@@ -1,22 +1,20 @@
 @use "src/styles/mixins.scss";
 
 :root {
-  // colors: rgba/hex
-  --primary: #4287f5;
-  --secondary: #eba134;
-  --text-light: #f0f6ff;
-  --color-black: #000000;
-  --color-white: #ffffff;
-  --include-purple: #3c257e;
-  --gradient-purple: linear-gradient(68deg,
-      #332950 10.09%,
-      #3c257e 50.92%,
-      #322d41 93.48%);
+  // font colors
+  --font-primary: #272B2E;
+  --font-secondary: #404447;
+  --font-warning-red: #E40000; // contact required fields
 
+  // main page colors
+  --color-dark-purple: #1B044E;
+  --color-purple: #5A3F98;
+  --color-light-purple: #C6B9DC;
+  --color-pale-gray: #E2DDEB;
+  
   // spacers: px
   --edge-spacer: 24px;
 
-  // font sizes: ALWAYS IN REM
 }
 
 * {
@@ -28,4 +26,25 @@
 
 button {
   cursor: pointer;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-arial);
+  font-style: normal;
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 3.375rem;
+  line-height: 110%; /* 59.4px */
+}
+
+h2 {
+  font-size: 2.25rem;
+  line-height: 120%; /* 43.2px */
+}
+
+h3 {
+  font-size: 1.75rem;
+  line-height: 120%; /* 33.6px */
 }
