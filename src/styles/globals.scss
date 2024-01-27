@@ -2,35 +2,43 @@
 
 :root {
   // font colors
-  --font-primary: #272B2E;
+  --font-primary: #272b2e;
   --font-secondary: #404447;
-  --font-warning-red: #E40000; // contact required fields
+  --font-warning-red: #e40000; // contact required fields
 
   // main page colors
-  --color-dark-purple: #1B044E;
-  --color-purple: #5A3F98;
-  --color-light-purple: #C6B9DC;
-  --color-pale-gray: #E2DDEB;
-  
+  --color-dark-purple: #1b044e;
+  --color-purple: #5a3f98;
+  --color-light-purple: #c6b9dc;
+  --color-pale-gray: #e2ddeb;
+
+  // background color
+  --color-light-gray: #ededed;
+  --color-white: #ffffff;
+
   // spacers: px
   --edge-spacer: 24px;
 
+  // nav
+  --navbar-height: 88px;
 }
 
 * {
   box-sizing: border-box;
-  font-family: var(--font-inter);
   padding: 0;
   margin: 0;
+  font-family: var(--font-helvetica-neue);
+  color: var(--font-primary);
+  background-color: var(--color-light-gray);
 }
 
 button {
   cursor: pointer;
 }
 
-h1, h2, h3 {
-  font-family: var(--font-arial);
-  font-style: normal;
+h1,
+h2,
+h3 {
   font-weight: 700;
 }
 
@@ -42,9 +50,38 @@ h1 {
 h2 {
   font-size: 2.25rem;
   line-height: 120%; /* 43.2px */
+  color: var(--font-secondary);
 }
 
 h3 {
   font-size: 1.75rem;
   line-height: 120%; /* 33.6px */
+  color: var(--font-secondary);
+}
+
+.subheading {
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 200%; /* 48px */
+}
+
+.body-1,
+.body-1-bold,
+.body-2 {
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 27px */
+  color: var(--font-secondary);
+}
+
+.body-1-bold {
+  font-weight: 700;
+  line-height: 140%;
+}
+
+.body-2 {
+  font-size: 1rem;
+  line-height: 140%;
 }
