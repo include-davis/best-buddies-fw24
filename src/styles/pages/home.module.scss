@@ -1,0 +1,101 @@
+/*
+
+HIII none of this styling is the actual stye of the page lol
+i'm just figuring out how to position everything with flexbox rn!
+currently styling is mainly for visual clarity as i'm figuring out structure
+- naomi
+
+*/
+
+
+.body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: green;
+    padding: 48px;
+
+    > p {
+        font-size: 1.1875rem;
+    }
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 1rem;
+    background-color: lightblue;
+    
+    h1 {
+        font-size: 4.5rem;
+        padding: 1rem; // temporary, fix this later
+    }
+    h2 {
+        font-size: 1.875rem;
+        padding: 1rem; // temporary, fix this later
+    }
+    h5 {
+        font-size: 1.6875rem;
+        padding: 1rem; // temporary, fix this later
+    }
+
+}
+
+.heroText {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.buttonComponent {
+    // note: this button should be a global component. this styling is temporary and only for my convenience -naomi
+    padding: 1rem;
+    margin: 1rem;
+}
+
+.heroVideo {
+    // not sure how to do this yet
+    padding: 1rem;
+    margin: 1rem;
+}
+
+.mission {
+    text-align: center;
+    width: 50%;
+    background-color: pink;
+    > h3 {
+        font-size: 3.375rem;
+        margin: 1rem;
+    }
+    > p {
+        text-align: left;
+        margin: 1rem;
+    }
+    
+}
+
+.featuredEvents {
+    text-align: center;
+    background-color: lightgreen;
+    > h4 {
+        font-size: 2.25rem;
+        margin: 1rem;
+    }
+    > div {
+        text-align: left;
+        margin: 1rem;
+    }
+
+}
+
+.announcements {
+    display: flex;
+    flex-direction: row;
+}
+
+.announcementsContent {
+    display: flex;
+    flex-direction: column;
+}
