@@ -1,0 +1,55 @@
+@use "src/styles/mixins.scss";
+
+//needs revision
+.copyright{
+    background-color: var(--color-purple);
+    color: var(--color-light-purple);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 40px;
+}
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: var(--color-purple);
+    
+}
+.socials{
+    display: flex;
+    .socials_right{
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+        margin-left: 15px;
+        gap: 10px;
+    }
+    .smicons{
+        display: flex;
+        gap: 32px;
+        margin-top: 10px;
+    }
+}
+
+.phone, .email{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.phoneAndEmail, .logoAndSocials{
+    display:flex;
+    flex-direction: column;
+    gap: 15px;
+
+}
+
+.sections{
+    display: flex;
+    gap: 74px;
+    .section{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+}
