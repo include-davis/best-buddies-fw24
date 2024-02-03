@@ -1,3 +1,34 @@
-.div {
-  background: red;
+@use "src/styles/mixins.scss";
+
+// .div {
+//   background: red;
+// }
+
+.contact{
+  text-align: center;
+
+  > h1{
+    color: var(--font-primary);
+  }
+  input{
+    width: 492px;
+  }  
+}
+
+.warning{
+  color: var(--font-warning-red);
+}
+
+//add red asterick after each required field
+.required::after{
+  content: " *";
+  color: var(--font-warning-red);
+}
+
+//for all text boxes: name, email address, and email content
+.answerContainer{
+  background: white;
+  border-radius: 15px;
+  padding: 1em;
+  border: 1px solid rgb(166, 165, 165);
 }
