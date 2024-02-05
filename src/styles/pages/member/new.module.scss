@@ -1,0 +1,84 @@
+.Body{
+    background-color: #F8F8F9;
+    width: 1440px;
+    height: 2993px;
+    top: -2034px;
+    left: 1668px;
+}
+
+
+//intro
+.introContainer{
+    width: Hug (753px);
+    height: Hug (137px);
+    top: 201px;
+    left: 346px;
+    gap: 24px;
+
+    h1{
+        width: 373px;
+        height: 59px;
+        color: #1B044E;
+        font-family: Helvetica Neue;
+        font-size: 54px;
+        font-weight: 700;
+        line-height: 59px;
+        letter-spacing: 0em;
+        text-align: left;
+    }
+
+    p{
+        width: 753px;
+        height: 54px;
+        background: #404447;
+        font-family: Helvetica Neue;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 27px;
+        letter-spacing: 0em;
+        text-align: center;
+    
+    }
+}
+
+
+//who can join
+.whoContainer{
+    width: Fixed (1,216px);
+    height: Fixed (513px);
+    top: 443px;
+    left: 112px;
+    border-radius: 15px;
+    justify: space-between;
+
+    img{
+        width: 592px;
+        height: 513px;
+        border-radius: 10px;
+    }
+
+    h2{
+        width: 592px;
+        height: 43px;
+        background: #1B044E;
+        font-family: Helvetica Neue;
+        font-size: 36px;
+        font-weight: 700;
+        line-height: 43px;
+        letter-spacing: 0em;
+        text-align: left;
+    }
+
+    p{
+        width: 592px;
+        height: 189px;
+        background: #404447;
+        font-family: Helvetica Neue;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 27px;
+        letter-spacing: 0em;
+        text-align: left;
+    }
+
+}
