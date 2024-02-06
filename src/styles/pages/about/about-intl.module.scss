@@ -1,0 +1,30 @@
+.body{
+    background-color: var(--color-light-gray);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+  .frames{
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+    padding: 64px;
+
+    //.h2{
+      //  color: aliceblue;
+    //}
+
+  }
+
+ // .h2text{
+   // font-size: 2.25rem;
+    //line-height: 120%;
+    //color: var(--color-dark-purple);
+  //}
+
+  .p{
+    color: var(--font-secondary);
+  }
+
+
+}
