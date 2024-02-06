@@ -1,0 +1,63 @@
+.currentMembersContainer {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center; 
+  
+  .currentMembersTitle {
+    font-size: 56px;
+    color: #1B044E;
+    font-weight: bold;
+    margin-bottom: 50px;
+  }
+  
+  .renewalBox {
+    width: 878px;
+    height: 327px;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-bottom: 32px;
+    padding-top: 32px;
+    background-color: white;
+    border-radius: 15px;
+    gap: 48px;
+
+    .renewalTitle {
+        color: #1B044E;
+        font-size: 30px; /* Adjust the font size */
+        background-color: white;
+        text-align: left;
+        font-weight: bold;
+        margin-bottom: 20px;
+      }
+    
+    p {
+        color: #404447;
+        font-size: 16px; /* Adjust the font size */
+        background-color: white;
+        text-align: left;
+      }
+    
+    .renewalBoxContent {
+        color: #404447;
+        font-size: 18px;
+        background-color: white;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        height: 202px;
+        // column-gap: 24px;
+
+    }
+    .renewalButton {
+        font-size: 18px; /* Adjust the font size */
+        font-weight: bold;
+        color: #5A3F98;
+        text-align: left;
+        background-color: white;
+        border: none;
+      }
+    }
+}
+  
