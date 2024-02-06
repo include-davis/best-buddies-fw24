@@ -2,12 +2,13 @@ import styles from "@/styles/pages/event/regional-state.module.scss";
 
 export default function RegionalStateEvents() {
   return (
-    <div>
+    <div className={styles.page}>
       <div>
         <h1 className={styles.regional_state_title}>Regional State Events</h1>
       </div>
       <div className={styles.friendship_walk_card}>
         <div className={styles.friendship_walk}>
+          <h1 className={styles.friendship_walk_title}>Friendship Walk</h1>
           <p>
             The Best Buddies Friendship Walk is the leading walk in the 
             country supporting inclusion for people with IDD. Over 60 U.S. 
@@ -24,8 +25,9 @@ export default function RegionalStateEvents() {
           Buddies programs.
           </p>
         </div>
-        <div>
-          <img />
+        <div className={styles.image_block}>
+
+          {/*<img src={"././"}/>*/}
         </div>
       </div>
     </div>
