@@ -4,14 +4,14 @@ import Image from "next/image";
 // modify icons to fit the footer structure
 const  smicons = [
   {
-    name: "facebook",
-    path: "/footer-icons/facebook.svg",
-    slug: "https://www.facebook.com/bestbuddiesatucdavis",
-  },
-  {
     name: "instagram",
     path: "/footer-icons/instagram.svg",
     slug: "https://www.instagram.com/ucdbestbuddies/",
+  },
+  {
+    name: "facebook",
+    path: "/footer-icons/facebook.svg",
+    slug: "https://www.facebook.com/bestbuddiesatucdavis",
   },
   {
     name: "youtube",

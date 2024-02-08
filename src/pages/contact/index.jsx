@@ -11,15 +11,52 @@ export default function Contact() {
           <p className={styles.required}>Name</p>
           <input className={styles.answerContainer} type="text" id="name" placeholder="Full Name" required></input>
           <p className={styles.required}>Email Address</p>
+          
           <input className={styles.answerContainer} type="text" id="userEmail" placeholder="Email"required></input>
+        </div>
+        <p className={styles.required}>Describe your question or comment</p>
+        <div className={styles.selectBox}>
+          
+          <div className={styles.optionsContainer}>
+
+            <div className={styles.option}>
+              <input type="radio" className={styles.radio} id="bestbuddiesinfo" name="category"></input>
+              <label for="bestbuddiesinfo">What Best Buddies does and how it works at UC Davis</label>
+            </div>
+
+            <div className={styles.option}>
+              <input type="radio" className={styles.radio} id="join" name="category"></input>
+              <label for="join">How to join Best Buddies</label>
+            </div>
+
+            <div className={styles.option}>
+              <input type="radio" className={styles.radio} id="events" name="category"></input>
+              <label for="events">Best Buddies events</label>
+            </div>
+
+            <div className={styles.option}>
+              <input type="radio" className={styles.radio} id="conflict" name="category"></input>
+              <label for="conflict">Buddy/peer buddy conflict</label>
+            </div>
+
+            <div className={styles.option}>
+              <input type="radio" className={styles.radio} id="other" name="category"></input>
+              <label for="other">Other</label>
+            </div>
+
+          </div>
+          
+          <div className={styles.selected}>
+            Select
+          </div>
         </div>
         <p className={styles.required}>Describe your question or comment</p>
         <textarea className={styles.answerContainer} name="paragraph_text" cols="50" rows="10"></textarea>
         
         
-        {/* 
-          Still figuring this out 
-        <label for="emailCategory">Describe your question or comment *</label>
+      
+      
+        {/* <label for="emailCategory">Describe your question or comment *</label>
          <select id="emailCategory" name="emailCategory">
           <option value="select">Select</option>
           <option value="volvo">What is Best Buddies and how it works at UC Davis</option>
@@ -27,8 +64,8 @@ export default function Contact() {
           <option value="fiat">Best Buddies events</option>
           <option value="audi">Buddy/peer buddy conflict</option>
           <option value="audi">Other</option>
-        </select> */}
-        
+        </select>
+         */}
       </form>
 
   </div>;

@@ -1,18 +1,23 @@
 @use "src/styles/mixins.scss";
 
-// .div {
-//   background: red;
-// }
-
 .contact{
   text-align: center;
-
   > h1{
     color: var(--font-primary);
   }
   input{
     width: 492px;
   }  
+
+}
+
+.selectBox {
+  width: 800px;
+  border-radius: 15px;
+  *{
+    background: white;
+  }
+  
 }
 
 .warning{
@@ -31,4 +36,39 @@
   border-radius: 15px;
   padding: 1em;
   border: 1px solid rgb(166, 165, 165);
+}
+
+.selectBox{
+  border: 1px solid rgb(166, 165, 165);
+}
+.optionsContainer{
+  border: 1px solid rgb(166, 165, 165);
+}
+//need to clean up below code
+.selectBox{
+  display: flex;
+  flex-direction: column;
+}
+.selectBox .optionsContainer{
+  background: white;
+  text-align: left;
+
+  order: 1;
+}
+
+.selectBox .option{
+  padding: 10px;
+}
+
+.selectBox .option:hover{
+  background: var(--color-light-gray);
+  
+}
+
+.selectBox .option .radio{
+  display: none;
+}
+
+.selectBox label{
+  cursor: pointer;
 }

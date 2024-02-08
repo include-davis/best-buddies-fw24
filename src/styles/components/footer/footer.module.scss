@@ -12,7 +12,19 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
-    color: var(--color-purple);
+    background: white;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    *{
+        background: white;
+        color: var(--color-purple);
+    }
+    p{
+        font-size: 1.2rem;
+    }
+    a{
+        text-decoration: none;
+    }
     
 }
 .socials{
@@ -37,6 +49,9 @@
     align-items: center;
 }
 
+.phoneAndEmail{
+    margin-top: 20px;
+}
 .phoneAndEmail, .logoAndSocials{
     display:flex;
     flex-direction: column;
@@ -46,10 +61,11 @@
 
 .sections{
     display: flex;
-    gap: 74px;
+    gap: 70px;
     .section{
         display: flex;
         flex-direction: column;
         gap: 20px;
     }
+    
 }
