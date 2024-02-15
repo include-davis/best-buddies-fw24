@@ -17,13 +17,22 @@ export default function NewMembers() {
           src="/member-imgs/newMemHero.jpg"
           alt="WinterParty23"
         />
-        <p>
-          <h2>Who can join?</h2>
-          Anyone can join Best Buddies, regardless of whether you have an IDD or not. UC Davis students can sign up as a Peer Buddy (without IDD), Buddy (with IDD), or Associate Member (unmatched).
 
-          Non-students with IDD that reside in the Greater Sacramento Area, are also eligible to join as Buddies, Associates or Members.
-        </p>
-        
+        <h2>
+          Who can join?
+          <p>
+            Anyone can join Best Buddies, regardless of whether you have an IDD or not. UC Davis students can sign up as a Peer Buddy (without IDD), Buddy (with IDD), or Associate Member (unmatched).
+            <br />
+            <br />
+            Non-students with IDD that reside in the Greater Sacramento Area, are also eligible to join as Buddies, Associates or Members.
+          </p>
+        </h2>
+      </div>
+
+      <div className={styles.howContainer}>
+        <h2>How To Join</h2>
+        <div className={styles.registration}>
+        </div>
       </div>
     </div>
 
