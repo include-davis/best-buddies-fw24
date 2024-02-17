@@ -15,7 +15,6 @@ export default function Home() {
         world in which programs like Best Buddies are no longer needed because
         people with IDD are completely included in their communities. 
       </div>
-      <Button pageName="member">Visit Official Website</Button>
     </div>
   );
 }
