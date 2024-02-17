@@ -1,18 +1,17 @@
 .button {
-    padding-top: 0.75rem;
-    padding-right: 1.5rem;
-    padding-bottom: 0.75rem;
-    padding-left: 1.5rem;
-
+    padding: 12px 24px;
+    justify-content: center;
+    align-items: center;
     border-radius: 70px;
+
     border-width: 0;
     background-color: var(--color-yellow);
 
-    font-weight: 700;
+    color: var(--color-font-primary);
+
     font-size: 1rem;
-    line-height: 1.5rem;
-    letter-spacing: 0em;
-    text-align: left;
+    font-weight: 700;
+    line-height: 140%;
 }
 
 .buttonLink {
