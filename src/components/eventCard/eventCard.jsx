@@ -1,4 +1,4 @@
-import styles from "@/styles/components/footer/eventcard.module.scss";
+import styles from "@/styles/components/eventcard/eventcard.module.scss";
 import Image from "next/image";
 import Button from "../button/button";
 
