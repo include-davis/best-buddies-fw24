@@ -1,5 +1,6 @@
 $primary-900: #1B044E;
 $text-secondary-gray: #404447;
+$mobile-breakpoint: 768px;
 
 .card {
     display: flex;
@@ -46,5 +47,31 @@ $text-secondary-gray: #404447;
       line-height: 150%;
       flex-grow: 1;
     }
+
+    @media (max-width: $mobile-breakpoint) {
+      max-width: 100%; 
+      padding: 10px; 
+      gap: 10px; 
+
+      .image {
+          width: 180px; 
+          height: 117px; 
+      }
+
+      .cardTitle {
+          font-size: 14px; 
+          line-height: 120%; 
+      }
+
+      .cardSubtitle {
+          font-size: 13px; 
+          line-height: 150%; 
+      }
+
+      .cardDescription {
+          font-size: 12px; 
+          line-height: 150%; 
+      }
+  }
   }
   
