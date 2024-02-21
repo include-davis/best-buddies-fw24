@@ -1,6 +1,7 @@
 @use "src/styles/mixins.scss";
 
 //needs revision
+//no width and height
 .copyright{
     background-color: var(--color-purple);
     color: var(--color-light-purple);
@@ -15,9 +16,8 @@
     background: white;
     padding-top: 50px;
     padding-bottom: 50px;
-    *{
+    div{
         background: white;
-        color: var(--color-purple);
     }
     p{
         font-size: 1.2rem;
@@ -27,6 +27,7 @@
     }
     
 }
+
 .socials{
     display: flex;
     .socials_right{
@@ -35,11 +36,18 @@
         margin-top: 20px;
         margin-left: 15px;
         gap: 10px;
+        p, a{
+            background: white;
+            color: var(--color-purple);
+        }
     }
     .smicons{
         display: flex;
         gap: 32px;
         margin-top: 10px;
+        img{
+            background: white;
+        }
     }
 }
 
@@ -47,11 +55,20 @@
     display: flex;
     gap: 5px;
     align-items: center;
+    img{
+        background: white;
+    }
+
 }
 
 .phoneAndEmail{
     margin-top: 20px;
+    p{
+        color: var(--color-purple);
+        background: white;
+    }
 }
+
 .phoneAndEmail, .logoAndSocials{
     display:flex;
     flex-direction: column;
@@ -62,10 +79,14 @@
 .sections{
     display: flex;
     gap: 70px;
+    
     .section{
         display: flex;
         flex-direction: column;
         gap: 20px;
     }
-    
+    p, a{
+        background: white;
+        color: var(--color-purple);
+    }
 }

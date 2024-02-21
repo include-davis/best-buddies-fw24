@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "@/styles/pages/contact/contact.module.scss";
 export default function Contact() {
+  
   return <div className={styles.contact}>
  
       <h1>Contact Us</h1>
@@ -8,16 +9,22 @@ export default function Contact() {
       <p className={styles.warning}>* = required field</p>
       <form>
         <div className={styles.nameAndEmail}>
-          <p className={styles.required}>Name</p>
-          <input className={styles.answerContainer} type="text" id="name" placeholder="Full Name" required></input>
-          <p className={styles.required}>Email Address</p>
-          
-          <input className={styles.answerContainer} type="text" id="userEmail" placeholder="Email"required></input>
+          <div>
+            <p className={styles.required}>Name</p>
+            <input className={styles.answerContainer} type="text" id="name" placeholder="Full Name" required></input>
+          </div>
+          <div>
+            <p className={styles.required}>Email Address</p>
+            <input className={styles.answerContainer} type="text" id="userEmail" placeholder="Email"required></input>
+          </div>
         </div>
+
+        <div className={styles.dropdown}>
+        <div style={{ display: 'flex', flexDirection: 'column' }}>
         <p className={styles.required}>Describe your question or comment</p>
         <div className={styles.selectBox}>
           
-          <div className={styles.optionsContainer}>
+          <div className={`${styles.optionsContainer}`}>
 
             <div className={styles.option}>
               <input type="radio" className={styles.radio} id="bestbuddiesinfo" name="category"></input>
@@ -45,14 +52,19 @@ export default function Contact() {
             </div>
 
           </div>
-          
+          </div>
           <div className={styles.selected}>
             Select
           </div>
+          
         </div>
+        </div>
+        <div className={styles.content}>
+        <div style={{ display: 'flex', flexDirection: 'column' }}>
         <p className={styles.required}>Describe your question or comment</p>
         <textarea className={styles.answerContainer} name="paragraph_text" cols="50" rows="10"></textarea>
-        
+        </div>
+        </div>
         
       
       

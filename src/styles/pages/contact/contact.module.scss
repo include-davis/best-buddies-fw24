@@ -2,28 +2,35 @@
 
 .contact{
   text-align: center;
+  font-size: 1.125rem;
   > h1{
     color: var(--font-primary);
   }
   input{
-    width: 492px;
+    padding-right: 276px;
+    margin-top: 10px;
+    font-size: 1.125rem;
   }  
-
-}
-
-.selectBox {
-  width: 800px;
-  border-radius: 15px;
-  *{
-    background: white;
+  form{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
   }
-  
 }
+
+.nameAndEmail, .dropdown, .content{
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
 
 .warning{
   color: var(--font-warning-red);
 }
-
+.required{
+  text-align: left;
+}
 //add red asterick after each required field
 .required::after{
   content: " *";
@@ -34,41 +41,77 @@
 .answerContainer{
   background: white;
   border-radius: 15px;
-  padding: 1em;
+  padding: 16px;
   border: 1px solid rgb(166, 165, 165);
+  margin-top: 10px;
+  padding-right: 600px;
+  color: var(--font-secondary);
+}
+
+.selected, .optionsContainer{
+  border: 1px solid rgb(166, 165, 165);
+  border-radius: 15px;
+  text-align: left;
+  background: white;
+  div, label{
+    background: white;
+    padding: 10px;
+  }
+  overflow: hidden;
 }
 
 .selectBox{
-  border: 1px solid rgb(166, 165, 165);
-}
-.optionsContainer{
-  border: 1px solid rgb(166, 165, 165);
-}
-//need to clean up below code
-.selectBox{
+  padding-right: 500px;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
 }
-.selectBox .optionsContainer{
-  background: white;
-  text-align: left;
 
-  order: 1;
+.selected{
+  padding: 16px;
+  font-size:1.125rem;
+  color: var(--font-secondary);
 }
 
-.selectBox .option{
+// .selected::after{
+//   content: "";
+//   background: url("http://www.w3.org/2000/svg");
+//   background-size: contain;
+//   background-repeat: no-repeat;
+//   position: absolute;
+//   height: 100%;
+//   width: 32px;
+//   right: 10px;
+//   top: 5px;
+//   transition: all 0.4s;
+// }
+
+.optionsContainer{
+  order: 1;
+  cursor: pointer;
+  max-height: 0;
+  opacity: 0;
+  margin-top: 10px;
+}
+
+.optionsContainer.active{
+  max-height: 240px;
+  opacity: 100;
+}
+
+.option{
   padding: 10px;
 }
 
-.selectBox .option:hover{
+.option:hover{
   background: var(--color-light-gray);
-  
+  label{
+    background: var(--color-light-gray);
+  }
 }
 
-.selectBox .option .radio{
+.radio{
   display: none;
 }
 
-.selectBox label{
-  cursor: pointer;
-}
+
