@@ -1,4 +1,6 @@
 import styles from "@/styles/pages/event/regional-state.module.scss";
+import Footer from "@/components/footer/footer";
+import Image from 'next/image';
 
 export default function RegionalStateEvents() {
   return (
@@ -27,7 +29,12 @@ export default function RegionalStateEvents() {
         </div>
         <div className={styles.image_block}>
 
-          {/*<img src={"././"}/>*/}
+          <Image
+            src="/state-events-imgs/friendship_walk_img.png"
+            width={500}
+            height={500}
+            alt="Friendship walk group image"
+          />
         </div>
       </div>
     </div>

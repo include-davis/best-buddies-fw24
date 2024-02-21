@@ -1,5 +1,5 @@
 .page {
-  
+  color: gray;
 }
 
 .regional_state_title {
@@ -8,18 +8,27 @@
 
 .friendship_walk_card {
   display: flex;
+  flex-direction: row;
+  background-color: white;
 }
 
 .friendship_walk_title {
-  font-size:1em;
+  font-size: 36px;
 }
 
 .friendship_walk {
-  
+  width: 50%;
+  background-color: white;
+  padding: 40px;
+  border-radius: 15px;
+}
+
+.friendship_walk p, .friendship_walk h1 {
+  background-color: white;
 }
 
 .image_block {
-  width: 100%;
+  width: 50%;
   height: 200px;
-  color: gray;
+  z-index: 100;
 }
