@@ -1,10 +1,10 @@
 import styles from "@/styles/pages/event/chapter.module.scss";
-import Image from 'next/image';
+import EventCard from "@/components/eventCard/eventCard";
 
 export default function ChapterEvents() {
   return (
     <div>
-      <div className={styles['featured-events']}>
+      <div className={styles.featuredEvents}>
           <h1 className={styles.chapter}>Chapter Events</h1>
         <div className={styles.box}>
         <h2 className={styles.title}>Featured Events</h2>
@@ -17,49 +17,25 @@ export default function ChapterEvents() {
             </svg>
           </div>
         </div>
-        <div className={styles['cards-container']}>
-          <div className={styles.card}>
-            <div className={styles.image}>
-              <Image
-                src="/member-imgs/newMemHero.jpg"
-                alt="New Member"
-                width={352}
-                height={240} 
-              />
-            </div>
-            <h3 className={styles['card-title']}>Event Title</h3>
-            <p className={styles['card-subtitle']}>Month Day, Year</p>
-            <p className={styles['card-description']}>Event Description</p>
-            <button className={styles.button}>RSVP</button>
-          </div>
-          <div className={styles.card}>
-            <div className={styles.image}>
-              <Image
-                  src="/member-imgs/newMemHero.jpg"
-                  alt="New Member"
-                  width={352}
-                  height={240} 
-                />
-            </div>
-            <h3 className={styles['card-title']}>Event Title</h3>
-            <p className={styles['card-subtitle']}>Month Day, Year</p>
-            <p className={styles['card-description']}>Event Description</p>
-            <button className={styles.button}>RSVP</button>
-          </div>
-          <div className={styles.card}>
-            <div className={styles.image}>
-              <Image
-                  src="/member-imgs/newMemHero.jpg"
-                  alt="New Member"
-                  width={352}
-                  height={240} 
-                />
-            </div>
-            <h3 className={styles['card-title']}>Event Title</h3>
-            <p className={styles['card-subtitle']}>Month Day, Year</p>
-            <p className={styles['card-description']}>Event Description</p>
-            <button className={styles.button}>RSVP</button>
-          </div>
+        <div className={styles.cardsContainer}>
+          <EventCard
+          imagePath="/member-imgs/newMemHero.jpg"
+          title="Event Title"
+          date="Month Day, Year"
+          description="Event Description"
+          />
+          <EventCard
+          imagePath="/member-imgs/newMemHero.jpg"
+          title="Event Title"
+          date="Month Day, Year"
+          description="Event Description"
+          />
+          <EventCard
+            imagePath="/member-imgs/newMemHero.jpg"
+            title="Event Title"
+            date="Month Day, Year"
+            description="Event Description"
+          />
         </div>
       </div>
       <div className={styles.eventCalendar}>
