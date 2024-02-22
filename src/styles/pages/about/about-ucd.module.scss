@@ -2,7 +2,40 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  //font-family: var(--font-helvetica-neue);
+
+  .heroBox{
+    height: 592px;
+    width: 100%;
+    position: relative;
+    margin-bottom: 77px;
+    
+
+    .heroImg{
+       width: 100%;
+       height: 100%;
+       object-fit: cover;
+       background-repeat: no-repeat;
+       background-size: cover;
+       
+       background-image: 
+       linear-gradient(rgba(153, 236, 222, 0.33) 0%, rgba(153, 236, 222, 0.33) 100%), 
+       linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%)
+       src("/about-imgs/MatchParty2022.jpg");
+    }
+
+    .heroText{
+       text-align: center;
+       position: absolute;
+       top: 50%;
+       left: 50%;
+       transform: translate(-50%, -50%);
+       background-color: transparent;
+       color: white;
+       border: 2px solid ;
+    }
+ }
+
+
 }
 
 .cards{
@@ -10,10 +43,28 @@
   flex-direction: column;
   gap: 36px;
   padding: 64px;
-  width: 1216px;
+  //width: 1216px;
+  margin-left: 220px;
+  margin-right: 220px;
+
+}
+
+.imgs{
+  border-radius: 10px;
+}
+
+.cardsBox{
+  display: flex;
+  flex-direction: row;
 }
 
 .buddies, .associateMembers, .chapterEvents, .buddyPair{
+  display: flex;
+  flex-direction: column;
+  margin: 64px;
+
+
+
   h2{
     color: var(--color-dark-purple);
     font-size: 36px;
