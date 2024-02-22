@@ -32,7 +32,7 @@
          background-image: 
          linear-gradient(rgba(153, 236, 222, 0.33) 0%, rgba(153, 236, 222, 0.33) 100%), 
          linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%)
-         src("/about-imgs/MatchParty2022.jpg");
+         src("/about-imgs/BBI.jpeg");
       }
 
       .heroText{
@@ -140,6 +140,23 @@
          border-radius: 50%;
          margin-right: 64px;
       }
+   }
+
+   .learnMore{
+      background: white;
+      border-radius: 20px;
+      padding-top: 40px;
+      padding-bottom: 40px;
+      padding-left: 48px;
+      padding-right: 48px;
+
+      .learnMoreText{
+         background: none;
+         margin-bottom: 8px;
+      }
+
+
+
    }
 
 }

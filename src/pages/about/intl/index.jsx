@@ -1,5 +1,4 @@
 import styles from "@/styles/pages/about/about-intl.module.scss";
-import Image from "next/image";
 
 
 export default function AboutIntl() {
@@ -94,8 +93,8 @@ export default function AboutIntl() {
       </div>
 
       <div className={styles.learnMore}>
-        <h2 className={styles.learnMoreH2}>Want to learn more?</h2>
-        <p>Visit the Best Buddies International Official website.</p>
+        <h2 className={styles.learnMoreText}>Want to learn more?</h2>
+        <p className={styles.learnMoreText}>Visit the Best Buddies International Official website.</p>
         {/*button goes here*/}
       </div>
 
