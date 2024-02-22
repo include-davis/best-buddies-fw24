@@ -3,7 +3,12 @@
 }
 
 .regional_state_title {
+  color: #1b044e;
   font-size: 4em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 48px;
 }
 
 .friendship_walk_card {
@@ -28,6 +33,7 @@
 .image_block {
   background-position: 0 0;
   z-index: 100;
+  border-radius: 15px;
 }
 
 .two_imgs {
@@ -41,14 +47,22 @@
 
 .third_section {
   display: flex;
+  margin: 30px;
 }
 
 .third_walk_card, .third_walk_card h2, .third_walk_card_body {
   background-color: white;
   padding: 40px;
   border-radius: 15px;
+  margin-right: 16px;
 }
 
-.third_walk_join {
+.third_walk_join, .third_walk_join_text {
   background-color: #5a3f98;
+  border-radius: 15px;
+}
+
+.third_walk_join_text {
+  color: white;
+  padding: 40px;
 }
