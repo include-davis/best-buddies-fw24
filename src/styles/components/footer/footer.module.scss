@@ -73,9 +73,13 @@
     display:flex;
     flex-direction: column;
     gap: 15px;
-
 }
 
+.phoneAndEmail,.socials_right{
+    @include mixins.phone{
+        display: none;
+    }
+}
 .sections{
     display: flex;
     gap: 70px;

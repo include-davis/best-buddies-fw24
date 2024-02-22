@@ -89,13 +89,10 @@
 
 .optionsContainer{
   order: 1;
-  cursor: pointer;
   margin-top: 10px;
-}
-
-.optionsContainer.active{
-  max-height: 240px;
-  opacity: 100;
+  div, label{
+    cursor: pointer;
+  }
 }
 
 .option{

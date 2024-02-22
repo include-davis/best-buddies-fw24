@@ -2,13 +2,13 @@ import React from "react";
 import styles from "@/styles/pages/contact/contact.module.scss";
 export default function Contact() {
 
-  const options = [
+  /*const options = [
     { id: 'bestbuddiesinfo', label: 'What Best Buddies does and how it works at UC Davis' },
     { id: 'join', label: 'How to join Best Buddies' },
     { id: 'events', label: 'Best Buddies events' },
     { id: 'conflict', label: 'Buddy/peer buddy conflict' },
     { id: 'other', label: 'Other' }
-  ];
+  ];*/
 
   return <div className={styles.contact}>
     <div className={styles.title}>

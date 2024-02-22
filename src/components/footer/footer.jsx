@@ -1,5 +1,4 @@
 import styles from "@/styles/components/footer/footer.module.scss";
-// import globals from "@/styles/globals.scss";
 import Image from "next/image";
 import Link from 'next/link';
 
@@ -73,7 +72,7 @@ export default function Footer() {
         <div className={styles.socials}>
           <Image width={124} height={124} src="/best-buddies-logo.svg" />
           <div className={styles.socials_right}>
-            {/* header */}
+            
               <p>BEST BUDDIES</p>
               <p>AT UC DAVIS</p>
             
