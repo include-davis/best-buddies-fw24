@@ -1,12 +1,21 @@
 import React from "react";
 import styles from "@/styles/pages/contact/contact.module.scss";
 export default function Contact() {
-  
+
+  const options = [
+    { id: 'bestbuddiesinfo', label: 'What Best Buddies does and how it works at UC Davis' },
+    { id: 'join', label: 'How to join Best Buddies' },
+    { id: 'events', label: 'Best Buddies events' },
+    { id: 'conflict', label: 'Buddy/peer buddy conflict' },
+    { id: 'other', label: 'Other' }
+  ];
+
   return <div className={styles.contact}>
- 
+    <div className={styles.title}>
       <h1>Contact Us</h1>
       <p>Have questions or comments for our officer team? Please fill out the form below and we will get back to you as soon as possible!</p>
       <p className={styles.warning}>* = required field</p>
+    </div>
       <form>
         <div className={styles.nameAndEmail}>
           <div>
@@ -20,11 +29,12 @@ export default function Contact() {
         </div>
 
         <div className={styles.dropdown}>
-        <div style={{ display: 'flex', flexDirection: 'column' }}>
-        <p className={styles.required}>Describe your question or comment</p>
-        <div className={styles.selectBox}>
+          <div style={{ display: 'flex', flexDirection: 'column' }}>
+            <p className={styles.required}>Describe your question or comment</p>
+            
+            <div className={styles.selectBox}>
           
-          <div className={`${styles.optionsContainer}`}>
+          <div className={styles.optionsContainer}>
 
             <div className={styles.option}>
               <input type="radio" className={styles.radio} id="bestbuddiesinfo" name="category"></input>
@@ -52,12 +62,13 @@ export default function Contact() {
             </div>
 
           </div>
-          </div>
           <div className={styles.selected}>
-            Select
+              Select
           </div>
-          
-        </div>
+
+          </div>
+            
+          </div>
         </div>
         <div className={styles.content}>
         <div style={{ display: 'flex', flexDirection: 'column' }}>
