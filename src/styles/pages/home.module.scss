@@ -1,44 +1,59 @@
-/*
-
-HIII none of this styling is the actual stye of the page lol
-i'm just figuring out how to position everything with flexbox rn!
-currently styling is mainly for visual clarity as i'm figuring out structure
-- naomi
-
+/* note to self: 
+    justify-content: children along main axis (horizontal if flex direction is horizontal)
+    align-content: children along secondary axis (vertical if flex direction is horizontal)
+    justify-self: change alignment along secondary axis of the child itself
+    align-self: change alignment along secondary axis of the child itself
 */
 
+// 1 rem = 16px
+
+// light gray bg color is #F8F8F9 on figma but is #ededed in globals?
 
 .body {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    color: green;
-    padding: 48px;
+    align-items: stretch;
+    padding: 0 122px 0 122px;
 
     > p {
         font-size: 1.1875rem;
     }
+    // background-color: lightgoldenrodyellow;
 }
 
 .hero {
+    margin: 46px 0 46px 0;
+
     display: flex;
     flex-direction: column;
     align-items: center;
-
-    padding: 1rem;
-    background-color: lightblue;
+    gap: 16px;
     
-    h1 {
+    // background-color: lightblue;
+    
+    h1 { // Friendships that matter.
+        color: var(--color-dark-purple);
+
         font-size: 4.5rem;
-        padding: 1rem; // temporary, fix this later
+        line-height: 120%; /* 86.4px */
+        background-color: transparent;
     }
-    h2 {
-        font-size: 1.875rem;
-        padding: 1rem; // temporary, fix this later
+    h2 { // BEST BUDDIES AT UC DAVIS
+        color: var(--color-purple);
+
+        font-size: 1.5rem;
+        background-color: transparent;
     }
-    h5 {
+    h5 { // Fostering social and economic inclusion for individuals with disabilities. 
+        color: var(--font-secondary);
+
         font-size: 1.6875rem;
-        padding: 1rem; // temporary, fix this later
+        font-weight: 400;
+        line-height: 120%; /* 32.4px */
+        background-color: transparent;
+    }
+    button {
+        margin-top: 40px;
     }
 
 }
@@ -50,52 +65,175 @@ currently styling is mainly for visual clarity as i'm figuring out structure
 }
 
 .buttonComponent {
-    // note: this button should be a global component. this styling is temporary and only for my convenience -naomi
-    padding: 1rem;
-    margin: 1rem;
+    // note: this button should be a global component. this styling is temporary and only for my convenience
+    padding: 12px;;
+    border-radius: 32px;
 }
 
 .heroVideo {
-    // not sure how to do this yet
-    padding: 1rem;
+    align-self: center;
+    
+    padding: 100px;
     margin: 1rem;
+    background-color: var(--color-purple);
+    color: white;
 }
 
 .mission {
-    text-align: center;
-    width: 50%;
-    background-color: pink;
-    > h3 {
-        font-size: 3.375rem;
-        margin: 1rem;
+    margin-top: 100px;
+
+    display: flex;
+    padding: 40px;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    flex-shrink: 0;
+    border-radius: 15px;
+    background: white;
+
+    h1 {
+        color: var(--color-dark-purple);
+        background-color: transparent;
     }
-    > p {
-        text-align: left;
-        margin: 1rem;
+    p {
+        color: var(--font-secondary);
+        align-self: stretch;
+
+        /* Desktop/Body 1/Regular */
+        font-size: 1.125rem;
+        line-height: 150%; /* 27px */
+        
+        background-color: transparent;
     }
-    
+
+    .purpleHighlight {
+        color: var(--color-dark-purple);
+        background-color: transparent;
+    }
 }
 
 .featuredEvents {
-    text-align: center;
-    background-color: lightgreen;
-    > h4 {
-        font-size: 2.25rem;
-        margin: 1rem;
-    }
-    > div {
-        text-align: left;
-        margin: 1rem;
-    }
+    margin: 165px 0 166px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
 
+    h2 {
+        justify-self: start;
+        color: var(--color-dark-purple);
+        text-align: center;
+    }
+}
+
+.carousel {
+    display: flex;
+    padding: 10px;
+    flex-direction: row;
+    gap: 40px;
+}
+
+.eventCard {
+    display: flex;
+    width: 384px;
+    padding: 16px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+    border-radius: 15px;
+    background: #FFF;
+
+    /* Card Shadow Light */
+    box-shadow: 0 5px 50px 0 rgba(228, 225, 231, 0.40);
 }
 
 .announcements {
-    display: flex;
-    flex-direction: row;
-}
+    margin: 0 -122px 0 -122px;
+    
+    // negative margin because body has padding this needs to override
 
-.announcementsContent {
     display: flex;
     flex-direction: column;
+    gap: 40px;
+    padding: 65px 114px 105px 110px;
+    
+    background-color: var(--color-purple);
+
+    h2 {
+        text-align: start;
+        color: white;
+        background-color: transparent;
+    }
+}
+
+.headerIcon {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+
+    justify-self: stretch;
+    justify-content: start;
+    background-color: transparent;
+}
+
+.announcementCardContainer {
+    display: flex;
+    flex-direction: horizontal;
+    background-color: transparent;
+    gap: 24px;
+    
+    padding: 10px;
+}
+
+.announcementsCard { // TEMPORARY STYLING i need to make a component for this!!!!
+    flex-grow: 1;
+
+    display: flex;
+    padding: 32px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+
+    border-radius: 15px;
+    background: #FFF;
+    box-shadow: 0px 0px 44px 0px rgba(46, 25, 94, 0.80);
+}
+
+.memberSpotlight {
+    margin: 188px 0 91px 0;
+    display: flex;
+    flex-direction: row;
+    gap: 136px;
+}
+
+.memberSpotlightText {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+    h2 {
+        color: var(--color-dark-purple);
+    }
+    h3 {
+        color: var(--font-primary); // #222 on figma (TODO: FIX)
+        font-size: 1.5rem;
+    }
+    p {
+        color: var(--font-secondary);
+
+        /* Desktop/Body 1/Regular */
+        font-size: 1.125rem;
+        line-height: 150%; /* 27px */
+    }
+}
+
+.memberSpotlightDescription {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.memberSpotlightImage {
+    padding: 200px;
+    border-radius: 15px;
+    background: #D9D9D9;
 }
