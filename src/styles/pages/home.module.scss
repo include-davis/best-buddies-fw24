@@ -52,10 +52,6 @@
         line-height: 120%; /* 32.4px */
         background-color: transparent;
     }
-    button {
-        margin-top: 40px;
-    }
-
 }
 
 .heroText {
@@ -64,10 +60,8 @@
     text-align: center;
 }
 
-.buttonComponent {
-    // note: this button should be a global component. this styling is temporary and only for my convenience
-    padding: 12px;;
-    border-radius: 32px;
+.heroButton {
+    width: 152px;
 }
 
 .heroVideo {

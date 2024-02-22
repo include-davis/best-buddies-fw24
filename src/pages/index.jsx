@@ -2,6 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 import { Inter } from "next/font/google";
 import styles from '@/styles/pages/home.module.scss';
+import Button from "@/components/button/button";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -45,7 +46,7 @@ export default function Home() {
         <h1>Friendships that matter.</h1>
         <h5>Fostering social and economic inclusion for individuals with disabilities.</h5>
 
-        <button className={styles.buttonComponent}>Join Us</button> {/* button component */}
+        <Button label={"Join Us"} href="member" extraStyles={styles.heroButton}/>
       </div>
 
       <div className={styles.heroVideo}>video(?) goes here</div>
@@ -54,7 +55,7 @@ export default function Home() {
 
         <h1>Our Mission</h1>
         <p><text className={styles.purpleHighlight}>Best Buddies at UC Davis</text> is a chapter of the global nonprofit Best Buddies International, which promotes social and economic inclusion for people with intellectual and developmental disabilities (IDD). We envision a world in which programs like Best Buddies are no longer needed because people with IDD are completely included in their communities. </p>
-        <button className={styles.buttonComponent}>About Our Chapter</button>
+        <Button label={"About Our Chapter"} href="about"/>
 
       </div>
 
