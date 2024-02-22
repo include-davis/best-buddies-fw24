@@ -1,34 +1,67 @@
+@use 'src/styles/mixins';
+
 .Body{
     background-color: var(--color-light-gray);
+
+    // @include mixins.sm-phone{ //ask
+    //     // display: flex;
+    //     // flex-direction: column;
+    //     align-items: center;
+    // }
 }
 
 
 //intro
 .introContainer{
-    // background-color: #404447;
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 81px;
 
+    @include mixins.sm-phone{
+        margin-top: 53px;
+    }
+    
+
     h1{
-        //width: 373px; //dont hard code
-        //height: 59px; //dont hard code
-        color: var(--color-dark-purple);  //ask about font color
-        //font-weight: 700;
-        //letter-spacing: 0em;
-        //text-align: left;
+        color: var(--color-dark-purple);
         margin-bottom: 24px;
+
+
+        @include mixins.phone{
+            font-size: 3rem;
+            margin-bottom: 26px;
+        }
+
+        @include mixins.sm-phone{
+            font-size: 2.25rem;
+            margin-bottom: 28px;
+        }
     }
 
     p{
         width: 753px;
         height: 54px;
         font-size: 1.125rem;
-        font-weight: 400;
+        // font-weight: 400;
         line-height: 112.5%;
-        //letter-spacing: 0em;
         text-align: center;
+        color: var(--font-secondary);
+
+
+        @include mixins.phone{
+            font-size: 1.05rem;
+            line-height: 130%;
+            width: 500px;
+            height: 85px;
+        }
+
+        @include mixins.sm-phone{
+            font-size: 1rem;
+            line-height: 150%;
+            width: 347px;
+            height: 95px;
+        }
     }
 }
 
@@ -43,6 +76,8 @@
     align-items: center;
     justify-content: center;
     gap: 32px;
+
+
 
 
     img{
