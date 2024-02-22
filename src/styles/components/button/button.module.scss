@@ -1,0 +1,32 @@
+@use 'src/styles/mixins.scss';
+
+.button {
+    justify-content: center;
+    align-items: center;
+    border-radius: 70px;
+
+    border-width: 0;
+    background-color: var(--color-yellow);
+
+    color: var(--color-font-primary);
+    
+    font-weight: 700;
+    line-height: 140%;
+
+    padding: 12px 24px;
+    font-size: 1.125rem;
+
+    @include mixins.phone {
+        padding: 12px 22px;
+        font-size: 1rem;
+    }
+    
+    @include mixins.sm-phone {
+        padding: 12px 22px;
+        font-size: 1rem;
+    }
+}
+
+.buttonLink {
+    background-color: transparent;
+}
