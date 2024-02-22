@@ -70,7 +70,7 @@ export default function Footer() {
       <div className={styles.container}>
         <div className={styles.logoAndSocials}>
         <div className={styles.socials}>
-          <Image width={124} height={124} src="/best-buddies-logo.svg" />
+          <Image width={124} height={124} src="/best-buddies-logo.svg" alt="best-buddies-logo"/>
           <div className={styles.socials_right}>
             
               <p>BEST BUDDIES</p>

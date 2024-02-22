@@ -77,18 +77,6 @@ export default function Contact() {
         </div>
         </div>
         
-      
-      
-        {/* <label for="emailCategory">Describe your question or comment *</label>
-         <select id="emailCategory" name="emailCategory">
-          <option value="select">Select</option>
-          <option value="volvo">What is Best Buddies and how it works at UC Davis</option>
-          <option value="saab">How to join Best Buddies</option>
-          <option value="fiat">Best Buddies events</option>
-          <option value="audi">Buddy/peer buddy conflict</option>
-          <option value="audi">Other</option>
-        </select>
-         */}
       </form>
 
   </div>;

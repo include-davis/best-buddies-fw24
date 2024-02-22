@@ -1,10 +1,10 @@
 @use "src/styles/mixins.scss";
-
+$gray: rgb(166, 165, 165);
 
 .contact{
   text-align: center;
   font-size: 1.125rem;
-  > h1{
+  h1{
     color: var(--font-primary);
   }
   input{
@@ -47,7 +47,7 @@
   background: white;
   border-radius: 15px;
   padding: 16px;
-  border: 1px solid rgb(166, 165, 165);
+  border: 1px solid $gray;
   margin-top: 10px;
   color: var(--font-secondary);
   border-right: 600px;
@@ -68,7 +68,7 @@
 
 .optionsContainer{
   background: white;
-  border: 1px solid rgb(166, 165, 165);
+  border: 1px solid $gray;
 }
 
 .selectBox{
@@ -84,7 +84,7 @@
   font-size:1.125rem;
   color: var(--font-secondary);
   background: white;
-  border: 1px solid rgb(166, 165, 165);
+  border: 1px solid $gray;
 }
 
 .optionsContainer{
