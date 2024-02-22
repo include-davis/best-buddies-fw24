@@ -9,26 +9,46 @@
 .friendship_walk_card {
   display: flex;
   flex-direction: row;
-  background-color: white;
-}
-
-.friendship_walk_title {
-  font-size: 36px;
 }
 
 .friendship_walk {
   width: 50%;
   background-color: white;
   padding: 40px;
+  margin: 30px;
   border-radius: 15px;
 }
 
-.friendship_walk p, .friendship_walk h1 {
+
+
+.friendship_walk p, .friendship_walk h2 {
   background-color: white;
 }
 
 .image_block {
-  width: 50%;
-  height: 200px;
+  background-position: 0 0;
   z-index: 100;
+}
+
+.two_imgs {
+  display: flex;
+  justify-content: center;
+}
+
+.event_img {
+  padding: 5px;
+}
+
+.third_section {
+  display: flex;
+}
+
+.third_walk_card, .third_walk_card h2, .third_walk_card_body {
+  background-color: white;
+  padding: 40px;
+  border-radius: 15px;
+}
+
+.third_walk_join {
+  background-color: #5a3f98;
 }
