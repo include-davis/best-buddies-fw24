@@ -1,8 +1,16 @@
 import styles from "@/styles/pages/event/chapter.module.scss";
 import EventCard from "@/components/eventCard/eventCard";
 import Image from "next/image";
+import { useEffect, useState } from 'react';
+
 
 export default function ChapterEvents() {
+  const [iframeSrc, setIframeSrc] = useState('');
+
+  useEffect(() => {
+    setIframeSrc('https://calendar.google.com/calendar/embed?src=includecalendarapi%40gmail.com&ctz=America%2FLos_Angeles');
+  }, []);
+
   return (
     <div>
       <div className={styles.featuredEvents}>
@@ -44,7 +52,18 @@ export default function ChapterEvents() {
         <p className={styles.description}>
           Stay in the know! We'll announce upcoming events at least two weeks in advance. All events are in person unless stated otherwise. Don't forget to find the RSVP link in the event description.
         </p>
-        <div className={styles.calendarPlaceholder}></div>
+        <div className={styles.calendar}>
+          {iframeSrc && (
+            <iframe 
+              src={iframeSrc}
+              style={{ border: 0 }} 
+              width="800" 
+              height="600" 
+              frameborder="0" 
+              scrolling="no">
+            </iframe>
+          )}
+        </div>
       </div>
     </div>
   );

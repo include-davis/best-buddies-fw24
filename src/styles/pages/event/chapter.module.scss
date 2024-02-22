@@ -107,11 +107,11 @@ $mobile-breakpoint: 768px;
     line-height: 150%;
   }
 
-  .calendarPlaceholder {
+  .calendar {
     align-self: stretch;
     height: 500px; 
-    background-color: $placeholder-gray;
     border-radius: 10px;
+    margin-top: 16px;
   }
 
   @media (max-width: $mobile-breakpoint) {
@@ -126,7 +126,7 @@ $mobile-breakpoint: 768px;
     }
 
     .calendarPlaceholder {
-      // TODO
+      flex: auto; // TODO: Remove placeholder line
     }
   }
 }
