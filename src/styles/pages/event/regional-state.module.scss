@@ -17,9 +17,19 @@
   margin-bottom: 48px;
 }
 
+.body-1 {
+  background-color: white;
+}
+
 .friendship_walk_section {
   display: flex;
   flex-direction: row;
+  gap: 30px;
+}
+
+.first_section_text {
+  display: flex;
+  flex-direction: column;
   gap: 30px;
 }
 
@@ -28,9 +38,8 @@
   background-color: white;
   padding: 40px;
   border-radius: 15px;
+  box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.02);
 }
-
-
 
 .body-1, .friendship_walk_section h2 {
   background-color: white;
@@ -60,6 +69,9 @@
 }
 
 .third_walk_card {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
   background-color: white;
   padding: 40px;
   border-radius: 15px;
@@ -87,4 +99,6 @@
 .fourth_section_text {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  gap: 30px;
 }

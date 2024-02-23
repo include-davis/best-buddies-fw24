@@ -10,23 +10,25 @@ export default function RegionalStateEvents() {
       </div>
       <section className={styles.friendship_walk_section}>
         <div className={styles.text_card}>
-          <span>
-            <h2 className={styles.text_title}>Friendship Walk</h2>
-          </span>
-          <div className={'body-1'}>
-            The Best Buddies Friendship Walk is the leading walk in the 
-            country supporting inclusion for people with IDD. Over 60 U.S. 
-            cities host Friendship Walks each year, and over 150,000 
-            participants have walked to support inclusion since 2009. The 
-            Friendship Walk is free to attend (although fundraising is 
-            encouraged!) and family-friendly.
-          </div>
-          <div className={'body-1'}>
-          It&#39;s not just a walk &#8208; Friendship Walk attendees also get to 
-          enjoy entertainment including song and dance performances, 
-          ice cream trucks, and lawn games. Funds raised at the 
-          Friendship Walk are used to maintain and expand local Best 
-          Buddies programs.
+          <div className={styles.first_section_text}>
+            <span>
+              <h2 className={styles.text_title}>Friendship Walk</h2>
+            </span>
+            <div className={'body-1'}>
+              The Best Buddies Friendship Walk is the leading walk in the 
+              country supporting inclusion for people with IDD. Over 60 U.S. 
+              cities host Friendship Walks each year, and over 150,000 
+              participants have walked to support inclusion since 2009. The 
+              Friendship Walk is free to attend (although fundraising is 
+              encouraged!) and family-friendly.
+            </div>
+            <div className={'body-1'}>
+            It&#39;s not just a walk &#8208; Friendship Walk attendees also get to 
+            enjoy entertainment including song and dance performances, 
+            ice cream trucks, and lawn games. Funds raised at the 
+            Friendship Walk are used to maintain and expand local Best 
+            Buddies programs.
+            </div>
           </div>
         </div>
         <div className={styles.image_block}>
