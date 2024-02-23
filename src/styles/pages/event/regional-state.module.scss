@@ -1,5 +1,11 @@
 .page {
   color: gray;
+  margin-left: 90px;
+  margin-right: 90px;
+}
+
+.friendship_walk_section, .two_imgs, .third_section, .border_divider, .fourth_section {
+  margin-bottom: 30px;
 }
 
 .regional_state_title {
@@ -11,22 +17,22 @@
   margin-bottom: 48px;
 }
 
-.friendship_walk_card {
+.friendship_walk_section {
   display: flex;
   flex-direction: row;
+  gap: 30px;
 }
 
-.friendship_walk {
+.text_card {
   width: 50%;
   background-color: white;
   padding: 40px;
-  margin: 30px;
   border-radius: 15px;
 }
 
 
 
-.friendship_walk p, .friendship_walk h2 {
+.body-1, .friendship_walk_section h2 {
   background-color: white;
 }
 
@@ -47,22 +53,38 @@
 
 .third_section {
   display: flex;
-  margin: 30px;
 }
 
-.third_walk_card, .third_walk_card h2, .third_walk_card_body {
+.third_walk_card, .third_walk_card h2, .third_walk_card > .body-1 {
+  background-color: white;
+}
+
+.third_walk_card {
   background-color: white;
   padding: 40px;
   border-radius: 15px;
   margin-right: 16px;
 }
 
-.third_walk_join, .third_walk_join_text {
+.third_walk_join {
   background-color: #5a3f98;
   border-radius: 15px;
 }
 
-.third_walk_join_text {
+.third_walk_join > .body-1 {
   color: white;
   padding: 40px;
+
+}
+
+.fourth_section > .text_card {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+
+.fourth_section_text {
+  display: flex;
+  flex-direction: column;
 }

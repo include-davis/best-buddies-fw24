@@ -8,9 +8,11 @@ export default function RegionalStateEvents() {
       <div>
         <h1 className={styles.regional_state_title}>Regional State Events</h1>
       </div>
-      <div className={styles.friendship_walk_card}>
-        <div className={styles.friendship_walk}>
-          <h2 className={styles.friendship_walk_title}>Friendship Walk</h2>
+      <section className={styles.friendship_walk_section}>
+        <div className={styles.text_card}>
+          <span>
+            <h2 className={styles.text_title}>Friendship Walk</h2>
+          </span>
           <div className={'body-1'}>
             The Best Buddies Friendship Walk is the leading walk in the 
             country supporting inclusion for people with IDD. Over 60 U.S. 
@@ -36,8 +38,8 @@ export default function RegionalStateEvents() {
             alt="Friendship walk group image"
           />
         </div>
-      </div>
-      <div className={styles.two_imgs}>
+      </section>
+      <section className={styles.two_imgs}>
         <Image className={styles.event_img}
           src="/state-events-imgs/friendship_walk_img.png"
           width={598}
@@ -50,20 +52,20 @@ export default function RegionalStateEvents() {
           height={397}
           alt="Friendship walk group image"
         />
-      </div>
+      </section>
       <section className={styles.third_section}>
         <div className={styles.third_walk_card}>
           <h2 className={styles.third_walk_card_title}>
             2024 will mark the third Friendship Walk held in Sacramento!
           </h2>
-          <div className={styles.third_walk_card_body}>
+          <div className={'body-1'}>
           The last Sacramento Friendship Walk raised over $48,000 to support 
           the Best Buddies mission – and it was tons of fun! Our UC Davis team 
           raised over $3,000 with 25 registered members. 
           </div>
         </div>
         <div className={styles.third_walk_join}>
-          <div className={styles.third_walk_join_text}>
+          <div className={'body-1'}>
           Join us for the April 2024 Sacramento Friendship Walk to support 
           Best Buddies and make a difference!
           </div>
@@ -72,10 +74,36 @@ export default function RegionalStateEvents() {
           </div>
         </div>
       </section>
-      <div className={styles.border_divider}>
+      <section className={styles.border_divider}>
 
-      </div>
+      </section>
       <section className={styles.fourth_section}>
+        <div className={styles.text_card}>
+          <Image className={styles.champion_img}
+            src="/state-events-imgs/friendship_walk_img.png"
+            width={598}
+            height={397}
+            alt="Friendship walk group image"
+          />
+          <div className={styles.fourth_section_text}>
+            <h2 className={styles.text_title}>
+                Champion of the Year
+            </h2>
+            <div className={'body-1'}>
+              Best Buddies Champion of the Year recognizes and celebrates leaders 
+              of inclusion in our community. The event includes a black-tie gala, 
+              silent auction, and live auction. Sacramento’s first Champion of the 
+              Year event was held in November 2023.
+            </div>
+            <div className={'body-1-bold'}>
+              Want to get involved?
+            </div>
+            <div className={'body-1'}>
+              Visit the Best Buddies Champion of the Year website for more information 
+              about the event, candidates, and corporate sponsorship opportunities!
+            </div>
+          </div>
+        </div>
         
       </section>
     </div>
