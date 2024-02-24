@@ -35,7 +35,7 @@ export default function Contact() {
             <div className={styles.selectBox}>
           
           <div className={styles.optionsContainer}>
-
+            {/* use content instead of label */}
             <div className={styles.option}>
               <input type="radio" className={styles.radio} id="bestbuddiesinfo" name="category"></input>
               <label for="bestbuddiesinfo">What Best Buddies does and how it works at UC Davis</label>

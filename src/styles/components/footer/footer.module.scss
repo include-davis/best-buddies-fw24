@@ -2,6 +2,7 @@
 
 //needs revision
 //no width and height
+//classname="" instead of {style.name} for global variables
 .copyright{
     background-color: var(--color-purple);
     color: var(--color-light-purple);
@@ -61,7 +62,7 @@
 
 }
 
-.phoneAndEmail{
+.infoSection{
     margin-top: 20px;
     p{
         color: var(--color-purple);
@@ -69,13 +70,13 @@
     }
 }
 
-.phoneAndEmail, .logoAndSocials{
+.infoSection, .logoAndSocials{
     display:flex;
     flex-direction: column;
     gap: 15px;
 }
 
-.phoneAndEmail,.socials_right{
+.infoSection,.socials_right{
     @include mixins.phone{
         display: none;
     }

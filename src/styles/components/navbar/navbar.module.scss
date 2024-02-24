@@ -1,0 +1,28 @@
+@use 'src/styles/mixins.scss';
+
+.nav{
+    display: flex;
+    align-items: center;
+    background-color: white;
+    justify-content: space-between;
+    padding: 30px;
+    color: var(--color-dark-purple);
+}
+
+.rightSide{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.links{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+

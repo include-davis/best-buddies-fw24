@@ -1,7 +1,8 @@
 @use "src/styles/mixins.scss";
 $gray: rgb(166, 165, 165);
-
+//set fixed widths
 .contact{
+  margin-top: 115px;
   text-align: center;
   font-size: 1.125rem;
   h1{
@@ -22,7 +23,7 @@ $gray: rgb(166, 165, 165);
 .title{
   margin: 0px 408px 50px 408px
 }
-
+//nameAndEmail ==> infoSection
 .nameAndEmail, .dropdown, .content{
   display: flex;
   gap: 10px;
@@ -50,7 +51,7 @@ $gray: rgb(166, 165, 165);
   border: 1px solid $gray;
   margin-top: 10px;
   color: var(--font-secondary);
-  border-right: 600px;
+  padding-right: 600px;
 }
 
 .selected, .optionsContainer{

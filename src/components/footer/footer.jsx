@@ -86,7 +86,7 @@ export default function Footer() {
 
           </div>
         </div>
-        <div className={styles.phoneAndEmail}>
+        <div className={styles.infoSection}>
             <div className={styles.email}>
               <Image width={25} height={25} src={"/footer-icons/mail.svg"} alt={"email"}/>
               <p>ucdbestbuddies@gmail.com</p>
