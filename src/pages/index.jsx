@@ -3,6 +3,7 @@ import Image from "next/image";
 import { Inter } from "next/font/google";
 import styles from '@/styles/pages/home.module.scss';
 import Button from "@/components/button/button";
+import EventCard from "@/components/eventCard/eventCard";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -38,11 +39,24 @@ function UserIcon() {
   )
 }
 
+var events = [
+
+]
+
+for (let i=1; i<=3; i++){
+  events.push ({
+      title: `Event Title ${i}`, 
+      date: "Month Day, Year", 
+      description: "Event Description", 
+      imagePath: "/member-imgs/newMemHero 2.jpg",
+    })
+}
+
 export default function Home() {
   return (
     <div className={styles.body}>
       <div className={styles.hero}>
-        <h2>BEST BUDDIES AT UC DAVIS</h2>
+        <h6 className={`subheading`}>BEST BUDDIES AT UC DAVIS</h6>
         <h1>Friendships that matter.</h1>
         <h5>Fostering social and economic inclusion for individuals with disabilities.</h5>
 
@@ -54,7 +68,7 @@ export default function Home() {
       <div className={styles.mission}>
 
         <h1>Our Mission</h1>
-        <p><text className={styles.purpleHighlight}>Best Buddies at UC Davis</text> is a chapter of the global nonprofit Best Buddies International, which promotes social and economic inclusion for people with intellectual and developmental disabilities (IDD). We envision a world in which programs like Best Buddies are no longer needed because people with IDD are completely included in their communities. </p>
+        <p className={`body-1`}><span className={styles.purpleHighlight}>Best Buddies at UC Davis</span> is a chapter of the global nonprofit Best Buddies International, which promotes social and economic inclusion for people with intellectual and developmental disabilities (IDD). We envision a world in which programs like Best Buddies are no longer needed because people with IDD are completely included in their communities. </p>
         <Button label={"About Our Chapter"} href="about"/>
 
       </div>
@@ -65,9 +79,11 @@ export default function Home() {
           <CalendarIcon/>
         </div>
         <div className = {styles.carousel}>
-          <div className = {styles.eventCard}>card content wow</div>
-          <div className = {styles.eventCard}>card content wow</div>
-          <div className = {styles.eventCard}>card content wow</div>
+          {
+            events.map((thisEvent) => {
+              return <EventCard title={thisEvent.title} date={thisEvent.date} description={thisEvent.description} imagePath={thisEvent.imagePath}/>;
+            })
+          }
         </div> {/* event cards are used on homepage and events page. */}
       </div>
 
@@ -91,8 +107,8 @@ export default function Home() {
             <UserIcon/>
           </div>
           <div className={styles.memberSpotlightDescription}>
-            <h3>John Doe</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+            <h3 className={`subheading`}>John Doe</h3>
+            <p className={`body-1`}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
           </div>
         </div>
         <div className={styles.memberSpotlightImage}>image</div>

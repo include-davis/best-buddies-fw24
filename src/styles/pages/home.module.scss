@@ -23,23 +23,18 @@
 
 .hero {
     margin: 46px 0 46px 0;
-
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 16px;
     
-    
+    .subheading { // BEST BUDDIES AT UC DAVIS
+        color: pink;
+    }
     h1 { // Friendships that matter.
         color: var(--color-dark-purple);
-
         font-size: 4.5rem;
         line-height: 120%; 
-    }
-    h2 { // BEST BUDDIES AT UC DAVIS
-        color: var(--color-purple);
-
-        font-size: 1.5rem;
     }
     h5 { // Fostering social and economic inclusion for individuals with disabilities. 
         color: var(--font-secondary);
@@ -84,14 +79,6 @@
     h1 {
         color: var(--color-dark-purple);
     }
-    p {
-        color: var(--font-secondary);
-
-        /* Desktop/Body 1/Regular */
-        font-size: 1.125rem;
-        line-height: 150%; 
-    }
-
     .purpleHighlight {
         color: var(--color-dark-purple);
     }
@@ -112,9 +99,9 @@
 
 .carousel {
     display: flex;
-    padding: 10px;
     flex-direction: row;
     gap: 40px;
+    align-items: flex-start;
 }
 
 .eventCard {
@@ -142,7 +129,6 @@
     padding: 65px 114px 105px 110px;
     
     background-color: var(--color-purple);
-
     h2 {
         text-align: start;
         color: white;
@@ -192,19 +178,12 @@
     flex-direction: column;
     gap: 40px;
 
-    h2 {
+    h2 { // Member Spotlight
         color: var(--color-dark-purple);
     }
-    h3 {
+    h3 { // John Doe
         color: var(--font-primary); // #222 on figma (TODO: FIX)
-        font-size: 1.5rem;
-    }
-    p {
-        color: var(--font-secondary);
-
-        /* Desktop/Body 1/Regular */
-        font-size: 1.125rem;
-        line-height: 150%; 
+        line-height: 120%;
     }
 }
 
