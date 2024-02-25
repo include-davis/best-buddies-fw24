@@ -14,11 +14,11 @@
     flex-direction: column;
     align-items: stretch;
     padding: 0 122px 0 122px;
+    background-color: var(--color-light-gray);
 
     > p {
         font-size: 1.1875rem;
     }
-    // background-color: lightgoldenrodyellow;
 }
 
 .hero {
@@ -29,28 +29,24 @@
     align-items: center;
     gap: 16px;
     
-    // background-color: lightblue;
     
     h1 { // Friendships that matter.
         color: var(--color-dark-purple);
 
         font-size: 4.5rem;
-        line-height: 120%; /* 86.4px */
-        background-color: transparent;
+        line-height: 120%; 
     }
     h2 { // BEST BUDDIES AT UC DAVIS
         color: var(--color-purple);
 
         font-size: 1.5rem;
-        background-color: transparent;
     }
     h5 { // Fostering social and economic inclusion for individuals with disabilities. 
         color: var(--font-secondary);
 
         font-size: 1.6875rem;
         font-weight: 400;
-        line-height: 120%; /* 32.4px */
-        background-color: transparent;
+        line-height: 120%; 
     }
 }
 
@@ -87,22 +83,17 @@
 
     h1 {
         color: var(--color-dark-purple);
-        background-color: transparent;
     }
     p {
         color: var(--font-secondary);
-        align-self: stretch;
 
         /* Desktop/Body 1/Regular */
         font-size: 1.125rem;
-        line-height: 150%; /* 27px */
-        
-        background-color: transparent;
+        line-height: 150%; 
     }
 
     .purpleHighlight {
         color: var(--color-dark-purple);
-        background-color: transparent;
     }
 }
 
@@ -155,7 +146,6 @@
     h2 {
         text-align: start;
         color: white;
-        background-color: transparent;
     }
 }
 
@@ -166,13 +156,11 @@
 
     justify-self: stretch;
     justify-content: start;
-    background-color: transparent;
 }
 
 .announcementCardContainer {
     display: flex;
     flex-direction: horizontal;
-    background-color: transparent;
     gap: 24px;
     
     padding: 10px;
@@ -216,7 +204,7 @@
 
         /* Desktop/Body 1/Regular */
         font-size: 1.125rem;
-        line-height: 150%; /* 27px */
+        line-height: 150%; 
     }
 }
 
