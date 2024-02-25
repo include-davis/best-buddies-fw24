@@ -2,16 +2,16 @@
 $gray: rgb(166, 165, 165);
 //set fixed widths
 .contact{
-  margin-top: 115px;
+  background: var(--color-light-gray);
+  padding-top: 115px;
   text-align: center;
   font-size: 1.125rem;
   h1{
     color: var(--font-primary);
   }
   input{
-    padding-right: 276px;
-    margin-top: 10px;
-    font-size: 1.125rem;
+    padding: 10px 270px 10px 10px;
+    
   }  
   form{
     display: flex;
@@ -21,13 +21,23 @@ $gray: rgb(166, 165, 165);
 }
 
 .title{
-  margin: 0px 408px 50px 408px
-}
-//nameAndEmail ==> infoSection
-.nameAndEmail, .dropdown, .content{
+  margin: 0px 408px 50px 408px;
   display: flex;
-  gap: 10px;
+  flex-direction: column;
+  gap: 19px;
+}
+
+//nameAndEmail ==> infoSection
+.infoSection, .dropdown, .content{
+  display: flex;
+  gap: 35px;
   justify-content: center;
+}
+
+.infoContainer{
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
 .warning{
@@ -36,6 +46,7 @@ $gray: rgb(166, 165, 165);
 }
 .required{
   text-align: left;
+  
 }
 //add red asterick after each required field
 .required::after{
@@ -49,7 +60,6 @@ $gray: rgb(166, 165, 165);
   border-radius: 15px;
   padding: 16px;
   border: 1px solid $gray;
-  margin-top: 10px;
   color: var(--font-secondary);
   padding-right: 600px;
 }
@@ -57,23 +67,37 @@ $gray: rgb(166, 165, 165);
 .selected, .optionsContainer{
   border-radius: 15px;
   text-align: left;
-  background: white;
   div, label{
-    padding: 10px;
+    padding: 12px 10px;
   }
-  label{
-    background: white;
-  }
-  overflow: hidden;
+
 }
 
 .optionsContainer{
-  background: white;
   border: 1px solid $gray;
+  opacity: 0;
+  position: relative;
+  background: white;
 }
 
-.selectBox{
+.active{
+  opacity: 1;
   overflow: hidden;
+  right: 1px;
+  padding: 5px;
+  position: relative;
+}
+
+.content{
+  position: relative;
+  top: -225px;
+  z-index: 1;
+  // background: white;
+  color: black;
+}
+
+
+.selectBox{
   display: flex;
   flex-direction: column;
 }
@@ -88,6 +112,11 @@ $gray: rgb(166, 165, 165);
   border: 1px solid $gray;
 }
 
+.selected::after{
+  content: "";
+  background: "";
+}
+
 .optionsContainer{
   order: 1;
   margin-top: 10px;
@@ -97,7 +126,6 @@ $gray: rgb(166, 165, 165);
 }
 
 .option{
-  background:white;
   padding: 10px;
 }
 

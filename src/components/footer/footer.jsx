@@ -73,8 +73,8 @@ export default function Footer() {
           <Image width={124} height={124} src="/best-buddies-logo.svg" alt="best-buddies-logo"/>
           <div className={styles.socials_right}>
             
-              <p>BEST BUDDIES</p>
-              <p>AT UC DAVIS</p>
+              <p className={`body-1-bold`}>BEST BUDDIES</p>
+              <p className={`body-1-bold`}>AT UC DAVIS</p>
             
             <div className={styles.smicons}>
               {smicons.map((icon) => {
@@ -89,23 +89,23 @@ export default function Footer() {
         <div className={styles.infoSection}>
             <div className={styles.email}>
               <Image width={25} height={25} src={"/footer-icons/mail.svg"} alt={"email"}/>
-              <p>ucdbestbuddies@gmail.com</p>
+              <p className={`body-1`}>ucdbestbuddies@gmail.com</p>
             </div>
             <div className={styles.phone}>
               <Image width={25} height={25} src={"/footer-icons/phone.svg"} alt={"phone"}/>
-              <p>916 - 538 - 3662</p>
+              <p className={`body-1`}>916 - 538 - 3662</p>
             </div>
           </div>
         </div>
-        <div className={styles.sections}>
-        {sections.map((section, index) => (
-          <div key={index} className={styles.section}>
-          <p>{section.title}</p>
-          {section.links.map((link, linkIndex) => (
-            <Link key={linkIndex} href={link.url} target="_blank">{link.label}</Link>
+        <div className={`${styles.sections} body-1`}>
+          {sections.map((section, index) => (
+            <div key={index} className={styles.section}>
+            <p className={`body-1-bold`}>{section.title}</p>
+            {section.links.map((link, linkIndex) => (
+              <Link key={linkIndex} href={link.url} target="_blank">{link.label}</Link>
+            ))}
+            </div>
           ))}
-          </div>
-        ))}
         </div>
       </div>
       <div className={styles.copyright}>

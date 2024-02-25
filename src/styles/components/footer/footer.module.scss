@@ -1,5 +1,5 @@
 @use "src/styles/mixins.scss";
-
+$purple: #3C257E;
 //needs revision
 //no width and height
 //classname="" instead of {style.name} for global variables
@@ -15,14 +15,11 @@
     align-items: center;
     justify-content: space-around;
     background: white;
-    padding-top: 50px;
+    padding-top: 60px;
     padding-bottom: 50px;
-    div{
-        background: white;
-    }
-    p{
-        font-size: 1.2rem;
-    }
+    padding-left: 30px;
+    color: $purple;
+    
     a{
         text-decoration: none;
     }
@@ -36,38 +33,31 @@
         flex-direction: column;
         margin-top: 20px;
         margin-left: 15px;
-        gap: 10px;
         p, a{
             background: white;
-            color: var(--color-purple);
+            color: $purple;
         }
+
     }
     .smicons{
         display: flex;
         gap: 32px;
-        margin-top: 10px;
-        img{
-            background: white;
-        }
+        margin-top: 15px;
+        margin-left: 5px;
     }
 }
 
+//individual div of logo and corresponding contact info
 .phone, .email{
     display: flex;
-    gap: 5px;
+    gap: 15px;
     align-items: center;
-    img{
-        background: white;
-    }
-
 }
 
+//container consisting of phone and email parts
 .infoSection{
     margin-top: 20px;
-    p{
-        color: var(--color-purple);
-        background: white;
-    }
+    color: $purple;
 }
 
 .infoSection, .logoAndSocials{
@@ -81,6 +71,7 @@
         display: none;
     }
 }
+
 .sections{
     display: flex;
     gap: 70px;
@@ -91,7 +82,6 @@
         gap: 20px;
     }
     p, a{
-        background: white;
-        color: var(--color-purple);
+        color: $purple;
     }
 }

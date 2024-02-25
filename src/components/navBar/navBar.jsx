@@ -9,6 +9,18 @@ const navLinks = [
   {name: "Members", href: "https://www.google.com"},
   {name: "Contact", href: "https://www.google.com"}
 ]
+
+const aboutUsLinks = [
+  
+]
+
+const eventsLinks = [
+  
+]
+
+const membersLinks = [
+  
+]
 export default function Navbar() {
   return (
     <nav className={`${styles.nav} body-1`}>
