@@ -5,7 +5,7 @@
     align-items: center;
     border-radius: 70px;
 
-    border-width: 0;
+    border: none;
     background-color: var(--color-yellow);
 
     color: var(--color-font-primary);
@@ -20,13 +20,4 @@
         padding: 12px 22px;
         font-size: 1rem;
     }
-    
-    @include mixins.sm-phone {
-        padding: 12px 22px;
-        font-size: 1rem;
-    }
-}
-
-.buttonLink {
-    background-color: transparent;
 }
