@@ -57,12 +57,12 @@ export default function RegionalStateEvents() {
       </section>
       <section className={styles.third_section}>
         <div className={styles.third_walk_card}>
-          <h2 className={styles.third_walk_card_title}>
+          <h2 className={styles.text_title}>
             2024 will mark the third Friendship Walk held in Sacramento!
           </h2>
           <div className={'body-1'}>
-          The last Sacramento Friendship Walk raised over $48,000 to support 
-          the Best Buddies mission – and it was tons of fun! Our UC Davis team 
+          The last Sacramento Friendship Walk <span className={'body-1-bold'}>raised over $48,000 to support 
+          the Best Buddies mission</span> – and it was tons of fun! Our UC Davis team 
           raised over $3,000 with 25 registered members. 
           </div>
         </div>
