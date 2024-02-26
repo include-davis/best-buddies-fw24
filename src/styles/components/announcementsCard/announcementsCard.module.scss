@@ -1,0 +1,21 @@
+.announcementsCard { // TEMPORARY STYLING i need to make a component for this!!!!
+    flex-grow: 1;
+
+    display: flex;
+    padding: 32px;
+    flex-direction: column;
+    align-content: stretch;
+
+    gap: 8px;
+
+    border-radius: 15px;
+    background: #FFF;
+    box-shadow: 0px 0px 44px 0px rgba(46, 25, 94, 0.80);
+}
+
+.titleDateContainer {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+
+}

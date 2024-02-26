@@ -4,6 +4,7 @@ import { Inter } from "next/font/google";
 import styles from '@/styles/pages/home.module.scss';
 import Button from "@/components/button/button";
 import EventCard from "@/components/eventCard/eventCard";
+import AnnouncementsCard from "@/components/announcementsCard/announcementsCard"
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -50,7 +51,7 @@ export default function Home() {
               return <EventCard title={thisEvent.title} date={thisEvent.date} description={thisEvent.description} imagePath={thisEvent.imagePath}/>;
             })
           }
-        </div> {/* event cards are used on homepage and events page. */}
+        </div> 
       </div>
 
       <div className={styles.announcements}>
@@ -60,8 +61,8 @@ export default function Home() {
         </div>
         
         <div className={styles.announcementCardContainer}>
-          <div className = {styles.announcementsCard}>announcements card</div>
-          <div className = {styles.announcementsCard}>announcements card</div>
+          <AnnouncementsCard/>
+          <AnnouncementsCard/>
         </div>
         
       </div>
@@ -70,7 +71,7 @@ export default function Home() {
         <div className={styles.memberSpotlightText}>
           <div className={styles.headerIconContainer}>
             <h2>Member Spotlight</h2>
-            <Image src={"/page-icons/users.svg"} width={44} height={44}/>
+            <Image src={"/page-icons/users.svg"} width={44} height={44}/> {/* 43x43 on figma */}
           </div>
           <div className={styles.memberSpotlightDescription}>
             <h3 className={`subheading`}>John Doe</h3>
