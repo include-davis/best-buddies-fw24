@@ -2,8 +2,9 @@
 
 :root {
   // font colors
-  --font-primary: #272b2e;
+  --font-primary: #1b044e;
   --font-secondary: #404447;
+  --font-gray: #a8abae;
   --font-warning-red: #e40000; // contact required fields
 
   // main page colors
@@ -12,13 +13,20 @@
   --color-light-purple: #c6b9dc;
   --color-pale-gray: #e2ddeb;
 
-  // accent colors
-  --color-yellow: #ffd420;
-
-  // background color
-  --color-light-gray: #ededed;
+  // background colors
+  --color-light-gray: #F8F8F9;
   --color-white: #ffffff;
 
+  // extra colors
+  --color-violet: #9396CA;
+  --color-light-violet: #D2D4E9;
+  --color-teal: #8FD1C4;
+  --color-light-teal: #B4DDD5;
+  --color-orange: #F37735;
+  --color-light-orange: #F7AF88;
+  --color-yellow: #FFD420;
+  --color-light-yellow: #FFEC9D;
+  
   // spacers: px
   --edge-spacer: 24px;
 
@@ -32,13 +40,14 @@
   margin: 0;
   font-family: var(--font-helvetica-neue);
   color: var(--font-primary);
-  background-color: var(--color-light-gray);
 }
 
 button {
   cursor: pointer;
 }
 
+// if you want to use BOLD font, add font-weight: 700; style: bold;
+// if you want to use NORMAL font, add font-weight: 400; style: normal;
 h1,
 h2,
 h3 {
@@ -46,24 +55,24 @@ h3 {
 }
 
 h1 {
-  font-size: 3.375rem;
+  font-size: 3.375rem; /* 54 px */
   line-height: 110%; /* 59.4px */
 }
 
 h2 {
-  font-size: 2.25rem;
+  font-size: 2.25rem; /* 36 px */
   line-height: 120%; /* 43.2px */
   color: var(--font-secondary);
 }
 
 h3 {
-  font-size: 1.75rem;
+  font-size: 1.75rem; /* 28 px */
   line-height: 120%; /* 33.6px */
   color: var(--font-secondary);
 }
 
 .subheading {
-  font-size: 1.5rem;
+  font-size: 1.5rem; /* 24px */
   font-style: normal;
   font-weight: 700;
   line-height: 200%; /* 48px */
@@ -72,7 +81,7 @@ h3 {
 .body-1,
 .body-1-bold,
 .body-2 {
-  font-size: 1.125rem;
+  font-size: 1.125rem; /* 18px */
   font-style: normal;
   font-weight: 400;
   line-height: 150%; /* 27px */
