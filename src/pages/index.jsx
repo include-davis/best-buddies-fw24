@@ -16,6 +16,7 @@ for (let i=1; i<=3; i++){
       date: "Month Day, Year", 
       description: "Event Description", 
       imagePath: "/member-imgs/newMemHero 2.jpg",
+      eventLink: "/eventLink",
     })
 }
 
@@ -47,8 +48,8 @@ export default function Home() {
         </div>
         <div className = {styles.carousel}>
           {
-            events.map((thisEvent) => {
-              return <EventCard title={thisEvent.title} date={thisEvent.date} description={thisEvent.description} imagePath={thisEvent.imagePath}/>;
+            events.map((thisEvent, index) => {
+              return <EventCard key={index} title={thisEvent.title} date={thisEvent.date} description={thisEvent.description} imagePath={thisEvent.imagePath} eventLink={thisEvent.eventLink}/>;
             })
           }
         </div> 
