@@ -16,21 +16,21 @@
   }
 
   .cardTitle {
-      color: $font-primary;
+      color: var(--font-primary);
       font-size: 1.5rem;
       font-weight: 700;
       line-height: 120%;
   }
 
   .cardSubtitle {
-      color: $font-gray;
+      color: var(--font-gray);
       font-size: 1.125rem;
       font-weight: 400;
       line-height: 150%;
   }
 
   .cardDescription {
-      color: $font-secondary;
+      color: var(--font-secondary);
       font-size: 1.125rem;
       font-weight: 400;
       line-height: 150%;
