@@ -49,8 +49,12 @@ export default function NewMembers() {
               <h3>Interest Form</h3>
               <p>Complete the form below and one of our officers will reach out to you.</p>
             </div>
-            <Link className={styles.interestLink}href="https://example.com">Interest Form &gt; </Link>
-            {/*   ask about '>' */}
+            <Link className={styles.interestLink}href="https://example.com">
+              Interest Form
+              <svg xmlns="http://www.w3.org/2000/svg" width="15" height="27" viewBox="0 0 15 27" fill="none">
+                <path d="M6.33268 16.9997L9.66602 13.6663L6.33268 10.333" stroke="#5A3F98" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </Link>
           </div>
 
           <div className={styles.card}>
@@ -59,8 +63,12 @@ export default function NewMembers() {
               <h3>Membership Application</h3>
               <p>Submit an application on our BB360 platform. Find helpful application tips below on our YouTube!</p>
             </div>
-            <Link className={styles.appLink}href="https://example.com">BB360 Application &gt; </Link>
-            {/*   ask about '>' */}
+            <Link className={styles.appLink}href="https://example.com">
+              BB360 Application
+              <svg xmlns="http://www.w3.org/2000/svg" width="15" height="27" viewBox="0 0 15 27" fill="none">
+                <path d="M6.33268 16.9997L9.66602 13.6663L6.33268 10.333" stroke="#5A3F98" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </Link>
           </div>
 
           <div className={styles.card}>
@@ -104,7 +112,7 @@ export default function NewMembers() {
             </div>
 
           </div>
-          
+
         </div>
 
       </div>

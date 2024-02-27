@@ -248,6 +248,19 @@
             font-size: 1.125rem;
             font-weight: 700;
             text-decoration: none;
+
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            gap: 2px;
+            flex-shrink: 0;
+
+            svg{
+                width: 15px;
+                align-self: stretch;
+                background-color: #FFF;
+                
+            }
         }
 
         .appLink{
@@ -257,6 +270,19 @@
             font-size: 1.125rem;
             font-weight: 700;
             text-decoration: none;
+
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            gap: 2px;
+            flex-shrink: 0;
+
+            svg{
+                width: 15px;
+                align-self: stretch;
+                background-color: #FFF;
+                
+            }
         }
     }
 }
