@@ -1,6 +1,6 @@
 @use 'src/styles/mixins';
 
-.Body{
+.Body{ 
     background-color: var(--color-light-gray);
 
     // @include mixins.sm-phone{ //ask
@@ -79,8 +79,7 @@
 
 
 
-
-    img{
+    .newMemHeroImg{
         border-radius: 10px;
     }
 
@@ -105,6 +104,7 @@
 }
 
 
+
 .howContainer{
     display: flex;
     flex-direction: column;
@@ -112,9 +112,107 @@
     margin-top: 128px;
 
     h2{
-        color: var(--color-dark-purple);  //ask about font color
+        color: var(--color-dark-purple);
         //font-weight: 700;
         //letter-spacing: 0em;
         text-align: left;
+        margin-bottom: 54px;
+    }
+    
+    .cardContainer{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .card{
+        font-family: "Helvetica Neue";
+        background-color: #FFF;
+        display: flex;
+        max-width: 394px;
+        height: 442px;
+        flex: 1;
+        padding: 40px;
+        flex-direction: column;
+        align-items: flex-start;
+        border-radius: 15px;
+        box-shadow: 0px 5px 50px 0px rgba(228, 225, 231, 0.40);
+
+
+        .textFrameInt{
+            background-color: #FFF;
+            margin-top: 7px;
+            max-width: 314px;
+            height: 222px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            
+            h3{
+                margin-top: 103px; //change to 48px later
+                align-items: flex-start;
+                background-color: #FFF;
+                color: var(--color-dark-purple);
+                line-height: 120%;
+                font-weight: 700;
+                font-size: 1.6875rem;
+            }
+
+            p{
+                background-color: #FFF;
+                margin-top: 40px;
+                color: var(--font-secondary);
+                line-height: 150%;
+                font-weight: 400;
+                font-size: 1.125rem;
+            }
+        }
+
+        .textFrame{
+            background-color: #FFF;
+            margin-top: 7px;
+            max-width: 314px;
+            height: 249px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+
+            h3{
+                margin-top: 103px; //change to 48px later
+                align-items: flex-start;
+                background-color: #FFF;
+                color: var(--color-dark-purple);
+                line-height: 120%;
+                font-weight: 700;
+                font-size: 1.6875rem;
+            }
+
+            p{
+                background-color: #FFF;
+                margin-top: 40px;
+                color: var(--font-secondary);
+                line-height: 150%;
+                font-weight: 400;
+                font-size: 1.125rem;
+            }
+        }
+        
+
+        .interestLink{
+            margin-top: 72px;
+            background-color: #FFF;
+            color: var(--color-purple);
+            font-size: 1.125rem;
+            font-weight: 700;
+        }
+
+        .appLink{
+            margin-top: 45px;
+            background-color: #FFF;
+            color: var(--color-purple);
+            font-size: 1.125rem;
+            font-weight: 700;
+        }
     }
 }
+
