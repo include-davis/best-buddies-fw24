@@ -72,9 +72,7 @@ export default function ChapterEvents() {
           {iframeSrc && (
             <iframe 
               src={iframeSrc}
-              style={{ border: 0 }} 
-              width="800" 
-              height="600" 
+              style={{ border: 0, width: '90%', height: '600px' }} 
               frameborder="0">
             </iframe>
           )}

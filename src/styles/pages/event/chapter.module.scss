@@ -1,3 +1,5 @@
+@import "../../mixins.scss";
+
 $primary-900: #1B044E;
 $text-secondary-gray: #404447;
 $background-yellow: #FFD420;
@@ -49,22 +51,34 @@ $mobile-breakpoint: 768px;
     gap: 40px;
     flex-wrap: wrap;
     justify-content: center;
+
+    @include tablet {
+      overflow-x: auto;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      gap: 20px;
+      padding: 0 20px;
+  
+      .eventCard {
+        flex: 0 0 auto; 
+        width: 100%; 
+      }
+    }
   }
 
 }
 
 .eventCalendar {
   display: flex;
-  width: 830px;
+  width: 100%; // Updated to take full width
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
   gap: 16px;
   margin: auto; 
   margin-top: 42px;
 
   .title {
-    align-self: stretch;
+    width: 100%; // Ensure full width
     color: $primary-900;
     text-align: center;
     font-family: "Helvetica Neue";
@@ -75,7 +89,7 @@ $mobile-breakpoint: 768px;
   }
 
   .description {
-    align-self: stretch;
+    width: 100%; 
     color: $text-secondary-gray;
     text-align: center;
     font-family: "Helvetica Neue";
@@ -86,25 +100,19 @@ $mobile-breakpoint: 768px;
   }
 
   .calendar {
-    align-self: stretch;
+    width: 100%; 
     height: 500px; 
     border-radius: 10px;
     margin-top: 16px;
   }
 
-  @media (max-width: $mobile-breakpoint) {
-    width: auto;
-
-    .title {
-      font-size: 24px; 
+  @include tablet { 
+    .title, .description {
+      font-size: smaller; 
     }
 
-    .description {
-      font-size: 16px; 
-    }
-
-    .calendarPlaceholder {
-      flex: auto; // TODO: Remove placeholder line
+    .calendar {
+      height: auto; 
     }
   }
 }
