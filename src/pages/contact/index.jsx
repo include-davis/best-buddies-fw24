@@ -44,8 +44,8 @@ export default function Contact() {
         </div>
 
         <div className={styles.dropdown}>
-          <div style={{ display: 'flex', flexDirection: 'column' }}>
-            <p className={`${styles.required} body-1-bold`}>Describe your question or comment</p>
+          <div className={styles.test} style={{ display: 'flex', flexDirection: 'column' }}>
+            <p className={`${styles.required} body-1-bold`}>I have a question/comment about ...</p>
             <div className={styles.selectBox}>
               {/* <div className={optionsActive ? `${styles.optionsContainer} ${styles.active}` : `${styles.optionsContainer}`}> */}
               <div className={`${styles.optionsContainer}`}>
