@@ -45,6 +45,7 @@ export default function NewMembers() {
 
           <div className={styles.card}>
             <div className={styles.textFrameInt}>
+              <div>1</div>
               <h3>Interest Form</h3>
               <p>Complete the form below and one of our officers will reach out to you.</p>
             </div>
@@ -54,6 +55,7 @@ export default function NewMembers() {
 
           <div className={styles.card}>
             <div className={styles.textFrame}>
+              <div>2</div>
               <h3>Membership Application</h3>
               <p>Submit an application on our BB360 platform. Find helpful application tips below on our YouTube!</p>
             </div>
@@ -63,17 +65,47 @@ export default function NewMembers() {
 
           <div className={styles.card}>
             <div className={styles.textFrame}>
+              <div>3</div>
               <h3>Interview</h3>
               <p>After submitting, our team will provide instructions for signing up for an interview slot.</p>
             </div>
           </div>
-
         </div>
-
       </div>
 
       
-      <div>
+      <div className={styles.helpContainer}>
+        <div className={styles.headerContainer}>
+          <h2>Need Help?</h2>
+          <p>
+            Check out our video resources for help with your application.
+          </p>
+        </div>
+
+
+        <div className={styles.textBox}>
+          <h3>Buddies & Support Staff</h3>
+          <h3>Peer Buddies</h3>
+        </div>
+
+        <div className={styles.youtubeContainer}>
+
+          <div className={styles.youtubeCard}>
+            <div className={styles.cardFrame}>
+
+            </div>
+
+          </div>
+          
+          
+          <div className={styles.youtubeCard}>
+            <div className={styles.cardFrame}>
+              
+            </div>
+
+          </div>
+          
+        </div>
 
       </div>
 
