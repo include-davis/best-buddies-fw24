@@ -29,34 +29,16 @@ $text-secondary-gray: #404447;
       flex-direction: column;
       gap: 16px;
     }
-  
-    .cardTitle,
-    .cardSubtitle,
-    .cardDescription {
-      color: $primary-900;
-      font-family: "Helvetica Neue";
+
+    h4 {
+      color: var(--color-dark-purple);
       line-height: 120%;
-      margin: 0; 
     }
-  
-    .cardTitle {
-      font-size: 24px;
-      font-weight: 700;
+    p {
+      color: var(--font-secondary);
     }
-  
-    .cardSubtitle {
-      color: #A8ABAE;
-      font-size: 18px;
-      font-weight: 400;
-      line-height: 150%;
-    }
-  
-    .cardDescription {
-      color: $text-secondary-gray;
-      font-size: 18px;
-      font-weight: 400;
-      line-height: 150%;
-      flex-grow: 1;
+    .titleDateContainer p {
+      color: var(--font-gray);
     }
   }
   

@@ -10,10 +10,10 @@ export default function EventCard({ title, date, description, imagePath, altText
             <Image src={imagePath} alt={altText} width={352} height={240} />
           </div>
           <div className={styles.titleDateContainer}>
-            <h3 className={styles.cardTitle}>{title}</h3>
-            <p className={styles.cardSubtitle}>{date}</p>
+            <h4 className={`subheading`}>{title}</h4>
+            <p className={`body-1`}>{date}</p>
           </div>
-          <p className={styles.cardDescription}>{description}</p>
+          <p className={`body-1`}>{description}</p>
         </div>
         <Button label="RSVP" href={eventLink} />
       </div>
