@@ -31,29 +31,38 @@ export default function RegionalStateEvents() {
             </div>
           </div>
         </div>
-        <div className={styles.image_block}>
+        <div className={styles.image_container}>
 
           <Image
             src="/state-events-imgs/friendship_walk_img.png"
-            width={598}
-            height={397}
+            objectFit="cover"
+            objectPosition="center"
+            fill
+            // width={598}
+            // height={397}
             alt="Friendship walk group image"
           />
         </div>
       </section>
       <section className={styles.two_imgs}>
+        <div className={styles.event_img1_container}>
         <Image className={styles.event_img}
           src="/state-events-imgs/friendship_walk_img.png"
-          width={598}
-          height={397}
+          objectFit="cover"
+          objectPosition="center"
+          fill
           alt="Friendship walk group image"
         />
+        </div>
+        <div className={styles.event_img2_container}>
         <Image className={styles.event_img}
           src="/state-events-imgs/friendship_walk_img.png"
-          width={598}
-          height={397}
+          objectFit="cover"
+          objectPosition="center"
+          fill
           alt="Friendship walk group image"
         />
+        </div>
       </section>
       <section className={styles.third_section}>
         <div className={styles.third_walk_card}>
