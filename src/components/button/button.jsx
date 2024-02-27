@@ -10,10 +10,11 @@ import Link from 'next/link'
 // extraStyle = {styles.<className>}
 // the css for className only needs to include overrided attributes. 
 
-export default function Button({label, href, extraStyles=null}){
+// make sure href is in form of '/<name_of_page>' or 'official'
+export default function Button({label, href}){
     return (
-        <Link href={(href=='official')? 'https://www.bestbuddies.org/' : `/${href}`} className={styles.buttonLink}>
-            <button className={[styles.button, extraStyles].join(' ')}>{label}</button> 
+        <Link href={href =='official' ? 'https://www.bestbuddies.org/' : href} className={styles.buttonLink}>
+            <button className={styles.button}>{label}</button> 
         </Link>
     );
 }
