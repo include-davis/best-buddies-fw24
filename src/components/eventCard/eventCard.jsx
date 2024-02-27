@@ -6,7 +6,7 @@ export default function EventCard({ title, date, description, imagePath, altText
     return (
       <div className={styles.card}> {/* 40 px gaps between info, button */}
        <div className={styles.eventInfo}> {/* 16 px gaps between image, title+date, description */}
-          <Image src={imagePath} alt={title} width={352} height={240} />
+          <Image src={imagePath} alt={altText} width={352} height={240} />
           <div className={styles.titleDateContainer}> 
             <h3 className={styles.cardTitle}>{title}</h3>
             <p className={styles.cardSubtitle}>{date}</p>
