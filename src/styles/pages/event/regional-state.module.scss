@@ -49,7 +49,7 @@
   background-color: var(--color-white);
 }
 
-.image_container {
+.imageContainer {
   width: 50%;
   position: relative;
 }
@@ -128,14 +128,22 @@
 }
 
 .fourth_section_text {
+  width: 50%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 30px;
+  gap: 24px;
+  margin-top: 16px;
 }
 
-.getInvolvedQ {
+.getInvolved {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 40px;
+}
+
+.getInvolvedText {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
 }

@@ -1,6 +1,7 @@
 import styles from "@/styles/pages/event/regional-state.module.scss";
 import Footer from "@/components/footer/footer";
 import Image from "next/image";
+import Button from "@/components/button/button";
 
 export default function RegionalStateEvents() {
   return (
@@ -30,7 +31,7 @@ export default function RegionalStateEvents() {
             </div>
           </div>
         </div>
-        <div className={styles.image_container}>
+        <div className={styles.imageContainer}>
           <Image
             className={styles.eventImage}
             src="/event-imgs/events-friendship.jpg"
@@ -44,7 +45,7 @@ export default function RegionalStateEvents() {
         </div>
       </section>
       <section className={styles.two_imgs}>
-        <div className={styles.image_container} style={{ width: "40%" }}>
+        <div className={styles.imageContainer} style={{ width: "40%" }}>
           <Image
             className={`${styles.eventImage}`}
             src="/event-imgs/events-friendship-2.jpg"
@@ -54,7 +55,7 @@ export default function RegionalStateEvents() {
             alt="Friendship walk group image"
           />
         </div>
-        <div className={styles.image_container} style={{ width: "60%" }}>
+        <div className={styles.imageContainer} style={{ width: "60%" }}>
           <Image
             className={`${styles.eventImage} ${styles.friendshipImg3}`}
             src="/event-imgs/events-friendship-3.jpg"
@@ -86,19 +87,25 @@ export default function RegionalStateEvents() {
               Join us for the April 2024 Sacramento Friendship Walk to support
               Best Buddies and make a difference!
             </div>
-            <div className={styles.third_walk_join_button}></div>
+            <Button
+              label={"Register Now"}
+              href={"https://www.bestbuddiesfriendshipwalk.org/sacramento/"}
+            />
           </div>
         </div>
       </section>
       <section className={styles.fourth_section}>
         <div className={styles.text_card}>
-          <Image
-            className={styles.eventImage}
-            src="/event-imgs/events-champion.jpg"
-            width={598}
-            height={397}
-            alt="Friendship walk group image"
-          />
+          <div className={styles.imageContainer}>
+            <Image
+              className={styles.eventImage}
+              src="/event-imgs/events-champion.jpg"
+              objectFit="cover"
+              objectPosition="center"
+              fill
+              alt="Friendship walk group image"
+            />
+          </div>
           <div className={styles.fourth_section_text}>
             <h2 className={styles.text_title}>Champion of the Year</h2>
             <div className={"body-1"}>
@@ -107,13 +114,19 @@ export default function RegionalStateEvents() {
               black-tie gala, silent auction, and live auction. Sacramento’s
               first Champion of the Year event was held in November 2023.
             </div>
-            <div className={styles.getInvolvedQ}>
-              <div className={"body-1-bold"}>Want to get involved?</div>
-              <div className={"body-1"}>
-                Visit the Best Buddies Champion of the Year website for more
-                information about the event, candidates, and corporate
-                sponsorship opportunities!
+            <div className={styles.getInvolved}>
+              <div className={styles.getInvolvedText}>
+                <div className={"body-1-bold"}>Want to get involved?</div>
+                <div className={"body-1"}>
+                  Visit the Best Buddies Champion of the Year website for more
+                  information about the event, candidates, and corporate
+                  sponsorship opportunities!
+                </div>
               </div>
+              <Button
+                label={"Get Involved"}
+                href={"https://www.bestbuddieschampion.org/sacramento/"}
+              />
             </div>
           </div>
         </div>
