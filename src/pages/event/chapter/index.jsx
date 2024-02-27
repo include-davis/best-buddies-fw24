@@ -11,6 +11,30 @@ export default function ChapterEvents() {
     setIframeSrc('https://calendar.google.com/calendar/embed?src=includecalendarapi%40gmail.com&ctz=America%2FLos_Angeles');
   }, []);
 
+  const eventCardsData = [
+    {
+      imagePath: "/member-imgs/newMemHero.jpg",
+      title: "Event Title 1",
+      date: "Month Day, Year",
+      description: "Event Description 1",
+      eventLink: "/event-link-1"
+    },
+    {
+      imagePath: "/member-imgs/newMemHero.jpg",
+      title: "Event Title 2",
+      date: "Month Day, Year",
+      description: "Event Description 2",
+      eventLink: "/event-link-2"
+    },
+    {
+      imagePath: "/member-imgs/newMemHero.jpg",
+      title: "Event Title 3",
+      date: "Month Day, Year",
+      description: "Event Description 3",
+      eventLink: "/event-link-3"
+    }
+  ];
+
   return (
     <div>
       <div className={styles.featuredEvents}>
@@ -27,27 +51,16 @@ export default function ChapterEvents() {
         </div>
         </div>
         <div className={styles.cardsContainer}>
-          <EventCard
-          imagePath="/member-imgs/newMemHero.jpg"
-          title="Event Title"
-          date="Month Day, Year"
-          description="Event Description"
-          eventLink="/undefined"
-          />
-          <EventCard
-          imagePath="/member-imgs/newMemHero.jpg"
-          title="Event Title"
-          date="Month Day, Year"
-          description="Event Description"
-          eventLink="/undefined"
-          />
-          <EventCard
-            imagePath="/member-imgs/newMemHero.jpg"
-            title="Event Title"
-            date="Month Day, Year"
-            description="Event Description"
-            eventLink="/undefined"
-          />
+        {eventCardsData.map((card, index) => (
+            <EventCard
+              key={index}
+              imagePath={card.imagePath}
+              title={card.title}
+              date={card.date}
+              description={card.description}
+              eventLink={card.eventLink}
+            />
+          ))}
         </div>
       </div>
       <div className={styles.eventCalendar}>
