@@ -7,6 +7,7 @@ export default function EventCard({ title, date, description, imagePath, eventLi
       <div className={styles.card}>
         <div className={styles.image}>
           <Image src={imagePath} alt={title} width={352} height={240} />
+          {/* Move image out and wrap title, date, desc in div */}
         </div>
         <h3 className={styles.cardTitle}>{title}</h3>
         <p className={styles.cardSubtitle}>{date}</p>
