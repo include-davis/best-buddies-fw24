@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import styles from "@/styles/pages/contact/contact.module.scss";
+import Button from "@/components/button/button";
 
 
 
@@ -88,7 +89,7 @@ export default function Contact() {
             <textarea className={`${styles.answerContainer} body-1`} style={{marginTop: '8px'}} name="paragraph_text" cols="50" rows="10"></textarea>
           </div>
         </div>
-        
+        <Button label={"Submit"} href={"official"} />
       </form>
 
   </div>;
