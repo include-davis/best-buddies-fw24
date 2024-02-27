@@ -1,10 +1,13 @@
 .page {
-  color: gray;
-  margin-left: 90px;
-  margin-right: 90px;
+  background-color: var(--color-light-gray);
+  padding: var(--edge-spacer);
 }
 
-.friendship_walk_section, .two_imgs, .third_section, .border_divider, .fourth_section {
+.friendship_walk_section,
+.two_imgs,
+.third_section,
+.border_divider,
+.fourth_section {
   margin-bottom: 30px;
 }
 
@@ -17,26 +20,22 @@
   margin-bottom: 48px;
 }
 
-.body-1 {
-  background-color: white;
-}
-
 .friendship_walk_section {
   display: flex;
   flex-direction: row;
-  gap: 30px;
+  gap: 24px;
 }
 
 .first_section_text {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 32px;
 }
 
 .text_card {
   width: 50%;
-  background-color: white;
-  padding: 40px;
+  background-color: var(--color-white);
+  padding: 80px 40px;
   border-radius: 15px;
   box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.02);
 }
@@ -45,52 +44,80 @@
   color: #1b044e;
 }
 
-.body-1, .friendship_walk_section h2 {
-  background-color: white;
+.body-1,
+.friendship_walk_section h2 {
+  background-color: var(--color-white);
 }
 
-.image_block {
-  // background-position: 0 0;
-  z-index: 100;
-  border-radius: 15px;
+.image_container {
+  width: 50%;
+  position: relative;
+}
+
+.eventImage {
+  border-radius: 16px;
 }
 
 .two_imgs {
   display: flex;
+  width: 100%;
+  height: 50vh;
   justify-content: center;
+  gap: 24px;
 }
 
-.event_img {
-  padding: 5px;
+.friendshipImg2 {
+  width: 33%;
+}
+
+.friendshipImg3 {
+  width: 67%;
 }
 
 .third_section {
   display: flex;
+  gap: 16px;
 }
 
-.third_walk_card, .third_walk_card h2, .third_walk_card > .body-1 {
-  background-color: white;
+.third_walk_card,
+.third_walk_card h2,
+.third_walk_card {
+  background-color: var(--color-white);
 }
 
 .third_walk_card {
+  width: 60%;
   display: flex;
   flex-direction: column;
-  gap: 30px;
-  background-color: white;
-  padding: 40px;
-  border-radius: 15px;
-  margin-right: 16px;
+  gap: 16px;
+  padding: 56px;
+  border-radius: 16px;
 }
 
 .third_walk_join {
-  background-color: #5a3f98;
-  border-radius: 15px;
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: var(--color-purple);
+  border-radius: 16px;
+}
+
+.register {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding: 40px 56px;
+}
+
+.registerText {
+  color: var(--color-white);
 }
 
 .third_walk_join > .body-1 {
   color: white;
   padding: 40px;
-
 }
 
 .fourth_section > .text_card {
@@ -105,4 +132,10 @@
   flex-direction: column;
   justify-content: center;
   gap: 30px;
+}
+
+.getInvolvedQ {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
