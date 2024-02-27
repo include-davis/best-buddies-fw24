@@ -1,5 +1,6 @@
 import styles from "@/styles/pages/member/current.module.scss";
 
+
 export default function CurrentMembers() {
   return (
     <div className={styles.currentMembersContainer}>
@@ -14,6 +15,22 @@ export default function CurrentMembers() {
       <button className={styles.renewalButton}>
         Renewal Application
       </button>
+    </div>
+    <div className={styles.friendUpdatesBox}>
+      <div className={styles.friendUpdatesTitle}>Friend Updates!</div>
+      <div className={styles.friendUpdatesContent}>
+      Starting in November, every Buddy and Peer Buddy will need to complete a Friendship Update each month. 
+      These updates let us know how your friendship is going and if you need support.
+      </div>
+      <button className={styles.friendUpdatesButton}>Friendship Updates</button>
+    </div>
+    <div className={styles.latestNewsBox}>
+      <div className={styles.latestNewsTitle}>Our Latest News</div>
+      <div className={styles.latestNewsContent}>
+      We will send out newsletters every month from September to June.
+      There you can find announcements, upcoming chapter events, community events, and ideas for things to do with your buddy.
+      </div>
+      <button className={styles.latestNewsButton}>Dec 2023</button>
     </div>
   </div>
   );
