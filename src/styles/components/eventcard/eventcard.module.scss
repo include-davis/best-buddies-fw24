@@ -8,7 +8,7 @@ $text-secondary-gray: #404447;
     padding: 16px;
     flex-direction: column;
     align-items: flex-start;
-    gap: 16px;
+    gap: 40px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   
@@ -16,6 +16,18 @@ $text-secondary-gray: #404447;
       height: 240px;
       border-radius: 10px;
       background: center / cover no-repeat;
+    }
+
+    .titleDateContainer {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .eventInfo {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
     }
   
     .cardTitle,
