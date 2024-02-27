@@ -32,18 +32,21 @@ export default function ChapterEvents() {
           title="Event Title"
           date="Month Day, Year"
           description="Event Description"
+          eventLink="/undefined"
           />
           <EventCard
           imagePath="/member-imgs/newMemHero.jpg"
           title="Event Title"
           date="Month Day, Year"
           description="Event Description"
+          eventLink="/undefined"
           />
           <EventCard
             imagePath="/member-imgs/newMemHero.jpg"
             title="Event Title"
             date="Month Day, Year"
             description="Event Description"
+            eventLink="/undefined"
           />
         </div>
       </div>
@@ -59,8 +62,7 @@ export default function ChapterEvents() {
               style={{ border: 0 }} 
               width="800" 
               height="600" 
-              frameborder="0" 
-              scrolling="no">
+              frameborder="0">
             </iframe>
           )}
         </div>
