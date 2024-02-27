@@ -6,7 +6,7 @@ export default function RegionalStateEvents() {
   return (
     <div className={styles.page}>
       <div>
-        <h1 className={styles.regional_state_title}>Regional State Events</h1>
+        <h1 className={styles.regional_state_title}>Regional and State Events</h1>
       </div>
       <section className={styles.friendship_walk_section}>
         <div className={styles.text_card}>
@@ -33,7 +33,7 @@ export default function RegionalStateEvents() {
         </div>
         <div className={styles.image_container}>
 
-          <Image
+          <Image className={styles.event_img}
             src="/state-events-imgs/friendship_walk_img.png"
             objectFit="cover"
             objectPosition="center"
@@ -76,7 +76,7 @@ export default function RegionalStateEvents() {
           </div>
         </div>
         <div className={styles.third_walk_join}>
-          <div className={'body-1'}>
+          <div className={`body-1-bold ${styles.join_body}`}>
           Join us for the April 2024 Sacramento Friendship Walk to support 
           Best Buddies and make a difference!
           </div>
@@ -85,9 +85,11 @@ export default function RegionalStateEvents() {
           </div>
         </div>
       </section>
+
       <section className={styles.border_divider}>
 
       </section>
+
       <section className={styles.fourth_section}>
         <div className={styles.text_card}>
           <Image className={styles.champion_img}

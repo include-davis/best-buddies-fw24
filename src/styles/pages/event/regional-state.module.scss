@@ -1,7 +1,7 @@
 .page {
-  color: gray;
-  margin-left: 90px;
-  margin-right: 90px;
+  background-color: #F8F8F9;
+  padding-left: 90px;
+  padding-right: 90px;
 }
 
 .friendship_walk_section, .two_imgs, .third_section, .border_divider, .fourth_section {
@@ -14,12 +14,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 48px;
+  padding: 72px 0;
 }
 
-.body-1 {
-  background-color: white;
-}
 
 .friendship_walk_section {
   display: flex;
@@ -34,7 +31,7 @@
 }
 
 .text_card {
-  width: 150vh;
+  width: 50%;
   background-color: white;
   padding: 40px;
   border-radius: 15px;
@@ -50,10 +47,13 @@
 }
 
 .image_container {
-  width: 100%;
-  height: 66vh;
+  width: 50%;
+
   position: relative;
   z-index: 100;
+}
+
+.event_img {
   border-radius: 15px;
 }
 
@@ -61,9 +61,6 @@
   display: flex;
   justify-content: center;
   gap: 30px;
-}
-
-.event_img {
 }
 
 .event_img1_container {
@@ -86,9 +83,6 @@
   display: flex;
 }
 
-.third_walk_card, .third_walk_card h2, .third_walk_card > .body-1 {
-  background-color: white;
-}
 
 .third_walk_card {
   display: flex;
@@ -105,10 +99,14 @@
   border-radius: 15px;
 }
 
-.third_walk_join > .body-1 {
+.join_body {
   color: white;
-  padding: 40px;
+  padding: 80px;
+  text-align: center;
+}
 
+.fourth_section {
+  margin-bottom: 00px;
 }
 
 .fourth_section > .text_card {
