@@ -30,7 +30,15 @@ export default function Footer() {
     <footer>
       <h3>Footer yay</h3>
       {icons.map((icon) => {
-        return <Image width={25} height={25} src={icon.path} alt={icon.name} />;
+        return (
+          <Image
+            width={25}
+            height={25}
+            src={icon.path}
+            alt={icon.name}
+            key={icon.name}
+          />
+        );
       })}
     </footer>
   );
