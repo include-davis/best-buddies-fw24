@@ -23,7 +23,7 @@ export default function RegionalStateEvents() {
               encouraged!) and family-friendly.
             </div>
             <div className={'body-1'}>
-            It&#39;s not just a walk &#8208; Friendship Walk attendees also get to 
+            It's not just a walk - Friendship Walk attendees also get to 
             enjoy entertainment including song and dance performances, 
             ice cream trucks, and lawn games. Funds raised at the 
             Friendship Walk are used to maintain and expand local Best 
@@ -32,9 +32,8 @@ export default function RegionalStateEvents() {
           </div>
         </div>
         <div className={styles.image_block}>
-
           <Image
-            src="/state-events-imgs/friendship_walk_img.png"
+            src="/event-imgs/events-friendship.jpg"
             width={598}
             height={397}
             alt="Friendship walk group image"
@@ -43,13 +42,13 @@ export default function RegionalStateEvents() {
       </section>
       <section className={styles.two_imgs}>
         <Image className={styles.event_img}
-          src="/state-events-imgs/friendship_walk_img.png"
+          src="/event-imgs/events-friendship-2.jpg"
           width={598}
           height={397}
           alt="Friendship walk group image"
         />
         <Image className={styles.event_img}
-          src="/state-events-imgs/friendship_walk_img.png"
+          src="/event-imgs/events-friendship-3.jpg"
           width={598}
           height={397}
           alt="Friendship walk group image"
