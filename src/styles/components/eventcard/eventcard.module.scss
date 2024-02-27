@@ -1,28 +1,34 @@
 .card {
-  display: flex;
-  max-width: 384px;
-  flex: 1;
-  padding: 16px;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 16px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    max-width: 384px;
+    flex: 1; 
+    padding: 16px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 
-  .textContainer {
+    .titleDateContainer {
       display: flex;
       flex-direction: column;
-      gap: 4px; 
-  }
+      gap: 4px;
+    }
 
-  .cardTitle {
+    .eventInfo {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+  
+    .cardTitle {
       color: var(--font-primary);
       font-family: "Helvetica Neue";
       font-size: 1.5rem;
       font-weight: 700;
       line-height: 120%;
   }
-
+  
   .cardSubtitle {
       color: var(--font-gray);
       font-size: 1.125rem;
@@ -39,3 +45,4 @@
       flex-grow: 1;
   }
 }
+  
