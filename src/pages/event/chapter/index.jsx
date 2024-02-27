@@ -14,6 +14,7 @@ export default function ChapterEvents() {
   const eventCardsData = [
     {
       imagePath: "/member-imgs/newMemHero.jpg",
+      altText: "img",
       title: "Event Title 1",
       date: "Month Day, Year",
       description: "Event Description 1",
@@ -21,6 +22,7 @@ export default function ChapterEvents() {
     },
     {
       imagePath: "/member-imgs/newMemHero.jpg",
+      altText: "img",
       title: "Event Title 2",
       date: "Month Day, Year",
       description: "Event Description 2",
@@ -28,6 +30,7 @@ export default function ChapterEvents() {
     },
     {
       imagePath: "/member-imgs/newMemHero.jpg",
+      altText: "img",
       title: "Event Title 3",
       date: "Month Day, Year",
       description: "Event Description 3",
@@ -57,6 +60,7 @@ export default function ChapterEvents() {
               imagePath={card.imagePath}
               title={card.title}
               date={card.date}
+              altText={card.altText}
               description={card.description}
               eventLink={card.eventLink}
             />
