@@ -1,23 +1,23 @@
-@use 'src/styles/mixins.scss';
+@use "src/styles/mixins.scss";
 
 .button {
-    justify-content: center;
-    align-items: center;
-    border-radius: 70px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 70px;
 
-    border: none;
-    background-color: var(--color-yellow);
+  border: none;
+  background-color: var(--color-yellow);
 
-    color: var(--color-font-primary);
-    
-    font-weight: 700;
-    line-height: 140%;
+  color: var(--color-font-primary);
 
-    padding: 12px 24px;
-    font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 140%;
 
-    @include mixins.phone {
-        padding: 12px 22px;
-        font-size: 1rem;
-    }
+  padding: 12px 24px;
+  font-size: 1.125rem;
+
+  @include mixins.phone {
+    padding: 12px 22px;
+    font-size: 1rem;
+  }
 }
