@@ -17,7 +17,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 48px;
+  padding: 72px 0;
 }
 
 .friendship_walk_section {
@@ -115,7 +115,7 @@
   color: var(--color-white);
 }
 
-.third_walk_join > .body-1 {
+.join_body {
   color: white;
   padding: 40px;
 }
