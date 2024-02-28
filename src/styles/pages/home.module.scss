@@ -76,6 +76,15 @@
     }
 }
 
+.missionContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 48px;
+
+    width: 75%;
+}
+
 .featuredEvents {
     margin: 165px 0 166px 0;
     display: flex;
