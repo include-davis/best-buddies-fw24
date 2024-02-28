@@ -4,13 +4,14 @@ import { Suspense } from "react"
 import { Inter } from "next/font/google";
 import styles from '@/styles/pages/home.module.scss';
 import Button from "@/components/button/button";
+import Link from "next/link";
 import EventCard from "@/components/eventCard/eventCard";
 import AnnouncementsCard from "@/components/announcementsCard/announcementsCard"
 
 const inter = Inter({ subsets: ["latin"] });
 
 {/** TODO: these need to be in a file shared by index and event page!!! */}
-var events = [ 
+const events = [ 
   {
     title: "BB x #Include Site Demo", 
     date: "March 10, 2024", 
@@ -31,6 +32,20 @@ var events = [
     description: "Join us on Google Meet for our last movie night of the quarter! RSVP and vote for your movie choice by clicking the button below.",
     imagePath: "/event-imgs/feature-events-3.jpg",
     eventLink: "https://forms.gle/D4Ng51D8yyitewSVA",
+  },
+]
+
+{/** TODO: link isn't wrapping correctly for link in announcements */}
+const announcements = [
+  { 
+    title: "Join our Friendship Walk team! ",
+    date: "February 27, 2024", 
+    description: <Link href="https://www.bestbuddiesfriendshipwalk.org/sacramento/supporting/#aggies">www.bestbuddiesfriendshipwalk.org/sacramento/supporting/#aggies</Link>,
+  },
+  {
+    title: "End of Winter Quarter",
+    date: "February 27, 2024",
+    description: "This quarter’s last event will be on March 10th! Spring Quarter begins March 28th.",
   },
 ]
 
@@ -79,8 +94,11 @@ export default function Home() {
         </div>
         
         <div className={styles.announcementCardContainer}>
-          <AnnouncementsCard/>
-          <AnnouncementsCard/>
+        {
+            announcements.map((thisAnnouncement, index) => {
+              return <AnnouncementsCard key={index} title={thisAnnouncement.title} date={thisAnnouncement.date} description={thisAnnouncement.description}/>;
+            })
+          }
         </div>
         
       </div>

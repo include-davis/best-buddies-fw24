@@ -4,10 +4,10 @@ export default function AnnouncementsCard({ title, date, description }){
     return (
         <div className={styles.announcementsCard}>
             <div className={styles.titleDateContainer}>
-                <p className={`subheading`}>Announcement Title</p> 
-                <p className={`body-2`}>Month Day, Year</p>
+                <p className={`subheading`}>{title}</p> 
+                <p className={`body-2`}>{date}</p>
             </div>
-            <p className={`body-1`}>Friendship forms due this Friday!</p>
+            <p className={`body-1`}>{description}</p>
         </div>
     )
 }
