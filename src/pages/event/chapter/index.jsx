@@ -8,33 +8,33 @@ export default function ChapterEvents() {
   const [iframeSrc, setIframeSrc] = useState('');
 
   useEffect(() => {
-    setIframeSrc('https://calendar.google.com/calendar/embed?src=includecalendarapi%40gmail.com&ctz=America%2FLos_Angeles');
+    setIframeSrc('https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=America%2FLos_Angeles&bgcolor=%239396ca&showTitle=0&src=dWNkYmVzdGJ1ZGRpZXNAZ21haWwuY29t&color=%237986CB');
   }, []);
 
   const eventCardsData = [
     {
-      imagePath: "/member-imgs/newMemHero.jpg",
-      altText: "img",
-      title: "Event Title 1",
-      date: "Month Day, Year",
-      description: "Event Description 1",
-      eventLink: "/event-link-1"
+      imagePath: "/event-imgs/feature-events-1.jpg",
+      altText: "Website Demo + Social",
+      title: "Website Demo + Social",
+      date: "March 10th from 3 PM - 4 PM",
+      description: "We're so excited to unveil our brand-new website, courtesy of Include at UC Davis! Join us for a website demo, snacks, drinks, and socializing.",
+      eventLink: "https://forms.gle/CobDNczNVCej4uKAA"
     },
     {
-      imagePath: "/member-imgs/newMemHero.jpg",
-      altText: "img",
-      title: "Event Title 2",
-      date: "Month Day, Year",
-      description: "Event Description 2",
-      eventLink: "/event-link-2"
+      imagePath: "/event-imgs/feature-events-2.jpg",
+      altText: "Panera Bread Fundraiser",
+      title: "Panera Bread Fundraiser",
+      date: "March 5th from 7 AM - 8 PM",
+      description: "Support Best Buddies by joining us at Panera Bread anytime from 7 AM - 8 PM! Use the code “FUND4U” online, in the app, or in store. 20% of proceeds will go to our chapter. The fundraiser lasts all day, and you can join us at 5 PM for a club social!",
+      eventLink: "https://forms.gle/CobDNczNVCej4uKAA"
     },
     {
-      imagePath: "/member-imgs/newMemHero.jpg",
-      altText: "img",
-      title: "Event Title 3",
-      date: "Month Day, Year",
-      description: "Event Description 3",
-      eventLink: "/event-link-3"
+      imagePath: "/event-imgs/feature-events-3.jpg",
+      altText: "Virtual Movie Night",
+      title: "Virtual Movie Night",
+      date: "March 2nd at 7 PM",
+      description: "Join us on Google Meet for our last movie night of the quarter! RSVP and vote for your movie choice by clicking the button below",
+      eventLink: "https://forms.gle/D4Ng51D8yyitewSVA"
     }
   ];
 
