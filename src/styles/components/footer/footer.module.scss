@@ -85,7 +85,9 @@ $purple: #3C257E;
 //container consisting of phone and email parts
 .infoSection{
     margin-top: 20px;
-    color: $purple;
+    p{
+        color: $purple;
+    }
 }
 
 .infoSection, .logoAndSocials{
@@ -122,5 +124,11 @@ $purple: #3C257E;
         flex-direction: column;
         text-align: center;
         gap: 40px;
+    }
+}
+
+.contactFormLink{
+    @include mixins.phone{
+        display: none;
     }
 }
