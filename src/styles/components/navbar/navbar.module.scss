@@ -7,6 +7,13 @@
     justify-content: space-between;
     padding: 30px;
     color: var(--color-dark-purple);
+    a{
+        text-decoration: none;
+    }
+    li{
+        list-style-type: none;
+        padding: 10px 22px 10px 22px;
+    }
 }
 
 .rightSide{
@@ -26,5 +33,39 @@
     list-style-type: none;
     text-decoration: none;
 }
+
+.link{
+    padding: 10px;
+    background: white;
+}
+
+.link:hover{
+    background: var(--color-light-violet);
+}
+
+.header{
+    cursor: pointer; 
+}
+
+.headerContent{
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.dropdownIcon{
+    position: absolute;
+    right: -23px;
+    bottom: 2px;
+}
+.openIcon{
+    transform: rotate(180deg);
+}
+
+.header::after{
+    content: "";
+    background: url("/page-icons/dropdown.svg");
+}
+
 
 
