@@ -1,11 +1,13 @@
 .page {
-  background-color: #F8F8F9;
-  padding-left: 90px;
-  padding-right: 90px;
-  padding-bottom: 96px;
+  background-color: var(--color-light-gray);
+  padding: var(--edge-spacer);
 }
 
-.friendship_walk_section, .two_imgs, .third_section, .border_divider, .fourth_section {
+.friendship_walk_section,
+.two_imgs,
+.third_section,
+.border_divider,
+.fourth_section {
   margin-bottom: 30px;
 }
 
@@ -18,23 +20,22 @@
   padding: 72px 0;
 }
 
-
 .friendship_walk_section {
   display: flex;
   flex-direction: row;
-  gap: 30px;
+  gap: 24px;
 }
 
 .first_section_text {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 32px;
 }
 
 .text_card {
   width: 50%;
-  background-color: white;
-  padding: 40px;
+  background-color: var(--color-white);
+  padding: 80px 40px;
   border-radius: 15px;
   box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.02);
 }
@@ -43,71 +44,81 @@
   color: #1b044e;
 }
 
-.body-1, .friendship_walk_section h2 {
-  background-color: white;
+.body-1,
+.friendship_walk_section h2 {
+  background-color: var(--color-white);
 }
 
-.image_container {
+.imageContainer {
   width: 50%;
-
   position: relative;
-  z-index: 100;
 }
 
-.event_img {
-  border-radius: 15px;
+.eventImage {
+  border-radius: 16px;
 }
 
 .two_imgs {
   display: flex;
+  width: 100%;
+  height: 50vh;
   justify-content: center;
-  gap: 30px;
+  gap: 24px;
 }
 
-.event_img1_container {
-  width: 100%;
-  height: 66vh;
-  position: relative;
-  z-index: 100;
-  border-radius: 15px;
+.friendshipImg2 {
+  width: 33%;
 }
 
-.event_img2_container {
-  width: 100%;
-  height: 66vh;
-  position: relative;
-  z-index: 100;
-  border-radius: 15px;
+.friendshipImg3 {
+  width: 67%;
 }
 
 .third_section {
   display: flex;
+  gap: 16px;
+  margin-bottom: 202px;
 }
 
+.third_walk_card,
+.third_walk_card h2,
+.third_walk_card {
+  background-color: var(--color-white);
+}
 
 .third_walk_card {
+  width: 60%;
   display: flex;
   flex-direction: column;
-  gap: 30px;
-  background-color: white;
-  padding: 40px;
-  border-radius: 15px;
-  margin-right: 16px;
+  gap: 16px;
+  padding: 56px;
+  border-radius: 16px;
 }
 
 .third_walk_join {
-  background-color: #5a3f98;
-  border-radius: 15px;
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: var(--color-purple);
+  border-radius: 16px;
+}
+
+.register {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding: 40px 56px;
+}
+
+.registerText {
+  color: var(--color-white);
 }
 
 .join_body {
   color: white;
-  padding: 80px;
-  text-align: center;
-}
-
-.fourth_section {
-  margin-bottom: 00px;
+  padding: 40px;
 }
 
 .fourth_section > .text_card {
@@ -118,8 +129,22 @@
 }
 
 .fourth_section_text {
+  width: 50%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 30px;
+  gap: 24px;
+  margin: 16px 0;
+}
+
+.getInvolved {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.getInvolvedText {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
 }
