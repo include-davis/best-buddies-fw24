@@ -11,59 +11,75 @@
 .featuredEvents {
   display: flex;
   flex-direction: column;
-  align-items: left;
   gap: 40px;
   margin-bottom: 112px;
+  margin-left: 112px;
+  margin-right: 112px;
 
   .box {
     display: flex;
     flex-direction: row;
-    justify-content: left;
-    margin-left: 112px;
     align-items: center;
-    gap: 16px; 
-  }
+    padding-left: 12px;
+    gap: 16px;
 
-  .title {
-    color: var(--font-primary);
-    text-align: center;
-    font-family: "Helvetica Neue";
-    font-size: 36px;
-    font-weight: 700;
-    line-height: 120%;
-    margin-left: 26px;
-  }
+    .title {
+      color: var(--font-primary);
+      font-family: "Helvetica Neue";
+      font-size: 2.25rem;
+      font-weight: 700;
+      line-height: 120%;
+    }
 
-  .icon {
-    width: 44px;
-    height: 44px;
+    .icon {
+      width: 44px;
+      height: 44px;
+    }
   }
 
   .cardsContainer {
     display: flex;
     gap: 40px;
-    flex-wrap: wrap;
     justify-content: center;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    width: 100%;
+    padding-bottom: 10px; 
+    padding-left: 10px;
+    padding-right: 10px;
+    box-sizing: border-box; 
 
     @include tablet {
-      overflow-x: auto;
-      flex-wrap: nowrap;
       justify-content: flex-start;
       gap: 20px;
-      padding: 0 20px;
-  
+      padding: 10px 20px;
+
       .eventCard {
-        flex: 0 0 auto; 
-        width: 100%; 
+        flex: 0 0 auto;
       }
     }
   }
 
+  @include tablet {
+    align-items: center; 
+    margin-left: 0;
+    margin-right: 0;
+
+    .box {
+      justify-content: center; 
+    }
+  }
 }
+
+
+
+
+
+
 
 .eventCalendar {
   display: flex;
-  width: 100%; // Updated to take full width
+  width: 100%; 
   flex-direction: column;
   justify-content: center;
   gap: 16px;
@@ -71,38 +87,36 @@
   margin-top: 42px;
 
   .title {
-    width: 100%; // Ensure full width
+    width: 100%; 
     color: var(--font-primary);
     text-align: center;
     font-family: "Helvetica Neue";
-    font-size: 36px;
-    font-style: normal;
+    font-size: 2.25rem; 
     font-weight: 700;
-    line-height: 120%;
+    line-height: 120%; 
   }
 
   .description {
     width: 100%; 
+    margin-left: 40px;
+    margin-right: 40px;
     color: var(--font-secondary);
     text-align: center;
-    font-family: "Helvetica Neue";
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 150%;
+    font-size: 1.125rem; 
+    font-weight: 400; 
+    line-height: 150%; 
   }
 
   .calendar {
-    width: 100%; 
+    width: 80%; 
+    align-items: center;
+    justify-content: center;
     height: 500px; 
     border-radius: 10px;
     margin-top: 16px;
   }
 
   @include tablet { 
-    .title, .description {
-      font-size: smaller; 
-    }
 
     .calendar {
       height: auto; 

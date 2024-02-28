@@ -41,31 +41,31 @@ export default function ChapterEvents() {
   return (
     <div>
       <div className={styles.featuredEvents}>
-          <h1 className={styles.chapter}>Chapter Events</h1>
-        <div className={styles.box}>
-        <h2 className={styles.title}>Featured Events</h2>
-        <div className={styles.icon}>
-          <Image 
-            src="/page-icons/calendar.svg"
-            alt="Calendar Icon"
-            width={44}
-            height={44}
-          />
-        </div>
-        </div>
-        <div className={styles.cardsContainer}>
-        {eventCardsData.map((card, index) => (
-            <EventCard
-              key={index}
-              imagePath={card.imagePath}
-              title={card.title}
-              date={card.date}
-              altText={card.altText}
-              description={card.description}
-              eventLink={card.eventLink}
-            />
-          ))}
-        </div>
+        <h1 className={styles.chapter}>Chapter Events</h1>
+          <div className={styles.box}>
+            <h2 className={styles.title}>Featured Events</h2>
+            <div className={styles.icon}>
+              <Image 
+                src="/page-icons/calendar.svg"
+                alt="Calendar Icon"
+                width={44}
+                height={44}
+              />
+            </div>
+          </div>
+          <div className={styles.cardsContainer}>
+            {eventCardsData.map((card, index) => (
+              <EventCard
+                key={index}
+                imagePath={card.imagePath}
+                title={card.title}
+                date={card.date}
+                altText={card.altText}
+                description={card.description}
+                eventLink={card.eventLink}
+              />
+            ))}
+          </div>
       </div>
       <div className={styles.eventCalendar}>
         <h2 className={styles.title}>Event Calendar</h2>
@@ -76,7 +76,7 @@ export default function ChapterEvents() {
           {iframeSrc && (
             <iframe 
               src={iframeSrc}
-              style={{ border: 0, width: '90%', height: '600px' }} 
+              style={{ border: 0, width: '90%', height: '600px', alignItems: 'center', justifyContent: 'center', }} 
               frameborder="0">
             </iframe>
           )}
