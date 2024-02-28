@@ -9,19 +9,34 @@ import AnnouncementsCard from "@/components/announcementsCard/announcementsCard"
 
 const inter = Inter({ subsets: ["latin"] });
 
-var events = []
+{/** TODO: these need to be in a file shared by index and event page!!! */}
+var events = [ 
+  {
+    title: "BB x #Include Site Demo", 
+    date: "March 10, 2024", 
+    description: "We’re so excited to unveil our brand-new website, courtesy of Include at UC Davis! Join us for a website demo, snacks, drinks, and socializing. Join us at the SCC on March 10th from 3pm-4pm.", 
+    imagePath: "/event-imgs/feature-events-1.jpg",
+    eventLink: "https://forms.gle/CobDNczNVCej4uKAA", 
+  },
+  {
+    title: "Panera Fundraiser",
+    date: "March 5, 2024", 
+    description: "Support Best Buddies by joining us at Panera Bread anytime from 7 AM - 8 PM! Use the code “FUND4U” online, in the app, or in store. 20% of proceeds will go to our chapter. The fundraiser lasts all day, and you can join us at 5 PM for a club social! ", 
+    imagePath: "/event-imgs/feature-events-2.jpg",
+    eventLink: "https://forms.gle/CobDNczNVCej4uKAA",
+  },
+  {
+    title: "March Movie Night", 
+    date: "March 2, 2024",
+    description: "Join us on Google Meet for our last movie night of the quarter! RSVP and vote for your movie choice by clicking the button below.",
+    imagePath: "/event-imgs/feature-events-3.jpg",
+    eventLink: "https://forms.gle/D4Ng51D8yyitewSVA",
+  },
+]
+
+
 const memberSpotlightText = "New for Spring Quarter! Best Buddies will choose a new member or buddy pair to spotlight every month. Members may receive recognition for buddy pair hangouts, Friendship Walk participation, donations, and more.";
 const videoSrc = "https://www.youtube.com/embed/GrG2-oX5z24?si=RLMuCFnXqc3I73tC"
-
-for (let i=1; i<=3; i++){
-  events.push ({
-      title: `Event Title ${i}`, 
-      date: "Month Day, Year", 
-      description: "Event Description", 
-      imagePath: "/member-imgs/newMemHero 2.jpg",
-      eventLink: "/eventLink",
-    })
-}
 
 export default function Home() {
   return (
