@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
+import { Suspense } from "react"
 import { Inter } from "next/font/google";
 import styles from '@/styles/pages/home.module.scss';
 import Button from "@/components/button/button";
@@ -9,6 +10,7 @@ import AnnouncementsCard from "@/components/announcementsCard/announcementsCard"
 const inter = Inter({ subsets: ["latin"] });
 
 var events = []
+const videoSrc = "https://www.youtube.com/embed/GrG2-oX5z24?si=RLMuCFnXqc3I73tC"
 
 for (let i=1; i<=3; i++){
   events.push ({
@@ -24,14 +26,13 @@ export default function Home() {
   return (
     <div className={styles.body}>
       <div className={styles.hero}>
-        <h6 className={`subheading`}>BEST BUDDIES AT UC DAVIS</h6>
+        <p className={`subheading`}>BEST BUDDIES AT UC DAVIS</p>
         <h1>Friendships that matter.</h1>
         <h5>Fostering social and economic inclusion for individuals with disabilities.</h5>
-
         <Button label={"Join Us"} href="member" extraStyles={styles.heroButton}/>
       </div>
 
-      <div className={styles.heroVideo}>video(?) goes here</div>
+      <iframe className={styles.heroVideo} src={videoSrc} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     
       <div className={styles.mission}>
 
