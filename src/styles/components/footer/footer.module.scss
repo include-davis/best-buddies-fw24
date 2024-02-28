@@ -34,12 +34,14 @@ $purple: #3C257E;
 .container{
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between; //changed
     background: white;
-    padding-top: 60px;
-    padding-bottom: 50px;
-    padding-left: 30px;
+    // padding-top: 60px;
+    // padding-bottom: 50px;
+    // padding-left: 30px;
+    padding: 54px 92px 48px; //changed
     color: $purple;
+    position: relative;
     
     a{
         text-decoration: none;
@@ -47,7 +49,7 @@ $purple: #3C257E;
 
     @include mixins.phone{
         flex-direction: column;
-        padding-left: 0px;
+        //padding-left: 0px; //edited
     }
 }
 
@@ -89,7 +91,13 @@ $purple: #3C257E;
         color: $purple;
     }
 }
+.logoAndSocials{ //edited
+    margin-right: 104px;
+    @include mixins.phone{
+        margin-right: 0px;
+    }
 
+}
 .infoSection, .logoAndSocials{
     display:flex;
     flex-direction: column;
