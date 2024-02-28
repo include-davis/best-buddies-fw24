@@ -10,6 +10,7 @@ import AnnouncementsCard from "@/components/announcementsCard/announcementsCard"
 const inter = Inter({ subsets: ["latin"] });
 
 var events = []
+const memberSpotlightText = "New for Spring Quarter! Best Buddies will choose a new member or buddy pair to spotlight every month. Members may receive recognition for buddy pair hangouts, Friendship Walk participation, donations, and more.";
 const videoSrc = "https://www.youtube.com/embed/GrG2-oX5z24?si=RLMuCFnXqc3I73tC"
 
 for (let i=1; i<=3; i++){
@@ -76,11 +77,11 @@ export default function Home() {
             <Image src={"/page-icons/users.svg"} width={44} height={44}/> {/* 43x43 on figma */}
           </div>
           <div className={styles.memberSpotlightDescription}>
-            <h3 className={`subheading`}>John Doe</h3>
-            <p className={`body-1`}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+            <h3 className={`subheading`}>Coming Soon... New for Spring Quarter!</h3>
+            <p className={`body-1`}>{memberSpotlightText}</p>
           </div>
         </div>
-        <div className={styles.memberSpotlightImage}>image</div>
+        <div className={styles.memberSpotlightImage}></div>
       </div>
       
     </div>
