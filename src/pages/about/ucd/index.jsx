@@ -60,9 +60,9 @@ export default function AboutUCD() {
         </div>
 
       <div className={styles.cardsContainer}>
-        {ucdImgs.map((cardContent) => {
+        {ucdImgs.map((cardContent, index) => {
             return(
-              <div className={styles.card}>
+              <div key={index} className={styles.card}>
                 
                 <div className={styles.imgContainer}>
                   <Image className={styles.cardImgs}

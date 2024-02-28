@@ -80,7 +80,7 @@ export default function AboutIntl() {
         </div>
       </div>
 
-      <h2 className={styles.margin}>Our Four Pillars</h2>
+      <h2>Our Four Pillars</h2>
         <div className={styles.pillars}>
           <div className={styles.YellowCircle}>
             <h3>One-to-One Friendships</h3>
@@ -99,9 +99,9 @@ export default function AboutIntl() {
           </div>
       </div>
 
-        {intlImgs.map((pillars) => {
+        {intlImgs.map((pillars, index) => {
             return(
-                <div className={styles.pillarsContainer}>
+                <div key={index} className={styles.pillarsContainer}>
                   <div className={styles.card}>
                     <div className={styles.imgContainer}>
                       <Image className={styles.cardImgs}
