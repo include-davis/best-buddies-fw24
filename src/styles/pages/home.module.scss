@@ -11,8 +11,9 @@
     display: flex;
     flex-direction: column;
     align-items: stretch;
-    padding: 0 122px 0 122px;
+    padding: 46px 122px 88px 122px;
     background-color: var(--color-light-gray);
+    gap: 88px;
 
     > p {
         font-size: 1.1875rem;
@@ -20,7 +21,6 @@
 }
 
 .hero {
-    margin: 46px 0 46px 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -57,8 +57,6 @@
 }
 
 .mission {
-    margin-top: 100px;
-
     display: flex;
     padding: 40px;
     flex-direction: column;
@@ -86,7 +84,6 @@
 }
 
 .featuredEvents {
-    margin: 165px 0 166px 0;
     display: flex;
     flex-direction: column;
     gap: 40px;
@@ -139,7 +136,6 @@
 }
 
 .memberSpotlight {
-    margin: 188px 0 91px 0;
     display: flex;
     flex-direction: row;
     gap: 136px;
