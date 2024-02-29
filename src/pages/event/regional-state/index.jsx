@@ -13,7 +13,7 @@ export default function RegionalStateEvents() {
       </div>
       <section className={styles.friendship_walk_section}>
         <div className={styles.text_card}>
-          <div className={styles.first_section_text}>
+          <div className={styles.friendship_walk_text}>
             <h2 className={styles.text_title}>Friendship Walk</h2>
             <div className={"body-1"}>
               The Best Buddies Friendship Walk is the leading walk in the
@@ -45,7 +45,7 @@ export default function RegionalStateEvents() {
         </div>
       </section>
       <section className={styles.two_imgs}>
-        <div className={styles.imageContainer} style={{ width: "40%" }}>
+        <div className={styles.imageContainer1} style={{ width: "40%" }}>
           <Image
             className={`${styles.eventImage}`}
             src="/event-imgs/events-friendship-2.jpg"
@@ -55,7 +55,7 @@ export default function RegionalStateEvents() {
             alt="Friendship walk group image"
           />
         </div>
-        <div className={styles.imageContainer} style={{ width: "60%" }}>
+        <div className={styles.imageContainer2} style={{ width: "60%" }}>
           <Image
             className={`${styles.eventImage} ${styles.friendshipImg3}`}
             src="/event-imgs/events-friendship-3.jpg"
@@ -66,7 +66,7 @@ export default function RegionalStateEvents() {
           />
         </div>
       </section>
-      <section className={styles.third_section}>
+      <section className={styles.third_fw_sac}>
         <div className={styles.third_walk_card}>
           <h2 className={styles.text_title}>
             2024 will mark the third Friendship Walk held in Sacramento!
@@ -94,7 +94,7 @@ export default function RegionalStateEvents() {
           </div>
         </div>
       </section>
-      <section className={styles.fourth_section}>
+      <section className={styles.champion_of_the_year}>
         <div className={styles.text_card}>
           <div className={styles.imageContainer}>
             <Image
@@ -106,7 +106,7 @@ export default function RegionalStateEvents() {
               alt="Friendship walk group image"
             />
           </div>
-          <div className={styles.fourth_section_text}>
+          <div className={styles.champion_text}>
             <h2 className={styles.text_title}>Champion of the Year</h2>
             <div className={"body-1"}>
               Best Buddies Champion of the Year recognizes and celebrates

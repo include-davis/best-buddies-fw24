@@ -1,13 +1,19 @@
+@import "../../mixins";
+
 .page {
   background-color: var(--color-light-gray);
   padding: var(--edge-spacer);
+
+  @include phone {
+    padding: 24px;
+  }
 }
 
 .friendship_walk_section,
 .two_imgs,
-.third_section,
+.third_fw_sac,
 .border_divider,
-.fourth_section {
+.champion_of_the_year {
   margin-bottom: 30px;
 }
 
@@ -17,16 +23,24 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 72px 0;
+  padding-bottom: 72px;
+
+  @include phone {
+    text-align: center;
+  }
 }
 
 .friendship_walk_section {
   display: flex;
   flex-direction: row;
   gap: 24px;
+
+  @include phone {
+    flex-direction: column;
+  }
 }
 
-.first_section_text {
+.friendship_walk_text {
   display: flex;
   flex-direction: column;
   gap: 32px;
@@ -38,10 +52,18 @@
   padding: 80px 40px;
   border-radius: 15px;
   box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.02);
+
+  @include phone {
+    width: 100%;
+  }
 }
 
 .text_title {
   color: #1b044e;
+
+  @include phone {
+    text-align: center;
+  }
 }
 
 .body-1,
@@ -49,7 +71,7 @@
   background-color: var(--color-white);
 }
 
-.imageContainer {
+.imageContainer, .imageContainer1, .imageContainer2 {
   width: 50%;
   position: relative;
 }
@@ -66,6 +88,18 @@
   gap: 24px;
 }
 
+.two_imgs > .imageContainer1 {
+  @include phone {
+    display: none;
+  }
+}
+
+.two_imgs > .imageContainer2 {
+  @include phone {
+    width: 100%;
+  }
+}
+
 .friendshipImg2 {
   width: 33%;
 }
@@ -74,10 +108,15 @@
   width: 67%;
 }
 
-.third_section {
+.third_fw_sac {
   display: flex;
+  flex-direction: row;
   gap: 16px;
   margin-bottom: 202px;
+
+  @include phone {
+    flex-direction: column;
+  }
 }
 
 .third_walk_card,
@@ -93,6 +132,10 @@
   gap: 16px;
   padding: 56px;
   border-radius: 16px;
+
+  @include phone {
+    width: 100%;
+  }
 }
 
 .third_walk_join {
@@ -103,6 +146,10 @@
   text-align: center;
   background-color: var(--color-purple);
   border-radius: 16px;
+
+  @include phone {
+    width: 100%;
+  }
 }
 
 .register {
@@ -121,14 +168,14 @@
   padding: 40px;
 }
 
-.fourth_section > .text_card {
+.champion_of_the_year > .text_card {
   width: 100%;
   display: flex;
   flex-direction: row;
   gap: 30px;
 }
 
-.fourth_section_text {
+.champion_text {
   width: 50%;
   display: flex;
   flex-direction: column;
@@ -147,4 +194,10 @@
   display: flex;
   flex-direction: column;
   gap: 4px;
+}
+
+@mixin phone {
+  @media screen and (max-width: 720px) {
+    @content;
+  }
 }
