@@ -57,20 +57,23 @@ export default function Home() {
   return (
     <div className={styles.body}>
       <div className={styles.hero}>
+      <div className={styles.heroHeaders}>
         <p className={`subheading`}>BEST BUDDIES AT UC DAVIS</p>
         <h1>Friendships that matter.</h1>
         <h5>Fostering social and economic inclusion for individuals with disabilities.</h5>
+      </div>
+        
         <Button label={"Join Us"} href="member" extraStyles={styles.heroButton}/>
       </div>
 
       <iframe className={styles.heroVideo} src={videoSrc} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     
       <div className={styles.mission}>
-        <h1>Our Mission</h1>
-        <div className={styles.missionContent}>
+        <div className={styles.missionText}>
+          <h1>Our Mission</h1>
           <p className={`body-1`}><span className={styles.purpleHighlight}>Best Buddies at UC Davis</span> is a chapter of the global nonprofit Best Buddies International, which promotes social and economic inclusion for people with intellectual and developmental disabilities (IDD). We envision a world in which programs like Best Buddies are no longer needed because people with IDD are completely included in their communities. </p>
-          <Button label={"About Our Chapter"} href="about"/>
         </div>
+        <Button label={"About Our Chapter"} href="about"/>
       </div>
 
       <div className={styles.featuredEvents}>
@@ -78,7 +81,7 @@ export default function Home() {
           <h2>Featured Events</h2>
           <Image src={"/page-icons/calendar.svg"} width={44} height={44}/>
         </div>
-        <div className = {styles.carousel}>
+        <div className = {styles.eventCarousel}>
           {
             events.map((thisEvent, index) => {
               return <EventCard key={index} title={thisEvent.title} date={thisEvent.date} description={thisEvent.description} imagePath={thisEvent.imagePath} eventLink={thisEvent.eventLink}/>;
