@@ -65,9 +65,7 @@ export default function Home() {
         
         <Button label={"Join Us"} href="member" extraStyles={styles.heroButton}/>
       </div>
-
       <iframe className={styles.heroVideo} src={videoSrc} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-    
       <div className={styles.mission}>
         <div className={styles.missionText}>
           <h1>Our Mission</h1>

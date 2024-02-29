@@ -58,10 +58,11 @@
 }
 
 .heroVideo {
-    flex-shrink: 0;
     border-radius: 10px;
-    //height: 656px;
     aspect-ratio: 1.85;
+    width: 100%;
+    max-width: 1280px;
+    align-self: center; // body has align-items: stretch; but i want this element to have a maximum width while staying centered. 
 }
 
 .mission {
