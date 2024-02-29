@@ -2,7 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 import { Suspense } from "react"
 import { Inter } from "next/font/google";
-import styles from '@/styles/pages/home.module.scss';
+import styles from '@/styles/pages/home/home.module.scss';
 import Button from "@/components/button/button";
 import Link from "next/link";
 import EventCard from "@/components/eventCard/eventCard";
