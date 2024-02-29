@@ -99,7 +99,6 @@ $gray: rgb(166, 165, 165);
 
 //for all text boxes: name, email address, and email content
 .answerContainer{
-  background: white;
   border-radius: 15px;
   padding: 10px;
   padding-left: 16px;
@@ -118,6 +117,9 @@ $gray: rgb(166, 165, 165);
   border: 1px solid $gray;
   opacity: 0;
   position: relative;
+  order: 1;
+  margin-top: 10px;
+  //otherwise transparent and can see next question
   background: white;
   @include mixins.phone{
     width: 361px;
@@ -125,6 +127,7 @@ $gray: rgb(166, 165, 165);
   }
 }
 
+//display options
 .active{
   opacity: 1;
   overflow: hidden;
@@ -136,6 +139,7 @@ $gray: rgb(166, 165, 165);
   }
 }
 
+//div holding last question
 .content{
   position: relative;
   top: -235px;
@@ -170,16 +174,6 @@ $gray: rgb(166, 165, 165);
   }
 }
 
-.selected::after{
-  content: "";
-  background: "";
-}
-
-.optionsContainer{
-  order: 1;
-  margin-top: 10px;
-}
-
 .option{
   padding: 15px;
   margin:0px;
@@ -192,13 +186,14 @@ $gray: rgb(166, 165, 165);
   }
 }
 
+//hide bullet points for options
 .radio{
   display: none;
 }
 
+//text area for last question
 .paragraphContainer{
   margin-top: 8px;
-  
   width: 1008px;
   height: 189px;
   @include mixins.phone{
@@ -207,6 +202,7 @@ $gray: rgb(166, 165, 165);
   }
 }
 
+//chevron pointing down
 .dropdownIcon{
   position: absolute;
   right: 12px;
@@ -214,6 +210,7 @@ $gray: rgb(166, 165, 165);
   cursor: pointer;
 }
 
+//chevron pointing up
 .openMenuIcon{
   transform: rotate(180deg);
 }
