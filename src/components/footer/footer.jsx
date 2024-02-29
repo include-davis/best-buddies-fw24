@@ -72,6 +72,7 @@ export default function Footer() {
               </div>
             </div>
           </div>
+          {/* .infoSection: div holding the email and phone icons and text*/}
           <div className={styles.infoSection}>
               <div className={styles.email}>
                 <Image width={25} height={25} className={styles.logo} src={"/footer-icons/mail.svg"} alt={"email"}/>
@@ -81,23 +82,27 @@ export default function Footer() {
                 <Image width={25} height={25} src={"/footer-icons/phone.svg"} alt={"phone"}/>
                 <p className={`body-1`}>916 - 538 - 3662</p>
               </div>
-            </div>
+          </div>
         </div>
+        {/* .sections: div holding all the sections/columns */}
         <div className={`${styles.sections} body-1`}>
           <Link href="www.google.com" className={`${styles.home} body-1-bold`}>Home</Link>
           {sections.map((section, index) => (
+            // .section: div holding the individual columns
             <div key={index} className={styles.section}>
-              
               <p className={`body-1-bold`}>{section.title}</p>
               {section.links.map((link, linkIndex) => (
                 <Link key={linkIndex} href={link.url} target="_blank" className={link.label === 'Contact Form' ? `${styles.contactFormLink}` : ''}>{link.label}</Link>
               ))}
             </div>
           ))}
+
+          {/* .desktopContact: div with Contact Us column to be displayed only on desktop */}
           <div className={styles.desktopContact}>
             <p className={`body-1-bold`}>Contact Us</p>
             <Link href="/contact">Contact Form</Link>
           </div>
+
           <Link href="/contact" className={`${styles.mobileContact} body-1-bold`}>Contact</Link>
         </div>
       </div>
