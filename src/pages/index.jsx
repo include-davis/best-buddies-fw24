@@ -38,7 +38,7 @@ const events = [
 {/** TODO: link isn't wrapping correctly for link in announcements */}
 const announcements = [
   { 
-    title: "Join our Friendship Walk team! ",
+    title: "Join our Friendship Walk team!",
     date: "February 27, 2024", 
     description: <Link href="https://www.bestbuddiesfriendshipwalk.org/sacramento/supporting/#aggies">www.bestbuddiesfriendshipwalk.org/sacramento/supporting/#aggies</Link>,
   },
