@@ -43,5 +43,10 @@
       margin-top: 4px;
       flex-grow: 1;
   }
+
+  .button {
+    align-self: flex-start; 
+    margin-top: auto;
+  }
 }
   
