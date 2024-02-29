@@ -129,7 +129,7 @@ export default function AboutIntl() {
         <h2>Want to learn more?</h2> 
         <p className={styles.learnMoreText}>Visit the Best Buddies International Official website.</p>
       
-          <Button label={"Visit Official Website"} href={"https://aggielife.ucdavis.edu/bestbuddies/home/#:~:text=Best%20Buddies%20is%20an%20international,friendships%20for%20the%20academic%20year."} target={"_blank"}/>
+          <Button label={"Visit Official Website"} href={"https://aggielife.ucdavis.edu/bestbuddies/home/"} target={"_blank"}/>
     </div>
 
 

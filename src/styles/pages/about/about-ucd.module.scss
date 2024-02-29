@@ -1,3 +1,5 @@
+@use "src/styles/mixins.scss";
+
 .body {
   display: flex;
   flex-direction: column;
@@ -8,7 +10,10 @@
     height: 80vh;
     width: 100%;
     position: relative;
-    margin-bottom: 77px;
+
+    @include mixins.phone{
+      height: 70vh;
+    }
     
 
     .heroText{
@@ -31,12 +36,29 @@
 
       h1{
         display: flex;
-        font-size: 4.5rem;
         color: var(--color-white);
         text-align: center;
         justify-content: center;
-      
+        font-size: 4.5rem;
+
+          @include mixins.phone{
+            font-size: 3rem;
+          }
+
+        
        }
+
+       .heroSubHeading{
+        font-size: 4.5rem;
+        display: flex;
+        color: var(--color-white);
+        text-align: center;
+        justify-content: center;
+
+        @include mixins.phone{
+          font-size: 2rem;
+        }
+      }
     }  
      
  }
@@ -49,20 +71,37 @@
   flex-direction: column;
   gap: 36px;
   padding: 64px;
-  //width: 1216px;
-  margin-left: 124px;
-  margin-right: 124px;
+  width: 80%;
+  margin-top: 32px;
+  //margin-left: 124px;
+  //margin-right: 124px;
+
+  @include mixins.phone{
+    width: 100%;
+
+  }
 
 }
 
 .imgContainer{
   position: relative;
   width: 60%;
-  height: 66vh;
+  height: 70vh;
+
+
+  @include mixins.phone{
+    width: 100%;
+    height: 88vh;
+  }
+
 }
 
 .cardImgs{
   border-radius: 15px;
+
+  @include mixins.phone{
+    order: 2;
+  }
   
 }
 
@@ -71,19 +110,54 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  //border: 3px solid red;
+  gap: 32px;
+
+  @include mixins.phone{
+    flex-direction: column;
+  }
 }
 
 .cardText{
   display: flex;
   flex-direction: column;
-  margin: 64px;
+  //margin: 64px;
   width: 100%;
 
-
-
-  h2{
-    color: var(--color-dark-purple);
-    margin-bottom: 24px;
-  
+  @include mixins.phone{
+    
   }
 }
+
+
+
+  .title{
+    margin-bottom: 24px;
+
+    @include mixins.phone{
+      order: 1;
+    }
+
+    h2{
+      color: var(--color-dark-purple);
+    }
+
+          
+      @include mixins.phone{
+        //order: 1;
+        text-align: center;
+      }
+  
+  }
+
+  .caption{
+    //border: 2px solid pink;
+    margin-right: 32px;
+
+     @include mixins.phone{
+       order: 3;
+       margin-right: 0px;
+    }
+  }
+
+

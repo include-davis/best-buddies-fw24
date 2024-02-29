@@ -55,7 +55,7 @@ export default function AboutUCD() {
             
             <div className={styles.heroText}>
               <h1>Best Buddies</h1>
-              <h1>UC Davis Chapter</h1>
+              <h2 className={styles.heroSubHeading}>UC Davis Chapter</h2>
             </div>
         </div>
 
@@ -74,10 +74,18 @@ export default function AboutUCD() {
                   />
                 </div>
                 
+              
                 <div className={styles.cardText}>
-                  <h2>{cardContent.title}</h2>
-                  <p className={`body-1`}>{cardContent.description}</p>
+                  <div className={styles.title}>
+                    <h2>{cardContent.title}</h2>
+                  </div>
+
+                  <div className={styles.caption}>
+                    <p className={`body-1`}>{cardContent.description}</p>
+                  </div>
                 </div>
+
+                
               </div>
 
 
