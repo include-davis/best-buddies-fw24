@@ -112,11 +112,9 @@ $purple: #3C257E;
 
 .sections{
     display: flex;
-    gap: 70px;
+    gap: 60px;
     .home{
-        display: none;
         @include mixins.phone{
-            display: inline;
             margin-top: 40px;
         }
     }
@@ -124,13 +122,18 @@ $purple: #3C257E;
         display: flex;
         flex-direction: column;
         gap: 20px;
+        @include mixins.phone{
+            align-items: center;
+        }
     }
     p, a{
         color: $purple;
+        width: fit-content;
     }
     @include mixins.phone{
         flex-direction: column;
         text-align: center;
+        align-items: center;
         gap: 40px;
     }
 }
@@ -140,3 +143,4 @@ $purple: #3C257E;
         display: none;
     }
 }
+

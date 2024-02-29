@@ -86,6 +86,7 @@ export default function Footer() {
           <Link href="www.google.com" className={`${styles.home} body-1-bold`}>Home</Link>
           {sections.map((section, index) => (
             <div key={index} className={styles.section}>
+              
               <p className={`body-1-bold`}>{section.title}</p>
               {section.links.map((link, linkIndex) => (
                 <Link key={linkIndex} href={link.url} target="_blank" className={link.label === 'Contact Form' ? `${styles.contactFormLink}` : ''}>{link.label}</Link>
