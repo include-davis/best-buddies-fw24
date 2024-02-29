@@ -1,9 +1,11 @@
 .dropdown{
     position: absolute;
-    border: 1px solid black;
     border-radius: 15px;
     display: flex;
     flex-direction: column;
+    background:white;
+    padding: 24px;
     //hide the white corners
     overflow: hidden;
+    gap: 24px;
 }

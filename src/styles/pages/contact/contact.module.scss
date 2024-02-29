@@ -61,6 +61,10 @@ $gray: rgb(166, 165, 165);
   justify-content: center;
 }
 
+.dropdown{
+  user-select: none;
+}
+
 
 .infoSection{
   @include mixins.phone{
@@ -98,15 +102,18 @@ $gray: rgb(166, 165, 165);
   background: white;
   border-radius: 15px;
   padding: 10px;
+  padding-left: 16px;
   border: 1px solid $gray;
   color: var(--font-secondary);
 }
 
+//.selected: div above optionsContainer that shows what user has selected
 .selected, .optionsContainer{
   border-radius: 15px;
   text-align: left;
 }
 
+//div holding all the options in the dropdown menu
 .optionsContainer{
   border: 1px solid $gray;
   opacity: 0;
@@ -191,10 +198,22 @@ $gray: rgb(166, 165, 165);
 
 .paragraphContainer{
   margin-top: 8px;
+  
   width: 1008px;
   height: 189px;
   @include mixins.phone{
       width: 361px;
       height: 44px;
   }
+}
+
+.dropdownIcon{
+  position: absolute;
+  right: 12px;
+  top: 24px;
+  cursor: pointer;
+}
+
+.openMenuIcon{
+  transform: rotate(180deg);
 }

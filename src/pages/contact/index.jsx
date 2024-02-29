@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styles from "@/styles/pages/contact/contact.module.scss";
 import Button from "@/components/button/button";
+import Image from "next/image";
 
 
 
@@ -77,8 +78,11 @@ export default function Contact() {
                 </div>
               </div>
               <div onClick={toggleOptionsMenu} className={styles.selected}>
-                {selected || 'Select'}
+                <div className={optionsActive ? `${styles.selectedChoice}` : `${styles.hide}`}>
+                  {selected || 'Select'}
+                </div>
               </div>
+              <Image className={optionsActive ? `${styles.dropdownIcon} ${styles.openMenuIcon}` : `${styles.dropdownIcon}`} onClick={toggleOptionsMenu} width={24} height={27} src="page-icons/dropdown.svg"></Image>
           </div>
           </div>
         </div>

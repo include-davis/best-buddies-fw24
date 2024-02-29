@@ -43,13 +43,14 @@ const sections = [
       { label: 'New Members', url: '/member/new' },
       { label: 'Current Members', url: '/member/current' }
     ]
-  },
-  {
-    title: 'Contact Us',
-    links: [
-      { label: 'Contact Form', url: '/contact' }
-    ]
   }
+  // },
+  // {
+  //   title: 'Contact Us',
+  //   links: [
+  //     { label: 'Contact Form', url: '/contact' }
+  //   ]
+  // }
 ];
 
 export default function Footer() {
@@ -93,6 +94,11 @@ export default function Footer() {
               ))}
             </div>
           ))}
+          <div className={styles.desktopContact}>
+            <p className={`body-1-bold`}>Contact Us</p>
+            <Link href="/contact">Contact Form</Link>
+          </div>
+          <Link href="/contact" className={`${styles.mobileContact} body-1-bold`}>Contact</Link>
         </div>
       </div>
       <div className={styles.copyright}>

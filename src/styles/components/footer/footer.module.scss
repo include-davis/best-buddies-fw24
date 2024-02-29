@@ -138,9 +138,17 @@ $purple: #3C257E;
     }
 }
 
-.contactFormLink{
+.contactFormLink, .desktopContact{
     @include mixins.phone{
         display: none;
     }
 }
+
+.mobileContact{
+    display: none;
+    @include mixins.phone{
+        display: inline;
+    }
+}
+
 

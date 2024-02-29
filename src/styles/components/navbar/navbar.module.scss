@@ -5,7 +5,7 @@
     align-items: center;
     background-color: white;
     justify-content: space-between;
-    padding: 30px;
+    padding: 16px;
     color: var(--color-dark-purple);
     a{
         text-decoration: none;
@@ -20,33 +20,29 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    @include mixins.phone{
-        display:none;
-    }
+    
 }
 
 .links{
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 32px;
+    gap: 25px;
     list-style-type: none;
     text-decoration: none;
+    .header{
+        padding:10px; 
+    }
+    li{
+        @include mixins.phone{
+            display:none;
+        }
+    }
 }
 
-.link{
-    padding: 10px;
-    background: white;
+.header:hover{
+    cursor: default;
 }
-
-.link:hover{
-    background: var(--color-light-violet);
-}
-
-.header{
-    cursor: pointer; 
-}
-
 .headerContent{
     display: flex;
     align-items: center;
@@ -58,14 +54,19 @@
     right: -23px;
     bottom: 2px;
 }
-.openIcon{
-    transform: rotate(180deg);
-}
+
 
 .header::after{
     content: "";
     background: url("/page-icons/dropdown.svg");
 }
 
+.mobileMenu{
+    display: none;
+    @include mixins.phone{
+        display: inline;
+        cursor: pointer;
+    }
+}
 
 

@@ -27,19 +27,19 @@ export default function Navbar() {
   const [isEventsActive, setIsEventsActive] = useState(false);
   const [isMembersActive, setIsMembersActive] = useState(false);
   
-  const toggleAboutUsMenu = () => {
-    setIsAboutUsActive(!isAboutUsActive);
+  const openAboutUsMenu = () => {
+    setIsAboutUsActive(true);
     setIsEventsActive(false);
     setIsMembersActive(false);
   } 
-  const toggleEventsMenu = () => {
-    setIsEventsActive(!isEventsActive);
+  const openEventsMenu = () => {
+    setIsEventsActive(true);
     setIsAboutUsActive(false);
     setIsMembersActive(false);
 
   } 
-  const toggleMembersMenu = () => {
-    setIsMembersActive(!isMembersActive);
+  const openMembersMenu = () => {
+    setIsMembersActive(true);
     setIsAboutUsActive(false);
     setIsEventsActive(false);
   } 
@@ -54,11 +54,11 @@ export default function Navbar() {
             Home
           </Link>
         </li>
-        <li onClick={toggleAboutUsMenu}>
+        <li onMouseEnter={openAboutUsMenu}>
           <div className={`${styles.header} body-1`} href="/about">
             <div className={styles.headerContent}>
               <p>About Us</p>
-              <Image className={`${styles.dropdownIcon} ${isAboutUsActive ? styles.openIcon : ""}`} width={24} height={27} src="page-icons/dropdown.svg"></Image>
+              <Image className={styles.dropdownIcon} width={24} height={27} src="page-icons/dropdown.svg"></Image>
             </div>
           </div>
           {isAboutUsActive && (
@@ -69,11 +69,11 @@ export default function Navbar() {
             </Dropdown>
           )}
         </li>
-        <li onClick={toggleEventsMenu}>
+        <li onMouseEnter={openEventsMenu}>
           <div className={`${styles.header} body-1`} href="/event">
             <div className={styles.headerContent}>
               <p>Events</p>
-              <Image className={`${styles.dropdownIcon} ${isEventsActive ? styles.openIcon : ""}`} width={24} height={27} src="page-icons/dropdown.svg"></Image>
+              <Image className={styles.dropdownIcon} width={24} height={27} src="page-icons/dropdown.svg"></Image>
             </div>
           </div>
 
@@ -85,11 +85,11 @@ export default function Navbar() {
             </Dropdown>
           )}
         </li>
-        <li onClick={toggleMembersMenu}>
+        <li onMouseEnter={openMembersMenu}>
           <div className={`${styles.header} body-1`} href="/member">
             <div className={styles.headerContent}>
               <p>Members</p>
-              <Image className={`${styles.dropdownIcon} ${isMembersActive ? styles.openIcon : ""}`} width={24} height={27} src="page-icons/dropdown.svg"></Image>
+              <Image className={styles.dropdownIcon} width={24} height={27} src="page-icons/dropdown.svg"></Image>
             </div>
           </div>
           {isMembersActive && (
@@ -106,6 +106,7 @@ export default function Navbar() {
           </Link>
         </li>
           <Button label={"Join Us"} href={"official"}></Button>
+          <Image className={styles.mobileMenu} width={35} height={22} src="page-icons/bars.svg"></Image>
         </ul>
       </div>
     </nav>
