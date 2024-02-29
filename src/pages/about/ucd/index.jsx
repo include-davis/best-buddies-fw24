@@ -34,7 +34,7 @@ const ucdImgs = [
     title: "Buddy Pair Hangout",
     description: "Buddy pairs also hang out outside of our chapter events. What you do with your buddy will depend on what you both are interested in. Our monthly newsletter will include ideas for what buddy pairs can do together. For example, going to the movies, getting boba, and playing basketball together.",
     altText: "Five Best Buddies members pose together. Three are seated, and two are kneeling behind them. Other members are sitting in the background and chatting.",
-    path: "",
+    path: "/about-imgs/ucd/about-ucd-hangout.jpg",
   }
 ];
 
