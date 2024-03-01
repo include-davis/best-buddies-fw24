@@ -12,6 +12,7 @@
     .imageContainer {
       position: relative;
       aspect-ratio: 1; // TODO: make this change when the card is larger?
+      max-height: 43vh;
     }
 
     .titleDateContainer {
