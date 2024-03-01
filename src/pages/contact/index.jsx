@@ -16,8 +16,10 @@ export default function Contact() {
   ];
   const [selected, setSelected] = useState('');
   const [optionsActive, setOptionsActive] = useState(false);
+  const [showSelectedText, setShowSelectedText] = useState(false);
 
   const toggleOptionsMenu = () => {
+    setShowSelectedText(true);
     setOptionsActive(!optionsActive);
   };
 
@@ -30,7 +32,7 @@ export default function Contact() {
   return <div className={styles.contact}>
     <div className={styles.title}>
       <h1>Contact Us</h1>
-      <p className={`body-1`}>Have questions or comments for our officer team? Please fill out the form below and we will get back to you as soon as possible!</p>
+      <p className={`${styles.description} body-1`}>Have questions or comments for our officer team? Please fill out the form below and we will get back to you as soon as possible!</p>
       <p className={`${styles.warning} body-1-bold`}>* = required field</p>
     </div>
 
@@ -60,7 +62,7 @@ export default function Contact() {
               </div>
               <div onClick={toggleOptionsMenu} className={styles.selected}>
                 <div className={optionsActive ? `${styles.selectedChoice}` : `${styles.hide}`}>
-                  {selected || 'Select'}
+                  {selected || <p className={showSelectedText ? `${styles.appear}` : `${styles.hide}`}>Selected</p>}
                 </div>
               </div>
               <Image className={optionsActive ? `${styles.dropdownIcon} ${styles.openMenuIcon}` : `${styles.dropdownIcon}`} onClick={toggleOptionsMenu} width={24} height={27} src="page-icons/dropdown.svg"></Image>
@@ -68,12 +70,15 @@ export default function Contact() {
           </div>
         </div>
         <div className={styles.content}>
-          <div style={{ display: 'flex', flexDirection: 'column' }}>
-            <p className={`${styles.required} body-1-bold`}>Describe your question or comment</p>
-            <textarea className={`${styles.answerContainer} ${styles.paragraphContainer} body-1`} name="paragraph_text" cols="50" rows="10"></textarea>
+          <div>
+            <div style={{ display: 'flex', flexDirection: 'column', marginBottom: '50px' }}>
+              <p className={`${styles.required} body-1-bold`}>Describe your question or comment</p>
+              <textarea className={`${styles.answerContainer} ${styles.paragraphContainer} body-1`} name="paragraph_text" cols="50" rows="10"></textarea>
+            </div>
+            <Button label={"Submit"} href={"official"} />
           </div>
         </div>
-        <Button label={"Submit"} href={"official"} />
+      
       </form>
 
   </div>;

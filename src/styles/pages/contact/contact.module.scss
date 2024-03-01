@@ -34,11 +34,7 @@ $gray: rgb(166, 165, 165);
   }
 
   Button{
-    margin-left: 220px;
-    top: -200px;
-    position: relative;
     @include mixins.phone{
-      margin-left:0px;
       padding-right: 150px;
       padding-left: 150px;
     }
@@ -52,9 +48,16 @@ $gray: rgb(166, 165, 165);
   gap: 19px;
   @include mixins.phone{
     margin: 0px; 
+    margin-bottom: 73px;
+    margin-left: 20px;
+    margin-right: 20px;
   } 
 }
+.description{
+  @include mixins.phone{
 
+  }
+}
 .infoSection, .dropdown, .content{
   display: flex;
   gap: 35px;
@@ -146,6 +149,7 @@ $gray: rgb(166, 165, 165);
   z-index: 1;
   color: black;
   align-items: center;
+  flex-direction: column;
 }
 
 
@@ -191,6 +195,14 @@ $gray: rgb(166, 165, 165);
   display: none;
 }
 
+.hide{
+  color: white;
+}
+
+.appear, .selectedChoice{
+  color: black;
+}
+
 //text area for last question
 .paragraphContainer{
   margin-top: 8px;
@@ -208,6 +220,9 @@ $gray: rgb(166, 165, 165);
   right: 12px;
   top: 24px;
   cursor: pointer;
+  @include mixins.phone{
+    top: 18px;
+  }
 }
 
 //chevron pointing up
