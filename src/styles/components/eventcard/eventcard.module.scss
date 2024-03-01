@@ -9,11 +9,6 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     background-color: white;
 
-    .imageContainer {
-      position: relative;
-      aspect-ratio: 1; // TODO: make this change when the card is larger?
-    }
-
     .titleDateContainer {
       display: flex;
       flex-direction: column;
