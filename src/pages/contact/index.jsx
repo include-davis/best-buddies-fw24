@@ -32,7 +32,10 @@ export default function Contact() {
   return <div className={styles.contact}>
     <div className={styles.title}>
       <h1>Contact Us</h1>
-      <p className={`${styles.description} body-1`}>Have questions or comments for our officer team? Please fill out the form below and we will get back to you as soon as possible!</p>
+      <div>
+        <p className={`${styles.description} body-1`}>Have questions or comments for our officer team? </p>
+        <p className={`${styles.description} body-1`}>Please fill out the form below and we will get back to you as soon as possible!</p>
+      </div>
       <p className={`${styles.warning} body-1-bold`}>* = required field</p>
     </div>
 

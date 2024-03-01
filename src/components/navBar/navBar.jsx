@@ -46,7 +46,16 @@ export default function Navbar() {
 
   return (
     <nav className={`${styles.nav} body-1`}>
-      <Image width={86} height={86} src="/best-buddies-logo.svg" />
+      {/* Responsive Images Steps
+        You have to wrap your image inside a container!!!
+        The container has to be position: relative
+        Make sure you give your container some width & height. (width can be a percentage. height may have to be vh if percentages do not work)
+        Add the fill property to the image
+        Use objectFit to get the right scaling of your image (usually cover/contain)
+        Use objectPosition to select portion of image to focus on. */}
+      <div className={styles.logo}>
+        <Image width={86} height={86} src="/best-buddies-logo.svg" />
+      </div>
       <div className={styles.rightSide}>
       <ul className={styles.links}>
         <li>
@@ -61,13 +70,17 @@ export default function Navbar() {
               <Image className={styles.dropdownIcon} width={24} height={27} src="page-icons/dropdown.svg"></Image>
             </div>
           </div>
+          
           {isAboutUsActive && (
             <Dropdown state={isAboutUsActive} setState={setIsAboutUsActive}>
-                {navLinks[1].links.map((dropdownLink, index) => (
-                    <Link className={styles.link} href={dropdownLink.url}>{dropdownLink.label}</Link>
-                ))}
+                <div>
+                  {navLinks[1].links.map((dropdownLink, index) => (
+                      <Link key={index} className={styles.link} href={dropdownLink.url}>{dropdownLink.label}</Link>
+                  ))}
+                </div>
             </Dropdown>
           )}
+
         </li>
         <li onMouseEnter={openEventsMenu}>
           <div className={`${styles.header} body-1`} href="/event">

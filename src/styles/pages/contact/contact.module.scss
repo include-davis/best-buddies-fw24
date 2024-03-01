@@ -3,7 +3,7 @@ $gray: rgb(166, 165, 165);
 //set fixed widths
 .contact{
   background: var(--color-light-gray);
-  padding-top: 115px;
+  // padding-top: 115px;
   text-align: center;
   font-size: 1.125rem;
   h1{
@@ -42,10 +42,12 @@ $gray: rgb(166, 165, 165);
 }
 
 .title{
-  margin: 0px 408px 50px 408px;
+  // margin: 0px 408px 50px 408px;
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: 19px;
+  padding-top: 90px;
   @include mixins.phone{
     margin: 0px; 
     margin-bottom: 73px;
@@ -70,6 +72,7 @@ $gray: rgb(166, 165, 165);
 
 
 .infoSection{
+  margin-top: 66px;
   @include mixins.phone{
     flex-direction: column; 
     align-items: center; 

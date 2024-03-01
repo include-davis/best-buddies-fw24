@@ -139,6 +139,9 @@ $purple: #3C257E;
 }
 
 .contactFormLink, .desktopContact{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
     @include mixins.phone{
         display: none;
     }
