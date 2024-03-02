@@ -59,14 +59,14 @@
         font-size: 1.6875rem;
         font-weight: 400;
         line-height: 120%; 
-
-        @include mixins.phone {
-            margin-top: 16px;
-        }
     }
 
     @include mixins.phone {
         gap: 8px;
+
+        h5 {
+            margin-top: 16px;
+        }
     }
 }
 
@@ -116,22 +116,20 @@
 
     h1 {
         color: var(--color-dark-purple);
-        @include mixins.phone {
-            font-size: 1.5rem;
-            line-height: 120%;
-        }
     }
-    .purpleHighlight {
+    .purpleHighlight { // font family manrope on mobile
         color: var(--color-dark-purple);
-        @include mixins.phone {
-            //font-family: 'Manrope';
-        }
     }
 
     @include mixins.phone {
         border-radius: 0;
         gap: 16px;
         padding: 24px 0px;
+
+        h1 {
+            font-size: 1.5rem;
+            line-height: 120%;
+        }
     }
 }
 
@@ -222,15 +220,16 @@
     h3 { // John Doe
         color: #222; // #222 on figma (TODO: get this color into globals)
         line-height: 120%;
-        @include mixins.phone {
-            text-align: center;
-        }
     }
 
     @include mixins.phone {
         align-items: stretch;
         padding: 0px 16.5px;
         gap: 21px;
+
+        h3 {
+            text-align: center;
+        }
     }
 }
 
