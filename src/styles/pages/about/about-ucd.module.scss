@@ -70,28 +70,32 @@
   display: flex;
   flex-direction: column;
   gap: 36px;
-  padding: 64px;
-  width: 80%;
+  width: 90%;
   margin-top: 32px;
   //margin-left: 124px;
   //margin-right: 124px;
 
   @include mixins.phone{
-    width: 100%;
+    
 
   }
 
-}
+
 
 .imgContainer{
   position: relative;
   width: 60%;
-  height: 70vh;
+  height: 80vh;
+
 
 
   @include mixins.phone{
     width: 100%;
-    height: 88vh;
+    height: 90vh;
+    //display: flex;
+    //order: 2;
+    //flex: 2;
+    
   }
 
 }
@@ -100,7 +104,7 @@
   border-radius: 15px;
 
   @include mixins.phone{
-    order: 2;
+  
   }
   
 }
@@ -118,6 +122,19 @@
   }
 }
 
+
+.mobileHeader{
+  display: none;
+
+  @include mixins.phone{
+    display: flex;
+
+    h2{
+      color: var(--color-dark-purple);
+    }
+  }
+}
+
 .cardText{
   display: flex;
   flex-direction: column;
@@ -125,6 +142,7 @@
   width: 100%;
 
   @include mixins.phone{
+    //order: 1;
     
   }
 }
@@ -133,31 +151,46 @@
 
   .title{
     margin-bottom: 24px;
+    display: flex;
+    
 
     @include mixins.phone{
-      order: 1;
+      //order: 0;
+      flex: 1;
+      display: none;
     }
 
     h2{
       color: var(--color-dark-purple);
     }
 
-          
       @include mixins.phone{
-        //order: 1;
+      
         text-align: center;
+        //order: 1;
       }
   
   }
 
   .caption{
-    //border: 2px solid pink;
+    border: 2px solid pink;
     margin-right: 32px;
+    
 
      @include mixins.phone{
-       order: 3;
+      //display: flex;
+       order: 2;
        margin-right: 0px;
+       margin-bottom: 72px;
+       //flex: 3;
+    }
+
+    p{
+      @include mixins.phone{
+        //order: 1;
+      }
     }
   }
+}
 
 

@@ -64,6 +64,11 @@ export default function AboutUCD() {
             return(
               <div key={index} className={styles.card}>
                 
+                <div className={styles.mobileHeader}>
+                  <h2>{cardContent.title}</h2>
+                </div>
+
+
                 <div className={styles.imgContainer}>
                   <Image className={styles.cardImgs}
                   fill
@@ -74,7 +79,7 @@ export default function AboutUCD() {
                   />
                 </div>
                 
-              
+
                 <div className={styles.cardText}>
                   <div className={styles.title}>
                     <h2>{cardContent.title}</h2>
