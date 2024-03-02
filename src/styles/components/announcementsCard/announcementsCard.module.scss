@@ -1,3 +1,5 @@
+@use "src/styles/mixins.scss";
+
 .announcementsCard { // is this a fixed aspect ratio or flex?
     flex-grow: 1;
 
@@ -12,8 +14,15 @@
     background: var(--color-white);
     box-shadow: 0px 0px 44px 0px rgba(46, 25, 94, 0.80);
 
-    max-width: 41.39vw;
+    max-width: 50%;
     overflow-wrap: break-word;
+
+    @include mixins.phone {
+        max-width: 100%;
+        width: 100%;
+        padding: 16px 32px;
+    }
+
 }
 
 .titleDateContainer {
@@ -21,4 +30,10 @@
     justify-content: space-between;
     align-items: center;
     gap: 10px;
+
+    @include mixins.phone {
+        flex-direction: column;
+        gap: 0px;
+        align-items: flex-start;
+    }
 }

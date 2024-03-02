@@ -65,8 +65,12 @@ export default function Home() {
         
         <Button label={"Join Us"} href="member" extraStyles={styles.heroButton}/>
       </div>
-      <Suspense fallback={<div className={styles.heroVideoSuspense}><p className={`body-1`}>Loading Video...</p></div>}>
-          <iframe className={styles.heroVideo} src={videoSrc} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      <Suspense
+        fallback={<div className={styles.heroVideoFallback}><p className={`body-1`}>Loading Video...</p></div>}>
+          <div className={styles.heroVideoContainer}>
+            <iframe className={styles.heroVideo} src={videoSrc} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          </div>
+          
       </Suspense>
       <div className={styles.mission}>
         <div className={styles.missionText}>
@@ -106,18 +110,19 @@ export default function Home() {
         
       </div>
 
-      <div className={styles.memberSpotlight}>
-        <div className={styles.memberSpotlightText}>
+      <div className={styles.memberSpotlightContainer}>
+        <div className={styles.memberSpotlight}>
           <div className={styles.headerIconContainer}>
             <h2>Member Spotlight</h2>
             <Image src={"/page-icons/users.svg"} width={44} height={44}/> {/* 43x43 on figma */}
           </div>
+          <div className={styles.memberSpotlightImagePhone}></div>
           <div className={styles.memberSpotlightDescription}>
             <h3 className={`subheading`}>Coming Soon... New for Spring Quarter!</h3>
             <p className={`body-1`}>{memberSpotlightText}</p>
           </div>
         </div>
-        <div className={styles.memberSpotlightImage}></div>
+        <div className={styles.memberSpotlightImageDesktop}></div>
       </div>
       
     </div>
