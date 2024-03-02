@@ -7,6 +7,7 @@ import Button from "@/components/button/button";
 import Link from "next/link";
 import EventCard from "@/components/eventCard/eventCard";
 import AnnouncementsCard from "@/components/announcementsCard/announcementsCard"
+import HeaderWithIcon from "@/components/headerWithIcon/headerWithIcon";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -81,10 +82,7 @@ export default function Home() {
       </div>
 
       <div className={styles.featuredEvents}>
-        <div className={styles.headerIconContainer}>
-          <h2>Featured Events</h2>
-          <Image src={"/page-icons/calendar.svg"} width={44} height={44}/>
-        </div>
+        <HeaderWithIcon label="Featured Events" src="/page-icons/calendar.svg"/>
         <div className = {styles.eventCarousel}>
           {
             events.map((thisEvent, index) => {
@@ -95,10 +93,7 @@ export default function Home() {
       </div>
 
       <div className={styles.announcements}>
-        <div className={styles.headerIconContainer}>
-          <h2>Announcements</h2>
-          <Image src={"/page-icons/star.svg"} width={44} height={44}/>
-        </div>
+          <HeaderWithIcon label="Announcements" src="/page-icons/star.svg"/>
         
         <div className={styles.announcementCardContainer}>
         {
@@ -112,10 +107,7 @@ export default function Home() {
 
       <div className={styles.memberSpotlightContainer}>
         <div className={styles.memberSpotlight}>
-          <div className={styles.headerIconContainer}>
-            <h2>Member Spotlight</h2>
-            <Image src={"/page-icons/users.svg"} width={44} height={44}/> {/* 43x43 on figma */}
-          </div>
+          <HeaderWithIcon label="Member Spotlight" src="/page-icons/users.svg"/>
           <div className={styles.memberSpotlightImagePhone}></div>
           <div className={styles.memberSpotlightDescription}>
             <h3 className={`subheading`}>Coming Soon... New for Spring Quarter!</h3>

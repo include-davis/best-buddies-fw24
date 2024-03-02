@@ -190,20 +190,6 @@
     }
 }
 
-.headerIconContainer { 
-    // the height of the text includes space for tails, unlike how the boxes for text on figma includes only the space actually used by the letters
-    // this makes these icons look like they're not aligned with the verticality of the text.
-    // TODO: ask for help on this
-
-    display: flex;
-    gap: 16px;
-
-    align-items: center;
-    h2 {
-        font-family: "Helvetica Neue";
-    }
-}
-
 .announcementCardContainer {
     display: flex;
     flex-direction: row;
@@ -236,6 +222,9 @@
     h3 { // John Doe
         color: #222; // #222 on figma (TODO: get this color into globals)
         line-height: 120%;
+        @include mixins.phone {
+            text-align: center;
+        }
     }
 
     @include mixins.phone {

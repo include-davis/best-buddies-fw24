@@ -1,0 +1,32 @@
+@use "src/styles/mixins.scss";
+
+.headerIconContainer { 
+
+    display: flex;
+    gap: 16px;
+    align-self: center;
+    align-items: center;
+
+    // need to manually set font so the header and image align.
+    h2 {
+        font-family: "Helvetica Neue"; // note on figma, the header for mobile for featured events is actually smaller.
+    }
+
+    @include mixins.phone{
+        gap: 8px;
+
+        h2 {
+            font-size: 1.5rem;
+        }
+    }
+}
+
+.imageContainer{
+    width: 44px;
+    aspect-ratio: 1;
+    position: relative;
+
+    @include mixins.phone {
+        width: 32px;
+    }
+}
