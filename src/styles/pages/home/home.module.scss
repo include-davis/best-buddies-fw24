@@ -57,12 +57,20 @@
     text-align: center;
 }
 
-.heroVideo {
+.heroVideo, .heroVideoSuspense {
     border-radius: 10px;
     aspect-ratio: 1.85;
     width: 100%;
     max-width: 1280px;
     align-self: center; // body has align-items: stretch; but i want this element to have a maximum width while staying centered. 
+}
+
+.heroVideoSuspense { // not too sure what i was supposed to do here
+    //background-color: var(--color-white);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .mission {
