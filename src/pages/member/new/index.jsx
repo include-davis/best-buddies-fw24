@@ -96,24 +96,70 @@ export default function NewMembers() {
           <h3>Peer Buddies</h3>
         </div>
 
+        {/* card */}
         <div className={styles.youtubeContainer}>
 
           <div className={styles.youtubeCard}>
-            <div className={styles.cardFrame}>
-
+            <iframe className={styles.video} width="560" height="315" src="https://www.youtube.com/embed/jpDCf0O0rsc?si=QcoocIa8h9u8W-mN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <div className={styles.footerContainer}>
+              <div className={styles.providerContainer}>
+                <h4>
+                  How to submit a membership application 
+                  <br>
+                  </br>
+                  Buddies...
+                </h4>
+                <div className={styles.providerItems}>
+                  <p>logo</p>
+                  <p>YouTube</p>
+                </div>
+              </div>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17" fill="none">
+                <g clip-path="url(#clip0_2591_2184)">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M1 8.5C1 4.634 4.134 1.5 8 1.5C11.866 1.5 15 4.634 15 8.5C15 12.366 11.866 15.5 8 15.5C4.134 15.5 1 12.366 1 8.5ZM8 16.5C3.582 16.5 0 12.918 0 8.5C0 4.082 3.582 0.5 8 0.5C12.418 0.5 16 4.082 16 8.5C16 12.918 12.418 16.5 8 16.5ZM7.25 12.75V7.75H8.75V12.75H7.25ZM9 5.5C9 6.052 8.552 6.5 8 6.5C7.448 6.5 7 6.052 7 5.5V5.431C7 4.879 7.448 4.431 8 4.431C8.552 4.431 9 4.879 9 5.431V5.5Z" fill="black" fill-opacity="0.8"/>
+                </g>
+                <defs>
+                  <clipPath id="clip0_2591_2184">
+                    <rect width="16" height="16" fill="white" transform="translate(0 0.5)"/>
+                  </clipPath>
+                </defs>
+              </svg>
             </div>
-
           </div>
           
+        
           
           <div className={styles.youtubeCard}>
-            <div className={styles.cardFrame}>
-              
+          <iframe className={styles.video} width="560" height="315" src="https://www.youtube.com/embed/RN8OdsNe_50?si=S4fMfa6gA61n4E6i" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <div className={styles.footerContainer}>
+              <div className={styles.providerContainer}>
+                <h4>
+                  How to submit a membership application on BB360 
+                  <br>
+                  </br>
+                  (...
+                </h4>
+                <div className={styles.providerItems}>
+                  <p>logo</p>
+                  <p>YouTube</p>
+                </div>
+              </div>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17" fill="none">
+                <g clip-path="url(#clip0_2591_2184)">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M1 8.5C1 4.634 4.134 1.5 8 1.5C11.866 1.5 15 4.634 15 8.5C15 12.366 11.866 15.5 8 15.5C4.134 15.5 1 12.366 1 8.5ZM8 16.5C3.582 16.5 0 12.918 0 8.5C0 4.082 3.582 0.5 8 0.5C12.418 0.5 16 4.082 16 8.5C16 12.918 12.418 16.5 8 16.5ZM7.25 12.75V7.75H8.75V12.75H7.25ZM9 5.5C9 6.052 8.552 6.5 8 6.5C7.448 6.5 7 6.052 7 5.5V5.431C7 4.879 7.448 4.431 8 4.431C8.552 4.431 9 4.879 9 5.431V5.5Z" fill="black" fill-opacity="0.8"/>
+                </g>
+                <defs>
+                  <clipPath id="clip0_2591_2184">
+                    <rect width="16" height="16" fill="white" transform="translate(0 0.5)"/>
+                  </clipPath>
+                </defs>
+              </svg>
             </div>
-
           </div>
+          
 
         </div>
+        {/* card */}
 
       </div>
 

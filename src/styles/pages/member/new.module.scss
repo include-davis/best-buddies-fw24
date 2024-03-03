@@ -24,6 +24,7 @@
     
 
     h1{
+        font-family: "Helvetica Neue";
         color: var(--color-dark-purple);
         margin-bottom: 24px;
 
@@ -43,7 +44,8 @@
         width: 753px;
         height: 54px;
         font-size: 1.125rem;
-        // font-weight: 400;
+        font-family: "Helvetica Neue";
+        font-weight: 400;
         line-height: 112.5%;
         text-align: center;
         color: var(--font-secondary);
@@ -87,7 +89,7 @@
         
     h2{
         color: var(--color-dark-purple);
-        //font-weight: 700;
+        font-family: "Helvetica Neue";
         text-align: left;
         width: 592px;
 
@@ -321,6 +323,7 @@
         width: 1142px;
         gap: 376px;
         margin-top: 54px;
+        
 
         h3{
             font-size: 1.5rem;
@@ -333,24 +336,81 @@
     .youtubeContainer{
         display: flex;
         flex-direction: row;
-        margin-top: 54px;
+        justify-content: center;
         gap: 150px;
         
         
         
 
         .youtubeCard{
+            font-family: "Helvetica Neue";
+            background-color: #FFF;
             display: flex;
             flex-direction: column;
-            max-width: 496px;
-            background-color: #FFF;
-
-
-            .cardFrame{
-                padding: 8px;
+            width: 496px;
+            height: 395px;
+            margin-top: 22px;
+            padding: 8px;
+            
+            align-items: flex-start;
+            border-radius: 10px;
+            box-shadow: 0px 5px 50px 0px rgba(228, 225, 231, 0.40);
+            border: 1px solid rgba(128, 126, 131, 0.4);
+            
+            .video{
+                border-radius: 10px;
+                width: 480px;
+                height: 270px;
             }
 
-            
+            .footerContainer{
+                display: flex;
+                flex-direction: row;
+                width: 480px;
+                height: 105px;
+                padding-left: 8px;
+                background-color: #FFF;
+
+                .providerContainer{
+                    display: flex;
+                    flex-direction: column;
+                    padding: 8px;
+                    background-color: #FFF;
+
+                    h4{
+                        width: 396px;
+                        height: 48px;
+                        font-size: 1rem;
+                        line-height: 24px;
+                        font-weight: 200;
+                        color: #000000CC;
+                        background-color: #FFF;
+                    }
+
+                    .providerItems{
+                        display: flex;
+                        flex-direction: row;
+                        background-color: #FFF;
+                        margin-top: 8px;
+                        gap: 8px;
+
+                        p{
+                            font-size: 0.8125rem;
+                            color: #00000080;
+                            background-color: #FFF;
+                        }
+                    }
+
+                }
+
+                svg{
+                    margin-top: 36.5px;
+                    margin-bottom: 36.5px;
+                    margin-left: 20px;
+                    align-self: stretch;
+                    background-color: #FFF;
+                }
+            }
         }
         
     }
