@@ -12,15 +12,21 @@ export default function EventCard({
 }) {
   return (
     <div className={styles.card}>
-      {" "}
-      {/* 40 px gaps between info, button */}
-      <div className={styles.eventInfo}>
-        {" "}
-        {/* 16 px gaps between image, title+date, description */}
-        <Image src={imagePath} alt={altText} width={352} height={240} />
-        <div className={styles.titleDateContainer}>
-          <h3 className={styles.cardTitle}>{title}</h3>
-          <p className={styles.cardSubtitle}>{date}</p>
+      <div className={styles.event}>
+        <div className={styles.imageContainer}>
+          <Image
+            src={imagePath}
+            className={styles.eventImg}
+            alt={altText}
+            fill={true}
+          />
+        </div>
+
+        <div className={styles.eventInfo}>
+          <div className={styles.eventHeader}>
+            <h3 className={styles.cardTitle}>{title}</h3>
+            <p className={styles.cardSubtitle}>{date}</p>
+          </div>
           <p className={styles.cardDescription}>{description}</p>
         </div>
       </div>
