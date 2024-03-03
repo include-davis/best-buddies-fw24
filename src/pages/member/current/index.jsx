@@ -6,6 +6,7 @@ export default function CurrentMembers() {
   return (
     <div className={styles.currentMembersContainer}>
       <h1 className={styles.currentMembersTitle}>Current Members</h1>
+
       <div className={styles.renewalBox}>
         <p className={styles.renewalTitle}>Renewing your Membership?</p>
         <p className={styles.renewalBoxContent}>
@@ -15,27 +16,32 @@ export default function CurrentMembers() {
           Check our YouTube channel for application guidance. Interviews may be necessary, but officers will inform you in May or June if required this year.
         </p>
         <button className={styles.renewalButton}>Renewal Application
-          <img src="/page-icons/hyperlink.svg" alt="Renewal Application"/>
+          <img className={styles.renewalButton} src="/page-icons/hyperlink.svg"/>
         </button>
       </div>
+
       <div className={styles.videoBox}>yt video here</div>
+
       <div className={styles.friendUpdatesBox}>
-        <p className={styles.friendUpdatesTitle}>Friend Updates!</p>
-        <p className={styles.friendUpdatesContent}>
+        <p className={styles.subPageTitle}>Friendship Updates!</p>
+        <p className={styles.subPageContent}>
           Starting in November, every Buddy and Peer Buddy will need to complete a Friendship Update each month. These updates let us know how your friendship is going and if you need support.
         </p>
+
         <button className={styles.friendUpdatesButton}>Friendship Updates
-        <img src="/page-icons/hyperlink.svg" alt="Friendship Updates"/>
+          <img src="/page-icons/hyperlink.svg"/>
         </button>
       </div>
+
       <div className={styles.latestNewsBox}>
-        <p className={styles.latestNewsTitle}>Our Latest News</p>
-        <p className={styles.latestNewsContent}>
+        <p className={styles.subPageTitle}>Our Latest News</p>
+        <p className={styles.subPageContent}>
           We will send out newsletters every month from September to June. There you can find announcements, upcoming chapter events, community events, and ideas for things to do with your buddy.
         </p>
+
         <div className={styles.prevNewsBox}>
           <button className={styles.latestNewsButton}>Dec 2023
-            <img src="/page-icons/hyperlink.svg" alt="Latest News"/>
+            <img src="/page-icons/hyperlink.svg"/>
           </button>
           <Image className={styles.newsletterImg}
             width = {696}
@@ -43,7 +49,9 @@ export default function CurrentMembers() {
             src="/member-imgs/best_buddies_newsletter_img.png"
           />
         </div>
+
       </div>
+
     </div>
   );
 }
