@@ -3,13 +3,6 @@ import Image from "next/image";
 import Button from "@/components/button/button";
 
 const intlContent = [
-  /*{
-    title: "hero",
-    description: "",
-    path: "/about-imgs/intl/about-intl-banner.jpg",
-    altText: "Large group of members posing together in front of a banner and a purple and white ballon arch.",
-  },*/
-
   {
     title: "One-to-One Friendships",
     description: "These programs build one-to-one friendships between people with and without intellectual and developmental disabilities (IDD), offering social interactions while improving the quality of life and level of inclusion for a population that is often isolated and excluded.",
@@ -64,7 +57,7 @@ export default function AboutIntl() {
       </div>
     
     <div className={styles.pillars}>
-      <h2>Our Four Pillars</h2>
+      {/*<h2>Our Four Pillars</h2>
         <div className={styles.circles}>
 
           <div className={styles.topCircles}>
@@ -85,26 +78,18 @@ export default function AboutIntl() {
             <div className={styles.PurpleCircle}>
               <h3>Inclusive Living</h3>
             </div>
-          </div>
   </div>
+  </div>*/}
 
-    <div className={styles.pillarsContainer}> {/*container that holds ALL content, tbh might not need*/}
-
+    <div className={styles.pillarsContainer}>
             {intlContent.map((pillars, index) => {
                 return(
-                  <div>
-                      <div className={styles.mobileHeader}>
-                        <h2>{pillars.title}</h2>
-                        
-                        <Image className={styles.iconsMobile}
-                          width={44}
-                          height={44}
-                          src={pillars.iconPath}
-                        />
-                    </div>
-
-
-                  <div key={index} className={styles.card}>
+                  <div 
+                  key={index} 
+                  className={`${styles.card} ${
+                    index % 2 == 0 ? styles.imgLeft : styles.imgRight
+                  }`}
+                  >
                         <div className={styles.imageContainer}>
                             <Image className={styles.cardImgs}
                             fill
@@ -116,11 +101,10 @@ export default function AboutIntl() {
                         </div>
 
                         <div className={styles.cardText}> 
-
                           <div className={styles.headerContainer}>
                             <h2 >{pillars.title}</h2>
 
-                            <Image className={styles.icons}
+                            <Image
                             width={44}
                             height={44}
                             src={pillars.iconPath}
@@ -131,7 +115,6 @@ export default function AboutIntl() {
                 
                         </div>
                     </div>
-                  </div>
 
                 );
             })}
