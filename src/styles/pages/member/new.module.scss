@@ -94,6 +94,7 @@
         width: 592px;
 
         p{  
+            font-family: "Helvetica Neue";
             margin-top: 24px;
             font-size: 1.125rem; //change to rem
             font-weight: 400;
@@ -114,6 +115,7 @@
     margin-top: 128px;
 
     h2{
+        font-family: "Helvetica Neue";
         color: var(--color-dark-purple);
         text-align: left;
         margin-bottom: 54px;
@@ -172,6 +174,7 @@
             }
             
             h3{
+                font-family: "Helvetica Neue";
                 margin-top: 48px; //change to 48px later
                 align-items: flex-start;
                 background-color: #FFF;
@@ -182,6 +185,7 @@
             }
 
             p{
+                font-family: "Helvetica Neue";
                 background-color: #FFF;
                 margin-top: 40px;
                 color: var(--font-secondary);
@@ -233,6 +237,7 @@
             }
 
             p{
+                font-family: "Helvetica Neue";
                 background-color: #FFF;
                 margin-top: 40px;
                 color: var(--font-secondary);
@@ -301,11 +306,13 @@
         text-align: center;
 
         h2{
+            font-family: "Helvetica Neue";
             color: var(--color-dark-purple);
             width: 592px;
             margin-bottom: 16px;
 
             p{  
+                font-family: "Helvetica Neue";
                 font-size: 1.125rem; //change to rem
                 font-weight: 400;
                 line-height: 150%;
@@ -326,6 +333,7 @@
         
 
         h3{
+            font-family: "Helvetica Neue";
             font-size: 1.5rem;
             line-height: 120%;
             color: var(--color-dark-purple);
@@ -378,11 +386,12 @@
                     background-color: #FFF;
 
                     h4{
+                        font-family: "Helvetica Neue";
                         width: 396px;
                         height: 48px;
                         font-size: 1rem;
                         line-height: 24px;
-                        font-weight: 200;
+                        font-weight: 500;
                         color: #000000CC;
                         background-color: #FFF;
                     }
@@ -394,7 +403,8 @@
                         margin-top: 8px;
                         gap: 8px;
 
-                        p{
+                        p{  
+                            font-family: "Helvetica Neue";
                             font-size: 0.8125rem;
                             color: #00000080;
                             background-color: #FFF;
