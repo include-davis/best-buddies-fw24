@@ -1,13 +1,7 @@
 import styles from "@/styles/pages/about/about-ucd.module.scss";
 import Image from "next/image";
 
-const ucdImgs = [
-  /*{
-    title: "hero",
-    altText: "All the Best Buddies members (about 50 people) are huddled in a group and looking at the camera. In the foreground, four lawn chairs and a table are visible.",
-    path: "/about-imgs/ucd/about-ucd-banner.jpg",
-  },*/
-
+const ucdContent = [
   {
     title: "Buddies + Peer Buddies",
     description:
@@ -54,6 +48,8 @@ export default function AboutUCD() {
           src="/about-imgs/ucd/about-ucd-banner.jpg"
           alt="All the Best Buddies members (about 50 people) are huddled in a group and looking at the camera. In the foreground, four lawn chairs and a table are visible."
           fill
+          objectFit="cover"
+          objectPosition="center"
         />
 
         <div className={styles.heroText}>
@@ -63,7 +59,7 @@ export default function AboutUCD() {
       </div>
 
       <div className={styles.cardsContainer}>
-        {ucdImgs.map((cardContent, index) => {
+        {ucdContent.map((cardContent, index) => {
           return (
             <div
               key={index}
@@ -75,6 +71,8 @@ export default function AboutUCD() {
                 <Image
                   className={styles.cardImgs}
                   fill
+                  objectFit="cover"
+                  objectPosition="center"
                   src={cardContent.path}
                   alt={cardContent.altText}
                 />

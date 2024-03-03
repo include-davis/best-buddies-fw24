@@ -3,13 +3,6 @@ import Image from "next/image";
 import Button from "@/components/button/button";
 
 const intlContent = [
-  /*{
-    title: "hero",
-    description: "",
-    path: "/about-imgs/intl/about-intl-banner.jpg",
-    altText: "Large group of members posing together in front of a banner and a purple and white ballon arch.",
-  },*/
-
   {
     title: "One-to-One Friendships",
     description:
