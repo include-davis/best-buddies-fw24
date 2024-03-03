@@ -41,9 +41,7 @@ const ucdImgs = [
 export default function AboutUCD() {
   return (
   <div className={styles.body}>
-      {/* {ucdImgs.map((cardContent) => {
-            return(*/}
-
+    
         <div className={styles.heroContainer}>
             <Image
             objectFit="cover" 
