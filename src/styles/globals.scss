@@ -4,6 +4,7 @@
   // font colors
   --font-primary: #272b2e;
   --font-secondary: #404447;
+  --font-gray: #6E757B;
   --font-warning-red: #e40000; // contact required fields
 
   // main page colors
@@ -12,9 +13,19 @@
   --color-light-purple: #c6b9dc;
   --color-pale-gray: #e2ddeb;
 
-  // background color
-  --color-light-gray: #ededed;
+  // background colors
+  --color-light-gray: #f8f8f9;
   --color-white: #ffffff;
+
+  // extra colors
+  --color-violet: #9396ca;
+  --color-light-violet: #c0c2e9;
+  --color-teal: #8fd1c4;
+  --color-light-teal: #b4ddd5;
+  --color-orange: #f37735;
+  --color-light-orange: #FFA97C;
+  --color-yellow: #ffd420;
+  --color-light-yellow: #ffec9d;
 
   // spacers: px
   --edge-spacer: 24px;
@@ -29,13 +40,14 @@
   margin: 0;
   font-family: var(--font-helvetica-neue);
   color: var(--font-primary);
-  background-color: var(--color-light-gray);
 }
 
 button {
   cursor: pointer;
 }
 
+// if you want to use BOLD font, add font-weight: 700; style: bold;
+// if you want to use NORMAL font, add font-weight: 400; style: normal;
 h1,
 h2,
 h3 {
@@ -43,24 +55,24 @@ h3 {
 }
 
 h1 {
-  font-size: 3.375rem;
+  font-size: 3.375rem; /* 54 px */
   line-height: 110%; /* 59.4px */
 }
 
 h2 {
-  font-size: 2.25rem;
+  font-size: 2.25rem; /* 36 px */
   line-height: 120%; /* 43.2px */
   color: var(--font-secondary);
 }
 
 h3 {
-  font-size: 1.75rem;
+  font-size: 1.75rem; /* 28 px */
   line-height: 120%; /* 33.6px */
   color: var(--font-secondary);
 }
 
 .subheading {
-  font-size: 1.5rem;
+  font-size: 1.5rem; /* 24px */
   font-style: normal;
   font-weight: 700;
   line-height: 200%; /* 48px */
@@ -69,7 +81,7 @@ h3 {
 .body-1,
 .body-1-bold,
 .body-2 {
-  font-size: 1.125rem;
+  font-size: 1.125rem; /* 18px */
   font-style: normal;
   font-weight: 400;
   line-height: 150%; /* 27px */
