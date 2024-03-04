@@ -1,5 +1,5 @@
-import styles from "@/styles/components/eventcard/eventcard.module.scss";
-import Image from "next/image";
+import styles from "@/styles/components/eventCard/eventCard.module.scss";
+import AutoImage from "../AutoImage/AutoImage";
 import Button from "../button/button";
 
 export default function EventCard({
@@ -13,14 +13,7 @@ export default function EventCard({
   return (
     <div className={styles.card}>
       <div className={styles.event}>
-        <div className={styles.imageContainer}>
-          <Image
-            src={imagePath}
-            className={styles.eventImg}
-            alt={altText}
-            fill={true}
-          />
-        </div>
+        <AutoImage className={styles.eventImg} src={imagePath} alt={altText} />
 
         <div className={styles.eventInfo}>
           <div className={styles.eventHeader}>
