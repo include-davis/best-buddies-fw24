@@ -10,7 +10,6 @@
 }
 
 .friendship_walk_section,
-.third_fw_sac,
 .border_divider,
 .champion_of_the_year {
   margin-bottom: 30px;
@@ -120,6 +119,7 @@
     display: flex;
     position: relative;
     height: 56vh;
+    border-bottom-left-radius: 0px;
   }
 }
 
@@ -127,11 +127,27 @@
 
   @include phone {
     height: 60vh;
+    display: none;
+  }
+}
+
+.imageContainer3_mobile {
+  display: none;
+  
+  @include phone {
+    display: flex;
+    position: relative;
+    height: 56vh;
   }
 }
 
 .eventImage {
   border-radius: 16px;
+}
+
+.eventImage2_mobile {
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
 }
 
 .two_imgs {
@@ -175,6 +191,7 @@
 
   @include phone {
     flex-direction: column;
+    gap: 0;
   }
 }
 
@@ -191,6 +208,7 @@
   gap: 16px;
   padding: 56px;
   border-radius: 16px;
+  margin-bottom: 16px;
 
   @include phone {
     width: 100%;
@@ -209,6 +227,8 @@
 
   @include phone {
     width: 100%;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
   }
 }
 

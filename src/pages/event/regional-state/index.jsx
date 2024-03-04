@@ -95,7 +95,7 @@ export default function RegionalStateEvents() {
         </div>
         <div className={styles.imageContainer2_mobile}>
           <Image
-            className={`${styles.eventImage}`}
+            className={`${styles.eventImage2_mobile}`}
             src="/event-imgs/events-friendship-2.jpg"
             objectFit="cover"
             objectPosition="0 25%"
@@ -130,6 +130,16 @@ export default function RegionalStateEvents() {
           </div>
           <div className={styles.champion_text}>
             <h2 className={styles.text_title}>Champion of the Year</h2>
+            <div className={styles.imageContainer3_mobile}>
+              <Image
+                className={styles.eventImage}
+                src="/event-imgs/events-champion.jpg"
+                objectFit="cover"
+                objectPosition="center"
+                fill
+                alt="Friendship walk group image"
+              />
+            </div>
             <div className={"body-1"}>
               Best Buddies Champion of the Year recognizes and celebrates
               leaders of inclusion in our community. The event includes a
