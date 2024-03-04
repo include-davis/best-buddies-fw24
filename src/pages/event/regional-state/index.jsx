@@ -156,10 +156,12 @@ export default function RegionalStateEvents() {
                   sponsorship opportunities!
                 </div>
               </div>
-              <Button className={styles.get_involved_button}
+              <div className={styles.get_involved_button}>
+              <Button
                 label={"Get Involved"}
                 href={"https://www.bestbuddieschampion.org/sacramento/"}
               />
+              </div>
             </div>
           </div>
         </div>

@@ -49,6 +49,7 @@
 
   @include phone {
     flex-direction: column;
+    gap: 22px;
   }
 }
 
@@ -288,9 +289,7 @@
 
 .get_involved_button {
   @include phone {
-    width: 60px;
-    align-items: center;
-    justify-content: center;
+    text-align: center;
   }
 }
 
