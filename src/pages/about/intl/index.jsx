@@ -62,7 +62,7 @@ export default function AboutIntl() {
       </div>
 
       <div className={styles.pillars}>
-        <h2>Our Four Pillars</h2>
+        <h2 className={styles.pillarsHeader}>Our Four Pillars</h2>
         <div className={styles.circles}>
           <div className={styles.topCircles}>
             <div className={styles.YellowCircle}>
