@@ -1,331 +1,196 @@
 @use "src/styles/mixins.scss";
 
-.body{
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   background-color: var(--color-light-gray);
-  
-   @include mixins.phone{
-      padding-bottom: 190px;
-   }
+.body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--color-light-gray);
 
-   .heroContainer{
-      height: 80vh;
-      width: 100%;
-      position: relative;
+  @include mixins.phone {
+    padding-bottom: 190px;
+  }
 
-      @include mixins.phone{
-         height: 33vh;
-       }
-   
+  //   h2 {
+  //     display: flex;
+  //     justify-content: center;
 
-      .heroText{
-         position: absolute;
-         top: 50%;
-         left: 50%;
-         transform: translate(-50%, -50%);
-         width: 100%;
-         height: 100%;
-         background: linear-gradient(0deg, rgba(153, 236, 222, 0.33) 50%, rgba(153, 236, 222, 0.33) 100%),
-         linear-gradient(0deg,rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.25) 100%);
-
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 12px;
-  
-        h1{
-          display: flex;
-          font-size: 4.5rem;
-          color: var(--color-white);
-          text-align: center;
-          justify-content: center;
-
-          @include mixins.phone{
-            font-size: 3rem;
-          }
-        
-         }
-
-         .heroSubHeading{
-            font-size: 4.5rem;
-            display: flex;
-            color: var(--color-white);
-            text-align: center;
-            justify-content: center;
-    
-            @include mixins.phone{
-              font-size: 2rem;
-            }
-          }
-      }  
-   }
-
-
-   
-.pillars{
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   justify-content: center;
-   padding: 100px;
-   width: 100%;
-
-   @include mixins.phone{
-      padding: 16px;
-   }
+  //     @include mixins.phone {
+  //       font-size: 2.5rem;
+  //     }
+  //   }
 }
 
-   .pillarsHeader{
-      padding-top: 24px;
-      
-      @include mixins.phone{
-         padding-top: 48px;
-      }
-   }
+.heroContainer {
+  height: calc(100vh - var(--navbar-height));
+  width: 100%;
+  position: relative;
 
-   h2{
-      color: var(--color-dark-purple);
-      display: flex;
-      justify-content: center;
-
-      @include mixins.phone{
-         font-size: 2.5rem;
-      }
-   }
-
-   .circles{
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 64px;
-      margin-top: 64px;
-      width: 100%;
-      
-      
-      @include mixins.phone{
-         flex-direction: column;
-         width: 80%;
-      }
-
-     
-
-
-      h3{
-         position: absolute;
-         color: var(--color-dark-purple);
-         font-size: 2rem;
-         background-color: transparent;
-         left: 20%;
-         top: 40%;
-         right: 20%;
-         bottom: 20%;
-         text-align: center;
-
-         @include mixins.phone{
-            line-height: 150%;
-            font-size: 1.7rem;
-         }
-      }
-
-
-      .RedCircle, .YellowCircle, .GreenCircle, .PurpleCircle{
-         border-radius: 50%;
-         position: relative;
-         padding: 164px;
-         height: 48vh;
-
-         @include mixins.phone{
-            padding: 150px;
-         }
-      }
-
-      .YellowCircle{
-         background: rgba(254, 212, 29, 0.5);
-         margin-right: -8%;
-
-         @include mixins.phone{
-            margin-right: -8%;
-            margin-bottom: -8%;
-         }
-
-
-         
-      }
-
-      .GreenCircle{
-         background: rgba(143, 209, 197, 0.5);
-        
-         @include mixins.phone{
-            margin-left: -10%;
-            margin-bottom: -10%;
-         }
-      }
-
-      .RedCircle{
-         background: rgba(243, 119, 53, 0.5);
-        
-         @include mixins.phone{
-            margin-right: -10%;
-            margin-top: -10%;
-         }
-      }
-
-      .PurpleCircle{
-         background: rgba(147, 150, 202, 0.5);
-         margin-left: -8%;
-
-         @include mixins.phone{
-            margin-left: -10%;
-            margin-top: -10%;
-         }
-      }
-
-   
-   }
-
-   .topCircles, .bottomCircles{
-      display: flex;
-      width: 50%;
-      justify-content: center;
-      align-items: center;
-
-      @include mixins.phone{
-         align-items: center;
-         justify-content: center;
-      }
-   }
-
-   .topCircles{
-      margin-right: -4%;
-      
-      @include mixins.phone{
-         margin: 0px;
-      }
-   }
-
-   .bottomCircles{
-      margin-left: -4%;
-
-      @include mixins.phone{
-         margin: 0px;
-      }
-   }
-
-
-   .pillarsContainer{
-      display: flex;
-      flex-direction: column;
-      gap: 68px;
-      //width: 100%;
-
-      .card{
-      display: flex;
-      gap: 64px;
-
-         @include mixins.phone{
-            flex-direction: column;
-            background-color: var(--color-white);
-            border-radius: 15px;
-            align-items: center;
-            justify-content: center;
-            gap: 28px;
-         }
-
-      }
-
-      .imageContainer{
-         position: relative;
-         display: flex;
-         width: 45%;
-         height: 394px;
-
-            @include mixins.phone{
-               width: 100%;
-               height: 45vh;
-            }
-      }
-
-         .cardImgs{
-            border-radius: 50%;
-            object-fit: cover;
-            object-position: center;
-            
-
-            @include mixins.phone{
-               border-radius: 15px 15px 0px 0px;
-            }
-         }
-
-         .cardText{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            width: 100%;
-            gap: 28px;
-
-            @include mixins.phone{
-               margin-left: 0px;
-            }
-         }
-
-         .headerContainer{
-            display: flex;
-            flex-direction: row;
-            gap: 16px;
-
-            @include mixins.phone{
-               justify-content: center;
-            }
-         }
-   }
-  
-      p{
-         padding: 34px;
-         border-radius: 20px;
-         background: var(--color-white);
-
-         @include mixins.phone{
-            background: none;
-            border-radius: 0px;
-            font-size: 1.5rem;
-            padding: 0px 34px 34px 34px;
-            
-         }
-      }
-
-
-
-   .learnMore{
-      background: var(--color-white);
-      border-radius: 20px;
-      padding: 40px 48px;
-      margin-bottom: 84px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-
-      @include mixins.phone{
-         display: none;
-      }
-
-      .learnMoreText{
-         background: none;
-         display: flex;
-         margin-top: -24px;
-      }
-   }
-
+  @include mixins.phone {
+    height: 33vh;
+  }
 }
 
+.heroImg {
+  object-fit: cover;
+  object-position: center;
+}
+
+.heroText {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+      0deg,
+      rgba(153, 236, 222, 0.33) 50%,
+      rgba(153, 236, 222, 0.33) 100%
+    ),
+    linear-gradient(0deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.25) 100%);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+
+  h1 {
+    display: flex;
+    font-size: 4.5rem;
+    color: var(--color-white);
+    text-align: center;
+    justify-content: center;
+
+    @include mixins.phone {
+      font-size: 3rem;
+    }
+  }
+}
+
+.heroSubHeading {
+  font-size: 4.5rem;
+  display: flex;
+  color: var(--color-white);
+  text-align: center;
+  justify-content: center;
+
+  @include mixins.phone {
+    font-size: 2rem;
+  }
+}
+
+.pillars {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 120px;
+  padding: 72px 215px;
+
+  @include mixins.phone {
+    padding: 16px;
+  }
+}
+
+.pillarsContainer {
+  width: 100%;
+}
+
+.pillarsCards {
+  display: flex;
+  flex-direction: column;
+  gap: 120px;
+}
+
+.card {
+  display: flex;
+  gap: 64px;
+
+  @include mixins.phone {
+    flex-direction: column;
+    background-color: var(--color-white);
+    border-radius: 15px;
+    align-items: center;
+    justify-content: center;
+    gap: 28px;
+  }
+}
+
+.imageContainer {
+  width: 40%;
+
+  @include mixins.phone {
+    width: 100%;
+  }
+}
+
+.cardImg {
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+
+  @include mixins.phone {
+    border-radius: 15px;
+  }
+}
+
+.cardText {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 60%;
+  gap: 28px;
+
+  @include mixins.phone {
+    margin-left: 0px;
+  }
+}
+
+.headerContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+
+  @include mixins.phone {
+    justify-content: center;
+  }
+}
+
+.learnMore {
+  background: var(--color-white);
+  border-radius: 20px;
+  padding: 40px 48px;
+  margin-bottom: 84px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  @include mixins.phone {
+    display: none;
+  }
+}
+
+.learnMoreText {
+  background: none;
+  display: flex;
+  margin-top: -24px;
+}
 
 .imgLeft {
-   flex-direction: row;
- }
- 
- .imgRight {
-   flex-direction: row-reverse;
- }
+  flex-direction: row;
+
+  @include mixins.tablet {
+    flex-direction: column;
+  }
+}
+
+.imgRight {
+  flex-direction: row-reverse;
+
+  @include mixins.tablet {
+    flex-direction: column;
+  }
+}
