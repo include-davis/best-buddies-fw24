@@ -27,6 +27,7 @@
 
   @include phone {
     text-align: center;
+    padding-top: 72px;
   }
 }
 
@@ -71,9 +72,42 @@
   background-color: var(--color-white);
 }
 
-.imageContainer, .imageContainer1, .imageContainer2 {
+.imageContainer, .imageContainer1, .imageContainer2, .imageContainer3 {
   width: 50%;
   position: relative;
+
+  @include phone {
+    width: 100%;
+  }
+}
+
+.imageContainer {
+  @include phone {
+    height: 42vh;
+  }
+}
+
+.imageContainer1 {
+  width: 40%;
+  
+  @include phone {
+    height: 43vh;
+  }
+}
+
+.imageContainer2 {
+  width: 60%;
+
+  @include phone {
+    height: 43vh;
+  }
+}
+
+.imageContainer3 {
+
+  @include phone {
+    height: 60vh;
+  }
 }
 
 .eventImage {
@@ -173,6 +207,10 @@
   display: flex;
   flex-direction: row;
   gap: 30px;
+
+  @include phone {
+    flex-direction: column;
+  }
 }
 
 .champion_text {
@@ -182,6 +220,18 @@
   justify-content: center;
   gap: 24px;
   margin: 16px 0;
+
+  @include phone {
+    width: 100%;
+  }
+}
+
+.get_involved_button {
+  @include phone {
+    width: 60px;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 .getInvolved {

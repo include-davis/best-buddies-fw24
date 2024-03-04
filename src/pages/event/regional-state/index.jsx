@@ -45,7 +45,7 @@ export default function RegionalStateEvents() {
         </div>
       </section>
       <section className={styles.two_imgs}>
-        <div className={styles.imageContainer1} style={{ width: "40%" }}>
+        <div className={styles.imageContainer1}>
           <Image
             className={`${styles.eventImage}`}
             src="/event-imgs/events-friendship-2.jpg"
@@ -55,7 +55,7 @@ export default function RegionalStateEvents() {
             alt="Friendship walk group image"
           />
         </div>
-        <div className={styles.imageContainer2} style={{ width: "60%" }}>
+        <div className={styles.imageContainer2}>
           <Image
             className={`${styles.eventImage} ${styles.friendshipImg3}`}
             src="/event-imgs/events-friendship-3.jpg"
@@ -96,7 +96,7 @@ export default function RegionalStateEvents() {
       </section>
       <section className={styles.champion_of_the_year}>
         <div className={styles.text_card}>
-          <div className={styles.imageContainer}>
+          <div className={styles.imageContainer3}>
             <Image
               className={styles.eventImage}
               src="/event-imgs/events-champion.jpg"
@@ -123,7 +123,7 @@ export default function RegionalStateEvents() {
                   sponsorship opportunities!
                 </div>
               </div>
-              <Button
+              <Button className={styles.get_involved_button}
                 label={"Get Involved"}
                 href={"https://www.bestbuddieschampion.org/sacramento/"}
               />
