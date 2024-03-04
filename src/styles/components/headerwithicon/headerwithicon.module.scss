@@ -1,32 +1,32 @@
 @use "src/styles/mixins.scss";
 
-.headerIconContainer { 
+.headerIconContainer {
+  display: flex;
+  gap: 16px;
+  align-self: center;
+  align-items: center;
 
-    display: flex;
-    gap: 16px;
-    align-self: center;
-    align-items: center;
+  // need to manually set font so the header and image align.
+  h2 {
+    // font-family: "Helvetica Neue"; // note on figma, the header for mobile for featured events is actually smaller.
+    margin-top: 1px;
+  }
 
-    // need to manually set font so the header and image align.
+  @include mixins.phone {
+    gap: 8px;
+
     h2 {
-        font-family: "Helvetica Neue"; // note on figma, the header for mobile for featured events is actually smaller.
+      font-size: 1.5rem;
     }
-
-    @include mixins.phone{
-        gap: 8px;
-
-        h2 {
-            font-size: 1.5rem;
-        }
-    }
+  }
 }
 
-.imageContainer{
-    width: 44px;
-    aspect-ratio: 1;
-    position: relative;
+.imageContainer {
+  width: 44px;
+  aspect-ratio: 1;
+  position: relative;
 
-    @include mixins.phone {
-        width: 32px;
-    }
+  @include mixins.phone {
+    width: 32px;
+  }
 }
