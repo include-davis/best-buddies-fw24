@@ -1,6 +1,8 @@
 @use 'src/styles/mixins.scss';
 
 .currentMembersContainer {
+    background: var(--color-light-gray);
+    text-align: center;
     display: flex;
     flex-direction: column;
     align-items: stretch; 
