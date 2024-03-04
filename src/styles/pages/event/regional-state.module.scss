@@ -1,4 +1,4 @@
-@import "../../mixins";
+@use "src/styles/mixins.scss";
 
 .page {
   background-color: var(--color-light-gray);
@@ -149,6 +149,8 @@
 
 .eventImage {
   border-radius: 16px;
+  object-fit: "cover";
+  object-position: "center";
 }
 
 .eventImage_mobile {

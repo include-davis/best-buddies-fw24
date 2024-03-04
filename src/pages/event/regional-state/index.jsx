@@ -16,8 +16,6 @@ export default function RegionalStateEvents() {
           <Image
             className={styles.eventImage}
             src="/event-imgs/events-friendship.jpg"
-            objectFit="cover"
-            objectPosition="center"
             fill
             // width={598}
             // height={397}
@@ -47,8 +45,6 @@ export default function RegionalStateEvents() {
           <Image
             className={styles.eventImage}
             src="/event-imgs/events-friendship.jpg"
-            objectFit="cover"
-            objectPosition="center"
             fill
             // width={598}
             // height={397}
@@ -61,8 +57,6 @@ export default function RegionalStateEvents() {
           <Image
             className={`${styles.eventImage}`}
             src="/event-imgs/events-friendship-2.jpg"
-            objectFit="cover"
-            objectPosition="center"
             fill
             alt="Friendship walk group image"
           />
@@ -71,8 +65,6 @@ export default function RegionalStateEvents() {
           <Image
             className={`${styles.eventImage} ${styles.friendshipImgRight}`}
             src="/event-imgs/events-friendship-3.jpg"
-            objectFit="cover"
-            objectPosition="center"
             fill
             alt="Friendship walk group image"
           />
@@ -97,8 +89,6 @@ export default function RegionalStateEvents() {
           <Image
             className={`${styles.eventImage_mobile}`}
             src="/event-imgs/events-friendship-2.jpg"
-            objectFit="cover"
-            objectPosition="0 22%"
             fill
             alt="Friendship walk group image"
           />
@@ -125,8 +115,6 @@ export default function RegionalStateEvents() {
             <Image
               className={styles.eventImage}
               src="/event-imgs/events-champion.jpg"
-              objectFit="cover"
-              objectPosition="center"
               fill
               alt="Friendship walk group image"
             />
@@ -137,8 +125,6 @@ export default function RegionalStateEvents() {
               <Image
                 className={styles.eventImage}
                 src="/event-imgs/events-champion.jpg"
-                objectFit="cover"
-                objectPosition="center"
                 fill
                 alt="Friendship walk group image"
               />
