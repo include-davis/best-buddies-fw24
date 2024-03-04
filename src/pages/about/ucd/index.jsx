@@ -1,3 +1,4 @@
+import AutoImage from "@/components/AutoImage/AutoImage";
 import styles from "@/styles/pages/about/about-ucd.module.scss";
 
 export default function AboutUCD() {
