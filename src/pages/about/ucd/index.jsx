@@ -1,5 +1,6 @@
 import styles from "@/styles/pages/about/about-ucd.module.scss";
 import Image from "next/image";
+import AutoImage from "@/components/AutoImage/AutoImage";
 
 const ucdContent = [
   {
@@ -44,14 +45,11 @@ export default function AboutUCD() {
     <div className={styles.body}>
       <div className={styles.heroContainer}>
         <Image
-          className={styles.cardImgs}
+          className={styles.heroImg}
           src="/about-imgs/ucd/about-ucd-banner.jpg"
           alt="All the Best Buddies members (about 50 people) are huddled in a group and looking at the camera. In the foreground, four lawn chairs and a table are visible."
           fill
-          objectFit="cover"
-          objectPosition="center"
         />
-
         <div className={styles.heroText}>
           <h1>Best Buddies</h1>
           <h2 className={styles.heroSubHeading}>UC Davis Chapter</h2>
@@ -67,22 +65,19 @@ export default function AboutUCD() {
                 index % 2 == 0 ? styles.imgLeft : styles.imgRight
               }`}
             >
-              <div className={styles.imgContainer}>
-                <Image
-                  className={styles.cardImgs}
-                  fill
-                  objectFit="cover"
-                  objectPosition="center"
+              <div className={styles.cardImgContainer}>
+                <AutoImage
+                  className={styles.cardImg}
                   src={cardContent.path}
                   alt={cardContent.altText}
                 />
               </div>
 
               <div className={styles.cardText}>
-                <div className={styles.title}>
+                <div className={styles.cardTitle}>
                   <h2>{cardContent.title}</h2>
                 </div>
-                <div className={styles.caption}>
+                <div className={styles.cardCaption}>
                   <p className={`body-1`}>{cardContent.description}</p>
                 </div>
               </div>
