@@ -4,24 +4,21 @@
   background-color: var(--color-light-gray);
   padding: var(--edge-spacer);
 
-  @include phone {
+  @include mixins.phone {
     padding: 24px;
   }
 }
 
-.friendship_walk_section,
-.champion_of_the_year {
-  margin-bottom: 30px;
-
-  @include phone {
-    margin-bottom: 22px;
-  }
+.events_sections {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }
 
 .imageContainerTop_mobile {
   display: none;
 
-  @include phone {
+  @include mixins.phone {
     display: flex;
     position: relative;
     height: 42vh;
@@ -36,7 +33,7 @@
   justify-content: center;
   padding-bottom: 72px;
 
-  @include phone {
+  @include mixins.phone {
     text-align: center;
     padding-top: 72px;
   }
@@ -47,7 +44,7 @@
   flex-direction: row;
   gap: 24px;
 
-  @include phone {
+  @include mixins.phone {
     flex-direction: column;
     gap: 22px;
   }
@@ -62,20 +59,21 @@
 .text_card {
   width: 50%;
   background-color: var(--color-white);
-  padding: 80px 60px;
+  padding: 56px 40px;
   border-radius: 15px;
   box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.02);
 
-  @include phone {
+  @include mixins.phone {
     width: 100%;
-    padding: 40px 30px;
+    padding: 24px 16px;
+    border-radius: 10px;
   }
 }
 
 .text_title {
   color: #1b044e;
 
-  @include phone {
+  @include mixins.phone {
     text-align: center;
   }
 }
@@ -89,13 +87,13 @@
   width: 50%;
   position: relative;
 
-  @include phone {
+  @include mixins.phone {
     width: 100%;
   }
 }
 
 .imageContainerTop {
-  @include phone {
+  @include mixins.phone {
     display: none;
   }
 }
@@ -103,7 +101,7 @@
 .imageContainerLeft {
   width: 40%;
   
-  @include phone {
+  @include mixins.phone {
     height: 43vh;
     display: none;
   }
@@ -112,7 +110,7 @@
 .imageContainerRight {
   width: 60%;
 
-  @include phone {
+  @include mixins.phone {
     height: 43vh;
     width: 100%;
   }
@@ -121,7 +119,7 @@
 .imageContainerLeft_mobile {
   display: none;
 
-  @include phone {
+  @include mixins.phone {
     display: flex;
     position: relative;
     height: 42vh;
@@ -131,7 +129,7 @@
 
 .imageContainerBottom {
 
-  @include phone {
+  @include mixins.phone {
     height: 60vh;
     display: none;
   }
@@ -140,7 +138,7 @@
 .imageContainerBottom_mobile {
   display: none;
   
-  @include phone {
+  @include mixins.phone {
     display: flex;
     position: relative;
     height: 46vh;
@@ -148,9 +146,11 @@
 }
 
 .eventImage {
-  border-radius: 16px;
-  object-fit: "cover";
-  object-position: "center";
+  border-radius: 15px;
+
+  @include mixins.phone {
+    border-radius: 10px;
+  }
 }
 
 .eventImage_mobile {
@@ -164,9 +164,8 @@
   height: 50vh;
   justify-content: center;
   gap: 24px;
-  margin-bottom: 30px;
 
-  @include phone {
+  @include mixins.phone {
     margin-bottom: 0;
     height: 46vh;
   }
@@ -180,11 +179,12 @@
   display: flex;
   flex-direction: row;
   gap: 16px;
-  margin-bottom: 71px;
+  margin-bottom: 100px;
 
-  @include phone {
+  @include mixins.phone {
     flex-direction: column;
     gap: 0;
+    margin-bottom: 48px;
   }
 }
 
@@ -200,12 +200,13 @@
   flex-direction: column;
   gap: 16px;
   padding: 56px;
-  border-radius: 16px;
+  border-radius: 15px;
 
-  @include phone {
+  @include mixins.phone {
     width: 100%;
     margin-bottom: 22px;
-    padding: 40px 30px;
+    padding: 24px 16px;
+    border-radius: 10px;
   }
 }
 
@@ -216,10 +217,11 @@
   align-items: center;
   text-align: center;
   background-color: var(--color-purple);
-  border-radius: 16px;
+  border-radius: 15px;
 
-  @include phone {
+  @include mixins.phone {
     width: 100%;
+    border-radius: 10px;
     border-top-left-radius: 0px;
     border-top-right-radius: 0px;
   }
@@ -249,7 +251,11 @@
 }
 
 .champion_of_the_year {
-  margin-top: 71px;
+  margin-top: 100px;
+
+  @include mixins.phone {
+    margin-top: 48px;
+  }
 }
 
 .champion_of_the_year > .text_card {
@@ -258,7 +264,7 @@
   flex-direction: row;
   gap: 30px;
 
-  @include phone {
+  @include mixins.phone {
     flex-direction: column;
   }
 }
@@ -271,13 +277,13 @@
   gap: 24px;
   margin: 16px 0;
 
-  @include phone {
+  @include mixins.phone {
     width: 100%;
   }
 }
 
 .button_container {
-  @include phone {
+  @include mixins.phone {
     text-align: center;
   }
 }
