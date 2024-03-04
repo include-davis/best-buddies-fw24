@@ -1,0 +1,11 @@
+@use "src/styles/mixins.scss";
+
+.eventCards {
+  display: flex;
+  gap: 32px;
+  // overflow: scroll;
+
+  @include mixins.sm-phone {
+    gap: 8px;
+  }
+}
