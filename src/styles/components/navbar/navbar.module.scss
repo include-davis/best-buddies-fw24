@@ -21,7 +21,9 @@
     }
 }
 .mobileNav{
-    height: 100vh;
+    @include mixins.phone{
+        height: 100vh;
+    }
 }
 
 .logo{
