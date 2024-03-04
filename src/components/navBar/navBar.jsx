@@ -29,8 +29,7 @@ export default function Navbar() {
   const [mobileMenuIcon, setMobileMenuIcon] = useState("page-icons/bars.svg");
   const toggleMenu = (index) => {
     setDropdownStates((prevStates) => {
-      const newStates = [...prevStates];
-      newStates[index] = !(newStates[index]);
+      const newStates = prevStates.map((state, i) => i == index ? !state : false);
       return newStates;
     });
   };
