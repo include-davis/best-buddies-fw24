@@ -1,301 +1,257 @@
 @use "src/styles/mixins.scss";
 
 .page {
+  display: flex;
+  flex-direction: column;
+  gap: 86px;
   background-color: var(--color-light-gray);
-  padding: var(--edge-spacer);
+  padding: 81px 112px 126px 112px;
+
+  @include mixins.tablet {
+    gap: 64px;
+  }
 
   @include mixins.phone {
-    padding: 24px;
+    gap: 48px;
+    padding: 48px 16px 80px 16px;
   }
 }
 
-.events_sections {
+.events {
   display: flex;
   flex-direction: column;
-  gap: 24px;
-}
-
-.imageContainerTop_mobile {
-  display: none;
+  gap: 100px;
 
   @include mixins.phone {
-    display: flex;
-    position: relative;
-    height: 42vh;
+    gap: 64px;
   }
 }
 
 .regional_state_title {
-  color: #1b044e;
-  font-size: 4em;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-bottom: 72px;
+  text-align: center;
 
   @include mixins.phone {
-    text-align: center;
-    padding-top: 72px;
+    font-size: 2.25rem;
   }
 }
 
-.friendship_walk_section {
+.event {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   gap: 24px;
 
   @include mixins.phone {
-    flex-direction: column;
-    gap: 22px;
+    gap: 16px;
   }
 }
 
-.friendship_walk_text {
+.eventCard,
+.eventCard2 {
   display: flex;
-  flex-direction: column;
   gap: 32px;
-}
-
-.text_card {
-  width: 50%;
-  background-color: var(--color-white);
-  padding: 56px 40px;
-  border-radius: 15px;
-  box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.02);
 
   @include mixins.phone {
-    width: 100%;
-    padding: 24px 16px;
-    border-radius: 10px;
+    gap: 16px;
   }
 }
 
-.text_title {
-  color: #1b044e;
+.eventCard {
+  @include mixins.tablet {
+    flex-direction: column-reverse;
+  }
+}
 
+.eventCard2 {
+  @include mixins.tablet {
+    flex-direction: column;
+  }
+}
+
+.cardTitle {
   @include mixins.phone {
     text-align: center;
   }
 }
 
-.body-1,
-.friendship_walk_section h2 {
-  background-color: var(--color-white);
-}
-
-.imageContainerTop, .imageContainerLeft, .imageContainerRight, .imageContainerBottom {
+.eventCardText,
+.eventCard2Text {
   width: 50%;
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 24px;
+  background-color: var(--color-white);
+  padding: 40px;
+  border-radius: 15px;
 
-  @include mixins.phone {
+  @include mixins.tablet {
     width: 100%;
   }
-}
 
-.imageContainerTop {
   @include mixins.phone {
-    display: none;
+    gap: 16px;
+    padding: 24px 16px;
   }
 }
 
-.imageContainerLeft {
-  width: 40%;
-  
-  @include mixins.phone {
-    height: 43vh;
-    display: none;
-  }
-}
-
-.imageContainerRight {
+.eventCard2Text {
   width: 60%;
+  padding: 40px 56px;
 
-  @include mixins.phone {
-    height: 43vh;
+  @include mixins.tablet {
     width: 100%;
   }
-}
-
-.imageContainerLeft_mobile {
-  display: none;
 
   @include mixins.phone {
-    display: flex;
-    position: relative;
-    height: 42vh;
-    border-bottom-left-radius: 0px;
+    gap: 16px;
+    padding: 24px 16px;
   }
 }
 
-.imageContainerBottom {
+.eventCardImg {
+  width: 50%;
+  display: flex;
+  justify-content: center;
 
-  @include mixins.phone {
-    height: 60vh;
-    display: none;
-  }
-}
-
-.imageContainerBottom_mobile {
-  display: none;
-  
-  @include mixins.phone {
-    display: flex;
-    position: relative;
-    height: 46vh;
+  @include mixins.tablet {
+    width: 100%;
   }
 }
 
 .eventImage {
-  border-radius: 15px;
-
-  @include mixins.phone {
-    border-radius: 10px;
-  }
-}
-
-.eventImage_mobile {
-  border-top-left-radius: 16px;
-  border-top-right-radius: 16px;
-}
-
-.two_imgs {
-  display: flex;
   width: 100%;
-  height: 50vh;
-  justify-content: center;
-  gap: 24px;
-
-  @include mixins.phone {
-    margin-bottom: 0;
-    height: 100%;
-  }
-}
-
-.friendshipImgRight {
-  width: 67%;
-}
-
-.third_fw_sac {
-  display: flex;
-  flex-direction: row;
-  gap: 16px;
-  margin-bottom: 100px;
-
-  @include mixins.phone {
-    flex-direction: column;
-    gap: 0;
-    margin-bottom: 48px;
-  }
-}
-
-.third_walk_card,
-.third_walk_card h2,
-.third_walk_card {
-  background-color: var(--color-white);
-}
-
-.third_walk_card {
-  width: 60%;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  padding: 56px;
   border-radius: 15px;
+  object-fit: cover;
+  object-position: center;
+}
 
-  @include mixins.phone {
-    width: 100%;
-    margin-bottom: 22px;
-    padding: 24px 16px;
-    border-radius: 10px;
+.eventImgGallery {
+  display: flex;
+  gap: 32px;
+}
+
+.eventGalleryLeft {
+  width: 40%;
+
+  @include mixins.tablet {
+    display: none;
   }
 }
 
-.third_walk_join {
+.eventGalleryRight {
+  width: 60%;
+
+  @include mixins.tablet {
+    width: 100%;
+  }
+}
+
+.eventRegister {
   width: 40%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: center;
+  border-radius: 15px;
+  padding: 40px 56px;
   text-align: center;
   background-color: var(--color-purple);
-  border-radius: 15px;
 
-  @include mixins.phone {
+  @include mixins.tablet {
     width: 100%;
-    border-radius: 10px;
-    border-top-left-radius: 0px;
-    border-top-right-radius: 0px;
+    padding: 0;
+    gap: 32px;
   }
 }
 
-.register {
+.mobileRegisterImg {
+  display: none;
+
+  @include mixins.tablet {
+    display: flex;
+    > img {
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+  }
+}
+
+.eventRegisterInfo {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 32px;
-  padding: 40px 56px;
-}
 
-.registerText {
-  color: var(--color-white);
-}
+  > p {
+    color: var(--color-white);
+    text-align: center;
+  }
 
-.join_body {
-  color: white;
-  padding: 40px;
+  @include mixins.tablet {
+    padding: 0 144px 32px 144px;
+  }
+
+  @include mixins.phone {
+    gap: 16px;
+    padding: 0 16px 32px 16px;
+  }
 }
 
 .section_divider {
-  background-color: #E2DDEB;
-  height: 2px; 
+  background-color: var(--color-pale-gray);
+  height: 2px;
   border: none;
   opacity: 75%;
 }
 
-.champion_of_the_year {
-  margin-top: 100px;
-
-  @include mixins.phone {
-    margin-top: 48px;
-  }
-}
-
-.champion_of_the_year > .text_card {
-  width: 100%;
+.event2 {
   display: flex;
-  flex-direction: row;
-  gap: 30px;
+  gap: 32px;
+  border-radius: 15px;
+  padding: 40px;
+  background-color: var(--color-white);
 
-  @include mixins.phone {
+  @include mixins.tablet {
     flex-direction: column;
   }
-}
-
-.champion_text {
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 24px;
-  margin: 16px 0;
 
   @include mixins.phone {
+    padding: 16px;
+  }
+}
+
+.event2ImgContainer {
+  display: flex;
+  width: 50%;
+
+  @include mixins.tablet {
     width: 100%;
   }
 }
 
-.button_container {
+.event2Content {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 40px;
+
+  @include mixins.tablet {
+    width: 100%;
+  }
+
   @include mixins.phone {
-    text-align: center;
+    gap: 16px;
+    > a {
+      align-self: center;
+    }
   }
 }
 
-.getInvolved {
+.event2Text {
   display: flex;
   flex-direction: column;
-  gap: 40px;
-}
-
-.getInvolvedText {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
+  gap: 16px;
 }
