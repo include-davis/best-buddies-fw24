@@ -8,6 +8,7 @@ import Link from "next/link";
 import EventCard from "@/components/eventCard/eventCard";
 import AnnouncementsCard from "@/components/announcementsCard/announcementsCard"
 import HeaderWithIcon from "@/components/headerWithIcon/headerWithIcon";
+import AutoImage from "@/components/AutoImage/AutoImage";
 
 const inter = Inter({ subsets: ["latin"] });
 
