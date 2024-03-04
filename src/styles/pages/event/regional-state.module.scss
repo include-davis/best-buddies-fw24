@@ -18,7 +18,7 @@
   }
 }
 
-.imageContainer_mobile {
+.imageContainerTop_mobile {
   display: none;
 
   @include phone {
@@ -85,7 +85,7 @@
   background-color: var(--color-white);
 }
 
-.imageContainer, .imageContainer1, .imageContainer2, .imageContainer3 {
+.imageContainerTop, .imageContainerLeft, .imageContainerRight, .imageContainerBottom {
   width: 50%;
   position: relative;
 
@@ -94,29 +94,31 @@
   }
 }
 
-.imageContainer {
+.imageContainerTop {
   @include phone {
     display: none;
   }
 }
 
-.imageContainer1 {
+.imageContainerLeft {
   width: 40%;
   
   @include phone {
     height: 43vh;
+    display: none;
   }
 }
 
-.imageContainer2 {
+.imageContainerRight {
   width: 60%;
 
   @include phone {
     height: 43vh;
+    width: 100%;
   }
 }
 
-.imageContainer2_mobile {
+.imageContainerLeft_mobile {
   display: none;
 
   @include phone {
@@ -127,7 +129,7 @@
   }
 }
 
-.imageContainer3 {
+.imageContainerBottom {
 
   @include phone {
     height: 60vh;
@@ -135,7 +137,7 @@
   }
 }
 
-.imageContainer3_mobile {
+.imageContainerBottom_mobile {
   display: none;
   
   @include phone {
@@ -149,7 +151,7 @@
   border-radius: 16px;
 }
 
-.eventImage2_mobile {
+.eventImage_mobile {
   border-top-left-radius: 16px;
   border-top-right-radius: 16px;
 }
@@ -168,23 +170,7 @@
   }
 }
 
-.two_imgs > .imageContainer1 {
-  @include phone {
-    display: none;
-  }
-}
-
-.two_imgs > .imageContainer2 {
-  @include phone {
-    width: 100%;
-  }
-}
-
-.friendshipImg2 {
-  width: 33%;
-}
-
-.friendshipImg3 {
+.friendshipImgRight {
   width: 67%;
 }
 
@@ -288,7 +274,7 @@
   }
 }
 
-.get_involved_button {
+.button_container {
   @include phone {
     text-align: center;
   }
@@ -304,10 +290,4 @@
   display: flex;
   flex-direction: column;
   gap: 4px;
-}
-
-@mixin phone {
-  @media screen and (max-width: 720px) {
-    @content;
-  }
 }

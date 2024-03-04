@@ -12,7 +12,7 @@ export default function RegionalStateEvents() {
         </h1>
       </div>
       <section className={styles.friendship_walk_section}>
-      <div className={styles.imageContainer_mobile}>
+      <div className={styles.imageContainerTop_mobile}>
           <Image
             className={styles.eventImage}
             src="/event-imgs/events-friendship.jpg"
@@ -43,7 +43,7 @@ export default function RegionalStateEvents() {
             </div>
           </div>
         </div>
-        <div className={styles.imageContainer}>
+        <div className={styles.imageContainerTop}>
           <Image
             className={styles.eventImage}
             src="/event-imgs/events-friendship.jpg"
@@ -57,7 +57,7 @@ export default function RegionalStateEvents() {
         </div>
       </section>
       <section className={styles.two_imgs}>
-        <div className={styles.imageContainer1}>
+        <div className={styles.imageContainerLeft}>
           <Image
             className={`${styles.eventImage}`}
             src="/event-imgs/events-friendship-2.jpg"
@@ -67,9 +67,9 @@ export default function RegionalStateEvents() {
             alt="Friendship walk group image"
           />
         </div>
-        <div className={styles.imageContainer2}>
+        <div className={styles.imageContainerRight}>
           <Image
-            className={`${styles.eventImage} ${styles.friendshipImg3}`}
+            className={`${styles.eventImage} ${styles.friendshipImgRight}`}
             src="/event-imgs/events-friendship-3.jpg"
             objectFit="cover"
             objectPosition="center"
@@ -93,9 +93,9 @@ export default function RegionalStateEvents() {
             25 registered members.
           </div>
         </div>
-        <div className={styles.imageContainer2_mobile}>
+        <div className={styles.imageContainerLeft_mobile}>
           <Image
-            className={`${styles.eventImage2_mobile}`}
+            className={`${styles.eventImage_mobile}`}
             src="/event-imgs/events-friendship-2.jpg"
             objectFit="cover"
             objectPosition="0 22%"
@@ -109,17 +109,19 @@ export default function RegionalStateEvents() {
               Join us for the April 2024 Sacramento Friendship Walk to support
               Best Buddies and make a difference!
             </div>
-            <Button
-              label={"Register Now"}
-              href={"https://www.bestbuddiesfriendshipwalk.org/sacramento/"}
-            />
+            <div className={styles.button_container}>
+              <Button
+                label={"Register Now"}
+                href={"https://www.bestbuddiesfriendshipwalk.org/sacramento/"}
+              />
+            </div>
           </div>
         </div>
       </section>
       <hr className={styles.section_divider}></hr>
       <section className={styles.champion_of_the_year}>
         <div className={styles.text_card}>
-          <div className={styles.imageContainer3}>
+          <div className={styles.imageContainerBottom}>
             <Image
               className={styles.eventImage}
               src="/event-imgs/events-champion.jpg"
@@ -131,7 +133,7 @@ export default function RegionalStateEvents() {
           </div>
           <div className={styles.champion_text}>
             <h2 className={styles.text_title}>Champion of the Year</h2>
-            <div className={styles.imageContainer3_mobile}>
+            <div className={styles.imageContainerBottom_mobile}>
               <Image
                 className={styles.eventImage}
                 src="/event-imgs/events-champion.jpg"
@@ -156,11 +158,11 @@ export default function RegionalStateEvents() {
                   sponsorship opportunities!
                 </div>
               </div>
-              <div className={styles.get_involved_button}>
-              <Button
-                label={"Get Involved"}
-                href={"https://www.bestbuddieschampion.org/sacramento/"}
-              />
+              <div className={styles.button_container}>
+                <Button
+                  label={"Get Involved"}
+                  href={"https://www.bestbuddieschampion.org/sacramento/"}
+                />
               </div>
             </div>
           </div>
