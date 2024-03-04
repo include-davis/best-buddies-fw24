@@ -3,10 +3,9 @@
 .nav{
     display: flex;
     align-items: center;
-    background-color: white;
     justify-content: space-between;
     padding: 16px;
-
+    
     a{
         text-decoration: none;
         color: var(--color-dark-purple);
@@ -16,62 +15,72 @@
         list-style-type: none;
         padding: 10px 22px 10px 22px;
     }
-}
-.logo{
-    position: relative;
-    width: 86px;
-    height: 86px;
-    Image{
-        
+
+    @include mixins.phone{
+        height: 100vh;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding: 0px;
     }
 }
+
+.logo{
+    // position: relative;
+    width: 86px;
+    height: 86px;
+}
+
 .rightSide{
     display: flex;
     align-items: center;
     justify-content: center;
-    
+    @include mixins.phone{
+        justify-content: flex-end;
+    }
 }
 
 .links{
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 25px;
-    
+    gap: 32px;
+    padding: 0px 15px;
+    @include mixins.phone{
+        padding:0;
+        gap: 16px;
+    }
     list-style-type: none;
     text-decoration: none;
-    .header{
-        padding:10px; 
-    }
     li{
+        padding: 10px;
         @include mixins.phone{
-            display:none;
+            padding:0;
         }
     }
+    .pageLink{
+        @include mixins.phone{
+            display: none;
+        }
+    } 
+    
 }
 
 .header:hover{
     cursor: default;
 }
+
+.active{
+    transform: rotate(180deg);
+}
+
 .headerContent{
     display: flex;
     align-items: center;
     position: relative;
 }
 
-.dropdownIcon{
-    position: absolute;
-    right: -23px;
-    bottom: 2px;
-}
 
-
-.header::after{
-    content: "";
-    background: url("/page-icons/dropdown.svg");
-}
-
-.mobileMenu{
+.mobileMenuIcon{
     display: none;
     @include mixins.phone{
         display: inline;
@@ -79,4 +88,30 @@
     }
 }
 
-
+.mobileMenu{
+    display:none;
+    @include mixins.phone{
+        display: flex;
+        flex-direction: column;
+        padding:0;
+        align-items: center;
+        width: 100%;
+        Button{
+            font-size: 1rem;
+            color: var(--color-font-primary);
+            border: none;
+            border-radius: 0;
+            background: none;
+            font-weight: 700;
+            width: 100vw;
+            justify-content: center;
+            padding: 24px;
+            display: flex;
+            gap: 12px;  
+            img{
+                position: relative;
+                bottom: 5px;  
+            }
+        }
+    }
+}

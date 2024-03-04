@@ -10,3 +10,14 @@
     overflow: hidden;
     gap: 24px;
 }
+
+.dropdownMobile{
+    // position: static;
+    display: flex;
+    flex-direction: column;
+    background: var(--color-pale-gray);
+    align-items: center;
+    // border: 1px solid black;
+    width: 100%;
+    font-weight: 400;
+}

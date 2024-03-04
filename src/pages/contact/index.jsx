@@ -59,14 +59,14 @@ export default function Contact() {
                   {options.map((option, index) => (
                     <div key={index} className={styles.option} onClick={selectOption}>
                       <input type="radio" className={styles.radio} id={option.id} name="category"></input>
-                      <label for={option.id}>{option.content}</label>
+                      <label htmlFor={option.id}>{option.content}</label>
                     </div>
                   ))}
               </div>
               <div onClick={toggleOptionsMenu} className={styles.selected}>
                 <div className={optionsActive ? `${styles.selectedChoice}` : `${styles.hide}`}>
                   {selected || <p className={showSelectedText ? `${styles.appear}` : `${styles.hide}`}>Selected</p>}
-                </div>
+                </div> 
               </div>
               <Image className={optionsActive ? `${styles.dropdownIcon} ${styles.openMenuIcon}` : `${styles.dropdownIcon}`} onClick={toggleOptionsMenu} width={24} height={27} src="page-icons/dropdown.svg"></Image>
           </div>
