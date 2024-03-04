@@ -4,16 +4,17 @@
 
     display: flex;
     gap: 16px;
-    align-self: center;
+    
     align-items: center;
 
     // need to manually set font so the header and image align.
     h2 {
-        font-family: "Helvetica Neue"; // note on figma, the header for mobile for featured events is actually smaller.
+        margin-top: 6px;
     }
 
     @include mixins.phone{
         gap: 8px;
+        align-self: center;
 
         h2 {
             font-size: 1.5rem;
