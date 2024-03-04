@@ -12,6 +12,18 @@ export default function RegionalStateEvents() {
         </h1>
       </div>
       <section className={styles.friendship_walk_section}>
+      <div className={styles.imageContainer_mobile}>
+          <Image
+            className={styles.eventImage}
+            src="/event-imgs/events-friendship.jpg"
+            objectFit="cover"
+            objectPosition="center"
+            fill
+            // width={598}
+            // height={397}
+            alt="Friendship walk group image"
+          />
+        </div>
         <div className={styles.text_card}>
           <div className={styles.friendship_walk_text}>
             <h2 className={styles.text_title}>Friendship Walk</h2>
@@ -80,6 +92,16 @@ export default function RegionalStateEvents() {
             - and it was tons of fun! Our UC Davis team raised over $3,000 with
             25 registered members.
           </div>
+        </div>
+        <div className={styles.imageContainer2_mobile}>
+          <Image
+            className={`${styles.eventImage}`}
+            src="/event-imgs/events-friendship-2.jpg"
+            objectFit="cover"
+            objectPosition="0 25%"
+            fill
+            alt="Friendship walk group image"
+          />
         </div>
         <div className={styles.third_walk_join}>
           <div className={styles.register}>
