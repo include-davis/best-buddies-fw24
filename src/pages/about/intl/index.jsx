@@ -3,6 +3,7 @@ import Image from "next/image";
 import FourPillars from "@/components/about/fourPillars/FourPillars";
 import Button from "@/components/button/button";
 import AutoImage from "@/components/AutoImage/AutoImage";
+import HeaderWithIcon from "@/components/headerWithIcon/headerWithIcon";
 
 const intlContent = [
   {
@@ -85,18 +86,16 @@ export default function AboutIntl() {
                 </div>
 
                 <div className={styles.cardText}>
-                  <div className={styles.headerContainer}>
-                    <h2>{pillars.title}</h2>
-
-                    <Image
-                      className={styles.icons}
-                      width={44}
-                      height={44}
+                  <div className={styles.cardTitle}>
+                    <HeaderWithIcon
+                      label={pillars.title}
                       src={pillars.iconPath}
                     />
                   </div>
 
-                  <p className={`body-1`}>{pillars.description}</p>
+                  <div className={styles.cardDesc}>
+                    <p className={`body-1`}>{pillars.description}</p>
+                  </div>
                 </div>
               </div>
             );
@@ -104,17 +103,19 @@ export default function AboutIntl() {
         </div>
       </div>
 
-      <div className={styles.learnMore}>
-        <h2>Want to learn more?</h2>
-        <p className={styles.learnMoreText}>
-          Visit the Best Buddies International Official website.
-        </p>
+      <div className={styles.learnMoreContainer}>
+        <div className={styles.learnMore}>
+          <div className={styles.learnMoreText}>
+            <h2>Want to learn more?</h2>
+            <p>Visit the Best Buddies International Official website.</p>
+          </div>
 
-        <Button
-          label={"Visit Official Website"}
-          href={"https://aggielife.ucdavis.edu/bestbuddies/home/"}
-          target={"_blank"}
-        />
+          <Button
+            label={"Visit Official Website"}
+            href={"https://aggielife.ucdavis.edu/bestbuddies/home/"}
+            target={"_blank"}
+          />
+        </div>
       </div>
     </div>
   );
