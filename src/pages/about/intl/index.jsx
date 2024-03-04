@@ -86,11 +86,13 @@ export default function AboutIntl() {
         </div>
 
         <div className={styles.pillarsContainer}>
-          {/*container that holds ALL content, tbh might not need*/}
           {intlContent.map((pillars, index) => {
             return (
-              <div>
-                <div key={index} className={styles.card}>
+                <div key={index}
+                className={`${styles.card} ${
+                  index % 2 == 0 ? styles.imgLeft : styles.imgRight
+                }`}
+              >
                   <div className={styles.imageContainer}>
                     <Image
                       className={styles.cardImgs}
@@ -117,7 +119,6 @@ export default function AboutIntl() {
                     <p className={`body-1`}>{pillars.description}</p>
                   </div>
                 </div>
-              </div>
             );
           })}
         </div>
