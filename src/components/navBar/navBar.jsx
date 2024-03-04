@@ -25,13 +25,25 @@ const navLinks = [
 export default function Navbar() {
   
   const [dropdownStates, setDropdownStates] = useState(navLinks.map(() => false));
-
+  const [mobileMenuState, setMobileMenuState] = useState(false);
+  const [mobileMenuIcon, setMobileMenuIcon] = useState("page-icons/bars.svg");
   const toggleMenu = (index) => {
     setDropdownStates((prevStates) => {
       const newStates = [...prevStates];
       newStates[index] = !(newStates[index]);
       return newStates;
     });
+  };
+
+  const toggleMobileMenu = () => {
+    if(mobileMenuState){
+      setMobileMenuState(false);
+      setMobileMenuIcon("page-icons/bars.svg");
+    }else{
+      setMobileMenuState(true);
+      //temp. replacement of X icon
+      setMobileMenuIcon("page-icons/heart.svg");
+    }
   };
 
   const renderDropdownMenu = (links, isActive, index) => {
@@ -50,7 +62,7 @@ export default function Navbar() {
   };
 
   return (
-    <nav className={`${styles.nav} body-1`}>
+    <nav className={ mobileMenuState ? `${styles.nav} ${styles.mobileNav} body-1` : `${styles.nav} body-1`}>
       <div style={{display: 'flex', width: '100%', justifyContent:'space-between', padding: '16px'}}>
         <div className={styles.logo}>
           <Image width={86} height={86} alt="logo" src="/best-buddies-logo.svg" />
@@ -77,13 +89,13 @@ export default function Navbar() {
               <Button label={"Join Us"} href={"official"}></Button>
             </li>
             <li className={styles.mobileMenuIcon}>
-              <Image width={35} height={22} src="page-icons/bars.svg"></Image>
+              <Image width={35} height={22} src={mobileMenuIcon} onClick={toggleMobileMenu}></Image>
             </li> 
           </ul>
         </div> {/*right side */}
       </div>
         
-      <div className={styles.mobileMenu} >
+      <div className={mobileMenuState ? `${styles.mobileMenu}` : `${styles.hide}` }>
           {navLinks.map((link, index) => (
             <div>
               {link.menu ? (

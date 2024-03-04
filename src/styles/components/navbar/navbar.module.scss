@@ -15,11 +15,13 @@
     }
 
     @include mixins.phone{
-        height: 100vh;
         flex-direction: column;
         justify-content: flex-start;
         padding: 0px;
     }
+}
+.mobileNav{
+    height: 100vh;
 }
 
 .logo{
@@ -32,14 +34,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    // background:yellow;
     @include mixins.phone{
         justify-content: flex-end;
     }
 }
 
 .links{
-    // background:yellow;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -53,7 +53,6 @@
     text-decoration: none;
     li{
         padding: 10px;
-        // background: pink;
         @include mixins.phone{
             padding:0;
         }
@@ -87,6 +86,10 @@
         display: inline;
         cursor: pointer;
     }
+}
+
+.hide{
+    display: none;
 }
 
 .mobileMenu{
