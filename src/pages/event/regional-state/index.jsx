@@ -98,7 +98,7 @@ export default function RegionalStateEvents() {
             className={`${styles.eventImage2_mobile}`}
             src="/event-imgs/events-friendship-2.jpg"
             objectFit="cover"
-            objectPosition="0 25%"
+            objectPosition="0 22%"
             fill
             alt="Friendship walk group image"
           />
@@ -116,6 +116,7 @@ export default function RegionalStateEvents() {
           </div>
         </div>
       </section>
+      <hr className={styles.section_divider}></hr>
       <section className={styles.champion_of_the_year}>
         <div className={styles.text_card}>
           <div className={styles.imageContainer3}>

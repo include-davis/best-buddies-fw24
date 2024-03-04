@@ -10,9 +10,12 @@
 }
 
 .friendship_walk_section,
-.border_divider,
 .champion_of_the_year {
   margin-bottom: 30px;
+
+  @include phone {
+    margin-bottom: 22px;
+  }
 }
 
 .imageContainer_mobile {
@@ -118,7 +121,7 @@
   @include phone {
     display: flex;
     position: relative;
-    height: 56vh;
+    height: 42vh;
     border-bottom-left-radius: 0px;
   }
 }
@@ -137,7 +140,7 @@
   @include phone {
     display: flex;
     position: relative;
-    height: 56vh;
+    height: 46vh;
   }
 }
 
@@ -160,6 +163,7 @@
 
   @include phone {
     margin-bottom: 0;
+    height: 46vh;
   }
 }
 
@@ -187,7 +191,7 @@
   display: flex;
   flex-direction: row;
   gap: 16px;
-  margin-bottom: 202px;
+  margin-bottom: 71px;
 
   @include phone {
     flex-direction: column;
@@ -208,11 +212,10 @@
   gap: 16px;
   padding: 56px;
   border-radius: 16px;
-  margin-bottom: 16px;
 
   @include phone {
     width: 100%;
-
+    margin-bottom: 22px;
   }
 }
 
@@ -246,6 +249,17 @@
 .join_body {
   color: white;
   padding: 40px;
+}
+
+.section_divider {
+  background-color: #E2DDEB;
+  height: 2px; 
+  border: none;
+  opacity: 75%;
+}
+
+.champion_of_the_year {
+  margin-top: 71px;
 }
 
 .champion_of_the_year > .text_card {
