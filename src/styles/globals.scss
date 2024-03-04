@@ -5,7 +5,7 @@
   --font-primary: #272b2e;
   --font-secondary: #404447;
   --font-title: #1b044e;
-  --font-gray: #6E757B;
+  --font-gray: #6e757b;
   --font-warning-red: #e40000; // contact required fields
 
   // main page colors
@@ -23,7 +23,7 @@
   --color-teal: #8fd1c4;
   --color-light-teal: #b4ddd5;
   --color-orange: #f37735;
-  --color-light-orange: #FFA97C;
+  --color-light-orange: #ffa97c;
   --color-yellow: #ffd420;
   --color-light-yellow: #ffec9d;
 
@@ -63,6 +63,10 @@ h1 {
 h2 {
   font-size: 2.25rem; /* 36 px */
   line-height: 120%; /* 43.2px */
+
+  @include mixins.sm-phone {
+    font-size: 1.5rem; /* 24px */
+  }
 }
 
 h3 {
@@ -87,6 +91,12 @@ h3 {
   color: var(--font-secondary);
 }
 
+.body-1 {
+  @include mixins.sm-phone {
+    font-size: 1rem; /* 16px */
+  }
+}
+
 .body-1-bold {
   font-weight: 700;
   line-height: 140%;
@@ -95,4 +105,8 @@ h3 {
 .body-2 {
   font-size: 1rem;
   line-height: 140%;
+
+  @include mixins.sm-phone {
+    font-size: 0.875rem; /* 14px */
+  }
 }
