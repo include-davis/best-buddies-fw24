@@ -41,7 +41,8 @@ const announcements = [
   { 
     title: "Join our Friendship Walk team!",
     date: "February 27, 2024", 
-    description: <Link href="https://www.bestbuddiesfriendshipwalk.org/sacramento/supporting/#aggies">www.bestbuddiesfriendshipwalk.org/sacramento/supporting/#aggies</Link>,
+    description: "Make a difference today and be part of this incredible journey toward a more inclusive future!",
+    href: "https://www.bestbuddiesfriendshipwalk.org/sacramento/supporting/#aggies"
   },
   {
     title: "End of Winter Quarter",
@@ -98,7 +99,7 @@ export default function Home() {
         <div className={styles.announcementCardContainer}>
         {
             announcements.map((thisAnnouncement, index) => {
-              return <AnnouncementsCard key={index} title={thisAnnouncement.title} date={thisAnnouncement.date} description={thisAnnouncement.description}/>;
+              return <AnnouncementsCard key={index} title={thisAnnouncement.title} date={thisAnnouncement.date} description={thisAnnouncement.description} href={thisAnnouncement.href}/>;
             })
           }
         </div>

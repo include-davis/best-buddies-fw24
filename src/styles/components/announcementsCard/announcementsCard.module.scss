@@ -22,10 +22,10 @@
         width: 100%;
         padding: 16px 32px;
 
-        h4 {
+        h4 { // title
             font-size: 1.3125rem;
         }
-        p {
+        p { // description
             font-size: 1rem;
         }
         
@@ -38,14 +38,39 @@
     justify-content: space-between;
     align-items: center;
     gap: 10px;
+    p {
+        color: var(--font-gray);
+    }
 
     @include mixins.phone {
         flex-direction: column;
         gap: 0px;
         align-items: flex-start;
 
-        p {
+        p { // date
             font-size: 0.875rem;
         }
     }
+}
+
+.hyperlink {
+    display: flex;
+    align-items: center;
+    p {
+        color: var(--color-purple);
+        font-weight: 700;
+        line-height: 140%;
+        font-size: 1.125rem;
+        margin-top: 4px;
+    }
+
+    @include mixins.phone {
+        p {
+            font-size: 1rem;
+        }
+    }
+}
+
+.hyperlinkLink {
+    text-decoration: none;
 }
