@@ -1,33 +1,32 @@
 @use "src/styles/mixins.scss";
 
-.headerIconContainer { 
+.headerIconContainer {
+  display: flex;
+  gap: 16px;
 
-    display: flex;
-    gap: 16px;
-    
-    align-items: center;
+  align-items: center;
 
-    // need to manually set font so the header and image align.
+  // need to manually set font so the header and image align.
+  h2 {
+    margin-top: 6px;
+  }
+
+  @include mixins.phone {
+    gap: 8px;
+    align-self: center;
+
     h2 {
-        margin-top: 6px;
+      font-size: 1.5rem;
     }
-
-    @include mixins.phone{
-        gap: 8px;
-        align-self: center;
-
-        h2 {
-            font-size: 1.5rem;
-        }
-    }
+  }
 }
 
-.imageContainer{
-    width: 44px;
-    aspect-ratio: 1;
-    position: relative;
+.imageContainer {
+  width: 44px;
+  aspect-ratio: 1;
+  position: relative;
 
-    @include mixins.phone {
-        width: 32px;
-    }
+  @include mixins.phone {
+    width: 32px;
+  }
 }
