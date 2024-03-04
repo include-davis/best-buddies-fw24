@@ -8,6 +8,7 @@ import Link from "next/link";
 import EventCard from "@/components/eventCard/eventCard";
 import AnnouncementsCard from "@/components/announcementsCard/announcementsCard";
 import HeaderWithIcon from "@/components/headerWithIcon/headerWithIcon";
+import AutoImage from "@/components/AutoImage/AutoImage";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,7 +20,7 @@ const events = [
     title: "BB x #Include Site Demo",
     date: "March 10, 2024",
     description:
-      "We’re so excited to unveil our brand-new website, courtesy of Include at UC Davis! Join us for a website demo, snacks, drinks, and socializing. Join us at the SCC on March 10th from 3pm-4pm.",
+      "We're so excited to unveil our brand-new website, courtesy of Include at UC Davis! Join us for a website demo, snacks, drinks, and socializing. Join us at the SCC on March 10th from 3pm-4pm.",
     imagePath: "/event-imgs/feature-events-1.jpg",
     eventLink: "https://forms.gle/CobDNczNVCej4uKAA",
   },
@@ -48,22 +49,20 @@ const announcements = [
   {
     title: "Join our Friendship Walk team!",
     date: "February 27, 2024",
-    description: (
-      <Link href="https://www.bestbuddiesfriendshipwalk.org/sacramento/supporting/#aggies">
-        www.bestbuddiesfriendshipwalk.org/sacramento/supporting/#aggies
-      </Link>
-    ),
+    description:
+      "Make a difference today and be part of this incredible journey toward a more inclusive future!",
+    href: "https://www.bestbuddiesfriendshipwalk.org/sacramento/supporting/#aggies",
   },
   {
     title: "End of Winter Quarter",
     date: "February 27, 2024",
     description:
-      "This quarter’s last event will be on March 10th! Spring Quarter begins March 28th.",
+      "This quarter's last event will be on March 10th! Spring Quarter begins March 28th.",
   },
 ];
 
 const memberSpotlightText =
-  "New for Spring Quarter! Best Buddies will choose a new member or buddy pair to spotlight every month. Members may receive recognition for buddy pair hangouts, Friendship Walk participation, donations, and more.";
+  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.";
 const videoSrc =
   "https://www.youtube.com/embed/GrG2-oX5z24?si=RLMuCFnXqc3I73tC";
 
@@ -98,7 +97,6 @@ export default function Home() {
             className={styles.heroVideo}
             src={videoSrc}
             title="YouTube video player"
-            frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowFullscreen
           ></iframe>
@@ -116,7 +114,7 @@ export default function Home() {
             intellectual and developmental disabilities (IDD). We envision a
             world in which programs like Best Buddies are no longer needed
             because people with IDD are completely included in their
-            communities. 
+            communities.
           </p>
         </div>
         <Button label={"About Our Chapter"} href="about" />
@@ -154,6 +152,7 @@ export default function Home() {
                 title={thisAnnouncement.title}
                 date={thisAnnouncement.date}
                 description={thisAnnouncement.description}
+                href={thisAnnouncement.href}
               />
             );
           })}
