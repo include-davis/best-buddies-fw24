@@ -4,11 +4,11 @@
   // font colors
   --font-primary: #272b2e;
   --font-secondary: #404447;
+  --font-title: #1b044e;
   --font-gray: #6E757B;
   --font-warning-red: #e40000; // contact required fields
 
   // main page colors
-  --color-dark-purple: #1b044e;
   --color-purple: #5a3f98;
   --color-light-purple: #c6b9dc;
   --color-pale-gray: #e2ddeb;
@@ -52,6 +52,7 @@ h1,
 h2,
 h3 {
   font-weight: 700;
+  color: var(--font-title);
 }
 
 h1 {
@@ -62,13 +63,11 @@ h1 {
 h2 {
   font-size: 2.25rem; /* 36 px */
   line-height: 120%; /* 43.2px */
-  color: var(--font-secondary);
 }
 
 h3 {
   font-size: 1.75rem; /* 28 px */
   line-height: 120%; /* 33.6px */
-  color: var(--font-secondary);
 }
 
 .subheading {
