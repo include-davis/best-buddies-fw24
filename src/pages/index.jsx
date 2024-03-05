@@ -8,11 +8,10 @@ import Link from "next/link";
 import EventCard from "@/components/eventCard/eventCard";
 import AnnouncementsCard from "@/components/announcementsCard/announcementsCard"
 import HeaderWithIcon from "@/components/headerWithIcon/headerWithIcon";
-import AutoImage from "@/components/AutoImage/AutoImage";
+import YouTubePlayer from "@/components/YouTubePlayer/YouTubePlayer";
 
 const inter = Inter({ subsets: ["latin"] });
 
-{/** TODO: these need to be in a file shared by index and event page!!! */}
 const events = [ 
   {
     title: "BB x #Include Site Demo", 
@@ -37,7 +36,6 @@ const events = [
   },
 ]
 
-{/** TODO: link isn't wrapping correctly for link in announcements */}
 const announcements = [
   { 
     title: "Join our Friendship Walk team!",
@@ -53,7 +51,7 @@ const announcements = [
 ]
 
 
-const memberSpotlightText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.";
+const memberSpotlightText = "Best Buddies will choose a new member or buddy pair to spotlight every month. Members may receive recognition for buddy pair hangouts, Friendship Walk participation, donations, and more.";
 const videoSrc = "https://www.youtube.com/embed/GrG2-oX5z24?si=RLMuCFnXqc3I73tC"
 
 export default function Home() {
@@ -71,9 +69,9 @@ export default function Home() {
       <Suspense
         fallback={<div className={styles.heroVideoFallback}><p className={`body-1`}>Loading Video...</p></div>}>
           <div className={styles.heroVideoContainer}>
-            <iframe className={styles.heroVideo} src={videoSrc} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <YouTubePlayer src={videoSrc}/>
+            {/* <iframe className={styles.heroVideo} src={videoSrc} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> */}
           </div>
-          
       </Suspense>
       <div className={styles.mission}>
         <div className={styles.missionText}>
