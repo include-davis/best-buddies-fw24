@@ -2,6 +2,32 @@ import styles from "@/styles/pages/member/new.module.scss";
 import Image from "next/image";
 import Link from "next/link";
 
+
+const howToCardData = [
+  {
+    id: 1,
+    title: "Interst Form",
+    description: "Complete the form below and one of our officers will reach out to you.",
+    linkText: "Interest Form",
+    linkHref: "https://example.com",
+    linkClass: styles.interestLink
+  },
+  {
+    id: 2,
+    title: "Membership Application",
+    description: "Submit an application on our BB360 platform. Find helpful application tips below on our YouTube!",
+    linkText: "BB360 Application",
+    linkHref: "https://example.com",
+    linkClass: styles.appLink
+  },
+  {
+    id: 3,
+    title: "Interview",
+    description: "After submitting, our team will provide instructions for signing up for an interview slot."
+  }
+];
+
+
 export default function NewMembers() {
   return (
     <div className={styles.body}>
@@ -17,6 +43,7 @@ export default function NewMembers() {
       {/* Who can join */}
       <div className={styles.joinCard}>
         <div className={styles.imgContainer}>
+          {/* make it a responsive image */}
           <Image
             src={"/member-imgs/members-hero.jpg"}
             alt="Members Hero Image"
@@ -40,83 +67,63 @@ export default function NewMembers() {
         </div>
       </div>
 
+
       {/* How to Join */}
-      <div className={styles.howContainer}>
+      <div className={styles.howToJoinContainer}>
         <h2>How To Join</h2>
 
         {/* Cards */}
-        <div className={styles["cardsContainer"]}>
-          <div className={styles.card}>
-            <div className={styles.textFrameInt}>
-              <div>1</div>
-              <h3>Interest Form</h3>
-              <p>
-                Complete the form below and one of our officers will reach out
-                to you.
-              </p>
-            </div>
-            <Link className={styles.interestLink} href="https://example.com">
-              Interest Form
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="15"
-                height="27"
-                viewBox="0 0 15 27"
-                fill="none"
-              >
-                <path
-                  d="M6.33268 16.9997L9.66602 13.6663L6.33268 10.333"
-                  stroke="#5A3F98"
-                  stroke-width="1.25"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </Link>
-          </div>
+        <div className={styles["howToCardsContainer"]}>
+          {howToCardData.map((card) => {
+            const isSecondCard = card.id === 2;
 
-          <div className={styles.card}>
-            <div className={styles.textFrame}>
-              <div>2</div>
-              <h3>Membership Application</h3>
-              <p>
-                Submit an application on our BB360 platform. Find helpful
-                application tips below on our YouTube!
-              </p>
-            </div>
-            <Link className={styles.appLink} href="https://example.com">
-              BB360 Application
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="15"
-                height="27"
-                viewBox="0 0 15 27"
-                fill="none"
-              >
-                <path
-                  d="M6.33268 16.9997L9.66602 13.6663L6.33268 10.333"
-                  stroke="#5A3F98"
-                  stroke-width="1.25"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </Link>
-          </div>
-
-          <div className={styles.card}>
-            <div className={styles.textFrame}>
-              <div>3</div>
-              <h3>Interview</h3>
-              <p>
-                After submitting, our team will provide instructions for signing
-                up for an interview slot.
-              </p>
-            </div>
-          </div>
+            return (
+              <div className={`${styles.card} ${isSecondCard ? styles.secondCard : ''}`} key={card.id}>
+                <div className={styles.howToCardInfo}>
+                  <div className={styles.titleAndNum}>
+                    <div className={styles.numCircle}>
+                      {card.id}
+                    </div>
+                    <h3 className={styles.howToCardTitle}>
+                      {card.title}
+                    </h3>
+                  </div>
+                  <div className={`body-1`}>
+                    {card.description}
+                  </div>
+                </div>
+                
+                {card.linkText && (
+                  <Link className={`${card.linkClass} ${isSecondCard ? styles.link2 : styles.link}`} href={card.linkHref}>
+                    <>
+                      {card.linkText}
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="15"
+                        height="27"
+                        viewBox="0 0 15 27"
+                        fill="none"
+                      >
+                        <path
+                          d="M6.33268 16.9997L9.66602 13.6663L6.33268 10.333"
+                          stroke="#5A3F98"
+                          strokeWidth="1.25"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                      </svg>
+                    </>
+                  </Link>
+                )}
+              </div>
+            );
+          })}
         </div>
       </div>
 
+
+
+      {/* Need Help */}
       <div className={styles.helpContainer}>
         <div className={styles.headerContainer}>
           <h2>Need Help?</h2>
@@ -129,7 +136,7 @@ export default function NewMembers() {
         </div>
 
         {/* card */}
-        <div className={styles.youtubeContainer}>
+        {/* <div className={styles.youtubeContainer}>
           <div className={styles.youtubeCard}>
             <iframe
               className={styles.video}
@@ -235,7 +242,7 @@ export default function NewMembers() {
               </svg>
             </div>
           </div>
-        </div>
+        </div> */}
         {/* card */}
       </div>
     </div>
