@@ -8,6 +8,7 @@ import Link from "next/link";
 import EventCard from "@/components/eventCard/eventCard";
 import AnnouncementsCard from "@/components/announcementsCard/announcementsCard"
 import HeaderWithIcon from "@/components/headerWithIcon/headerWithIcon";
+import AutoImage from "@/components/AutoImage/AutoImage";
 import YouTubePlayer from "@/components/YouTubePlayer/YouTubePlayer";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -52,6 +53,8 @@ const announcements = [
 
 
 const memberSpotlightText = "Best Buddies will choose a new member or buddy pair to spotlight every month. Members may receive recognition for buddy pair hangouts, Friendship Walk participation, donations, and more.";
+const memberSpotlightImageSrc = "/member-imgs/members-hero.jpg"
+const memberSpotlightAltText = "Two women stand in the center of a purple cardboard frame that says \"Best Buddies\" in white text. They are wearing black Friendship Walk t-shirts. In the background is a white curtain with the Best Buddies logo in a repeating pattern."
 const videoSrc = "https://www.youtube.com/embed/GrG2-oX5z24?si=RLMuCFnXqc3I73tC"
 
 export default function Home() {
@@ -108,13 +111,13 @@ export default function Home() {
       <div className={styles.memberSpotlightContainer}>
         <div className={styles.memberSpotlight}>
           <HeaderWithIcon label="Member Spotlight" src="/page-icons/users.svg"/>
-          <div className={styles.memberSpotlightImagePhone}></div>
+          <AutoImage src={memberSpotlightImageSrc} alt={memberSpotlightAltText} style={{width: "100%", height: "auto"}} className={styles.memberSpotlightImagePhone}/>
           <div className={styles.memberSpotlightDescription}>
             <h3 className={`subheading`}>Coming Soon... New for Spring Quarter!</h3>
             <p className={`body-1`}>{memberSpotlightText}</p>
           </div>
         </div>
-        <div className={styles.memberSpotlightImageDesktop}></div>
+        <AutoImage src={memberSpotlightImageSrc} alt={memberSpotlightAltText} style={{width: "50%", height: "auto"}} className={styles.memberSpotlightImageDesktop}/>
       </div>
       
     </div>
