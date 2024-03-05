@@ -1,25 +1,31 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import styles from "@/styles/pages/contact/contact.module.scss";
-import Button from "@/components/button/button";
+// import Button from "@/components/button/button";
 import Image from "next/image";
 
-
+/* things to change later:
+1. replace p element at the end of the form with confirmation modal
+2. mailOptions html if you want it to be prettier.
+3. email configurations in .env.
+*/
 
 export default function Contact() {
 
   const options = [
     { id: 'bestbuddiesinfo', content: 'What Best Buddies does and how it works at UC Davis' },
-    { id: 'join', content: 'How to join Best Buddies' },
+    { id: 'joining', content: 'How to join Best Buddies' },
     { id: 'events', content: 'Best Buddies events' },
     { id: 'conflict', content: 'Buddy/peer buddy conflict' },
     { id: 'other', content: 'Other' }
   ];
+
   const [selected, setSelected] = useState('');
   const [optionsActive, setOptionsActive] = useState(false);
-  const [showSelectedText, setShowSelectedText] = useState(false);
+  const [mailStatus, setMailStatus] = useState('');
+  const [formPending, setFormPending] = useState(false);
+  const formRef = useRef(null);
 
   const toggleOptionsMenu = () => {
-    setShowSelectedText(true);
     setOptionsActive(!optionsActive);
   };
 
@@ -28,6 +34,40 @@ export default function Contact() {
     setSelected(labelText);
     setOptionsActive(false);
   };
+
+  const formHandler = async (e) => {
+    setFormPending(true);
+    e.preventDefault();
+
+    const data = new FormData(e.target);
+    const values = Object.fromEntries(data.entries());
+    if(! values.type){
+      values['type'] = selected;
+    }
+
+    try{
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'applications/json'
+        },
+        body: JSON.stringify(values)
+      })
+      const resData = await res.json();
+      console.log(resData);
+      if(resData.status === 200){
+        setMailStatus("sent!");
+      } else {
+        setMailStatus("There was an error. Try again later.");
+      }
+    } catch (e){
+      console.log(e);
+    }
+
+    setFormPending(false);
+    formRef.current.reset();
+    setSelected('');
+  }
  
   return <div className={styles.contact}>
     <div className={styles.title}>
@@ -38,16 +78,16 @@ export default function Contact() {
       </div>
       <p className={`${styles.warning} body-1-bold`}>* = required field</p>
     </div>
-
-      <form>
+    
+      <form ref={formRef} onSubmit={formHandler}>
         <div className={styles.infoSection}>
           <div className={styles.infoContainer}>
             <p className={`${styles.required} body-1-bold`}>Name</p>
-            <input className={`${styles.answerContainer} body-1`} type="text" id="name" placeholder="Full Name" required></input>
+            <input className={`${styles.answerContainer} body-1`} type="text" id="name" name="name" placeholder="Full Name" required></input>
           </div>
           <div className={styles.infoContainer}>
             <p className={`${styles.required} body-1-bold`}>Email Address</p>
-            <input className={`${styles.answerContainer} body-1`} type="text" id="userEmail" placeholder="Email" required></input>
+            <input className={`${styles.answerContainer} body-1`} type="email" id="email" name="email" placeholder="Email" required></input>
           </div>
         </div>
 
@@ -58,14 +98,14 @@ export default function Contact() {
               <div className={optionsActive ? `${styles.optionsContainer} ${styles.active}` : `${styles.optionsContainer}`}>
                   {options.map((option, index) => (
                     <div key={index} className={styles.option} onClick={selectOption}>
-                      <input type="radio" className={styles.radio} id={option.id} name="category"></input>
+                      <input type="radio" className={styles.radio} id={option.id} name="type" value={option.content}></input>
                       <label htmlFor={option.id}>{option.content}</label>
                     </div>
                   ))}
               </div>
               <div onClick={toggleOptionsMenu} className={styles.selected}>
-                <div className={optionsActive ? `${styles.selectedChoice}` : `${styles.hide}`}>
-                  {selected || <p className={showSelectedText ? `${styles.appear}` : `${styles.hide}`}>Selected</p>}
+                <div className={`${styles.selectedChoice}`}>
+                  {selected || <p className={styles.hide}>Select an option</p>}
                 </div> 
               </div>
               <Image className={optionsActive ? `${styles.dropdownIcon} ${styles.openMenuIcon}` : `${styles.dropdownIcon}`} onClick={toggleOptionsMenu} width={24} height={27} src="page-icons/dropdown.svg"></Image>
@@ -76,17 +116,17 @@ export default function Contact() {
           <div>
             <div style={{ display: 'flex', flexDirection: 'column', marginBottom: '50px' }}>
               <p className={`${styles.required} body-1-bold`}>Describe your question or comment</p>
-              <textarea className={`${styles.answerContainer} ${styles.paragraphContainer} body-1`} name="paragraph_text" cols="50" rows="10"></textarea>
+              <textarea className={`${styles.answerContainer} ${styles.paragraphContainer} body-1`} name="question" cols="50" rows="10"></textarea>
             </div>
-            <Button label={"Submit"} href={"official"} />
+            {/* <Button type="submit" label={"Submit"} href='/contact'/> */}
+            <button type="submit" href='/contact' className={styles.button}>Submit</button>
+            <p>{formPending ? 'Sending your question!': `${mailStatus}`}</p>
           </div>
         </div>
-      
       </form>
 
   </div>;
 }
-
 //non-mapping code in case i need it
 /* <div className={styles.option} onClick={selectOption}>
                   <input type="radio" className={styles.radio} id="bestbuddiesinfo" name="category"></input>

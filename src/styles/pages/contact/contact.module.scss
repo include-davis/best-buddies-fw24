@@ -199,7 +199,7 @@ $gray: rgb(166, 165, 165);
 }
 
 .hide{
-  color: white;
+  color: rgb(118, 118, 118);
 }
 
 .appear, .selectedChoice{
@@ -231,4 +231,27 @@ $gray: rgb(166, 165, 165);
 //chevron pointing up
 .openMenuIcon{
   transform: rotate(180deg);
+}
+
+
+.button {
+  justify-content: center;
+  align-items: center;
+  border-radius: 70px;
+
+  border: none;
+  background-color: var(--color-yellow);
+
+  color: var(--color-font-primary);
+
+  font-weight: 700;
+  line-height: 140%;
+
+  padding: 12px 24px;
+  font-size: 1.125rem;
+
+  @include mixins.phone {
+    padding: 12px 22px;
+    font-size: 1rem;
+  }
 }
