@@ -1,0 +1,31 @@
+@use "src/styles/mixins.scss";
+
+.youtubeContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+
+.youtubeCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  // padding: 16px;
+  // background-color: var(--font-white);
+  border-radius: 15px;
+  box-shadow: 0px 5px 50px 0px rgba(228, 225, 231, 0.4);
+  border: 2px solid rgba(128, 126, 131, 0.4);
+}
+
+.vid {
+  width: 100%;
+  height: auto;
+  min-width: 496px;
+  aspect-ratio: 16/9;
+  border-radius: 10px;
+
+  @include mixins.phone {
+    min-width: 360px;
+  }
+}
