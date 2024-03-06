@@ -6,10 +6,14 @@
     display: flex;
     flex-direction: column;
     align-items: stretch; 
+    padding-top: 81px;
+    padding-bottom: 94px;
     gap: 65px;
 
     @include mixins.phone {
         align-items: flex-start;
+        padding-left: 25px;
+        padding-right: 25px;
         gap: 64px;
     }
 }
@@ -89,87 +93,6 @@
     }
 }
 
-// from new-members page
-.youtubeContainer {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 150px;
-
-    .youtubeCard {
-        font-family: "Helvetica Neue";
-        background-color: #fff;
-        display: flex;
-        flex-direction: column;
-        width: 496px;
-        height: 395px;
-        margin-top: 22px;
-        padding: 8px;
-        align-items: flex-start;
-        border-radius: 10px;
-        box-shadow: 0px 5px 50px 0px rgba(228, 225, 231, 0.4);
-        border: 1px solid rgba(128, 126, 131, 0.4);
-
-        .vid {
-            border-radius: 10px;
-            width: 480px;
-            height: 270px;
-        }
-
-        .footerContainer {
-            display: flex;
-            flex-direction: row;
-            width: 480px;
-            height: 105px;
-            padding-left: 8px;
-            background-color: #fff;
-
-            .providerContainer {
-                display: flex;
-                flex-direction: column;
-                padding: 8px;
-                background-color: #fff;
-
-                h4 {
-                    font-family: "Helvetica Neue";
-                    width: 396px;
-                    height: 48px;
-                    font-size: 1rem;
-                    line-height: 24px;
-                    font-weight: 500;
-                    color: #000000cc;
-                    background-color: #fff;
-                }
-
-                .providerItems {
-                    display: flex;
-                    flex-direction: row;
-                    background-color: #fff;
-                    margin-top: 8px;
-                    gap: 8px;
-
-                    p {
-                        font-family: "Helvetica Neue";
-                        font-size: 0.8125rem;
-                        color: #00000080;
-                        background-color: #fff;
-                    }
-                }
-            }
-
-            svg {
-                margin-top: 36.5px;
-                margin-bottom: 36.5px;
-                margin-left: 20px;
-                align-self: stretch;
-                background-color: #fff;
-            }
-        }
-    }
-}
-// using from new-members page
-
-
 .friendUpdatesBox {
     align-self: center; 
     max-width: 878px;
@@ -190,11 +113,9 @@
     text-align: left;
     font-weight: bold;
     margin-bottom: 24px;
+
     @include mixins.phone {
-        align-self: stretch;
-        font-size: 16px;
-        font-weight: 400;
-        line-height: 150%;
+        text-align: center;
     }
 }
 
@@ -253,6 +174,7 @@
     font-size: 18px; 
     font-weight: bold;
     color: var(--color-purple);
+    background: var(--color-light-gray);
     border: none;
 }
 
@@ -297,6 +219,13 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 24px;
+    @include mixins.phone{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 24px;
+    }
 
     h2{
         color: var(--Primary-900);
@@ -330,5 +259,7 @@
     font-size: 18px; 
     font-weight: bold;
     color: var(--color-purple);
+    background-color: var(--color-light-gray);
+    ;
     border: none;
 }
