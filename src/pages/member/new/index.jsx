@@ -139,8 +139,8 @@ export default function NewMembers() {
           </div>
 
           <div className={styles.youtubeContainer}>
-            <YouTubePlayer className={styles.youtubePlayer} src="https://www.youtube.com/embed/jpDCf0O0rsc?si=7ekvB55Uo2b3kAGN" title="How to submit a membership application (BUDDIES + SUPPORT STAFF)"/>
-            <YouTubePlayer className={styles.youtubePlayer} src="https://www.youtube.com/embed/RN8OdsNe_50?si=CtJZe17_IcmjHgkL" title="How to submit a membership application on BB360 (FOR PEER BUDDIES)"/>
+            <YouTubePlayer src="https://www.youtube.com/embed/jpDCf0O0rsc?si=7ekvB55Uo2b3kAGN" title="How to submit a membership application (BUDDIES + SUPPORT STAFF)"/>
+            <YouTubePlayer src="https://www.youtube.com/embed/RN8OdsNe_50?si=CtJZe17_IcmjHgkL" title="How to submit a membership application on BB360 (FOR PEER BUDDIES)"/>
           </div>
         </div>
       </div>
