@@ -246,9 +246,10 @@
         display: flex;
         width: 361px;
         height: 25px;
-        padding: 0px 70px 0px 86px;
-        justify-content: flex-end;
-        align-items: flex-start;
+        // padding: 0px 70px 0px 86px;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
         gap: 16px;
         flex-shrink: 0;
     }
