@@ -66,10 +66,10 @@ export default function CurrentMembers() {
             <div className={styles.pastNewsColBox}>
               <h4 className={styles.pastNewsTitle}>Past Newsletters</h4>
               <div className={styles.prevNewsLinksContainer}>
-              <a className={styles.link} href="/newsletter/newsletter_2.pdf" target="_blank">Oct 2023
+              <a className={styles.link} href="/newsletter/newsletter_3.pdf" target="_blank">Oct 2023
                 <img src="/page-icons/hyperlink.svg"/>
               </a>
-              <a className={styles.link} href="/newsletter/newsletter_3.pdf" target="_blank">Nov 2023
+              <a className={styles.link} href="/newsletter/newsletter_2.pdf" target="_blank">Nov 2023
                 <img src="/page-icons/hyperlink.svg"/>
               </a>
               </div>
