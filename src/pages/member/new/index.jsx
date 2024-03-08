@@ -7,10 +7,10 @@ import YouTubePlayer from '@/components/YouTubePlayer/YouTubePlayer.jsx';
 const howToCardData = [
   {
     id: 1,
-    title: "Interst Form",
+    title: "Interest Form",
     description: "Complete the form below and one of our officers will reach out to you.",
     linkText: "Interest Form",
-    linkHref: "https://example.com",
+    linkHref: "/contact",
     linkClass: styles.interestLink
   },
   {
@@ -18,7 +18,7 @@ const howToCardData = [
     title: "Membership Application",
     description: "Submit an application on our BB360 platform. Find helpful application tips below on our YouTube!",
     linkText: "BB360 Application",
-    linkHref: "https://example.com",
+    linkHref: "https://forms.bestbuddies.org/4895599",
     linkClass: styles.appLink
   },
   {
@@ -43,6 +43,7 @@ export default function NewMembers() {
 
       {/* Who can join */}
       <div className={styles.joinCard}>
+      <h2 className={styles.joinTitleMobile}>Who Can Join?</h2>
         <div className={styles.imgContainer}>
           <Image
             src={"/member-imgs/members-hero.jpg"}
