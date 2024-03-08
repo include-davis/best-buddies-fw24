@@ -44,7 +44,6 @@ export default function NewMembers() {
       {/* Who can join */}
       <div className={styles.joinCard}>
         <div className={styles.imgContainer}>
-          {/* make it a responsive image */}
           <Image
             src={"/member-imgs/members-hero.jpg"}
             alt="Members Hero Image"
@@ -53,7 +52,7 @@ export default function NewMembers() {
           />
         </div>
         <div className={styles.joinInfo}>
-          <h2>Who Can Join?</h2>
+          <h2 className={styles.joinTitle}>Who Can Join?</h2>
           <div className={styles.joinDesc}>
             <p className={"body-1"}>
               Anyone can join Best Buddies, regardless of whether you have an
@@ -82,14 +81,17 @@ export default function NewMembers() {
               <div className={`${styles.card} ${isSecondCard ? styles.secondCard : ''}`} key={card.id}>
                 <div className={styles.howToCardInfo}>
                   <div className={styles.titleAndNum}>
-                    <div className={styles.numCircle}>
-                      {card.id}
+                    <div className={styles.idContainer}>
+                      <div className={styles.numCircle}>
+                        {card.id}
+                      </div>
                     </div>
+                    
                     <h3 className={styles.howToCardTitle}>
                       {card.title}
                     </h3>
                   </div>
-                  <div className={`body-1`}>
+                  <div className={`body-1 ${styles.howCardDesc}`}>
                     {card.description}
                   </div>
                 </div>
@@ -133,14 +135,20 @@ export default function NewMembers() {
         
 
         <div className={styles.helpContents}>
-          <div className={styles.youtubeTitle}>
-            <h3>Buddies & Support Staff</h3>
-            <h3>Peer Buddies</h3>
+          <div className={styles.youtubeTitleContainer}>
+            <p className={`subheading ${styles.videoTitle}`}>Buddies & Support Staff</p>
+            <p className={`subheading ${styles.videoTitle}`}>Peer Buddies</p>
           </div>
 
           <div className={styles.youtubeContainer}>
-            <YouTubePlayer src="https://www.youtube.com/embed/jpDCf0O0rsc?si=7ekvB55Uo2b3kAGN" title="How to submit a membership application (BUDDIES + SUPPORT STAFF)"/>
-            <YouTubePlayer src="https://www.youtube.com/embed/RN8OdsNe_50?si=CtJZe17_IcmjHgkL" title="How to submit a membership application on BB360 (FOR PEER BUDDIES)"/>
+            <div className={styles.videoContainer}>
+              <p className={`subheading ${styles.hiddenVideoTitle}`}>Buddies & Support Staff</p>
+              <YouTubePlayer src="https://www.youtube.com/embed/jpDCf0O0rsc?si=7ekvB55Uo2b3kAGN" title="How to submit a membership application (BUDDIES + SUPPORT STAFF)"/>
+            </div>
+            <div className={styles.videoContainer}>
+              <p className={`subheading ${styles.hiddenVideoTitle}`}>Peer Buddies</p>
+              <YouTubePlayer src="https://www.youtube.com/embed/RN8OdsNe_50?si=CtJZe17_IcmjHgkL" title="How to submit a membership application on BB360 (FOR PEER BUDDIES)"/>
+            </div>
           </div>
         </div>
       </div>
