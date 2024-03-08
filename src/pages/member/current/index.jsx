@@ -12,8 +12,7 @@ export default function CurrentMembers() {
         <p className={styles.renewalTitle}>Renewing your Membership?</p>
         <p className={styles.renewalBoxContent}>
           Keep your Best Buddies membership active by submitting a new application. Renewals are required annually, even for long-time club members. 
-          <br/>
-          <br/>
+          <br/><br/>
           Check our YouTube channel for application guidance. Interviews may be necessary, but officers will inform you in May or June if required this year.
         </p>
         <a className={styles.link} href="https://forms.bestbuddies.org/4895599">Renewal Application
