@@ -40,7 +40,7 @@ export default function CurrentMembers() {
           Starting in November, every Buddy and Peer Buddy will need to complete a Friendship Update each month. These updates let us know how your friendship is going and if you need support.
         </p>
         
-        <a className={styles.link} href="">Friendship Updates
+        <a className={styles.link} href="https://linktr.ee/ucdbestbuddies">Friendship Updates
           <img src="/page-icons/hyperlink.svg"/>
         </a>
       </div>
@@ -56,6 +56,7 @@ export default function CurrentMembers() {
             <img src="/page-icons/hyperlink.svg"/>
           </a>
           <div className={styles.prevNewsImgContainer}>
+          <a className={styles.newsletterImg} href="/newsletter/newsletter_1.pdf" target="_blank">
           <Image
                   className={styles.newsletterImg}
                   width={696}
@@ -63,6 +64,7 @@ export default function CurrentMembers() {
                   src="/newsletter/newsletter_1.jpg"
                   alt="Current Newsletter"
               />
+          </a>
             <div className={styles.pastNewsColBox}>
               <h4 className={styles.pastNewsTitle}>Past Newsletters</h4>
               <div className={styles.prevNewsLinksContainer}>
