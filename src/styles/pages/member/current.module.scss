@@ -11,7 +11,6 @@
     gap: 65px;
 
     @include mixins.phone {
-        align-items: flex-start;
         padding-left: 25px;
         padding-right: 25px;
         gap: 64px;
@@ -27,10 +26,6 @@
     font-size: 56px;
     color: var(--color-dark-purple);
     font-weight: bold;
-
-    @include mixins.phone {
-        padding: 15px;
-    }
 }
 
 .renewalBox {
@@ -42,8 +37,6 @@
 
     @include mixins.phone {
         padding: 40px 22px;
-        flex-direction: column;
-        gap: 32px;
     }
 }
 
@@ -57,6 +50,7 @@
 
     @include mixins.phone {
         text-align: center;
+        margin-bottom: 16px;
     }
 }
 
@@ -74,26 +68,25 @@
     @include mixins.phone {
         font-size: 16px;
         font-style: normal;
+        padding-bottom: 32px;
     }
 }
 
-.renewalButton {
+.link, .currentMonthLink {
     display: flex;
     align-items: center;
     gap: 2px;
     font-size: 18px; 
     font-weight: bold;
     color: var(--color-purple);
-    background-color: var(--color-white);
-    border: none;
+    text-decoration: none;
 
     @include mixins.phone {
-        align-self: center;
-        gap: 2px;
+        justify-content: center;
     }
 }
 
-.friendUpdatesBox {
+.friendUpdatesBox, .latestNewsBox {
     align-self: center; 
     max-width: 878px;
     display: flex;
@@ -103,7 +96,6 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        gap: 24px;
     }
 }
 
@@ -116,6 +108,7 @@
 
     @include mixins.phone {
         text-align: center;
+        margin-bottom: 16px;
     }
 }
 
@@ -131,55 +124,18 @@
     line-height: 150%;
     margin-bottom: 48px;
     @include mixins.phone{
-        display: flex;
-        flex-direction: column;
         justify-content: center;
         align-items: center;
-        gap: 24px;
+        margin-bottom: 16px;
     }
-}
-
-.friendUpdatesButton {
-    display: flex;
-    height: 27px;
-    align-items: center;
-    gap: 2px;
-    font-size: 18px; 
-    font-weight: bold;
-    color: var(--color-purple);
-    text-align: left;
-    background: none;
-    border: none;
-}
-
-.latestNewsBox {
-    max-width: 878px;
-    display: flex;
-    flex-direction: column;
-    align-self: center; 
-    @include mixins.phone {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 24px;
-    }
-}
-
-.latestNewsButton {
-    display: flex;
-    height: 27px;
-    align-items: center;
-    gap: 2px;
-    font-size: 18px; 
-    font-weight: bold;
-    color: var(--color-purple);
-    background: var(--color-light-gray);
-    border: none;
 }
 
 .newsletterImg{
     border-radius: 15px;
+    overflow: hidden;
+    object-fit: cover;
+    object-position: top;
+
     @include mixins.phone{
         width: 312px;
         height: 406px;
@@ -199,6 +155,11 @@
         gap: 24px;
     }
 }
+.currentMonthLink{
+    @include mixins.phone{
+        display: none;
+    }
+}
 
 .prevNewsImgContainer {
     display: flex;
@@ -206,11 +167,11 @@
     gap: 36px;
 
     @include mixins.phone{
-        display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        gap: 24px;
+        gap: 32px;
+        padding-top: 8px;
     }
 }
 
@@ -224,17 +185,11 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        gap: 24px;
+        gap: 16px;
     }
-
-    h2{
-        color: var(--Primary-900);
-        font-family: "Helvetica Neue";
-        font-size: 18px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 140%;
-    }
+}
+.pastNewsTitle{
+    font-size: 18px;
 }
 .prevNewsLinksContainer{
     display: flex;
@@ -253,14 +208,4 @@
         gap: 16px;
         flex-shrink: 0;
     }
-}
-
-
-.prevNewsLinks {
-    font-size: 18px; 
-    font-weight: bold;
-    color: var(--color-purple);
-    background-color: var(--color-light-gray);
-    ;
-    border: none;
 }
