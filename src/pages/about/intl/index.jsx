@@ -74,7 +74,7 @@ export default function AboutIntl() {
               <div
                 key={index}
                 className={`${styles.card} ${
-                  index % 2 == 0 ? styles.imgLeft : styles.imgRight
+                  index % 2 === 0 ? styles.imgLeft : styles.imgRight
                 }`}
               >
                 <div className={styles.imageContainer}>

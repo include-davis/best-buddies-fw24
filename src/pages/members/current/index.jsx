@@ -22,7 +22,12 @@ export default function CurrentMembers() {
         </p>
         <a className={styles.link} href="https://forms.bestbuddies.org/4895599">
           Renewal Application
-          <img src="/page-icons/hyperlink.svg" />
+          <Image
+            height={55}
+            width={55}
+            src="/page-icons/hyperlink.svg"
+            alt={"hyperlink"}
+          />
         </a>
       </div>
 
@@ -42,7 +47,12 @@ export default function CurrentMembers() {
 
         <a className={styles.link} href="https://linktr.ee/ucdbestbuddies">
           Friendship Updates
-          <img src="/page-icons/hyperlink.svg" />
+          <Image
+            height={55}
+            width={55}
+            src="/page-icons/hyperlink.svg"
+            alt={"hyperlink"}
+          />
         </a>
       </div>
 
@@ -61,7 +71,12 @@ export default function CurrentMembers() {
             target="_blank"
           >
             Dec 2023
-            <img src="/page-icons/hyperlink.svg" />
+            <Image
+              height={55}
+              width={55}
+              src="/page-icons/hyperlink.svg"
+              alt={"hyperlink"}
+            />
           </a>
           <div className={styles.prevNewsImgContainer}>
             <a href="/newsletter/newsletter_1.pdf" target="_blank">
@@ -80,7 +95,12 @@ export default function CurrentMembers() {
                   target="_blank"
                 >
                   Oct 2023
-                  <img src="/page-icons/hyperlink.svg" />
+                  <Image
+                    height={55}
+                    width={55}
+                    src="/page-icons/hyperlink.svg"
+                    alt={"hyperlink"}
+                  />
                 </a>
                 <a
                   className={styles.link}
@@ -88,7 +108,12 @@ export default function CurrentMembers() {
                   target="_blank"
                 >
                   Nov 2023
-                  <img src="/page-icons/hyperlink.svg" />
+                  <Image
+                    height={55}
+                    width={55}
+                    src="/page-icons/hyperlink.svg"
+                    alt={"hyperlink"}
+                  />
                 </a>
               </div>
             </div>

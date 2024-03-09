@@ -1,11 +1,9 @@
-import Head from "next/head";
-import Image from "next/image";
 import styles from "@/styles/pages/home/home.module.scss";
 import YouTubePlayer from "@/components/YouTubePlayer/YouTubePlayer";
 
 export default function Home() {
   return (
-    <div className={`body-1`}>
+    <div className={styles.home}>
       <h1>Home</h1>
       <YouTubePlayer
         src={
