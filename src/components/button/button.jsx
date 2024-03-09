@@ -1,5 +1,5 @@
 import styles from "@/styles/components/button/button.module.scss";
-import Link from 'next/link'
+import Link from "next/link";
 
 // usage: <Button href={"<name_of_page>"} label={"<button text>"}/>
 
@@ -8,13 +8,16 @@ import Link from 'next/link'
 
 // optional: if your button has styles that differ from the default button component, you can pass in those styles as a prop
 // extraStyle = {styles.<className>}
-// the css for className only needs to include overrided attributes. 
+// the css for className only needs to include overrided attributes.
 
 // make sure href is in form of '/<name_of_page>' or 'official'
-export default function Button({label, href}){
-    return (
-        <Link href={href =='official' ? 'https://www.bestbuddies.org/' : href} className={styles.buttonLink}>
-            <button className={styles.button}>{label}</button> 
-        </Link>
-    );
+export default function Button({ label, href }) {
+  return (
+    <Link
+      href={href == "official" ? "https://www.bestbuddies.org/" : href}
+      className={styles.buttonLink}
+    >
+      <button className={styles.button}>{label}</button>
+    </Link>
+  );
 }

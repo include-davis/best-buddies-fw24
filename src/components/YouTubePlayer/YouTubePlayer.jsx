@@ -9,7 +9,7 @@ export default function YouTubePlayer({ src, title }) {
           src={src}
           title={title}
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          frameborder="0"
+          frameBorder="0"
           allowFullScreen={true}
         />
       </div>
