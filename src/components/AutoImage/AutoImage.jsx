@@ -13,7 +13,7 @@ export default function AutoImage({
       width={4000}
       alt={alt}
       {...rest}
-      style={style ?? { width: "100%", height: "auto", aspectRatio: "1" }}
+      style={style ?? { width: "100%", height: "auto" }}
     />
   );
 }
