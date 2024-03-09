@@ -1,9 +1,8 @@
 import styles from "@/styles/pages/events/chapter.module.scss";
-import Image from "next/image";
 
 export default function ChapterEvents() {
   return (
-    <div>
+    <div className={styles.chapterEvents}>
       <h1>Chapter Events</h1>
     </div>
   );
