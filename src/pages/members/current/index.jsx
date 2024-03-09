@@ -1,5 +1,6 @@
 import styles from "@/styles/pages/members/current.module.scss";
 import Image from "next/image";
+import AutoImage from "@/components/AutoImage/AutoImage";
 import YouTubePlayer from "@/components/YouTubePlayer/YouTubePlayer";
 
 export default function CurrentMembers() {
@@ -63,17 +64,11 @@ export default function CurrentMembers() {
             <img src="/page-icons/hyperlink.svg" />
           </a>
           <div className={styles.prevNewsImgContainer}>
-            <a
-              className={styles.newsletterImg}
-              href="/newsletter/newsletter_1.pdf"
-              target="_blank"
-            >
-              <Image
+            <a href="/newsletter/newsletter_1.pdf" target="_blank">
+              <AutoImage
                 className={styles.newsletterImg}
-                width={696}
-                height={483}
                 src="/newsletter/newsletter_1.jpg"
-                alt="Current Newsletter"
+                alt="Newsletter 1"
               />
             </a>
             <div className={styles.pastNewsColBox}>
