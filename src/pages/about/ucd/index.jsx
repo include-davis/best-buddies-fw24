@@ -62,7 +62,7 @@ export default function AboutUCD() {
             <div
               key={index}
               className={`${styles.card} ${
-                index % 2 == 0 ? styles.imgLeft : styles.imgRight
+                index % 2 === 0 ? styles.imgLeft : styles.imgRight
               }`}
             >
               <div className={styles.cardImgContainer}>

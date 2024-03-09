@@ -1,5 +1,3 @@
-import Head from "next/head";
-import Image from "next/image";
 import styles from "@/styles/pages/home/home.module.scss";
 import YouTubePlayer from "@/components/YouTubePlayer/YouTubePlayer";
 
@@ -15,8 +13,9 @@ export async function getStaticProps() {
 }
 
 export default function Home({ data }) {
+  console.log(data);
   return (
-    <div className={`body-1`}>
+    <div className={styles.home}>
       <h1>Home</h1>
       <YouTubePlayer
         src={

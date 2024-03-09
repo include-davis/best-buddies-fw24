@@ -14,7 +14,7 @@ import Link from "next/link";
 export default function Button({ label, href }) {
   return (
     <Link
-      href={href == "official" ? "https://www.bestbuddies.org/" : href}
+      href={href === "official" ? "https://www.bestbuddies.org/" : href}
       className={styles.buttonLink}
     >
       <button className={styles.button}>{label}</button>
