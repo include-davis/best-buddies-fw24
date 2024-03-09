@@ -31,11 +31,13 @@ export default function CurrentMembers() {
         </a>
       </div>
 
-      <YouTubePlayer
-        src={
-          "https://www.youtube-nocookie.com/embed/jpDCf0O0rsc?si=qUAJXnxWaqNqUjpF&amp;controls=1"
-        }
-      />
+      <div className={styles.renewalVideo}>
+        <YouTubePlayer
+          src={
+            "https://www.youtube-nocookie.com/embed/jpDCf0O0rsc?si=qUAJXnxWaqNqUjpF&amp;controls=1"
+          }
+        />
+      </div>
 
       <div className={styles.friendUpdatesBox}>
         <p className={styles.subPageTitle}>Friendship Updates!</p>
