@@ -1,4 +1,4 @@
-import styles from "@/styles/components/eventCard/eventCard.module.scss";
+import styles from "@/styles/components/eventcard/eventcard.module.scss";
 import AutoImage from "../AutoImage/AutoImage";
 import Button from "../button/button";
 
