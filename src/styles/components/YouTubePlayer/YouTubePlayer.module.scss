@@ -9,7 +9,7 @@
 }
 
 .youtubeCard {
-  width: 50%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -24,9 +24,13 @@
 .vid {
   width: 100%;
   height: auto;
-  min-width: 361px;
+  min-width: 451px;
   aspect-ratio: 16/9;
   border-radius: 10px;
+
+  @include mixins.tablet {
+    min-width: 351px;
+  }
 
   @include mixins.sm-phone {
     min-width: 300px;
