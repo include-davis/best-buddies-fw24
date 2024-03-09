@@ -128,7 +128,6 @@
     }
     .purpleHighlight { // font family manrope on mobile
         color: var(--font-title);
-        font-weight: 700;
     }
 
     @include mixins.phone {
