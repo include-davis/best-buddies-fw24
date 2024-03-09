@@ -1,4 +1,4 @@
-import styles from "@/styles/pages/event/regional-state.module.scss";
+import styles from "@/styles/pages/events/regional-state.module.scss";
 import Button from "@/components/button/button";
 import AutoImage from "@/components/AutoImage/AutoImage";
 

@@ -27,7 +27,7 @@ export default function CurrentMembers() {
 
       <YouTubePlayer
         src={
-          "https://www.youtube-nocookie.com/embed/jpDCf0O0rsc?si=qUAJXnxWaqNqUjpF&amp;controls=0"
+          "https://www.youtube-nocookie.com/embed/jpDCf0O0rsc?si=qUAJXnxWaqNqUjpF&amp;controls=1"
         }
       />
 

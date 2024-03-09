@@ -1,4 +1,4 @@
-import styles from "@/styles/pages/event/chapter.module.scss";
+import styles from "@/styles/pages/events/chapter.module.scss";
 import Image from "next/image";
 
 export default function ChapterEvents() {
