@@ -1,21 +1,15 @@
 @use "src/styles/mixins.scss";
 $purple: #3C257E;
-//needs revision
-//no width and height
-//classname="" instead of {style.name} for global variables
+
 .copyright{
     background-color: var(--color-purple);
     display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+    align-items: center;
+    padding: 20px 1061px 17px 40px;
+    font-size: 1.125rem;
     p{
-        color: var(--color-light-purple);
-        margin: 2px;
+        color: var(--color-pale-gray);
     }
-
-    padding-top: 20px;
-    padding-bottom: 20px;
-    padding-left: 40px;
 
     @include mixins.phone{
         padding: 18px;
@@ -31,15 +25,16 @@ $purple: #3C257E;
     }
 }
 
+
 .container{
     display: flex;
     align-items: center;
-    justify-content: space-between; //changed
+    // justify-content: space-between; //changed
+    justify-content: center;
     background: white;
-    // padding-top: 60px;
-    // padding-bottom: 50px;
-    // padding-left: 30px;
-    padding: 54px 92px 48px; //changed
+    // padding: 54px 92px 48px; //changed
+    padding: 54px 117px 48px 117px;
+    gap:104px;
     color: $purple;
     position: relative;
     
@@ -61,13 +56,13 @@ $purple: #3C257E;
         margin-top: 20px;
         margin-left: 15px;
         p, a{
-            background: white;
             color: $purple;
         }
         @include mixins.phone{
             display: none;
         }
     }
+    //deviates
     .smicons{
         display: flex;
         gap: 32px;
@@ -86,25 +81,27 @@ $purple: #3C257E;
 
 //container consisting of phone and email parts
 .infoSection{
-    margin-top: 20px;
+    // margin-top: 20px;
     p{
         color: $purple;
     }
 }
 .logoAndSocials{ //edited
-    margin-right: 104px;
+    // margin-right: 104px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
     @include mixins.phone{
         margin-right: 0px;
     }
 
 }
-.infoSection, .logoAndSocials{
-    display:flex;
-    flex-direction: column;
-    gap: 15px;
-}
 
 .infoSection{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
     @include mixins.phone{
         display: none;
     }

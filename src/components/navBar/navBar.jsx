@@ -5,6 +5,7 @@ import Dropdown from "@/components/navbar/dropdown/dropdown";
 import Button from "@/components/button/button";
 import React, { useState, useEffect } from "react";
 import { useRouter } from "next/router";
+import AutoImage from "../AutoImage/AutoImage";
 
 
 const navLinks = [
@@ -48,8 +49,7 @@ export default function Navbar() {
       setMobileMenuIcon("page-icons/bars.svg");
     }else{
       setMobileMenuState(true);
-      //temp. replacement of X icon
-      setMobileMenuIcon("page-icons/heart.svg");
+      setMobileMenuIcon("page-icons/exit.svg");
     }
   };
 
@@ -79,7 +79,8 @@ export default function Navbar() {
     <nav className={ mobileMenuState ? `${styles.nav} ${styles.mobileNav} body-1` : `${styles.nav} body-1`}>
       <div style={{display: 'flex', width: '100%', justifyContent:'space-between', padding: '16px'}}>
         <div className={styles.logo}>
-          <Image width={86} height={86} alt="logo" src="/best-buddies-logo.svg" />
+          <AutoImage src={"/best-buddies-logo.svg"} alt={"best buddies logo"} style={{width:"100%", height:"auto"}}/>
+          {/* <Image width={86} height={86} alt="logo" src="/best-buddies-logo.svg" /> */}
         </div>
         {/* categories, join button, bars/x icon on mobile */}
         <div className={styles.rightSide}>
@@ -119,7 +120,7 @@ export default function Navbar() {
               {link.menu ? (
                 <div>
                 <button key={index} className={`body-1-bold`} onClick={()=>toggleMenu(index)}>
-                  <p key={index} >{link.name}</p>
+                  <p key={index}>{link.name}</p>
                   <Image key={index} className={dropdownStates[index] ? `${styles.dropdownIcon} ${styles.active}` : `${styles.dropdownIcon}`} width={24} height={27} src="page-icons/dropdown.svg"></Image>
                 </button>
                 {dropdownStates[index] && (
@@ -134,7 +135,7 @@ export default function Navbar() {
                 </div>
               ) : (
                 
-                  <Button key={index} href="" label={link.name}></Button>
+                  <Button key={index} href={link.href} label={link.name}></Button>
               )}
             </div>
             ))}

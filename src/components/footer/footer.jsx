@@ -1,6 +1,7 @@
 import styles from "@/styles/components/footer/footer.module.scss";
 import Image from "next/image";
 import Link from 'next/link';
+import AutoImage from "../AutoImage/AutoImage";
 
 // modify icons to fit the footer structure
 const  smicons = [
