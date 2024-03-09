@@ -32,8 +32,8 @@ jobs:
           -n ${{ vars.VERCEL_PROJECT }}
           --yes
           --prod
-          --env CMS_URL=${{ vars.CMS_URL }}
-          --build-env CMS_URL=${{ vars.CMS_URL }}
+          --env NEXT_PUBLIC_CMS_URL=${{ vars.NEXT_PUBLIC_CMS_URL }}
+          --build-env NEXT_PUBLIC_CMS_URL=${{ vars.NEXT_PUBLIC_CMS_URL }}
 
       - name: Success
         run: echo "🛠️ Deploy successful 🛠️"
