@@ -1,5 +1,6 @@
-import styles from "@/styles/pages/member/current.module.scss";
+import styles from "@/styles/pages/members/current.module.scss";
 import Image from "next/image";
+import AutoImage from "@/components/AutoImage/AutoImage";
 import YouTubePlayer from "@/components/YouTubePlayer/YouTubePlayer";
 
 export default function CurrentMembers() {
@@ -21,7 +22,12 @@ export default function CurrentMembers() {
         </p>
         <a className={styles.link} href="https://forms.bestbuddies.org/4895599">
           Renewal Application
-          <img src="/page-icons/hyperlink.svg" />
+          <Image
+            width={9}
+            height={12}
+            src="/page-icons/hyperlink.svg"
+            alt={"hyperlink"}
+          />
         </a>
       </div>
 
@@ -41,7 +47,12 @@ export default function CurrentMembers() {
 
         <a className={styles.link} href="https://linktr.ee/ucdbestbuddies">
           Friendship Updates
-          <img src="/page-icons/hyperlink.svg" />
+          <Image
+            width={9}
+            height={12}
+            src="/page-icons/hyperlink.svg"
+            alt={"hyperlink"}
+          />
         </a>
       </div>
 
@@ -60,32 +71,37 @@ export default function CurrentMembers() {
             target="_blank"
           >
             Dec 2023
-            <img src="/page-icons/hyperlink.svg" />
+            <Image
+              width={9}
+              height={12}
+              src="/page-icons/hyperlink.svg"
+              alt={"hyperlink"}
+            />
           </a>
           <div className={styles.prevNewsImgContainer}>
-            <a
-              className={styles.newsletterImg}
-              href="/newsletter/newsletter_1.pdf"
-              target="_blank"
-            >
-              <Image
+            <a href="/newsletter/newsletter_1.pdf" target="_blank">
+              <AutoImage
                 className={styles.newsletterImg}
-                width={696}
-                height={483}
                 src="/newsletter/newsletter_1.jpg"
-                alt="Current Newsletter"
+                alt="Newsletter 1"
               />
             </a>
             <div className={styles.pastNewsColBox}>
               <h4 className={styles.pastNewsTitle}>Past Newsletters</h4>
               <div className={styles.prevNewsLinksContainer}>
+                {/* MAP to links as needed  */}
                 <a
                   className={styles.link}
                   href="/newsletter/newsletter_3.pdf"
                   target="_blank"
                 >
                   Oct 2023
-                  <img src="/page-icons/hyperlink.svg" />
+                  <Image
+                    width={9}
+                    height={12}
+                    src="/page-icons/hyperlink.svg"
+                    alt={"hyperlink"}
+                  />
                 </a>
                 <a
                   className={styles.link}
@@ -93,7 +109,12 @@ export default function CurrentMembers() {
                   target="_blank"
                 >
                   Nov 2023
-                  <img src="/page-icons/hyperlink.svg" />
+                  <Image
+                    width={9}
+                    height={12}
+                    src="/page-icons/hyperlink.svg"
+                    alt={"hyperlink"}
+                  />
                 </a>
               </div>
             </div>

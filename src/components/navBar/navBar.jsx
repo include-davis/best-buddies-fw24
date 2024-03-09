@@ -3,8 +3,8 @@ import Image from "next/image";
 
 export default function Navbar() {
   return (
-    <nav>
-      <Image width={86} height={86} src="/best-buddies-logo.svg" />
+    <nav className={styles.navbar}>
+      <Image width={86} height={86} src="/best-buddies-logo.svg" alt={"logo"} />
       <h2>Navbar yay</h2>
     </nav>
   );

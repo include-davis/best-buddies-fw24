@@ -27,7 +27,7 @@ const icons = [
 
 export default function Footer() {
   return (
-    <footer>
+    <footer className={styles.footer}>
       <h3>Footer yay</h3>
       {icons.map((icon) => {
         return (
