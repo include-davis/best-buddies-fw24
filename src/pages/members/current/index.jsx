@@ -23,8 +23,8 @@ export default function CurrentMembers() {
         <a className={styles.link} href="https://forms.bestbuddies.org/4895599">
           Renewal Application
           <Image
-            height={55}
-            width={55}
+            width={9}
+            height={12}
             src="/page-icons/hyperlink.svg"
             alt={"hyperlink"}
           />
@@ -48,8 +48,8 @@ export default function CurrentMembers() {
         <a className={styles.link} href="https://linktr.ee/ucdbestbuddies">
           Friendship Updates
           <Image
-            height={55}
-            width={55}
+            width={9}
+            height={12}
             src="/page-icons/hyperlink.svg"
             alt={"hyperlink"}
           />
@@ -72,8 +72,8 @@ export default function CurrentMembers() {
           >
             Dec 2023
             <Image
-              height={55}
-              width={55}
+              width={9}
+              height={12}
               src="/page-icons/hyperlink.svg"
               alt={"hyperlink"}
             />
@@ -89,6 +89,7 @@ export default function CurrentMembers() {
             <div className={styles.pastNewsColBox}>
               <h4 className={styles.pastNewsTitle}>Past Newsletters</h4>
               <div className={styles.prevNewsLinksContainer}>
+                {/* MAP to links as needed  */}
                 <a
                   className={styles.link}
                   href="/newsletter/newsletter_3.pdf"
@@ -96,8 +97,8 @@ export default function CurrentMembers() {
                 >
                   Oct 2023
                   <Image
-                    height={55}
-                    width={55}
+                    width={9}
+                    height={12}
                     src="/page-icons/hyperlink.svg"
                     alt={"hyperlink"}
                   />
@@ -109,8 +110,8 @@ export default function CurrentMembers() {
                 >
                   Nov 2023
                   <Image
-                    height={55}
-                    width={55}
+                    width={9}
+                    height={12}
                     src="/page-icons/hyperlink.svg"
                     alt={"hyperlink"}
                   />

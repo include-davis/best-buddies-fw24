@@ -1,7 +1,6 @@
 @use "src/styles/mixins.scss";
 
 .currentMembersContainer {
-  background: var(--color-light-gray);
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -81,7 +80,7 @@
 .currentMonthLink {
   display: flex;
   align-items: center;
-  gap: 2px;
+  gap: 8px;
   font-size: 1.125rem;
   font-weight: bold;
   color: var(--color-purple);
