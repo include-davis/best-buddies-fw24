@@ -8,14 +8,15 @@
   align-items: center;
   justify-content: center;
   gap: 128px;
+  max-width: 1440px;
+  margin: 0 auto;
 
-
-  @include mixins.tablet{
+  @include mixins.tablet {
     padding: 90px 90px;
     gap: 110px;
   }
 
-  @include mixins.phone{
+  @include mixins.phone {
     padding: 50px 20px;
     gap: 50px;
   }
@@ -28,7 +29,7 @@
   align-items: center;
   gap: 24px;
 
-  h1{
+  h1 {
     @include mixins.sm-phone {
       font-size: 2.25rem;
     }
@@ -36,29 +37,17 @@
 }
 
 .introText {
+  width: 75%;
   text-align: center;
 }
-
 
 //who can join
 .imgContainer {
   width: 50%;
-  height: 60vh;
-  position: relative;
-  
+
   @include mixins.tablet {
     width: 100%;
-    height: 50vh;
   }
-
-  @include mixins.phone{
-    height: 40vh;
-  }
-
-  @include mixins.sm-phone{
-    height: 30vh;
-  }
-
 }
 
 .joinCard {
@@ -73,7 +62,6 @@
     border-radius: 15px;
     box-shadow: 0px 5px 50px 0px rgba(228, 225, 231, 0.4);
   }
-
 }
 
 .joinImg {
@@ -95,14 +83,14 @@
   }
 }
 
-.joinTitleMobile{
+.joinTitleMobile {
   display: none;
   @include mixins.tablet {
     display: flex;
     justify-content: center;
   }
 }
-.joinTitle{
+.joinTitle {
   @include mixins.tablet {
     display: none;
   }
@@ -112,9 +100,7 @@
   display: flex;
   flex-direction: column;
   gap: 24px;
-
 }
-
 
 //How to Join
 .howToJoinContainer {
@@ -130,13 +116,13 @@
   justify-content: center;
   gap: 34px;
 
-  @include mixins.sm-desktop{
+  @include mixins.sm-desktop {
     flex-direction: column;
     width: 90%;
   }
 
-  @include mixins.tablet{
-    width: 100%
+  @include mixins.tablet {
+    width: 100%;
   }
 }
 
@@ -154,69 +140,68 @@
   gap: 72px;
 
   &.secondCard {
-      gap: 45px;
+    gap: 45px;
 
-      @include mixins.sm-phone{
-        gap: 25px;
-      }
+    @include mixins.sm-phone {
+      gap: 25px;
     }
-  
-  @include mixins.sm-desktop{
+  }
+
+  @include mixins.sm-desktop {
     width: 100%;
     align-items: center;
     justify-content: center;
   }
 
-  @include mixins.tablet{
+  @include mixins.tablet {
     height: 45vh;
   }
 
-  @include mixins.sm-phone{
+  @include mixins.sm-phone {
     height: 35vh;
     gap: 25px;
   }
-  
 }
 
-.howToCardInfo{
+.howToCardInfo {
   display: flex;
   flex-direction: column;
   width: 100%;
   gap: 45px;
 
-  @include mixins.sm-desktop{
+  @include mixins.sm-desktop {
     align-items: center;
     justify-content: center;
   }
 
-  @include mixins.sm-phone{
+  @include mixins.sm-phone {
     gap: 25px;
   }
 }
 
-.titleAndNum{
+.titleAndNum {
   display: flex;
   flex-direction: column;
   gap: 48px;
   width: 100%;
 
-  @include mixins.sm-desktop{
+  @include mixins.sm-desktop {
     justify-content: center;
     align-items: center;
   }
 
-  @include mixins.sm-phone{
+  @include mixins.sm-phone {
     gap: 16px;
   }
 }
 
-.idContainer{
+.idContainer {
   display: flex;
   width: 100%;
 
-  @include mixins.sm-desktop{
-   justify-content: center;
-   align-items: center;
+  @include mixins.sm-desktop {
+    justify-content: center;
+    align-items: center;
   }
 }
 
@@ -238,126 +223,105 @@
   font-weight: 700;
   line-height: 120%; /* 32.4px */
 
-  @include mixins.phone{
+  @include mixins.phone {
     width: 44px;
     height: 44px;
   }
 }
 
-.howToCardTitle{
-    font-size: 1.6875rem;
+.howToCardTitle {
+  font-size: 1.6875rem;
 
-    @include mixins.phone{
-      font-size: 1.3125rem;
-    }
+  @include mixins.phone {
+    font-size: 1.3125rem;
+  }
 }
 
-.howCardDesc{
-  @include mixins.sm-desktop{
+.howCardDesc {
+  @include mixins.sm-desktop {
     text-align: center;
   }
 }
 
-
 .interestLink,
 .appLink {
-    color: var(--color-purple);
-    font-size: 1.125rem;
-    font-weight: 700;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    gap: 2px;    
+  color: var(--color-purple);
+  font-size: 1.125rem;
+  font-weight: 700;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 2px;
 
-    svg {
-        width: 15px;
-        align-self: stretch;
-        background-color: var(--color-white);
-    }
+  svg {
+    width: 15px;
+    align-self: stretch;
+    background-color: var(--color-white);
+  }
 }
-  
+
+.redirect {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
 
 // need help
-.helpContainer{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 54px;
+.helpContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 54px;
 }
 
-
-.helpHeaderContainer{
+.helpHeaderContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 16px;
 }
 
-.helpHeaderText{
+.helpHeaderText {
   text-align: center;
 }
 
-.helpContents{
+.helpContents {
   display: flex;
   flex-direction: column;
   gap: 22px;
   width: 100%;
 }
 
-.youtubeTitleContainer{
+.helpVideos {
   display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  gap: 376px;
+  justify-content: center;
+  gap: 128px;
 
-  @include mixins.sm-desktop{
-    padding-left: 8%;
-    gap: 330px;
-  }
-
-  @include mixins.tablet{
-    display: none;
-  }
-}
-
-.videoTitle{
-  color: var(--font-title);
-}
-
-.youtubeContainer{
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 150px;
-  width: 100%;
-
-  @include mixins.sm-desktop{
-    gap: 20px;
-  }
-
-  @include mixins.tablet{
+  @include mixins.tablet {
     flex-direction: column;
     gap: 57px;
   }
 }
 
-.videoContainer{
+.videoContainer {
   display: flex;
   flex-direction: column;
-  align-items: center;
   gap: 16px;
+
+  @include mixins.tablet {
+    align-items: center;
+  }
 }
 
-.hiddenVideoTitle{
-  display: none;
-  color: var(--font-title);
+.videoTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 120%;
 
-  @include mixins.tablet{
-    display: flex;
-  }
-
-  @include mixins.sm-phone{
-    font-size: 1rem;
-    line-height: 100%;
+  @include mixins.sm-phone {
+    font-size: 1.125rem;
+    line-height: 150%;
   }
 }

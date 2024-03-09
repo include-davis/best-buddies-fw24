@@ -1,7 +1,8 @@
-import styles from "@/styles/pages/member/new.module.scss";
+import styles from "@/styles/pages/members/new.module.scss";
 import Image from "next/image";
 import Link from "next/link";
 import YouTubePlayer from "@/components/YouTubePlayer/YouTubePlayer.jsx";
+import AutoImage from "@/components/AutoImage/AutoImage";
 
 const howToCardData = [
   {
@@ -30,6 +31,19 @@ const howToCardData = [
   },
 ];
 
+const helpVideos = [
+  {
+    id: "video-1",
+    title: "Buddies & Support Staff",
+    src: "https://www.youtube.com/embed/jpDCf0O0rsc?si=diSDe5rJPG-KVaxF",
+  },
+  {
+    id: "video-2",
+    title: "Peer Buddies",
+    src: "https://www.youtube.com/embed/RN8OdsNe_50?si=HTb4MDtOexpC_d7v",
+  },
+];
+
 export default function NewMembers() {
   return (
     <div className={styles.body}>
@@ -46,11 +60,10 @@ export default function NewMembers() {
       <div className={styles.joinCard}>
         <h2 className={styles.joinTitleMobile}>Who Can Join?</h2>
         <div className={styles.imgContainer}>
-          <Image
+          <AutoImage
             src={"/member-imgs/members-hero.jpg"}
             alt="Members Hero Image"
             className={styles.joinImg}
-            fill
           />
         </div>
         <div className={styles.joinInfo}>
@@ -74,7 +87,7 @@ export default function NewMembers() {
         <h2>How To Join</h2>
 
         {/* Cards */}
-        <div className={styles["howToCardsContainer"]}>
+        <div className={styles.howToCardsContainer}>
           {howToCardData.map((card) => {
             const isSecondCard = card.id === 2;
 
@@ -101,24 +114,15 @@ export default function NewMembers() {
                     className={`${card.linkClass} ${isSecondCard ? styles.link2 : styles.link}`}
                     href={card.linkHref}
                   >
-                    <>
+                    <div className={styles.redirect}>
                       {card.linkText}
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="15"
-                        height="27"
-                        viewBox="0 0 15 27"
-                        fill="none"
-                      >
-                        <path
-                          d="M6.33268 16.9997L9.66602 13.6663L6.33268 10.333"
-                          stroke="#5A3F98"
-                          strokeWidth="1.25"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                        />
-                      </svg>
-                    </>
+                      <Image
+                        width={9}
+                        height={12}
+                        src="/page-icons/hyperlink.svg"
+                        alt={"hyperlink symbol"}
+                      />
+                    </div>
                   </Link>
                 )}
               </div>
@@ -137,32 +141,16 @@ export default function NewMembers() {
         </div>
 
         <div className={styles.helpContents}>
-          <div className={styles.youtubeTitleContainer}>
-            <p className={`subheading ${styles.videoTitle}`}>
-              Buddies & Support Staff
-            </p>
-            <p className={`subheading ${styles.videoTitle}`}>Peer Buddies</p>
-          </div>
-
-          <div className={styles.youtubeContainer}>
-            <div className={styles.videoContainer}>
-              <p className={`subheading ${styles.hiddenVideoTitle}`}>
-                Buddies & Support Staff
-              </p>
-              <YouTubePlayer
-                src="https://www.youtube.com/embed/jpDCf0O0rsc?si=7ekvB55Uo2b3kAGN"
-                title="How to submit a membership application (BUDDIES + SUPPORT STAFF)"
-              />
-            </div>
-            <div className={styles.videoContainer}>
-              <p className={`subheading ${styles.hiddenVideoTitle}`}>
-                Peer Buddies
-              </p>
-              <YouTubePlayer
-                src="https://www.youtube.com/embed/RN8OdsNe_50?si=CtJZe17_IcmjHgkL"
-                title="How to submit a membership application on BB360 (FOR PEER BUDDIES)"
-              />
-            </div>
+          <div className={styles.helpVideos}>
+            {helpVideos &&
+              helpVideos.map((video) => {
+                return (
+                  <div key={video.id} className={styles.videoContainer}>
+                    <h2 className={styles.videoTitle}>{video.title}</h2>
+                    <YouTubePlayer src={video.src} />
+                  </div>
+                );
+              })}
           </div>
         </div>
       </div>
