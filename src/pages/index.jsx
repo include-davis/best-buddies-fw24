@@ -5,7 +5,7 @@ import YouTubePlayer from "@/components/YouTubePlayer/YouTubePlayer";
 
 export async function getStaticProps() {
   const res = await fetch(`${process.env.NEXT_PUBLIC_CMS_URL}/api/events`);
-  const data = res.json();
+  const data = await res.json();
 
   return {
     props: {
