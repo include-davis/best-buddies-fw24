@@ -2,33 +2,33 @@
 
 :root {
   // font colors
-  --font-primary: #1b044e;
+  --font-primary: #272b2e;
   --font-secondary: #404447;
-  --font-gray: #a8abae;
+  --font-title: #1b044e;
+  --font-gray: #6e757b;
   --font-warning-red: #e40000; // contact required fields
 
   // main page colors
-  --color-dark-purple: #1b044e;
   --color-purple: #5a3f98;
   --color-light-purple: #c6b9dc;
   --color-pale-gray: #e2ddeb;
 
   // background colors
-  --color-light-gray: #F8F8F9;
+  --color-light-gray: #f8f8f9;
   --color-white: #ffffff;
 
   // extra colors
-  --color-violet: #9396CA;
-  --color-light-violet: #D2D4E9;
-  --color-teal: #8FD1C4;
-  --color-light-teal: #B4DDD5;
-  --color-orange: #F37735;
-  --color-light-orange: #F7AF88;
-  --color-yellow: #FFD420;
-  --color-light-yellow: #FFEC9D;
-  
+  --color-violet: #9396ca;
+  --color-light-violet: #c0c2e9;
+  --color-teal: #8fd1c4;
+  --color-light-teal: #b4ddd5;
+  --color-orange: #f37735;
+  --color-light-orange: #ffa97c;
+  --color-yellow: #ffd420;
+  --color-light-yellow: #ffec9d;
+
   // spacers: px
-  --edge-spacer: 24px;
+  --edge-spacer: 112px;
 
   // nav
   --navbar-height: 88px;
@@ -52,6 +52,7 @@ h1,
 h2,
 h3 {
   font-weight: 700;
+  color: var(--font-title);
 }
 
 h1 {
@@ -62,13 +63,15 @@ h1 {
 h2 {
   font-size: 2.25rem; /* 36 px */
   line-height: 120%; /* 43.2px */
-  color: var(--font-secondary);
+
+  @include mixins.sm-phone {
+    font-size: 1.5rem; /* 24px */
+  }
 }
 
 h3 {
   font-size: 1.75rem; /* 28 px */
   line-height: 120%; /* 33.6px */
-  color: var(--font-secondary);
 }
 
 .subheading {
@@ -88,6 +91,12 @@ h3 {
   color: var(--font-secondary);
 }
 
+.body-1 {
+  @include mixins.sm-phone {
+    font-size: 1rem; /* 16px */
+  }
+}
+
 .body-1-bold {
   font-weight: 700;
   line-height: 140%;
@@ -96,4 +105,8 @@ h3 {
 .body-2 {
   font-size: 1rem;
   line-height: 140%;
+
+  @include mixins.sm-phone {
+    font-size: 0.875rem; /* 14px */
+  }
 }
