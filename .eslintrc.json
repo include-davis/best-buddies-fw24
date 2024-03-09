@@ -40,6 +40,15 @@
     "eqeqeq": [
       "error",
       "always"
-    ]
+    ],
+    "no-unused-vars": [
+        "error",
+        { 
+          "vars": "all", 
+          "varsIgnorePattern": "^_*$",
+          "argsIgnorePattern": "^_*$",
+          "destructuredArrayIgnorePattern": "^_*$"
+        }
+      ]
   }
 }

@@ -3,7 +3,18 @@ import Image from "next/image";
 import styles from "@/styles/pages/home/home.module.scss";
 import YouTubePlayer from "@/components/YouTubePlayer/YouTubePlayer";
 
-export default function Home() {
+export async function getStaticProps() {
+  const res = await fetch(`${process.env.NEXT_PUBLIC_CMS_URL}/api/events`);
+  const data = res.json();
+
+  return {
+    props: {
+      data: data.data,
+    },
+  };
+}
+
+export default function Home({ data }) {
   return (
     <div className={`body-1`}>
       <h1>Home</h1>
