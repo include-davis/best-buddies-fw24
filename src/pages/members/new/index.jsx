@@ -1,4 +1,4 @@
-import styles from "@/styles/pages/member/new.module.scss";
+import styles from "@/styles/pages/members/new.module.scss";
 
 export default function NewMembers() {
   return (

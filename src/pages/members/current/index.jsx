@@ -1,4 +1,4 @@
-import styles from "@/styles/pages/member/current.module.scss";
+import styles from "@/styles/pages/members/current.module.scss";
 import Image from "next/image";
 import YouTubePlayer from "@/components/YouTubePlayer/YouTubePlayer";
 
