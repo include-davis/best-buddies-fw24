@@ -35,7 +35,6 @@ export default function Home({
   events_json,
   announcements_json,
 }) {
-  console.log([homepage_json, events_json, announcements_json]);
   return (
     <div className={styles.body}>
       <div className={styles.hero}>
