@@ -1,0 +1,326 @@
+@use "src/styles/mixins";
+
+.body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 128px;
+  padding: 81px 94px 208px;
+  max-width: 1440px;
+  margin: 0 auto;
+
+  @include mixins.tablet {
+    padding: 90px 90px;
+    gap: 110px;
+  }
+
+  @include mixins.phone {
+    padding: 50px 20px;
+    gap: 50px;
+  }
+}
+
+//intro
+.introContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+
+  h1 {
+    @include mixins.sm-phone {
+      font-size: 2.25rem;
+    }
+  }
+}
+
+.introText {
+  width: 75%;
+  text-align: center;
+}
+
+//who can join
+.imgContainer {
+  width: 50%;
+
+  @include mixins.tablet {
+    width: 100%;
+  }
+}
+
+.joinCard {
+  width: 100%;
+  display: flex;
+  gap: 32px;
+
+  @include mixins.tablet {
+    flex-direction: column;
+    background-color: var(--color-white);
+    padding: 40px 20px;
+    border-radius: 15px;
+    box-shadow: 0px 5px 50px 0px rgba(228, 225, 231, 0.4);
+  }
+}
+
+.joinImg {
+  object-fit: cover;
+  object-position: center;
+  border-radius: 15px;
+}
+
+.joinInfo {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 24px;
+
+  @include mixins.tablet {
+    width: 100%;
+    align-items: center;
+  }
+}
+
+.joinTitleMobile {
+  display: none;
+  @include mixins.tablet {
+    display: flex;
+    justify-content: center;
+  }
+}
+.joinTitle {
+  @include mixins.tablet {
+    display: none;
+  }
+}
+
+.joinDesc {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+//How to Join
+.howToJoinContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 54px;
+}
+
+.howToCardsContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 34px;
+
+  @include mixins.sm-desktop {
+    flex-direction: column;
+    width: 90%;
+  }
+
+  @include mixins.tablet {
+    width: 100%;
+  }
+}
+
+.card {
+  background-color: var(--color-white);
+  width: 50%;
+  min-height: 50vh;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+  border-radius: 15px;
+  box-shadow: 0px 5px 50px 0px rgba(228, 225, 231, 0.4);
+  gap: 72px;
+
+  &.secondCard {
+    gap: 45px;
+
+    @include mixins.sm-phone {
+      gap: 25px;
+    }
+  }
+
+  @include mixins.sm-desktop {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+
+  @include mixins.tablet {
+    height: 45vh;
+  }
+
+  @include mixins.sm-phone {
+    height: 35vh;
+    gap: 25px;
+  }
+}
+
+.howToCardInfo {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 45px;
+
+  @include mixins.sm-desktop {
+    align-items: center;
+    justify-content: center;
+  }
+
+  @include mixins.sm-phone {
+    gap: 25px;
+  }
+}
+
+.titleAndNum {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  width: 100%;
+
+  @include mixins.sm-desktop {
+    justify-content: center;
+    align-items: center;
+  }
+
+  @include mixins.sm-phone {
+    gap: 16px;
+  }
+}
+
+.idContainer {
+  display: flex;
+  width: 100%;
+
+  @include mixins.sm-desktop {
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.numCircle {
+  display: flex;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+
+  padding: 10px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background: var(--color-light-teal);
+  color: #0d5a4b;
+  font-size: 1.6875rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%; /* 32.4px */
+
+  @include mixins.phone {
+    width: 44px;
+    height: 44px;
+  }
+}
+
+.howToCardTitle {
+  font-size: 1.6875rem;
+
+  @include mixins.phone {
+    font-size: 1.3125rem;
+  }
+}
+
+.howCardDesc {
+  @include mixins.sm-desktop {
+    text-align: center;
+  }
+}
+
+.interestLink,
+.appLink {
+  color: var(--color-purple);
+  font-size: 1.125rem;
+  font-weight: 700;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+
+  svg {
+    width: 15px;
+    align-self: stretch;
+    background-color: var(--color-white);
+  }
+}
+
+.redirect {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+// need help
+.helpContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 54px;
+}
+
+.helpHeaderContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.helpHeaderText {
+  text-align: center;
+}
+
+.helpContents {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  width: 100%;
+}
+
+.helpVideos {
+  display: flex;
+  justify-content: center;
+  gap: 128px;
+
+  @include mixins.tablet {
+    flex-direction: column;
+    gap: 57px;
+  }
+}
+
+.videoContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  @include mixins.tablet {
+    align-items: center;
+  }
+}
+
+.videoTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 120%;
+
+  @include mixins.sm-phone {
+    font-size: 1.125rem;
+    line-height: 150%;
+  }
+}

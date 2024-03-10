@@ -9,13 +9,13 @@ module.exports = {
         permanent: true,
       },
       {
-        source: "/event",
-        destination: "/event/chapter",
+        source: "/events",
+        destination: "/events/chapter",
         permanent: true,
       },
       {
-        source: "/member",
-        destination: "/member/new",
+        source: "/members",
+        destination: "/members/new",
         permanent: true,
       },
     ];

@@ -14,7 +14,6 @@
   flex-direction: column;
   align-items: stretch;
   padding: 46px 112px 88px 112px;
-  background-color: var(--color-light-gray);
   gap: 88px;
 
   > p {
@@ -157,6 +156,10 @@
 
   width: 75%;
 
+  @include mixins.tablet {
+    text-align: center;
+  }
+
   @include mixins.phone {
     gap: 16px;
   }
@@ -194,15 +197,9 @@
   flex-direction: column;
   gap: 40px;
   padding: 71.5px 112px;
-
   background-color: var(--color-purple);
-  h2 {
-    color: white;
-  }
 
-  background-color: var(--color-purple);
   h2 {
-    text-align: flex-start;
     color: white;
   }
 
@@ -228,8 +225,12 @@
 .memberSpotlightContainer {
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
+  // align-items: flex-start;
   gap: 136px;
+
+  @include mixins.tablet {
+    gap: 86px;
+  }
 }
 
 .memberSpotlight {
@@ -276,7 +277,8 @@
   gap: 15px;
 
   @include mixins.phone {
-    max-width: 100%;
+    width: 100%;
+    text-align: center;
     gap: 8px;
 
     p {
@@ -289,23 +291,19 @@
 .memberSpotlightImagePhone {
   border-radius: 15px;
   background: #d9d9d9;
+  object-fit: cover;
+}
 
-  .memberSpotlightImageDesktop,
-  .memberSpotlightImagePhone {
-    border-radius: 15px;
-  }
-
-  .memberSpotlightImageDesktop {
-    @include mixins.phone {
-      display: none;
-    }
-  }
-
-  .memberSpotlightImagePhone {
+.memberSpotlightImageDesktop {
+  @include mixins.phone {
     display: none;
+  }
+}
 
-    @include mixins.phone {
-      display: block;
-    }
+.memberSpotlightImagePhone {
+  display: none;
+
+  @include mixins.phone {
+    display: flex;
   }
 }

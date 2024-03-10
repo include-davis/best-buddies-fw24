@@ -1,17 +1,11 @@
-import Head from "next/head";
-import Image from "next/image";
 import { Suspense } from "react";
-import { Inter } from "next/font/google";
 import styles from "@/styles/pages/home/home.module.scss";
 import Button from "@/components/button/button";
-import Link from "next/link";
-import EventCard from "@/components/eventCard/eventCard";
+import FeaturedEvents from "@/components/featuredEvents/featuredEvents";
 import AnnouncementsCard from "@/components/announcementsCard/announcementsCard";
 import HeaderWithIcon from "@/components/headerWithIcon/headerWithIcon";
 import AutoImage from "@/components/AutoImage/AutoImage";
 import YouTubePlayer from "@/components/YouTubePlayer/YouTubePlayer";
-
-const inter = Inter({ subsets: ["latin"] });
 
 const events = [
   {
@@ -64,7 +58,8 @@ const memberSpotlightAltText =
 const videoSrc =
   "https://www.youtube.com/embed/GrG2-oX5z24?si=RLMuCFnXqc3I73tC";
 
-export default function Home() {
+export default function Home({ data }) {
+  console.log(data);
   return (
     <div className={styles.body}>
       <div className={styles.hero}>
@@ -92,7 +87,6 @@ export default function Home() {
       >
         <div className={styles.heroVideoContainer}>
           <YouTubePlayer src={videoSrc} />
-          {/* <iframe className={styles.heroVideo} src={videoSrc} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> */}
         </div>
       </Suspense>
       <div className={styles.mission}>
@@ -113,26 +107,7 @@ export default function Home() {
         <Button label={"About Our Chapter"} href="about" />
       </div>
 
-      <div className={styles.featuredEvents}>
-        <HeaderWithIcon
-          label="Featured Events"
-          src="/page-icons/calendar.svg"
-        />
-        <div className={styles.eventCarousel}>
-          {events.map((thisEvent, index) => {
-            return (
-              <EventCard
-                key={index}
-                title={thisEvent.title}
-                date={thisEvent.date}
-                description={thisEvent.description}
-                imagePath={thisEvent.imagePath}
-                eventLink={thisEvent.eventLink}
-              />
-            );
-          })}
-        </div>
-      </div>
+      <FeaturedEvents data={events} />
 
       <div className={styles.announcements}>
         <HeaderWithIcon label="Announcements" src="/page-icons/star.svg" />
@@ -141,7 +116,7 @@ export default function Home() {
           {announcements.map((thisAnnouncement, index) => {
             return (
               <AnnouncementsCard
-                key={index}
+                key={`Announcement ${index + 1}`}
                 title={thisAnnouncement.title}
                 date={thisAnnouncement.date}
                 description={thisAnnouncement.description}
@@ -174,10 +149,21 @@ export default function Home() {
         <AutoImage
           src={memberSpotlightImageSrc}
           alt={memberSpotlightAltText}
-          style={{ width: "50%", height: "auto" }}
+          style={{ width: "50%", height: "auto", aspectRatio: "1.22" }}
           className={styles.memberSpotlightImageDesktop}
         />
       </div>
     </div>
   );
+}
+
+export async function getStaticProps() {
+  const res = await fetch(`${process.env.NEXT_PUBLIC_CMS_URL}/api/events`);
+  const data = await res.json();
+
+  return {
+    props: {
+      data: data.data,
+    },
+  };
 }

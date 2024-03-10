@@ -6,7 +6,8 @@ export default function HeaderWithIcon({ label, src }) {
     <div className={styles.headerIconContainer}>
       <h2>{label}</h2>
       <div className={styles.imageContainer}>
-        <Image src={src} fill={true} /> {/* 43x43 on figma */}
+        <Image src={src} fill={true} alt={"header with icon"} />
+        {/* 43x43 on figma */}
       </div>
     </div>
   );

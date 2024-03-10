@@ -1,76 +1,83 @@
 @use "src/styles/mixins.scss";
 
-.announcementsCard { // is this a fixed aspect ratio or flex?
-    flex-grow: 1;
+.announcementsCard {
+  // is this a fixed aspect ratio or flex?
+  flex-grow: 1;
 
-    display: flex;
-    padding: 32px;
-    flex-direction: column;
-    align-content: stretch;
+  display: flex;
+  padding: 32px;
+  flex-direction: column;
+  align-content: stretch;
 
-    gap: 8px;
+  gap: 8px;
 
-    border-radius: 15px;
-    background: var(--color-white);
-    box-shadow: 0px 0px 44px 0px rgba(46, 25, 94, 0.80);
+  border-radius: 15px;
+  background: var(--color-white);
+//   box-shadow: 0px 0px 44px 0px rgba(46, 25, 94, 0.8);
 
-    max-width: 50%;
-    overflow-wrap: break-word;
+  max-width: 50%;
+  overflow-wrap: break-word;
 
-    @include mixins.phone {
-        max-width: 100%;
-        width: 100%;
-        padding: 16px 32px;
+  @include mixins.phone {
+    max-width: 100%;
+    width: 100%;
+    padding: 16px 32px;
 
-        h4 { // title
-            font-size: 1.3125rem;
-        }
-        p { // description
-            font-size: 1rem;
-        }
-        
+    h4 {
+      // title
+      font-size: 1.3125rem;
     }
-
+    p {
+      // description
+      font-size: 1rem;
+    }
+  }
 }
 
 .titleDateContainer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  p {
+    color: var(--font-gray);
+  }
+
+  @include mixins.phone {
+    flex-direction: column;
+    gap: 0px;
+    align-items: flex-start;
+
     p {
-        color: var(--font-gray);
+      // date
+      font-size: 0.875rem;
     }
-
-    @include mixins.phone {
-        flex-direction: column;
-        gap: 0px;
-        align-items: flex-start;
-
-        p { // date
-            font-size: 0.875rem;
-        }
-    }
+  }
 }
 
 .hyperlink {
-    display: flex;
-    align-items: center;
-    p {
-        color: var(--color-purple);
-        font-weight: 700;
-        line-height: 140%;
-        font-size: 1.125rem;
-        margin-top: 4px;
-    }
+  p {
+    color: var(--color-purple);
+    font-weight: 700;
+    line-height: 140%;
+    font-size: 1.125rem;
+    margin-top: 4px;
+  }
 
-    @include mixins.phone {
-        p {
-            font-size: 1rem;
-        }
+  @include mixins.phone {
+    p {
+      font-size: 1rem;
     }
+  }
 }
 
 .hyperlinkLink {
-    text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+
+  > img {
+    margin-top: 2px;
+  }
 }
