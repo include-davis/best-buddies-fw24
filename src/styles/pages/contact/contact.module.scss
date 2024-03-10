@@ -1,3 +1,271 @@
-.div {
-  background: red;
+@use "src/styles/mixins.scss";
+$gray: rgb(166, 165, 165);
+//set fixed widths
+.contact {
+  background: var(--color-light-gray);
+  // padding-top: 115px;
+  text-align: center;
+  font-size: 1.125rem;
+  width: 100%;
+  max-width: 1440px;
+  padding: 32px;
+  margin: 0 auto;
+
+  @include mixins.phone {
+    padding: 16px;
+  }
+
+  h1 {
+    color: var(--font-primary);
+    @include mixins.phone {
+      font-size: 2.25rem;
+    }
+  }
+
+  input {
+    width: 100%;
+    @include mixins.phone {
+      font-size: 1rem;
+      padding: 8px;
+    }
+  }
+
+  form {
+    display: flex;
+    text-align: left;
+    flex-direction: column;
+    gap: 40px;
+    @include mixins.phone {
+      font-size: 1rem;
+      align-items: center;
+    }
+  }
+
+  Button {
+    @include mixins.phone {
+      width: 100%;
+    }
+  }
+}
+
+.title {
+  // margin: 0px 408px 50px 408px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 19px;
+  padding-top: 90px;
+  @include mixins.phone {
+    margin: 0px;
+    margin-bottom: 73px;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
+.description {
+  @include mixins.phone {
+  }
+}
+.infoSection,
+.dropdown,
+.content {
+  display: flex;
+  gap: 35px;
+  justify-content: center;
+}
+
+.dropdown {
+  user-select: none;
+  width: 100%;
+}
+
+.dropdownContent {
+  width: 100%;
+}
+
+.content {
+  width: 100%;
+}
+
+.infoSection {
+  margin-top: 66px;
+  width: 100%;
+  flex-direction: row;
+  @include mixins.phone {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.infoContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+.warning {
+  color: var(--font-warning-red);
+  margin-top: 30px;
+}
+
+.required {
+  text-align: left;
+  @include mixins.phone {
+    font-size: 1rem;
+  }
+}
+//add red asterick after each required field
+.required::after {
+  content: " *";
+  color: var(--font-warning-red);
+}
+
+//for all text boxes: name, email address, and email content
+.answerContainer {
+  border-radius: 15px;
+  padding: 10px;
+  padding-left: 16px;
+  border: 1px solid $gray;
+  color: var(--font-secondary);
+}
+
+//.selected: div above optionsContainer that shows what user has selected
+.selected,
+.optionsContainer {
+  border-radius: 15px;
+  text-align: left;
+}
+
+//div holding all the options in the dropdown menu
+.optionsContainer {
+  border: 1px solid $gray;
+  opacity: 0;
+  position: relative;
+  order: 1;
+  margin-top: 10px;
+  //otherwise transparent and can see next question
+  background: white;
+  @include mixins.phone {
+    width: 100%;
+    font-size: 1rem;
+  }
+}
+
+//display options
+.active {
+  opacity: 1;
+  overflow: hidden;
+  right: 1px;
+  position: relative;
+  z-index: 2;
+  div,
+  label {
+    cursor: pointer;
+  }
+}
+
+//div holding last question
+.content {
+  position: relative;
+  top: -235px;
+  z-index: 1;
+  color: black;
+  align-items: center;
+  flex-direction: column;
+}
+
+.selectBox {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  @include mixins.phone {
+    align-items: center;
+  }
+}
+
+.selected {
+  cursor: pointer;
+  padding: 16px;
+  width: 100%;
+  margin-top: 10px;
+  font-size: 1.125rem;
+  color: var(--font-secondary);
+  background: white;
+  border: 1px solid $gray;
+  @include mixins.phone {
+    width: 100%;
+    font-size: 1rem;
+    padding: 12px;
+  }
+}
+
+.option {
+  padding: 15px;
+  margin: 0px;
+}
+
+.option:hover {
+  background: var(--color-light-gray);
+  label {
+    background: var(--color-light-gray);
+  }
+}
+
+//hide bullet points for options
+.radio {
+  display: none;
+}
+
+.hide {
+  color: rgb(118, 118, 118);
+}
+
+.appear,
+.selectedChoice {
+  color: black;
+}
+
+//text area for last question
+.paragraphContainer {
+  margin-top: 8px;
+  width: 100%;
+  height: 189px;
+  @include mixins.phone {
+    width: 100%;
+    height: 44px;
+  }
+}
+
+//chevron pointing down
+.dropdownIcon {
+  position: absolute;
+  right: 12px;
+  top: 24px;
+  cursor: pointer;
+  @include mixins.phone {
+    top: 18px;
+  }
+}
+
+//chevron pointing up
+.openMenuIcon {
+  transform: rotate(180deg);
+}
+
+.button {
+  justify-content: center;
+  align-self: flex-start;
+  border-radius: 70px;
+
+  border: none;
+  background-color: var(--color-yellow);
+
+  color: var(--color-font-primary);
+
+  font-weight: 700;
+  line-height: 140%;
+
+  padding: 12px 24px;
+  font-size: 1.125rem;
 }

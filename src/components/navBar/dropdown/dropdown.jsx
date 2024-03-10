@@ -1,10 +1,10 @@
 import styles from "@/styles/components/navbar/dropdown/dropdown.module.scss";
+import React, { useState } from "react";
 
-export default function Dropdown({ children, state, setState }) {
+export default function Dropdown({ children, state, setState, isMobile }) {
   return (
     <div
-      className={`${styles.dropdown} ${state ? styles.active : ""}`}
-      onClick={setState((prevState) => !prevState)}
+      className={isMobile ? `${styles.dropdownMobile}` : `${styles.dropdown}`}
     >
       {children}
     </div>

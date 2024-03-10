@@ -1,0 +1,21 @@
+.dropdown{
+    position: absolute;
+    z-index: 1;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    background:white;
+    padding: 24px;
+    //hide the white corners
+    overflow: hidden;
+    gap: 24px;
+}
+
+.dropdownMobile{
+    display: flex;
+    flex-direction: column;
+    background: var(--color-pale-gray);
+    align-items: center;
+    width: 100%;
+    font-weight: 400;
+}

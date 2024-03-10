@@ -1,0 +1,28 @@
+[
+  { "name": "Homepage", "links": [{ "label": "Home", "url": "/" }] },
+  {
+    "name": "About Us",
+    "links": [
+      { "label": "UCD Chapter", "url": "/about/ucd" },
+      { "label": "Best Buddies International", "url": "/about/intl" }
+    ]
+  },
+  {
+    "name": "Events",
+    "links": [
+      { "label": "Chapter Events", "url": "/events/chapter" },
+      { "label": "Regional and State Events", "url": "/events/regional-state" }
+    ]
+  },
+  {
+    "name": "Members",
+    "links": [
+      { "label": "New Members", "url": "/members/new" },
+      { "label": "Current Members", "url": "/members/current" }
+    ]
+  },
+  {
+    "name": "Contact Us",
+    "links": [{ "label": "Contact Form", "url": "/contact" }]
+  }
+]

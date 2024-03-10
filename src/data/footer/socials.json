@@ -1,0 +1,17 @@
+[
+  {
+    "name": "instagram",
+    "path": "/footer-icons/instagram.svg",
+    "slug": "https://www.instagram.com/ucdbestbuddies/"
+  },
+  {
+    "name": "facebook",
+    "path": "/footer-icons/facebook.svg",
+    "slug": "https://www.facebook.com/bestbuddiesatucdavis"
+  },
+  {
+    "name": "youtube",
+    "path": "/footer-icons/youtube.svg",
+    "slug": "https://twitter.com/bestbuddiesatucd"
+  }
+]
