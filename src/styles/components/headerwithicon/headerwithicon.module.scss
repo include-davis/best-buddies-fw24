@@ -3,14 +3,9 @@
 .headerIconContainer {
   display: flex;
   gap: 16px;
-  align-self: center;
   align-items: center;
 
-  display: flex;
-  gap: 16px;
-
-  align-items: center;
-
+  // need to manually set font so the header and image align.
   h2 {
     margin-top: 6px;
   }

@@ -9,12 +9,10 @@ import EventCard from "@/components/eventCard/eventCard";
 import AnnouncementsCard from "@/components/announcementsCard/announcementsCard";
 import HeaderWithIcon from "@/components/headerWithIcon/headerWithIcon";
 import AutoImage from "@/components/AutoImage/AutoImage";
+import YouTubePlayer from "@/components/YouTubePlayer/YouTubePlayer";
 
 const inter = Inter({ subsets: ["latin"] });
 
-{
-  /** TODO: these need to be in a file shared by index and event page!!! */
-}
 const events = [
   {
     title: "BB x #Include Site Demo",
@@ -42,9 +40,6 @@ const events = [
   },
 ];
 
-{
-  /** TODO: link isn't wrapping correctly for link in announcements */
-}
 const announcements = [
   {
     title: "Join our Friendship Walk team!",
@@ -62,7 +57,10 @@ const announcements = [
 ];
 
 const memberSpotlightText =
-  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.";
+  "Best Buddies will choose a new member or buddy pair to spotlight every month. Members may receive recognition for buddy pair hangouts, Friendship Walk participation, donations, and more.";
+const memberSpotlightImageSrc = "/member-imgs/members-hero.jpg";
+const memberSpotlightAltText =
+  'Two women stand in the center of a purple cardboard frame that says "Best Buddies" in white text. They are wearing black Friendship Walk t-shirts. In the background is a white curtain with the Best Buddies logo in a repeating pattern.';
 const videoSrc =
   "https://www.youtube.com/embed/GrG2-oX5z24?si=RLMuCFnXqc3I73tC";
 
@@ -93,13 +91,8 @@ export default function Home() {
         }
       >
         <div className={styles.heroVideoContainer}>
-          <iframe
-            className={styles.heroVideo}
-            src={videoSrc}
-            title="YouTube video player"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowFullscreen
-          ></iframe>
+          <YouTubePlayer src={videoSrc} />
+          {/* <iframe className={styles.heroVideo} src={videoSrc} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> */}
         </div>
       </Suspense>
       <div className={styles.mission}>
@@ -165,7 +158,12 @@ export default function Home() {
             label="Member Spotlight"
             src="/page-icons/users.svg"
           />
-          <div className={styles.memberSpotlightImagePhone}></div>
+          <AutoImage
+            src={memberSpotlightImageSrc}
+            alt={memberSpotlightAltText}
+            style={{ width: "100%", height: "auto" }}
+            className={styles.memberSpotlightImagePhone}
+          />
           <div className={styles.memberSpotlightDescription}>
             <h3 className={`subheading`}>
               Coming Soon... New for Spring Quarter!
@@ -173,7 +171,12 @@ export default function Home() {
             <p className={`body-1`}>{memberSpotlightText}</p>
           </div>
         </div>
-        <div className={styles.memberSpotlightImageDesktop}></div>
+        <AutoImage
+          src={memberSpotlightImageSrc}
+          alt={memberSpotlightAltText}
+          style={{ width: "50%", height: "auto" }}
+          className={styles.memberSpotlightImageDesktop}
+        />
       </div>
     </div>
   );
