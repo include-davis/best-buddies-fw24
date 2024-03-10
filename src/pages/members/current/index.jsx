@@ -40,7 +40,7 @@ function formatDateToMondayDayYear(date) {
     "Dec",
   ];
 
-  const month = months[date.getMonth()];
+  const month = months[date.getMonth() + 1];
   const year = date.getFullYear();
 
   return `${month} ${year}`;
@@ -158,7 +158,7 @@ export default function CurrentMembers({
                       className={styles.link}
                       href={newsletter.attributes.pdf.data.attributes.url}
                       target="_blank"
-                      key={newsletter.attributes.pdf.name}
+                      key={newsletter.attributes.date}
                     >
                       {formatDateToMondayDayYear(newsletter.attributes.date)}
                       <Image
