@@ -164,30 +164,29 @@ export default function Contact() {
           </div>
         </div>
         <div className={styles.content}>
-          <div>
-            <div
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                marginBottom: "50px",
-              }}
-            >
-              <p className={`${styles.required} body-1-bold`}>
-                Describe your question or comment
-              </p>
-              <textarea
-                className={`${styles.answerContainer} ${styles.paragraphContainer} body-1`}
-                name="question"
-                cols="50"
-                rows="10"
-              />
-            </div>
-            {/* <Button type="submit" label={"Submit"} href='/contact'/> */}
-            <button type="submit" href="/contact" className={styles.button}>
-              Submit
-            </button>
-            <p>{formPending ? "Sending your question!" : `${mailStatus}`}</p>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              marginBottom: "50px",
+              width: "100%",
+            }}
+          >
+            <p className={`${styles.required} body-1-bold`}>
+              Describe your question or comment
+            </p>
+            <textarea
+              className={`${styles.answerContainer} ${styles.paragraphContainer} body-1`}
+              name="question"
+              cols="50"
+              rows="10"
+            />
           </div>
+          {/* <Button type="submit" label={"Submit"} href='/contact'/> */}
+          <button type="submit" href="/contact" className={styles.button}>
+            Submit
+          </button>
+          <p>{formPending ? "Sending your question!" : `${mailStatus}`}</p>
         </div>
       </form>
     </div>

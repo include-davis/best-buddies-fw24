@@ -6,6 +6,16 @@ $gray: rgb(166, 165, 165);
   // padding-top: 115px;
   text-align: center;
   font-size: 1.125rem;
+  width: 100%;
+  max-width: 1080px;
+  padding: 32px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include mixins.phone {
+    padding: 16px;
+  }
+
   h1{
     color: var(--font-primary);
     @include mixins.phone{
@@ -14,11 +24,10 @@ $gray: rgb(166, 165, 165);
   }
 
   input{
-    width: 488px;
+    width: 100%;
     @include mixins.phone{
       font-size: 1rem;
       padding:8px;
-      width: 361px;
     }
   }  
 
@@ -68,11 +77,22 @@ $gray: rgb(166, 165, 165);
 
 .dropdown{
   user-select: none;
+  width: 100%;
+}
+
+.dropdownContent {
+    width: 100%;
+}
+
+.content {
+    width: 100%;
 }
 
 
 .infoSection{
   margin-top: 66px;
+  width: 100%;
+  flex-direction: row;
   @include mixins.phone{
     flex-direction: column; 
     align-items: center; 
@@ -83,6 +103,7 @@ $gray: rgb(166, 165, 165);
   display: flex;
   flex-direction: column;
   gap: 8px;
+  width: 100%;
 }
 
 .warning{
@@ -128,7 +149,7 @@ $gray: rgb(166, 165, 165);
   //otherwise transparent and can see next question
   background: white;
   @include mixins.phone{
-    width: 361px;
+    width: 100%;
     font-size: 1rem;
   }
 }
@@ -168,14 +189,14 @@ $gray: rgb(166, 165, 165);
 .selected{
   cursor: pointer;
   padding: 16px;
-  width: 1008px;
+  width: 100%;
   margin-top: 10px;
   font-size:1.125rem;
   color: var(--font-secondary);
   background: white;
   border: 1px solid $gray;
   @include mixins.phone{
-    width: 361px;
+    width: 100%;
     font-size: 1rem;
     padding: 12px;
   }
@@ -209,10 +230,10 @@ $gray: rgb(166, 165, 165);
 //text area for last question
 .paragraphContainer{
   margin-top: 8px;
-  width: 1008px;
+  width: 100%;
   height: 189px;
   @include mixins.phone{
-      width: 361px;
+      width: 100%;
       height: 44px;
   }
 }
@@ -249,6 +270,7 @@ $gray: rgb(166, 165, 165);
 
   padding: 12px 24px;
   font-size: 1.125rem;
+  width: 100%;
 
   @include mixins.phone {
     padding: 12px 22px;
