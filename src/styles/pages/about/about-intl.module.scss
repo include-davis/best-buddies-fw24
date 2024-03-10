@@ -3,7 +3,7 @@
 .body {
   display: flex;
   flex-direction: column;
-  background-color: var(--color-light-gray);
+  align-items: center;
 }
 
 .heroContainer {
@@ -116,7 +116,7 @@
   gap: 64px;
 
   @include mixins.phone {
-    background-color: var(--color-light-gray);
+    // background-color: var(--color-light-gray);
     gap: 16px;
   }
 }

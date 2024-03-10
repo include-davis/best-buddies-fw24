@@ -1,10 +1,10 @@
 import styles from "@/styles/components/footer/footer.module.scss";
 import Image from "next/image";
-import Link from 'next/link';
+import Link from "next/link";
 import AutoImage from "../AutoImage/AutoImage";
 
 // modify icons to fit the footer structure
-const  smicons = [
+const socials = [
   {
     name: "instagram",
     path: "/footer-icons/instagram.svg",
@@ -20,96 +20,130 @@ const  smicons = [
     path: "/footer-icons/youtube.svg",
     slug: "https://twitter.com/bestbuddiesatucd",
   },
-
 ];
 
-const sections = [
+const contacts = [
   {
-    title: 'About Us',
-    links: [
-      { label: 'UCD Chapter', url: '/about/ucd' },
-      { label: 'Best Buddies International', url: '/about/intl' }
-    ]
+    name: "email",
+    text: "ucdbestbuddies@gmail.com",
+    icon: "/footer-icons/mail.svg",
+    slug: "mailto:ucdbestbuddies@gmail.com",
   },
   {
-    title: 'Events',
+    name: "phone",
+    text: "916-538-3662",
+    icon: "/footer-icons/phone.svg",
+    slug: "tel:916-538-3662",
+  },
+];
+
+const pages = [
+  { name: "Homepage", links: [{ label: "Home", url: "/" }] },
+  {
+    name: "About Us",
     links: [
-      { label: 'Chapter Events', url: '/event/chapter' },
-      { label: 'Regional and State Events', url: '/event/regional-state' }
-    ]
+      { label: "UCD Chapter", url: "/about/ucd" },
+      { label: "Best Buddies International", url: "/about/intl" },
+    ],
   },
   {
-    title: 'Members',
+    name: "Events",
     links: [
-      { label: 'New Members', url: '/member/new' },
-      { label: 'Current Members', url: '/member/current' }
-    ]
-  }
-  // },
-  // {
-  //   title: 'Contact Us',
-  //   links: [
-  //     { label: 'Contact Form', url: '/contact' }
-  //   ]
-  // }
+      { label: "Chapter Events", url: "/events/chapter" },
+      { label: "Regional and State Events", url: "/events/regional-state" },
+    ],
+  },
+  {
+    name: "Members",
+    links: [
+      { label: "New Members", url: "/members/new" },
+      { label: "Current Members", url: "/members/current" },
+    ],
+  },
+  {
+    name: "Contact Us",
+    links: [{ label: "Contact Form", url: "/contact" }],
+  },
 ];
 
 export default function Footer() {
   return (
-    <footer>
-      <div className={styles.container}>
-        <div className={styles.logoAndSocials}>
-          <div className={styles.socials}>
-            <Image width={124} height={124} src="/best-buddies-logo.svg" alt="best-buddies-logo"/>
-            <div className={styles.socialsRight}>
-                <p className={`body-1-bold`}>BEST BUDDIES</p>
-                <p className={`body-1-bold`}>AT UC DAVIS</p> 
-              <div className={styles.smicons}>
-                {smicons.map((icon) => {
-                  return <Link href={icon.slug} key={icon.name} target="_blank">
-                    <Image width={25} height={25} src={icon.path} alt={icon.name} />
+    <footer className={styles.footer}>
+      <div className={styles.footerContent}>
+        <div className={styles.footerInfo}>
+          <div className={styles.footerSocials}>
+            <div className={styles.footerLogo}>
+              <AutoImage
+                src="/best-buddies-logo.svg"
+                alt="Best Buddies at UC Davis"
+                style={{
+                  width: "100%",
+                  height: "100%",
+                  aspectRatio: "1",
+                  objectFit: "cover",
+                }}
+              />
+            </div>
+            <div className={styles.footerSocialsIcons}>
+              <p className={styles.iconHeader}>BEST BUDDIES AT UC DAVIS</p>
+              <div className={styles.mediaIcons}>
+                {socials.map((social, index) => (
+                  <Link key={`icon ${index + 1}`} href={social.slug}>
+                    <Image
+                      src={social.path}
+                      alt={social.name}
+                      width={25}
+                      height={25}
+                    />
                   </Link>
-                })}
+                ))}
               </div>
             </div>
           </div>
-          {/* .infoSection: div holding the email and phone icons and text*/}
-          <div className={styles.infoSection}>
-              <div className={styles.email}>
-                <Image width={25} height={25} className={styles.logo} src={"/footer-icons/mail.svg"} alt={"email"}/>
-                <p className={`body-1`}>ucdbestbuddies@gmail.com</p>
-              </div>
-              <div className={styles.phone}>
-                <Image width={25} height={25} src={"/footer-icons/phone.svg"} alt={"phone"}/>
-                <p className={`body-1`}>916 - 538 - 3662</p>
-              </div>
+          <div className={styles.footerContact}>
+            {contacts.map((contact) => {
+              return (
+                <Link
+                  href={contact.slug}
+                  className={styles.footerContactIcon}
+                  key={`${contact.name} icon`}
+                >
+                  <Image
+                    width={25}
+                    height={25}
+                    src={contact.icon}
+                    alt={contact.name}
+                  />
+                  <p>{contact.text}</p>
+                </Link>
+              );
+            })}
           </div>
         </div>
-        {/* .sections: div holding all the sections/columns */}
-        <div className={`${styles.sections} body-1`}>
-          <Link href="www.google.com" className={`${styles.home} body-1-bold`}>Home</Link>
-          {sections.map((section, index) => (
-            // .section: div holding the individual columns
-            <div key={index} className={styles.section}>
-              <p className={`body-1-bold`}>{section.title}</p>
-              {section.links.map((link, linkIndex) => (
-                <Link key={linkIndex} href={link.url} target="_blank" className={link.label === 'Contact Form' ? `${styles.contactFormLink}` : ''}>{link.label}</Link>
-              ))}
-            </div>
-          ))}
-
-          {/* .desktopContact: div with Contact Us column to be displayed only on desktop */}
-          <div className={styles.desktopContact}>
-            <p className={`body-1-bold`}>Contact Us</p>
-            <Link href="/contact">Contact Form</Link>
-          </div>
-
-          <Link href="/contact" className={`${styles.mobileContact} body-1-bold`}>Contact</Link>
+        <div className={styles.footerRedirects}>
+          {pages.map((page) => {
+            return (
+              <div className={styles.pageRedirects} key={page.name}>
+                <h3 className={styles.redirectTitle}>{page.name}</h3>
+                <ul className={styles.redirects}>
+                  {page.links?.map((link) => {
+                    return (
+                      <li key={link.label}>
+                        <Link href={link.url}>{link.label}</Link>
+                      </li>
+                    );
+                  })}
+                </ul>
+              </div>
+            );
+          })}
         </div>
       </div>
       <div className={styles.copyright}>
-        <p className={styles.bestBuddies}>Best Buddies at UC Davis</p>
-        <p>Made with 🤍 by #include at Davis © 2024</p>
+        <p className={`${styles.mobileCopyright} body-1`}>
+          Best Buddies at UC Davis
+        </p>
+        <p className={`body-1`}>Made with 🤍 by #include at Davis © 2024</p>
       </div>
     </footer>
   );

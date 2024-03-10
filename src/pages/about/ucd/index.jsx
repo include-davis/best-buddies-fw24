@@ -1,6 +1,6 @@
-import styles from "@/styles/pages/about/about-ucd.module.scss";
 import Image from "next/image";
 import AutoImage from "@/components/AutoImage/AutoImage";
+import styles from "@/styles/pages/about/about-ucd.module.scss";
 
 const ucdContent = [
   {
@@ -62,7 +62,7 @@ export default function AboutUCD() {
             <div
               key={index}
               className={`${styles.card} ${
-                index % 2 == 0 ? styles.imgLeft : styles.imgRight
+                index % 2 === 0 ? styles.imgLeft : styles.imgRight
               }`}
             >
               <div className={styles.cardImgContainer}>
@@ -70,6 +70,7 @@ export default function AboutUCD() {
                   className={styles.cardImg}
                   src={cardContent.path}
                   alt={cardContent.altText}
+                  style={{ width: "100%", height: "auto", aspectRatio: "1" }}
                 />
               </div>
 

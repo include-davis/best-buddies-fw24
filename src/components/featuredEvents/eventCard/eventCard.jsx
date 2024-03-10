@@ -1,6 +1,6 @@
-import styles from "@/styles/components/eventCard/eventCard.module.scss";
-import AutoImage from "../AutoImage/AutoImage";
-import Button from "../button/button";
+import AutoImage from "../../AutoImage/AutoImage";
+import Button from "../../button/button";
+import styles from "@/styles/components/featuredEvents/eventcard/eventcard.module.scss";
 
 export default function EventCard({
   title,
@@ -13,7 +13,12 @@ export default function EventCard({
   return (
     <div className={styles.card}>
       <div className={styles.event}>
-        <AutoImage className={styles.eventImg} src={imagePath} alt={altText} />
+        <AutoImage
+          className={styles.eventImg}
+          src={imagePath}
+          alt={altText}
+          style={{ width: "100%", height: "auto", aspectRatio: "1" }}
+        />
 
         <div className={styles.eventInfo}>
           <div className={styles.eventHeader}>

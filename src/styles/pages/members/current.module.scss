@@ -1,0 +1,211 @@
+@use "src/styles/mixins.scss";
+
+.currentMembersContainer {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 65px;
+  padding: 81px 201px 94px;
+  max-width: 1440px;
+  margin: 0 auto;
+
+  @include mixins.tablet {
+    padding: 81px 91px 94px;
+    gap: 64px;
+  }
+
+  @include mixins.sm-phone {
+    padding: 48px 16px 144px 16px;
+  }
+}
+
+.currentMembersTitle {
+  font-size: 3.5rem;
+  color: var(--color-dark-purple);
+  font-weight: bold;
+
+  @include mixins.tablet {
+    font-size: 2.5rem;
+  }
+
+  @include mixins.phone {
+    font-size: 2.25rem;
+  }
+}
+
+.renewalBox {
+  align-self: center;
+  width: 100%;
+  background-color: var(--color-white);
+  border-radius: 15px;
+  padding: 25px 32px;
+
+  @include mixins.tablet {
+    padding: 40px 22px;
+  }
+}
+
+.renewalTitle {
+  color: var(--color-dark-purple);
+  font-size: 1.875rem;
+  background-color: var(--color-white);
+  text-align: left;
+  font-weight: bold;
+  margin-bottom: 24px;
+
+  @include mixins.tablet {
+    text-align: center;
+    margin-bottom: 16px;
+  }
+
+  @include mixins.phone {
+    font-size: 1.5rem;
+  }
+}
+
+.renewalBoxContent {
+  color: var(--font-secondary);
+  text-align: left;
+  font-size: 1.125rem;
+  line-height: 150%;
+  padding-bottom: 48px;
+
+  @include mixins.tablet {
+    font-size: 1rem;
+    font-style: normal;
+    padding-bottom: 32px;
+    text-align: center;
+  }
+}
+
+.renewalVideo {
+  width: 66%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @include mixins.tablet {
+    width: 100%;
+  }
+}
+
+.link,
+.currentMonthLink {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1.125rem;
+  font-weight: bold;
+  color: var(--color-purple);
+  text-decoration: none;
+
+  @include mixins.tablet {
+    justify-content: center;
+  }
+}
+
+.friendUpdatesBox,
+.latestNewsBox {
+  align-self: center;
+  width: 100%;
+  @include mixins.tablet {
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.subPageTitle {
+  color: var(--color-dark-purple);
+  font-size: 1.875rem;
+  text-align: left;
+  font-weight: bold;
+  margin-bottom: 24px;
+
+  @include mixins.tablet {
+    text-align: center;
+    margin-bottom: 16px;
+  }
+
+  @include mixins.phone {
+    font-size: 1.5rem;
+  }
+}
+
+.subPageContent {
+  color: var(--font-secondary);
+  font-size: 1.125rem;
+  text-align: left;
+  line-height: 150%;
+  margin-bottom: 48px;
+
+  @include mixins.tablet {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 16px;
+  }
+}
+
+.newsletterImg {
+  border-radius: 15px;
+  overflow: hidden;
+  object-fit: cover;
+  object-position: top;
+  width: 100%;
+}
+
+.prevNewsBox {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  @include mixins.tablet {
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+  }
+}
+.currentMonthLink {
+  @include mixins.tablet {
+    display: none;
+  }
+}
+
+.prevNewsImgContainer {
+  display: flex;
+  gap: 36px;
+  align-items: flex-start;
+
+  @include mixins.tablet {
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    padding-top: 8px;
+  }
+}
+
+.pastNewsColBox {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  @include mixins.tablet {
+    align-items: center;
+    gap: 16px;
+  }
+}
+.pastNewsTitle {
+  font-size: 1.125rem;
+  white-space: nowrap;
+}
+.prevNewsLinksContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+
+  @include mixins.tablet {
+    flex-direction: row;
+  }
+}
