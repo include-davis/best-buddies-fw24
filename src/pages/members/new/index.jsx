@@ -4,47 +4,61 @@ import Link from "next/link";
 import YouTubePlayer from "@/components/YouTubePlayer/YouTubePlayer.jsx";
 import AutoImage from "@/components/AutoImage/AutoImage";
 
-const howToCardData = [
-  {
-    id: 1,
-    title: "Interest Form",
-    description:
-      "Complete the form below and one of our officers will reach out to you.",
-    linkText: "Interest Form",
-    linkHref: "/contact",
-    linkClass: styles.interestLink,
-  },
-  {
-    id: 2,
-    title: "Membership Application",
-    description:
-      "Submit an application on our BB360 platform. Find helpful application tips below on our YouTube!",
-    linkText: "BB360 Application",
-    linkHref: "https://forms.bestbuddies.org/4895599",
-    linkClass: styles.appLink,
-  },
-  {
-    id: 3,
-    title: "Interview",
-    description:
-      "After submitting, our team will provide instructions for signing up for an interview slot.",
-  },
-];
+export async function getStaticProps() {
+  const new_members = await fetch(
+    `${process.env.NEXT_PUBLIC_CMS_URL}/api/members?populate=*`
+  );
 
-const helpVideos = [
-  {
-    id: "video-1",
-    title: "Buddies & Support Staff",
-    src: "https://www.youtube.com/embed/jpDCf0O0rsc?si=diSDe5rJPG-KVaxF",
-  },
-  {
-    id: "video-2",
-    title: "Peer Buddies",
-    src: "https://www.youtube.com/embed/RN8OdsNe_50?si=HTb4MDtOexpC_d7v",
-  },
-];
+  const new_members_json = await new_members.json();
 
-export default function NewMembers() {
+  return {
+    props: {
+      new_members_json: new_members_json.data,
+    },
+  };
+}
+
+export default function NewMembers({ new_members_json }) {
+  const data = new_members_json.attributes;
+
+  const helpVideos = [
+    {
+      id: "buddies & support staff video",
+      title: "Buddies & Support Staff",
+      src: data.left_video_url,
+    },
+    {
+      id: "peer buddies video",
+      title: "Peer Buddies",
+      src: data.right_video_url,
+    },
+  ];
+
+  const howToCardData = [
+    {
+      id: 1,
+      title: "Interest Form",
+      description: data.interest_link_text,
+      linkText: "Interest Form",
+      linkHref: data.interest_link_url,
+      linkClass: styles.interestLink,
+    },
+    {
+      id: 2,
+      title: "Membership Application",
+      description: data.application_link_text,
+      linkText: "BB360 Application",
+      linkHref: data.application_link_url,
+      linkClass: styles.appLink,
+    },
+    {
+      id: 3,
+      title: "Interview",
+      description:
+        "After submitting, our team will provide instructions for signing up for an interview slot.",
+    },
+  ];
+
   return (
     <div className={styles.body}>
       <div className={styles.introContainer}>
