@@ -1,9 +1,9 @@
-import styles from "@/styles/pages/about/about-intl.module.scss";
 import Image from "next/image";
 import FourPillars from "@/components/about/fourPillars/FourPillars";
 import Button from "@/components/button/button";
 import AutoImage from "@/components/AutoImage/AutoImage";
 import HeaderWithIcon from "@/components/headerWithIcon/headerWithIcon";
+import styles from "@/styles/pages/about/about-intl.module.scss";
 
 const intlContent = [
   {
@@ -82,6 +82,7 @@ export default function AboutIntl() {
                     className={styles.cardImg}
                     src={pillars.imagePath}
                     alt={pillars.altText}
+                    style={{ width: "100%", height: "auto", aspectRatio: "1" }}
                   />
                 </div>
 

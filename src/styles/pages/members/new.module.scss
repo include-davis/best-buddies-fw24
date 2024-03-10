@@ -1,13 +1,12 @@
 @use "src/styles/mixins";
 
 .body {
-  background-color: var(--color-light-gray);
-  padding: 81px 94px 208px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 128px;
+  padding: 81px 94px 208px;
   max-width: 1440px;
   margin: 0 auto;
 

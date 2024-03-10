@@ -1,0 +1,35 @@
+@use "src/styles/mixins.scss";
+
+.featuredEvents {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  
+  @include mixins.tablet {
+    gap: 24px;
+  }
+
+  @include mixins.sm-phone {
+    gap: 16px;
+  }
+}
+
+.featuredEventsHeader {
+  @include mixins.tablet {
+    align-self: center;
+  }
+}
+
+.cardsContainer {
+  display: flex;
+  gap: 32px;
+  overflow-x: scroll;
+
+  @include mixins.tablet {
+    gap: 24px;
+  }
+
+  @include mixins.sm-phone {
+    gap: 16px;
+  }
+}
