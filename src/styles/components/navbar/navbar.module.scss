@@ -48,6 +48,7 @@
   justify-content: center;
   gap: 32px;
   padding: 0px 15px;
+
   @include mixins.tablet {
     padding: 0;
     gap: 16px;
@@ -67,6 +68,11 @@
   }
 }
 
+.pageLink > a {
+  font-weight: 700;
+  color: var(--color-dark-purple);
+}
+
 .header:hover {
   cursor: default;
 }
@@ -80,6 +86,11 @@
   align-items: center;
   position: relative;
   gap: 8px;
+
+  > p {
+    font-weight: 700;
+    color: var(--color-dark-purple);
+  }
 }
 
 .mobileMenuIcon {
@@ -104,11 +115,10 @@
     width: 100%;
     Button {
       font-size: 1rem;
-      color: var(--color-font-primary);
+      color: var(--color-dark-purple);
       border: none;
       border-radius: 0;
       background: none;
-      // font-weight: 700;
       width: 100vw;
       justify-content: center;
       padding: 24px;
@@ -120,5 +130,9 @@
         margin-top: 10px;
       }
     }
+  }
+
+  > div > div > button > p {
+    color: var(--color-dark-purple-alt);
   }
 }

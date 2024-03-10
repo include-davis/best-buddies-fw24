@@ -13,16 +13,18 @@ export default function Footer() {
         <div className={styles.footerInfo}>
           <div className={styles.footerSocials}>
             <div className={styles.footerLogo}>
-              <AutoImage
-                src="/best-buddies-logo.svg"
-                alt="Best Buddies at UC Davis"
-                style={{
-                  width: "100%",
-                  height: "100%",
-                  aspectRatio: "1",
-                  objectFit: "cover",
-                }}
-              />
+              <Link href={"/"}>
+                <AutoImage
+                  src="/best-buddies-logo.svg"
+                  alt="Best Buddies at UC Davis"
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                    aspectRatio: "1",
+                    objectFit: "cover",
+                  }}
+                />
+              </Link>
             </div>
             <div className={styles.footerSocialsIcons}>
               <p className={styles.iconHeader}>BEST BUDDIES AT UC DAVIS</p>

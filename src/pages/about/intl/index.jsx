@@ -124,7 +124,7 @@ export default function AboutIntl({ intl_json }) {
 
           <Button
             label={"Visit Official Website"}
-            href={"https://aggielife.ucdavis.edu/bestbuddies/home/"}
+            href={"https://www.bestbuddies.org/"}
             target={"_blank"}
           />
         </div>

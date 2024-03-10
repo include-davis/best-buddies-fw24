@@ -5,26 +5,27 @@
   display: flex;
   flex-direction: column;
   background: white;
-  // padding: 24px;
-  //hide the white corners
   overflow: hidden;
-  // gap: 24px;
 
   > a {
     padding: 24px;
-    text-align: center;
   }
 
   > a:hover {
-    background: var(--color-pale-gray);
+    background: var(--color-white);
+    filter: brightness(0.95);
   }
 }
 
 .dropdownMobile {
   display: flex;
   flex-direction: column;
-  background: var(--color-pale-gray);
   align-items: center;
   width: 100%;
   font-weight: 400;
+
+  > a > button {
+    color: var(--color-purple);
+    font-weight: 400;
+  }
 }

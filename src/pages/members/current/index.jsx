@@ -23,7 +23,7 @@ export async function getStaticProps() {
   };
 }
 
-function formatDateToMondayDayYear(date) {
+function formatDateToMonthDayYear(date) {
   date = new Date(date);
   const months = [
     "Jan",
@@ -55,7 +55,7 @@ export default function CurrentMembers({
     (a, b) => new Date(b.date) - new Date(a.date)
   );
   const remainingNewsletters = newsletters.slice(1);
-  const latestNewsletterDate = formatDateToMondayDayYear(
+  const latestNewsletterDate = formatDateToMonthDayYear(
     newsletters[0].attributes.date
   );
 
@@ -75,7 +75,7 @@ export default function CurrentMembers({
           necessary, but officers will inform you in May or June if required
           this year.
         </p>
-        <a className={styles.link} href={data.renewal_url}>
+        <a className={styles.link} href={data.renewal_url} target="_blank">
           Renewal Application
           <Image
             width={9}
@@ -98,7 +98,11 @@ export default function CurrentMembers({
           friendship is going and if you need support.
         </p>
 
-        <a className={styles.link} href={data.friendship_updates_url}>
+        <a
+          className={styles.link}
+          href={data.friendship_updates_url}
+          target="_blank"
+        >
           Friendship Updates
           <Image
             width={9}
@@ -160,7 +164,7 @@ export default function CurrentMembers({
                       target="_blank"
                       key={newsletter.attributes.date}
                     >
-                      {formatDateToMondayDayYear(newsletter.attributes.date)}
+                      {formatDateToMonthDayYear(newsletter.attributes.date)}
                       <Image
                         width={9}
                         height={12}

@@ -1,6 +1,29 @@
-import AutoImage from "../../AutoImage/AutoImage";
-import Button from "../../button/button";
+import AutoImage from "@/components/AutoImage/AutoImage";
 import styles from "@/styles/components/featuredEvents/eventcard/eventcard.module.scss";
+
+function formatDateToMonthDayYear(date) {
+  date = new Date(date);
+  const months = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
+
+  const month = months[date.getMonth()];
+  const day = date.getDate();
+  const year = date.getFullYear();
+
+  return `${month} ${day}, ${year}`;
+}
 
 export default function EventCard({
   title,
@@ -23,12 +46,16 @@ export default function EventCard({
         <div className={styles.eventInfo}>
           <div className={styles.eventHeader}>
             <h3 className={styles.cardTitle}>{title}</h3>
-            <p className={styles.cardSubtitle}>{date}</p>
+            <p className={styles.cardSubtitle}>
+              {formatDateToMonthDayYear(date)}
+            </p>
           </div>
           <p className={styles.cardDescription}>{description}</p>
         </div>
       </div>
-      <Button label="RSVP" href={eventLink} />
+      <a href={eventLink} target="_blank">
+        <button className={styles.button}>RSVP</button>
+      </a>
     </div>
   );
 }

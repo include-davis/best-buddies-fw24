@@ -1,5 +1,4 @@
 import { RichText } from "@graphcms/rich-text-react-renderer";
-import Button from "@/components/button/button";
 import Image from "next/image";
 import AutoImage from "@/components/AutoImage/AutoImage";
 import styles from "@/styles/pages/events/regional-state.module.scss";
@@ -78,10 +77,11 @@ export default function RegionalStateEvents({ regional_state_json }) {
               </div>
               <div className={styles.eventRegisterInfo}>
                 <p className={"body-1-bold"}>{events.row_3_block_2_text}</p>
-                <Button
-                  label={"Register Now"}
-                  href={events.row_3_block_2_link_url}
-                />
+                <a href={events.row_3_block_2_link_url} target="_blank">
+                  <button className={styles.eventRegisterButton}>
+                    Register Now
+                  </button>
+                </a>
               </div>
             </div>
           </section>
@@ -108,10 +108,9 @@ export default function RegionalStateEvents({ regional_state_json }) {
                 }}
               />
             </div>
-            <Button
-              label={"Get Involved"}
-              href={events.featured_event_get_involved_link}
-            />
+            <a href={events.featured_event_get_involved_link} target="_blank">
+              <button className={styles.event2Button}>Get Involved</button>
+            </a>
           </div>
         </section>
       </div>

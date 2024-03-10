@@ -85,12 +85,13 @@ export default function Navbar() {
         }}
       >
         <div className={styles.logo}>
-          <AutoImage
-            src={"/best-buddies-logo.svg"}
-            alt={"best buddies logo"}
-            style={{ width: "100%", height: "auto" }}
-          />
-          {/* <Image width={86} height={86} alt="logo" src="/best-buddies-logo.svg" /> */}
+          <Link href={"/"}>
+            <AutoImage
+              src={"/best-buddies-logo.svg"}
+              alt={"best buddies logo"}
+              style={{ width: "100%", height: "auto" }}
+            />
+          </Link>
         </div>
         {/* categories, join button, bars/x icon on mobile */}
         <div className={styles.rightSide}>
@@ -131,7 +132,7 @@ export default function Navbar() {
               </li>
             ))}
             <li style={{ padding: "0px" }}>
-              <Button label={"Join Us"} href={"official"}></Button>
+              <Button label={"Join Us"} href={"/members/new"} />
             </li>
             <li className={styles.mobileMenuIcon}>
               <Image

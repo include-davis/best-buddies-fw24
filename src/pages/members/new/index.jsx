@@ -127,6 +127,7 @@ export default function NewMembers({ new_members_json }) {
                   <Link
                     className={`${card.linkClass} ${isSecondCard ? styles.link2 : styles.link}`}
                     href={card.linkHref}
+                    target="_blank"
                   >
                     <div className={styles.redirect}>
                       {card.linkText}

@@ -17,7 +17,7 @@ export default function AnnouncementsCard({
       <p className={`body-1`}>{description}</p>
       {href && (
         <div className={styles.hyperlink}>
-          <Link href={href} className={styles.hyperlinkLink}>
+          <Link href={href} className={styles.hyperlinkLink} target="_blank">
             <p>Learn More</p>
             <Image
               src="/page-icons/hyperlink.svg"

@@ -49,7 +49,7 @@ export default function Home({
 
         <Button
           label={"Join Us"}
-          href="member"
+          href={"/members/new"}
           extraStyles={styles.heroButton}
         />
       </div>

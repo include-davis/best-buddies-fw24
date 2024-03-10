@@ -187,12 +187,17 @@
 .eventRegisterInfo {
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: center;
   gap: 32px;
 
   > p {
     color: var(--color-white);
     text-align: center;
+  }
+
+  > a {
+    width: fit-content;
   }
 
   @include mixins.tablet {
@@ -246,6 +251,10 @@
   padding: 18px 0;
   gap: 40px;
 
+  > a {
+    width: fit-content;
+  }
+
   @include mixins.tablet {
     width: 100%;
   }
@@ -262,4 +271,32 @@
   display: flex;
   flex-direction: column;
   gap: 16px;
+}
+
+.eventRegisterButton,
+.event2Button {
+  justify-content: center;
+  align-items: center;
+  border-radius: 70px;
+
+  border: none;
+  background-color: var(--color-yellow);
+
+  color: var(--color-font-primary);
+
+  font-weight: 700;
+  line-height: 140%;
+
+  padding: 12px 24px;
+  font-size: 1.125rem;
+
+  @include mixins.phone {
+    padding: 12px 22px;
+    font-size: 1rem;
+  }
+}
+
+.eventRegisterButton:hover,
+.event2Button:hover {
+  filter: brightness(0.9);
 }
