@@ -1,4 +1,4 @@
-import styles from "@/styles/components/navbar/dropdown/dropdown.module.scss";
+import styles from "@/styles/components/navBar/dropdown/dropdown.module.scss";
 // import React, { useState } from "react";
 
 export default function Dropdown({
