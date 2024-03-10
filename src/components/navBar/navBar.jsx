@@ -54,7 +54,7 @@ export default function Navbar() {
   const toggleMenu = (index) => {
     setDropdownStates((prevStates) => {
       const newStates = prevStates.map((state, i) =>
-        i == index ? !state : false
+        i === index ? !state : false
       );
       return newStates;
     });
@@ -141,7 +141,7 @@ export default function Navbar() {
                         className={styles.dropdownIcon}
                         width={24}
                         height={27}
-                        src="page-icons/dropdown.svg"
+                        src="/page-icons/dropdown.svg"
                         alt={"Dropdown Menu"}
                       />
                     </div>

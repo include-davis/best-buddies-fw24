@@ -1,70 +1,10 @@
-import styles from "@/styles/components/footer/footer.module.scss";
 import Image from "next/image";
 import Link from "next/link";
-import AutoImage from "../AutoImage/AutoImage";
-
-// modify icons to fit the footer structure
-const socials = [
-  {
-    name: "instagram",
-    path: "/footer-icons/instagram.svg",
-    slug: "https://www.instagram.com/ucdbestbuddies/",
-  },
-  {
-    name: "facebook",
-    path: "/footer-icons/facebook.svg",
-    slug: "https://www.facebook.com/bestbuddiesatucdavis",
-  },
-  {
-    name: "youtube",
-    path: "/footer-icons/youtube.svg",
-    slug: "https://twitter.com/bestbuddiesatucd",
-  },
-];
-
-const contacts = [
-  {
-    name: "email",
-    text: "ucdbestbuddies@gmail.com",
-    icon: "/footer-icons/mail.svg",
-    slug: "mailto:ucdbestbuddies@gmail.com",
-  },
-  {
-    name: "phone",
-    text: "916-538-3662",
-    icon: "/footer-icons/phone.svg",
-    slug: "tel:916-538-3662",
-  },
-];
-
-const pages = [
-  { name: "Homepage", links: [{ label: "Home", url: "/" }] },
-  {
-    name: "About Us",
-    links: [
-      { label: "UCD Chapter", url: "/about/ucd" },
-      { label: "Best Buddies International", url: "/about/intl" },
-    ],
-  },
-  {
-    name: "Events",
-    links: [
-      { label: "Chapter Events", url: "/events/chapter" },
-      { label: "Regional and State Events", url: "/events/regional-state" },
-    ],
-  },
-  {
-    name: "Members",
-    links: [
-      { label: "New Members", url: "/members/new" },
-      { label: "Current Members", url: "/members/current" },
-    ],
-  },
-  {
-    name: "Contact Us",
-    links: [{ label: "Contact Form", url: "/contact" }],
-  },
-];
+import AutoImage from "@/components/AutoImage/AutoImage";
+import pages from "@/data/footer/redirects";
+import socials from "@/data/footer/socials";
+import contacts from "@/data/footer/contacts";
+import styles from "@/styles/components/footer/footer.module.scss";
 
 export default function Footer() {
   return (

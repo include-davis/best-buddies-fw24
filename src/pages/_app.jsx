@@ -24,7 +24,7 @@ const helveticaNeue = localFont({
 export default function App({ Component, pageProps }) {
   return (
     <div className={`${helveticaNeue.variable}`}>
-      {/* <Navbar /> */}
+      <Navbar />
       <Component {...pageProps} />
       <Footer />
     </div>
