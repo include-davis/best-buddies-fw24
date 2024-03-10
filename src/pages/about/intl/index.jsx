@@ -5,49 +5,60 @@ import AutoImage from "@/components/AutoImage/AutoImage";
 import HeaderWithIcon from "@/components/headerWithIcon/headerWithIcon";
 import styles from "@/styles/pages/about/about-intl.module.scss";
 
-const intlContent = [
-  {
-    title: "One-to-One Friendships",
-    description:
-      "These programs build one-to-one friendships between people with and without intellectual and developmental disabilities (IDD), offering social interactions while improving the quality of life and level of inclusion for a population that is often isolated and excluded.",
-    imagePath: "/about-imgs/intl/about-intl-friendship.jpg",
-    altText:
-      "A buddy pair, both girls, stand in front of a purple wall. They are smiling and posing together.",
-    iconPath: "/page-icons/heart.svg",
-  },
+export async function getStaticProps() {
+  const intl_res = await fetch(
+    `${process.env.NEXT_PUBLIC_CMS_URL}/api/about-intl?populate=*`
+  );
 
-  {
-    title: "Integrated Employment",
-    description:
-      "This program secures jobs for people with intellectual and developmental disabilities (IDD), allowing them to earn an income, pay taxes, and continuously and independently support themselves.",
-    imagePath: "/about-imgs/intl/about-intl-jobs.jpg",
-    altText:
-      "A Best Buddies participant stands in front of a sign that reads 'John Hancock'. He is wearing a black suit, light blue shirt, and tan tie.",
-    iconPath: "/page-icons/briefcase.svg",
-  },
+  const intl_json = await intl_res.json();
 
-  {
-    title: "Leadership Development",
-    description:
-      "These programs educate and empower people with and without IDD to become leaders, public speakers, and advocates. Best Buddies passionately believes that its program participants can lead the effort within their community and beyond to build a more inclusive world for people with IDD.",
-    imagePath: "/about-imgs/intl/about-intl-leadership.jpg",
-    altText:
-      "A Best Buddies Ambassador stands at a podium and speaks into a microphone. He is wearing a blue button-down shirt and tan slacks.",
-    iconPath: "/page-icons/users.svg",
-  },
+  return {
+    props: {
+      intl_json: intl_json.data,
+    },
+  };
+}
 
-  {
-    title: "Inclusive Living",
-    description:
-      "This program fosters an integrated experience for people with and without IDD to become active, contributing citizens who live independently in a dynamic environment where they can learn, grow, and thrive locations in Washington, D.C, Miami, FL, and Los Angeles, CA.",
-    imagePath: "/about-imgs/intl/about-intl-living.jpg",
-    altText:
-      "Four Best Buddies participants are gathered around a kitchen island. One of them is slicing a tomato.",
-    iconPath: "/page-icons/smile.svg",
-  },
-];
+export default function AboutIntl({ intl_json }) {
+  const data = intl_json.attributes;
+  const intlContent = [
+    {
+      title: "One-to-One Friendships",
+      description:
+        "These programs build one-to-one friendships between people with and without intellectual and developmental disabilities (IDD), offering social interactions while improving the quality of life and level of inclusion for a population that is often isolated and excluded.",
+      imagePath: data.img1.data.attributes.url,
+      altText: data.img1.data.attributes.alternativeText,
+      iconPath: "/page-icons/heart.svg",
+    },
 
-export default function AboutIntl() {
+    {
+      title: "Integrated Employment",
+      description:
+        "This program secures jobs for people with intellectual and developmental disabilities (IDD), allowing them to earn an income, pay taxes, and continuously and independently support themselves.",
+      imagePath: data.img2.data.attributes.url,
+      altText: data.img2.data.attributes.alternativeText,
+      iconPath: "/page-icons/briefcase.svg",
+    },
+
+    {
+      title: "Leadership Development",
+      description:
+        "These programs educate and empower people with and without IDD to become leaders, public speakers, and advocates. Best Buddies passionately believes that its program participants can lead the effort within their community and beyond to build a more inclusive world for people with IDD.",
+      imagePath: data.img3.data.attributes.url,
+      altText: data.img3.data.attributes.alternativeText,
+      iconPath: "/page-icons/users.svg",
+    },
+
+    {
+      title: "Inclusive Living",
+      description:
+        "This program fosters an integrated experience for people with and without IDD to become active, contributing citizens who live independently in a dynamic environment where they can learn, grow, and thrive locations in Washington, D.C, Miami, FL, and Los Angeles, CA.",
+      imagePath: data.img4.data.attributes.url,
+      altText: data.img4.data.attributes.alternativeText,
+      iconPath: "/page-icons/smile.svg",
+    },
+  ];
+
   return (
     <div className={styles.body}>
       <div className={styles.heroContainer}>
