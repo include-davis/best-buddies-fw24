@@ -224,3 +224,29 @@
     flex-direction: column;
   }
 }
+
+.learnMoreButton {
+  justify-content: center;
+  align-items: center;
+  border-radius: 70px;
+
+  border: none;
+  background-color: var(--color-yellow);
+
+  color: var(--color-font-primary);
+
+  font-weight: 700;
+  line-height: 140%;
+
+  padding: 12px 24px;
+  font-size: 1.125rem;
+
+  @include mixins.phone {
+    padding: 12px 22px;
+    font-size: 1rem;
+  }
+}
+
+.learnMoreButton:hover {
+  filter: brightness(0.9);
+}

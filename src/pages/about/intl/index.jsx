@@ -1,6 +1,5 @@
 import Image from "next/image";
 import FourPillars from "@/components/about/fourPillars/FourPillars";
-import Button from "@/components/button/button";
 import AutoImage from "@/components/AutoImage/AutoImage";
 import HeaderWithIcon from "@/components/headerWithIcon/headerWithIcon";
 import styles from "@/styles/pages/about/about-intl.module.scss";
@@ -122,11 +121,11 @@ export default function AboutIntl({ intl_json }) {
             <p>Visit the Best Buddies International Official website.</p>
           </div>
 
-          <Button
-            label={"Visit Official Website"}
-            href={"https://www.bestbuddies.org/"}
-            target={"_blank"}
-          />
+          <a href={"https://www.bestbuddies.org/"} target={"_blank"}>
+            <button className={styles.learnMoreButton}>
+              Visit Official Website
+            </button>
+          </a>
         </div>
       </div>
     </div>
