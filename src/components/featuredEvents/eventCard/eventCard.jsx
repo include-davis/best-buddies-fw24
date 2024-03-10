@@ -1,6 +1,6 @@
-import styles from "@/styles/components/featuredEvents/eventcard/eventcard.module.scss";
 import AutoImage from "../../AutoImage/AutoImage";
 import Button from "../../button/button";
+import styles from "@/styles/components/featuredEvents/eventcard/eventcard.module.scss";
 
 export default function EventCard({
   title,

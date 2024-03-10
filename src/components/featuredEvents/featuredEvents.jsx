@@ -1,6 +1,6 @@
-import styles from "@/styles/components/featuredEvents/featuredEvents.module.scss";
-import HeaderWithIcon from "../headerWithIcon/headerWithIcon";
 import EventCard from "./eventCard/eventCard";
+import HeaderWithIcon from "../headerWithIcon/headerWithIcon";
+import styles from "@/styles/components/featuredEvents/featuredEvents.module.scss";
 
 export default function FeaturedEvents({ data }) {
   return (

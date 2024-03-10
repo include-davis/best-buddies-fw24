@@ -1,7 +1,7 @@
 import styles from "@/styles/pages/events/chapter.module.scss";
 import FeaturedEvents from "@/components/featuredEvents/featuredEvents";
 
-const eventCardsData = [
+const events = [
   {
     imagePath: "/event-imgs/feature-events-1.jpg",
     altText: "Website Demo + Social",
@@ -36,7 +36,7 @@ export default function ChapterEvents() {
     <div className={styles.chapterEvents}>
       <h1 className={styles.chapterEventsTitle}>Chapter Events</h1>
       <div className={styles.chapterEventsContent}>
-        <FeaturedEvents data={eventCardsData} />
+        <FeaturedEvents data={events} />
         <div className={styles.eventCalendar}>
           <div className={styles.eventCalendarText}>
             <h2 className={styles.eventCalendarTitle}>Event Calendar</h2>
