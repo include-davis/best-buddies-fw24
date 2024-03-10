@@ -1,0 +1,97 @@
+@use "src/styles/mixins.scss";
+
+.chapterEvents {
+  display: flex;
+  flex-direction: column;
+  padding: 81px 112px 101px 112px;
+  gap: 110px;
+  max-width: 1440px;
+  margin: 0 auto;
+
+  @include mixins.tablet {
+    padding: 81px 64px 101px 64px;
+    gap: 64px;
+  }
+
+  @include mixins.phone {
+    padding: 48px 16px;
+    gap: 32px;
+  }
+
+  @include mixins.sm-phone {
+    gap: 24px;
+  }
+}
+
+.chapterEventsTitle {
+  align-self: center;
+
+  @include mixins.tablet {
+    font-size: 3rem;
+  }
+
+  @include mixins.phone {
+    font-size: 2.25rem;
+  }
+}
+
+.chapterEventsContent {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.eventCalendar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;
+
+  @include mixins.phone {
+    background-color: var(--color-white);
+    border-radius: 10px;
+    padding: 20px;
+    gap: 18px;
+  }
+}
+
+.eventCalendarText {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  text-align: center;
+}
+
+.eventCalendarDesc {
+  width: 66%;
+
+  @include mixins.tablet {
+    width: 80%;
+  }
+
+  @include mixins.sm-phone {
+    width: 100%;
+  }
+}
+
+.calendarContainer {
+  max-width: 1261px;
+  min-width: 280px;
+  width: 100%;
+  border-radius: 15px;
+}
+
+.calendar {
+  width: 100%;
+  border-radius: 15px;
+  aspect-ratio: 1.85;
+
+  @include mixins.tablet {
+    aspect-ratio: 1.5;
+  }
+
+  @include mixins.sm-phone {
+    aspect-ratio: 1.35;
+  }
+}

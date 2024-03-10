@@ -1,6 +1,6 @@
-import styles from "@/styles/pages/about/about-ucd.module.scss";
 import Image from "next/image";
 import AutoImage from "@/components/AutoImage/AutoImage";
+import styles from "@/styles/pages/about/about-ucd.module.scss";
 
 const ucdContent = [
   {
@@ -70,6 +70,7 @@ export default function AboutUCD() {
                   className={styles.cardImg}
                   src={cardContent.path}
                   alt={cardContent.altText}
+                  style={{ width: "100%", height: "auto", aspectRatio: "1" }}
                 />
               </div>
 

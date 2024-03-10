@@ -1,5 +1,6 @@
 import styles from "@/styles/pages/events/regional-state.module.scss";
 import Button from "@/components/button/button";
+import Image from "next/image";
 import AutoImage from "@/components/AutoImage/AutoImage";
 
 export default function RegionalStateEvents() {
@@ -28,10 +29,11 @@ export default function RegionalStateEvents() {
               </div>
             </div>
             <div className={styles.eventCardImg}>
-              <AutoImage
+              <Image
                 className={styles.eventImage}
                 src={"/event-imgs/events-friendship.jpg"}
                 alt={"placeholder"}
+                fill
               />
             </div>
           </div>
@@ -41,6 +43,7 @@ export default function RegionalStateEvents() {
                 className={styles.eventImage}
                 src={"/event-imgs/events-friendship-2.jpg"}
                 alt={"placeholder"}
+                style={{ width: "100%", height: "auto", aspectRatio: "1" }}
               />
             </div>
             <div className={styles.eventGalleryRight}>
@@ -48,7 +51,7 @@ export default function RegionalStateEvents() {
                 className={styles.eventImage}
                 src={"/event-imgs/events-friendship-3.jpg"}
                 alt={"placeholder"}
-                style={{ width: "100%", height: "auto" }}
+                style={{ width: "100%", height: "100%" }}
               />
             </div>
           </div>
@@ -73,6 +76,7 @@ export default function RegionalStateEvents() {
                   className={styles.eventImage}
                   src={"/event-imgs/events-friendship-2.jpg"}
                   alt={"placeholder"}
+                  style={{ width: "100%", height: "auto", aspectRatio: "1.2" }}
                 />
               </div>
               <div className={styles.eventRegisterInfo}>
@@ -91,10 +95,11 @@ export default function RegionalStateEvents() {
         <hr className={styles.section_divider}></hr>
         <section className={styles.event2}>
           <div className={styles.event2ImgContainer}>
-            <AutoImage
+            <Image
               className={styles.eventImage}
               src={"/event-imgs/events-champion.jpg"}
               alt={"placeholder"}
+              fill
             />
           </div>
           <div className={styles.event2Content}>

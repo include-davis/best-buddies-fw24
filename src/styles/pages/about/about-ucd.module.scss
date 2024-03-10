@@ -4,13 +4,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: var(--color-light-gray);
 }
 
 .heroContainer {
   height: calc(100vh - var(--navbar-height));
   width: 100%;
-  aspect-ratio: 1;
   position: relative;
 
   @include mixins.phone {
@@ -84,9 +82,12 @@
   padding: 112px;
   gap: 36px;
 
+  @include mixins.tablet {
+    gap: 80px;
+  }
+
   @include mixins.phone {
     padding: 34px 16px 157px 16px;
-    gap: 80px;
   }
 }
 
@@ -99,13 +100,11 @@
   @include mixins.tablet {
     flex-direction: column;
     gap: 28px;
-    //width: 100%;
   }
 }
 
 .cardImgContainer {
   width: 50%;
-  height: auto;
   aspect-ratio: 1;
 
   @include mixins.tablet {

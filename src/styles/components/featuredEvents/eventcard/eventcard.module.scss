@@ -84,4 +84,9 @@
   @include mixins.phone {
     font-size: 1rem;
   }
+
+  .button {
+    align-self: flex-start;
+    margin-top: auto;
+  }
 }

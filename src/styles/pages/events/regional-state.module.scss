@@ -6,6 +6,8 @@
   gap: 86px;
   background-color: var(--color-light-gray);
   padding: 81px 112px 126px 112px;
+  max-width: 1440px;
+  margin: 0 auto;
 
   @include mixins.tablet {
     gap: 64px;
@@ -113,8 +115,8 @@
 
 .eventCardImg {
   width: 50%;
+  position: relative;
   display: flex;
-  justify-content: center;
 
   @include mixins.tablet {
     width: 100%;
@@ -126,6 +128,10 @@
   border-radius: 15px;
   object-fit: cover;
   object-position: center;
+
+  @include mixins.tablet {
+    position: relative !important;
+  }
 }
 
 .eventImgGallery {
@@ -223,6 +229,7 @@
 }
 
 .event2ImgContainer {
+  position: relative;
   display: flex;
   width: 50%;
 
@@ -236,6 +243,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding: 18px 0;
   gap: 40px;
 
   @include mixins.tablet {

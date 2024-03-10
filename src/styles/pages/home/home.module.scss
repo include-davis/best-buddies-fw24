@@ -1,1 +1,309 @@
 @use "src/styles/mixins.scss";
+
+/* note to self: 
+    justify-content: children along main axis (horizontal if flex direction is horizontal)
+    align-items: children along secondary axis (vertical if flex direction is horizontal)
+    justify-self: change alignment along secondary axis of the child itself
+    align-self: change alignment along secondary axis of the child itself
+*/
+
+// 1 rem = 16px
+
+.body {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  padding: 46px 112px 88px 112px;
+  gap: 88px;
+
+  > p {
+    font-size: 1.1875rem;
+  }
+
+  @include mixins.phone {
+    padding: 43px 0px 122px 0px;
+    gap: 80px;
+  }
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 56px;
+  text-align: center;
+
+  @include mixins.phone {
+    gap: 32px;
+  }
+}
+
+.heroHeaders {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+
+  p {
+    // BEST BUDDIES AT UC DAVIS
+    color: var(--color-purple);
+  }
+  h1 {
+    // Friendships that matter.
+    color: var(--font-title);
+    font-size: 4.5rem;
+    line-height: 120%;
+  }
+  h5 {
+    // Fostering social and economic inclusion for individuals with disabilities.
+    color: var(--font-secondary);
+
+    font-size: 1.6875rem;
+    font-weight: 400;
+    line-height: 120%;
+  }
+
+  @include mixins.phone {
+    gap: 8px;
+    padding: 0px 28px;
+
+    p {
+      font-size: 1.125rem;
+    }
+    h1 {
+      font-size: 3.375rem;
+    }
+    h5 {
+      font-size: 1rem;
+      line-height: 150%;
+      margin-top: 16px;
+    }
+  }
+}
+
+.heroText {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.heroVideoContainer {
+  width: 100%;
+  max-width: 1280px;
+  align-self: center; // body has align-items: stretch; but i want this element to have a maximum width while staying centered.
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @include mixins.phone {
+    padding: 0px 15.5px;
+  }
+}
+
+.heroVideo,
+.heroVideoFallback {
+  aspect-ratio: 1.85;
+  border-radius: 10px;
+  width: 100%;
+}
+
+.heroVideoFallback {
+  // not too sure what i was supposed to do here
+  //background-color: var(--color-white);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.mission {
+  display: flex;
+  padding: 40px;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;
+  border-radius: 15px;
+  background: white;
+
+  h1 {
+    // Our Mission
+    color: var(--font-title);
+  }
+  .purpleHighlight {
+    // font family manrope on mobile
+    color: var(--font-title);
+  }
+
+  @include mixins.phone {
+    border-radius: 0;
+    gap: 16px;
+    padding: 24px 0px;
+
+    h1 {
+      font-size: 1.5rem;
+      line-height: 120%;
+    }
+    // p text has no size change
+  }
+}
+
+.missionText {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+
+  width: 75%;
+
+  @include mixins.tablet {
+    text-align: center;
+  }
+
+  @include mixins.phone {
+    gap: 16px;
+  }
+}
+
+.featuredEvents {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+
+  h2 {
+    color: var(--font-title);
+  }
+
+  @include mixins.phone {
+    gap: 8px;
+  }
+}
+
+.eventCarousel {
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
+  align-items: flex-start;
+
+  @include mixins.phone {
+    overflow: auto;
+  }
+}
+
+.announcements {
+  margin: 0 -112px 0 -112px; // negative margin because body has padding this needs to override
+
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 71.5px 112px;
+  background-color: var(--color-purple);
+
+  h2 {
+    color: white;
+  }
+
+  @include mixins.phone {
+    margin: 0px;
+    padding: 40px 17px;
+    gap: 24px;
+  }
+}
+
+.announcementCardContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+
+  @include mixins.phone {
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+  }
+}
+
+.memberSpotlightContainer {
+  display: flex;
+  flex-direction: row;
+  // align-items: flex-start;
+  gap: 136px;
+
+  @include mixins.tablet {
+    gap: 86px;
+  }
+}
+
+.memberSpotlight {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: 50%;
+
+  h2 {
+    // Member Spotlight
+    color: var(--color-dark-purple);
+  }
+  h3 {
+    // John Doe
+    color: #222; // #222 on figma (TODO: get this color into globals)
+    line-height: 120%;
+  }
+
+  h2 {
+    // Member Spotlight
+    color: var(--font-title);
+  }
+  h3 {
+    // John Doe
+    color: #222; // #222 on figma (TODO: get this color into globals)
+    line-height: 120%;
+  }
+
+  @include mixins.phone {
+    width: 100%;
+    align-items: stretch;
+    padding: 0px 16.5px;
+    gap: 21px;
+
+    h3 {
+      text-align: center;
+    }
+  }
+}
+
+.memberSpotlightDescription {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+  @include mixins.phone {
+    width: 100%;
+    text-align: center;
+    gap: 8px;
+
+    p {
+      font-size: 1rem;
+    }
+  }
+}
+
+.memberSpotlightImageDesktop,
+.memberSpotlightImagePhone {
+  border-radius: 15px;
+  background: #d9d9d9;
+  object-fit: cover;
+}
+
+.memberSpotlightImageDesktop {
+  @include mixins.phone {
+    display: none;
+  }
+}
+
+.memberSpotlightImagePhone {
+  display: none;
+
+  @include mixins.phone {
+    display: flex;
+  }
+}
