@@ -39,11 +39,17 @@ export default async function contactFormMailer(req, res) {
         html: msg,
       };
 
-      transporter.sendMail(mailOptions, function (error, _) {
-        if (error) {
-          throw new Error(error);
-        }
+      // eslint-disable-next-line no-undef
+      await new Promise((_, __) => {
+        transporter.sendMail(mailOptions, function (error, _) {
+          if (error) {
+            throw new Error(error);
+          } else {
+            res.status(200).json({ ok: true, data: msg, error: null });
+          }
+        });
       });
+
       res.status(200).json({ ok: true, data: msg, error: null });
     } catch (e) {
       res.status(500).json({
