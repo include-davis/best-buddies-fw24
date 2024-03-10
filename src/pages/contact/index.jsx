@@ -2,6 +2,7 @@ import React, { useState, useRef } from "react";
 import styles from "@/styles/pages/contact/contact.module.scss";
 // import Button from "@/components/button/button";
 import Image from "next/image";
+import ConfirmationModal from "@/components/confirmationModal/confirmationModal";
 
 /* things to change later:
 1. replace p element at the end of the form with confirmation modal
@@ -24,7 +25,7 @@ export default function Contact() {
   const [selected, setSelected] = useState("");
   const [optionsActive, setOptionsActive] = useState(false);
   const [mailStatus, setMailStatus] = useState("");
-  const [formPending, setFormPending] = useState(false);
+  const [pending, setPending] = useState(false);
   const formRef = useRef(null);
 
   const toggleOptionsMenu = () => {
@@ -37,8 +38,13 @@ export default function Contact() {
     setOptionsActive(false);
   };
 
+  const resetState = () => {
+    setPending(false);
+    setMailStatus("");
+  };
+
   const formHandler = async (e) => {
-    setFormPending(true);
+    setPending(true);
     e.preventDefault();
 
     const data = new FormData(e.target);
@@ -56,17 +62,15 @@ export default function Contact() {
         body: JSON.stringify(values),
       });
       const resData = await res.json();
-      console.log(resData);
-      if (resData.status === 200) {
-        setMailStatus("sent!");
-      } else {
-        setMailStatus("There was an error. Try again later.");
+      if (!resData.ok) {
+        throw new Error(resData.error);
       }
+      setMailStatus("success");
     } catch (e) {
-      console.log(e);
+      setMailStatus("failed");
     }
 
-    setFormPending(false);
+    setPending(false);
     formRef.current.reset();
     setSelected("");
   };
@@ -186,7 +190,11 @@ export default function Contact() {
           <button type="submit" href="/contact" className={styles.button}>
             Submit
           </button>
-          <p>{formPending ? "Sending your question!" : `${mailStatus}`}</p>
+          <ConfirmationModal
+            pending={pending}
+            mailStatus={mailStatus}
+            handleClose={resetState}
+          />
         </div>
       </form>
     </div>
