@@ -33,13 +33,13 @@ jobs:
           --yes
           --prod
           --env NEXT_PUBLIC_CMS_URL=${{ vars.NEXT_PUBLIC_CMS_URL }}
-          SENDER_EMAIL=${{ vars.SENDER_EMAIL }}
-          SENDER_PWD=${{ secrets.SENDER_PWD }}
-          TARGET_EMAIL=${{ vars.TARGET_EMAIL }}
+          --env SENDER_EMAIL=${{ vars.SENDER_EMAIL }}
+          --env SENDER_PWD=${{ secrets.SENDER_PWD }}
+          --env TARGET_EMAIL=${{ vars.TARGET_EMAIL }}
           --build-env NEXT_PUBLIC_CMS_URL=${{ vars.NEXT_PUBLIC_CMS_URL }}
-          SENDER_EMAIL=${{ vars.SENDER_EMAIL }}
-          SENDER_PWD=${{ secrets.SENDER_PWD }}
-          TARGET_EMAIL=${{ vars.TARGET_EMAIL }}
+          --build-env SENDER_EMAIL=${{ vars.SENDER_EMAIL }}
+          --build-env SENDER_PWD=${{ secrets.SENDER_PWD }}
+          --build-env TARGET_EMAIL=${{ vars.TARGET_EMAIL }}
 
       - name: Success
         run: echo "🛠️ Deploy successful 🛠️"
