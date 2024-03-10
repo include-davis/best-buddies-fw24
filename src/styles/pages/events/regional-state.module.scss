@@ -1,0 +1,265 @@
+@use "src/styles/mixins.scss";
+
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 86px;
+  background-color: var(--color-light-gray);
+  padding: 81px 112px 126px 112px;
+  max-width: 1440px;
+  margin: 0 auto;
+
+  @include mixins.tablet {
+    gap: 64px;
+  }
+
+  @include mixins.phone {
+    gap: 48px;
+    padding: 48px 16px 80px 16px;
+  }
+}
+
+.events {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+
+  @include mixins.phone {
+    gap: 64px;
+  }
+}
+
+.regional_state_title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  @include mixins.phone {
+    font-size: 2.25rem;
+  }
+}
+
+.event {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  @include mixins.phone {
+    gap: 16px;
+  }
+}
+
+.eventCard,
+.eventCard2 {
+  display: flex;
+  gap: 32px;
+
+  @include mixins.phone {
+    gap: 16px;
+  }
+}
+
+.eventCard {
+  @include mixins.tablet {
+    flex-direction: column-reverse;
+  }
+}
+
+.eventCard2 {
+  @include mixins.tablet {
+    flex-direction: column;
+  }
+}
+
+.cardTitle {
+  @include mixins.phone {
+    text-align: center;
+  }
+}
+
+.eventCardText,
+.eventCard2Text {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 24px;
+  background-color: var(--color-white);
+  padding: 40px;
+  border-radius: 15px;
+
+  @include mixins.tablet {
+    width: 100%;
+  }
+
+  @include mixins.phone {
+    gap: 16px;
+    padding: 24px 16px;
+  }
+}
+
+.eventCard2Text {
+  width: 60%;
+  padding: 40px 56px;
+
+  @include mixins.tablet {
+    width: 100%;
+  }
+
+  @include mixins.phone {
+    gap: 16px;
+    padding: 24px 16px;
+  }
+}
+
+.eventCardImg {
+  width: 50%;
+  position: relative;
+  display: flex;
+
+  @include mixins.tablet {
+    width: 100%;
+  }
+}
+
+.eventImage {
+  width: 100%;
+  border-radius: 15px;
+  object-fit: cover;
+  object-position: center;
+
+  @include mixins.tablet {
+    position: relative !important;
+  }
+}
+
+.eventImgGallery {
+  display: flex;
+  gap: 32px;
+}
+
+.eventGalleryLeft {
+  width: 40%;
+
+  @include mixins.tablet {
+    display: none;
+  }
+}
+
+.eventGalleryRight {
+  width: 60%;
+
+  @include mixins.tablet {
+    width: 100%;
+  }
+}
+
+.eventRegister {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 15px;
+  padding: 40px 56px;
+  text-align: center;
+  background-color: var(--color-purple);
+
+  @include mixins.tablet {
+    width: 100%;
+    padding: 0;
+    gap: 32px;
+  }
+}
+
+.mobileRegisterImg {
+  display: none;
+
+  @include mixins.tablet {
+    display: flex;
+    > img {
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+  }
+}
+
+.eventRegisterInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 32px;
+
+  > p {
+    color: var(--color-white);
+    text-align: center;
+  }
+
+  @include mixins.tablet {
+    padding: 0 144px 32px 144px;
+  }
+
+  @include mixins.phone {
+    gap: 16px;
+    padding: 0 16px 32px 16px;
+  }
+}
+
+.section_divider {
+  background-color: var(--color-pale-gray);
+  height: 2px;
+  border: none;
+  opacity: 75%;
+}
+
+.event2 {
+  display: flex;
+  gap: 32px;
+  border-radius: 15px;
+  padding: 40px;
+  background-color: var(--color-white);
+
+  @include mixins.tablet {
+    flex-direction: column;
+  }
+
+  @include mixins.phone {
+    padding: 16px;
+  }
+}
+
+.event2ImgContainer {
+  position: relative;
+  display: flex;
+  width: 50%;
+
+  @include mixins.tablet {
+    width: 100%;
+  }
+}
+
+.event2Content {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 18px 0;
+  gap: 40px;
+
+  @include mixins.tablet {
+    width: 100%;
+  }
+
+  @include mixins.phone {
+    gap: 16px;
+    > a {
+      align-self: center;
+    }
+  }
+}
+
+.event2Text {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
