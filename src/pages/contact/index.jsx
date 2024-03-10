@@ -159,9 +159,9 @@ export default function Contact() {
                     : `${styles.dropdownIcon}`
                 }
                 onClick={toggleOptionsMenu}
-                width={24}
-                height={27}
-                src="page-icons/dropdown.svg"
+                width={9}
+                height={12}
+                src="page-icons/down-arrow.svg"
                 alt="Dropdown Menu"
               />
             </div>

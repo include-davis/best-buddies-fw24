@@ -234,12 +234,14 @@ $gray: rgb(166, 165, 165);
   @include mixins.phone {
     width: 100%;
     height: 44px;
+    overflow: hidden;
   }
 }
 
 //chevron pointing down
 .dropdownIcon {
   position: absolute;
+  margin-top: 8px;
   right: 12px;
   top: 24px;
   cursor: pointer;

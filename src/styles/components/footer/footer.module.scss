@@ -184,11 +184,11 @@
   }
 }
 
-.footerRedirects > :last-child > .redirects > :last-child {
-  @include mixins.phone {
-    display: none;
-  }
-}
+// .footerRedirects > :last-child > .redirects > :last-child {
+//   @include mixins.phone {
+//     display: none;
+//   }
+// }
 
 .copyright {
   width: 100%;

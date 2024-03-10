@@ -1,60 +1,31 @@
 [
+  { "name": "Home", "href": "/", "menu": false },
   {
-    "id": "home",
-    "title": "Home",
-    "url": "/"
-  },
-  {
-    "id": "about us",
-    "title": "About Us",
-    "sublinks": [
-      {
-        "id": "ucd chapter",
-        "title": "UCD Chapter",
-        "url": "/about/ucd"
-      },
-      {
-        "id": "intl chapter",
-        "title": "Best Buddies International",
-        "url": "/about/intl"
-      }
+    "name": "About Us",
+    "href": "/about",
+    "menu": true,
+    "links": [
+      { "label": "UCD Chapter", "url": "/about/ucd" },
+      { "label": "Best Buddies International", "url": "/about/intl" }
     ]
   },
   {
-    "id": "events",
-    "title": "Events",
-    "sublinks": [
-      {
-        "id": "chapter events",
-        "title": "Chapter Events",
-        "url": "/events/chapter"
-      },
-      {
-        "id": "regional state events",
-        "title": "Regional and State Events",
-        "url": "/events/regional-state"
-      }
+    "name": "Events",
+    "href": "/event",
+    "menu": true,
+    "links": [
+      { "label": "Chapter Events", "url": "/events/chapter" },
+      { "label": "Regional and State Events", "url": "/events/regional-state" }
     ]
   },
   {
-    "id": "members",
-    "title": "Members",
-    "sublinks": [
-      {
-        "id": "new",
-        "title": "New Members",
-        "url": "/members/new"
-      },
-      {
-        "id": "current",
-        "title": "Current Members",
-        "url": "/members/current"
-      }
+    "name": "Members",
+    "href": "/member",
+    "menu": true,
+    "links": [
+      { "label": "New Members", "url": "/members/new" },
+      { "label": "Current Members", "url": "/members/current" }
     ]
   },
-  {
-    "id": "contact",
-    "title": "Contact",
-    "url": "/contact"
-  }
+  { "name": "Contact", "href": "/contact", "menu": false }
 ]

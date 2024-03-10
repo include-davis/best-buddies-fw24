@@ -1,89 +1,30 @@
-// @use "src/styles/mixins.scss";
-
-.dropdown_menu {
-  list-style: none;
-  text-decoration: none;
-  overflow: hidden;
+.dropdown {
   position: absolute;
-  top: 100%;
-  max-height: 0;
-  transition: all 0.3s;
-  border-radius: 10px;
-}
-
-.ddmenucontainer {
+  z-index: 1;
+  border-radius: 15px;
   display: flex;
   flex-direction: column;
-  gap: 0;
+  background: white;
+  // padding: 24px;
+  //hide the white corners
+  overflow: hidden;
+  // gap: 24px;
+
+  > a {
+    padding: 24px;
+    text-align: center;
+  }
+
+  > a:hover {
+    background: var(--color-pale-gray);
+  }
+}
+
+.dropdownMobile {
+  display: flex;
+  flex-direction: column;
+  background: var(--color-pale-gray);
   align-items: center;
-  justify-content: center;
-  min-height: 81px;
-  justify-self: center;
-}
-
-.programs,
-.dropdown_menu {
-  background-color: var(--color-white);
-}
-
-.dropdown_menu.show {
-  display: flex;
-  flex-direction: column;
-  max-height: 360px;
-}
-
-.pages {
-  width: 167px;
-  border: none;
-  margin: 0;
-  height: 100%;
-  font-size: 1.125rem;
-  font-weight: 400;
-  background: var(--color-white);
-}
-
-.ddmenucontainer > ul {
   width: 100%;
-  padding: 0;
-  margin: 0;
-}
-
-.dropdown_menu > li {
-  text-align: center;
-  height: 3.2rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.dropdown_menu > li:hover {
-  background-color: var(--primary-light);
-}
-
-@media screen and (max-width: 1220px) {
-  .dropdown_menu.show {
-    position: relative;
-    max-height: 486px;
-  }
-
-  .pages {
-    height: 81px;
-    width: 100%;
-    font-size: 1.125rem;
-    // font-weight: 600;
-  }
-
-  .dropdown_menu > li {
-    height: 81px;
-  }
-
-  .menu_items {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-sizing: border-box;
-    height: 81px;
-    font-size: 1.125rem;
-    // font-weight: 600;
-  }
+  font-weight: 400;
 }
