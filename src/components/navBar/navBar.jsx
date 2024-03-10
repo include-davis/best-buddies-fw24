@@ -6,7 +6,7 @@ import Button from "@/components/button/button";
 import React, { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import AutoImage from "@/components/AutoImage/AutoImage";
-import navLinks from "@/data/navbar/navLinks";
+import navLinks from "@/data/navbar/navlinks";
 
 export default function Navbar() {
   //show or hide dropdown menu
