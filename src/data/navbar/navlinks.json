@@ -1,0 +1,60 @@
+[
+  {
+    "id": "home",
+    "title": "Home",
+    "url": "/"
+  },
+  {
+    "id": "about us",
+    "title": "About Us",
+    "sublinks": [
+      {
+        "id": "ucd chapter",
+        "title": "UCD Chapter",
+        "url": "/about/ucd"
+      },
+      {
+        "id": "intl chapter",
+        "title": "Best Buddies International",
+        "url": "/about/intl"
+      }
+    ]
+  },
+  {
+    "id": "events",
+    "title": "Events",
+    "sublinks": [
+      {
+        "id": "chapter events",
+        "title": "Chapter Events",
+        "url": "/events/chapter"
+      },
+      {
+        "id": "regional state events",
+        "title": "Regional and State Events",
+        "url": "/events/regional-state"
+      }
+    ]
+  },
+  {
+    "id": "members",
+    "title": "Members",
+    "sublinks": [
+      {
+        "id": "new",
+        "title": "New Members",
+        "url": "/members/new"
+      },
+      {
+        "id": "current",
+        "title": "Current Members",
+        "url": "/members/current"
+      }
+    ]
+  },
+  {
+    "id": "contact",
+    "title": "Contact",
+    "url": "/contact"
+  }
+]

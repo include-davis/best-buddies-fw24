@@ -1,1 +1,69 @@
 @use "src/styles/mixins.scss";
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  background-color: var(--color-white);
+}
+
+.rightside {
+  display: flex;
+
+  > ul {
+    list-style: none;
+  }
+
+  > ul > li > a {
+    text-decoration: none;
+  }
+}
+
+.navlinks {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  padding: 0px 15px;
+}
+
+.link {
+  font-size: 1.125rem;
+  padding: 10px;
+}
+
+.joinUs {
+  display: flex;
+  align-items: center;
+}
+
+.joinButton {
+  text-decoration: none;
+  border: none;
+
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 140%;
+  background-color: var(--color-yellow);
+  padding: 12px 24px;
+  border-radius: 70px;
+  margin-left: 17px;
+  margin-right: 15px;
+
+  @include mixins.tablet {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+.mobileMenu {
+  display: none;
+
+  @include mixins.tablet {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 16px;
+  }
+}
