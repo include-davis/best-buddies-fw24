@@ -15,12 +15,12 @@ export default function FeaturedEvents({ data }) {
           return (
             <EventCard
               key={`Event Card ${index + 1}`}
-              title={card.title}
-              date={card.date}
-              description={card.description}
-              imagePath={card.imagePath}
-              altText={card.altText}
-              eventLink={card.eventLink}
+              title={card.attributes.title}
+              date={card.attributes.date}
+              description={card.attributes.description}
+              imagePath={card.attributes.image.data.attributes.url}
+              altText={card.attributes.image.data.attributes.alternativeText}
+              eventLink={card.attributes.rsvp_link}
             />
           );
         })}

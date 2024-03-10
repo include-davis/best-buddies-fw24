@@ -7,59 +7,35 @@ import HeaderWithIcon from "@/components/headerWithIcon/headerWithIcon";
 import AutoImage from "@/components/AutoImage/AutoImage";
 import YouTubePlayer from "@/components/YouTubePlayer/YouTubePlayer";
 
-const events = [
-  {
-    title: "BB x #Include Site Demo",
-    date: "March 10, 2024",
-    description:
-      "We're so excited to unveil our brand-new website, courtesy of Include at UC Davis! Join us for a website demo, snacks, drinks, and socializing. Join us at the SCC on March 10th from 3pm-4pm.",
-    imagePath: "/event-imgs/feature-events-1.jpg",
-    eventLink: "https://forms.gle/CobDNczNVCej4uKAA",
-  },
-  {
-    title: "Panera Fundraiser",
-    date: "March 5, 2024",
-    description:
-      "Support Best Buddies by joining us at Panera Bread anytime from 7 AM - 8 PM! Use the code “FUND4U” online, in the app, or in store. 20% of proceeds will go to our chapter. The fundraiser lasts all day, and you can join us at 5 PM for a club social! ",
-    imagePath: "/event-imgs/feature-events-2.jpg",
-    eventLink: "https://forms.gle/CobDNczNVCej4uKAA",
-  },
-  {
-    title: "March Movie Night",
-    date: "March 2, 2024",
-    description:
-      "Join us on Google Meet for our last movie night of the quarter! RSVP and vote for your movie choice by clicking the button below.",
-    imagePath: "/event-imgs/feature-events-3.jpg",
-    eventLink: "https://forms.gle/D4Ng51D8yyitewSVA",
-  },
-];
+export async function getStaticProps() {
+  const homepage_res = await fetch(
+    `${process.env.NEXT_PUBLIC_CMS_URL}/api/homepage?populate=*`
+  );
+  const homepage_json = await homepage_res.json();
+  const announcements_res = await fetch(
+    `${process.env.NEXT_PUBLIC_CMS_URL}/api/announcements?populate=*`
+  );
+  const announcements_json = await announcements_res.json();
+  const events_res = await fetch(
+    `${process.env.NEXT_PUBLIC_CMS_URL}/api/events?populate=*`
+  );
+  const events_json = await events_res.json();
 
-const announcements = [
-  {
-    title: "Join our Friendship Walk team!",
-    date: "February 27, 2024",
-    description:
-      "Make a difference today and be part of this incredible journey toward a more inclusive future!",
-    href: "https://www.bestbuddiesfriendshipwalk.org/sacramento/supporting/#aggies",
-  },
-  {
-    title: "End of Winter Quarter",
-    date: "February 27, 2024",
-    description:
-      "This quarter's last event will be on March 10th! Spring Quarter begins March 28th.",
-  },
-];
+  return {
+    props: {
+      homepage_json: homepage_json.data.attributes,
+      announcements_json: announcements_json.data,
+      events_json: events_json.data,
+    },
+  };
+}
 
-const memberSpotlightText =
-  "Best Buddies will choose a new member or buddy pair to spotlight every month. Members may receive recognition for buddy pair hangouts, Friendship Walk participation, donations, and more.";
-const memberSpotlightImageSrc = "/member-imgs/members-hero.jpg";
-const memberSpotlightAltText =
-  'Two women stand in the center of a purple cardboard frame that says "Best Buddies" in white text. They are wearing black Friendship Walk t-shirts. In the background is a white curtain with the Best Buddies logo in a repeating pattern.';
-const videoSrc =
-  "https://www.youtube.com/embed/GrG2-oX5z24?si=RLMuCFnXqc3I73tC";
-
-export default function Home({ data }) {
-  console.log(data);
+export default function Home({
+  homepage_json,
+  events_json,
+  announcements_json,
+}) {
+  console.log([homepage_json, events_json, announcements_json]);
   return (
     <div className={styles.body}>
       <div className={styles.hero}>
@@ -86,7 +62,7 @@ export default function Home({ data }) {
         }
       >
         <div className={styles.heroVideoContainer}>
-          <YouTubePlayer src={videoSrc} />
+          <YouTubePlayer src={homepage_json.video_url} />
         </div>
       </Suspense>
       <div className={styles.mission}>
@@ -96,31 +72,29 @@ export default function Home({ data }) {
             <span className={styles.purpleHighlight}>
               Best Buddies at UC Davis
             </span>{" "}
-            is a chapter of the global nonprofit Best Buddies International,
-            which promotes social and economic inclusion for people with
-            intellectual and developmental disabilities (IDD). We envision a
-            world in which programs like Best Buddies are no longer needed
-            because people with IDD are completely included in their
-            communities.
+            {homepage_json.our_mission_text}
           </p>
         </div>
-        <Button label={"About Our Chapter"} href="about" />
+        <Button
+          label={"About Our Chapter"}
+          href={homepage_json.our_mission_link}
+        />
       </div>
 
-      <FeaturedEvents data={events} />
+      <FeaturedEvents data={events_json} />
 
       <div className={styles.announcements}>
         <HeaderWithIcon label="Announcements" src="/page-icons/star.svg" />
 
         <div className={styles.announcementCardContainer}>
-          {announcements.map((thisAnnouncement, index) => {
+          {announcements_json.map((thisAnnouncement, index) => {
             return (
               <AnnouncementsCard
                 key={`Announcement ${index + 1}`}
-                title={thisAnnouncement.title}
-                date={thisAnnouncement.date}
-                description={thisAnnouncement.description}
-                href={thisAnnouncement.href}
+                title={thisAnnouncement.attributes.title}
+                date={thisAnnouncement.attributes.date}
+                description={thisAnnouncement.attributes.description}
+                href={thisAnnouncement.attributes.learn_more_link}
               />
             );
           })}
@@ -134,36 +108,32 @@ export default function Home({ data }) {
             src="/page-icons/users.svg"
           />
           <AutoImage
-            src={memberSpotlightImageSrc}
-            alt={memberSpotlightAltText}
+            src={homepage_json.member_spotlight_image.data.attributes.url}
+            alt={
+              homepage_json.member_spotlight_image.data.attributes
+                .alternativeText
+            }
             style={{ width: "100%", height: "auto" }}
             className={styles.memberSpotlightImagePhone}
           />
           <div className={styles.memberSpotlightDescription}>
             <h3 className={`subheading`}>
-              Coming Soon... New for Spring Quarter!
+              {homepage_json.member_spotlight_header}
             </h3>
-            <p className={`body-1`}>{memberSpotlightText}</p>
+            <p className={`body-1`}>
+              {homepage_json.member_spotlight_description}
+            </p>
           </div>
         </div>
         <AutoImage
-          src={memberSpotlightImageSrc}
-          alt={memberSpotlightAltText}
+          src={homepage_json.member_spotlight_image.data.attributes.url}
+          alt={
+            homepage_json.member_spotlight_image.data.attributes.alternativeText
+          }
           style={{ width: "50%", height: "auto", aspectRatio: "1.22" }}
           className={styles.memberSpotlightImageDesktop}
         />
       </div>
     </div>
   );
-}
-
-export async function getStaticProps() {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_CMS_URL}/api/events`);
-  const data = await res.json();
-
-  return {
-    props: {
-      data: data.data,
-    },
-  };
 }
