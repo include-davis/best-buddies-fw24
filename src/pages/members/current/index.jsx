@@ -3,7 +3,62 @@ import Image from "next/image";
 import AutoImage from "@/components/AutoImage/AutoImage";
 import YouTubePlayer from "@/components/YouTubePlayer/YouTubePlayer";
 
-export default function CurrentMembers() {
+export async function getStaticProps() {
+  const current_members_res = await fetch(
+    `${process.env.NEXT_PUBLIC_CMS_URL}/api/current-members?populate=*`
+  );
+  const current_members_json = await current_members_res.json();
+
+  const newsletter = await fetch(
+    `${process.env.NEXT_PUBLIC_CMS_URL}/api/newsletters?populate=*`
+  );
+
+  const newsletter_json = await newsletter.json();
+
+  return {
+    props: {
+      current_members_json: current_members_json.data,
+      newsletter_json: newsletter_json.data,
+    },
+  };
+}
+
+function formatDateToMondayDayYear(date) {
+  date = new Date(date);
+  const months = [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec",
+  ];
+
+  const month = months[date.getMonth()];
+  const year = date.getFullYear();
+
+  return `${month} ${year}`;
+}
+
+export default function CurrentMembers({
+  current_members_json,
+  newsletter_json,
+}) {
+  const data = current_members_json.attributes;
+  const newsletters = newsletter_json.sort(
+    (a, b) => new Date(b.date) - new Date(a.date)
+  );
+  const remainingNewsletters = newsletters.slice(1);
+  const latestNewsletterDate = formatDateToMondayDayYear(
+    newsletters[0].attributes.date
+  );
+
   return (
     <div className={styles.currentMembersContainer}>
       <h1 className={styles.currentMembersTitle}>Current Members</h1>
@@ -20,7 +75,7 @@ export default function CurrentMembers() {
           necessary, but officers will inform you in May or June if required
           this year.
         </p>
-        <a className={styles.link} href="https://forms.bestbuddies.org/4895599">
+        <a className={styles.link} href={data.renewal_url}>
           Renewal Application
           <Image
             width={9}
@@ -32,11 +87,7 @@ export default function CurrentMembers() {
       </div>
 
       <div className={styles.renewalVideo}>
-        <YouTubePlayer
-          src={
-            "https://www.youtube-nocookie.com/embed/jpDCf0O0rsc?si=qUAJXnxWaqNqUjpF&amp;controls=1"
-          }
-        />
+        <YouTubePlayer src={data.video_url} />
       </div>
 
       <div className={styles.friendUpdatesBox}>
@@ -47,7 +98,7 @@ export default function CurrentMembers() {
           friendship is going and if you need support.
         </p>
 
-        <a className={styles.link} href="https://linktr.ee/ucdbestbuddies">
+        <a className={styles.link} href={data.friendship_updates_url}>
           Friendship Updates
           <Image
             width={9}
@@ -69,10 +120,10 @@ export default function CurrentMembers() {
         <div className={styles.prevNewsBox}>
           <a
             className={styles.currentMonthLink}
-            href="/newsletter/newsletter_1.pdf"
+            href={newsletters[0].attributes.pdf.data.attributes.url}
             target="_blank"
           >
-            Dec 2023
+            {latestNewsletterDate}
             <Image
               width={9}
               height={12}
@@ -81,43 +132,44 @@ export default function CurrentMembers() {
             />
           </a>
           <div className={styles.prevNewsImgContainer}>
-            <a href="/newsletter/newsletter_1.pdf" target="_blank">
+            <a
+              href={newsletters[0].attributes.pdf.data.attributes.url}
+              target="_blank"
+            >
               <AutoImage
                 className={styles.newsletterImg}
-                src="/newsletter/newsletter_1.jpg"
-                alt="Newsletter 1"
+                src={
+                  newsletters[0].attributes.pdf.data.attributes.url.slice(
+                    0,
+                    -3
+                  ) + "jpg"
+                }
+                alt={
+                  newsletters[0].attributes.pdf.data.attributes.alternativeText
+                }
               />
             </a>
             <div className={styles.pastNewsColBox}>
               <h4 className={styles.pastNewsTitle}>Past Newsletters</h4>
               <div className={styles.prevNewsLinksContainer}>
-                {/* MAP to links as needed  */}
-                <a
-                  className={styles.link}
-                  href="/newsletter/newsletter_3.pdf"
-                  target="_blank"
-                >
-                  Oct 2023
-                  <Image
-                    width={9}
-                    height={12}
-                    src="/page-icons/hyperlink.svg"
-                    alt={"hyperlink"}
-                  />
-                </a>
-                <a
-                  className={styles.link}
-                  href="/newsletter/newsletter_2.pdf"
-                  target="_blank"
-                >
-                  Nov 2023
-                  <Image
-                    width={9}
-                    height={12}
-                    src="/page-icons/hyperlink.svg"
-                    alt={"hyperlink"}
-                  />
-                </a>
+                {remainingNewsletters.map((newsletter) => {
+                  return (
+                    <a
+                      className={styles.link}
+                      href={newsletter.attributes.pdf.data.attributes.url}
+                      target="_blank"
+                      key={newsletter.attributes.pdf.name}
+                    >
+                      {formatDateToMondayDayYear(newsletter.attributes.date)}
+                      <Image
+                        width={9}
+                        height={12}
+                        src="/page-icons/hyperlink.svg"
+                        alt={"hyperlink"}
+                      />
+                    </a>
+                  );
+                })}
               </div>
             </div>
           </div>
