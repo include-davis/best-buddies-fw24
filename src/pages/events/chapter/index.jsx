@@ -14,6 +14,9 @@ export async function getStaticProps() {
   };
 }
 
+const calendarEmbedLink =
+  "https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=America%2FLos_Angeles&bgcolor=%239396ca&showTitle=0&src=dWNkYmVzdGJ1ZGRpZXNAZ21haWwuY29t&color=%237986CB";
+
 export default function ChapterEvents({ events_json }) {
   return (
     <div className={styles.chapterEvents}>
@@ -33,9 +36,7 @@ export default function ChapterEvents({ events_json }) {
           <div className={styles.calendarContainer}>
             <iframe
               className={styles.calendar}
-              src={
-                "https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=America%2FLos_Angeles&bgcolor=%239396ca&showTitle=0&src=dWNkYmVzdGJ1ZGRpZXNAZ21haWwuY29t&color=%237986CB"
-              }
+              src={calendarEmbedLink}
               frameBorder="0"
             />
           </div>

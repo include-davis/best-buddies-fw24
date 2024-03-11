@@ -18,6 +18,8 @@ export async function getStaticProps() {
   };
 }
 
+const officialSiteLink = "https://www.bestbuddies.org/";
+
 export default function AboutIntl({ intl_json }) {
   const data = intl_json.attributes;
   const intlContent = [
@@ -121,7 +123,7 @@ export default function AboutIntl({ intl_json }) {
             <p>Visit the Best Buddies International Official website.</p>
           </div>
 
-          <a href={"https://www.bestbuddies.org/"} target={"_blank"}>
+          <a href={officialSiteLink} target={"_blank"}>
             <button className={styles.learnMoreButton}>
               Visit Official Website
             </button>
