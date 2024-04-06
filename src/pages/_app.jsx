@@ -1,6 +1,5 @@
 import localFont from "next/font/local";
-import Navbar from "@/components/navBar/navBar";
-import Footer from "@/components/footer/footer";
+import Layout from "@/components/layout/layout";
 import "@/styles/globals.scss";
 
 // note: weight & style property determines the font used?
@@ -24,9 +23,9 @@ const helveticaNeue = localFont({
 export default function App({ Component, pageProps }) {
   return (
     <div className={`${helveticaNeue.variable}`}>
-      <Navbar />
-      <Component {...pageProps} />
-      <Footer />
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
     </div>
   );
 }

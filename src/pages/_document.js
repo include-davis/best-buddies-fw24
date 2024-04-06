@@ -5,34 +5,20 @@ export default function Document() {
     <Html lang="en">
       <Head>
         <link
-          rel="apple-touch-icon"
-          sizes="180x180"
-          href="/apple-touch-icon.png"
-        />
-        <link
           rel="icon"
-          type="image/png"
-          sizes="32x32"
-          href="/favicon-32x32.png"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="16x16"
-          href="/favicon-16x16.png"
+          type="image/svg+xml"
+          sizes="87x87"
+          href="/best-buddies-logo.svg"
         />
         <link rel="manifest" href="/site.webmanifest" />
         <meta
           name="description"
-          content="We are a UC Davis community of web developers and designers dedicated to fostering collaboration, growth and the creation of creative digital solutions."
+          content="Best Buddies is an international organization that focuses on normalizing friendships between people with and without intellectual and developmental disabilities. We pair UCD students to people in the community with intellectual and developmental disabilities in one-to-one friendships for the academic year."
         />
         <meta
           name="keywords"
-          content="include, computer science, cs, design, figma, next, react, software, development, uc davis, davis, community, web, developers, designers, dedicated, fostering, collaboration, growth, club"
+          content="best buddies, best buddies at ucd, uc davis, ucd best buddies, international organization, intellectual disability, developmental disability, friendship, friendship program, friendship club, friendship organization, friendship organization davis, friendship organization uc davis, friendship organization california, friendship organization northern california, friendship organization sacramento, friendship organization davis california, friendship organization davis ca"
         />
-        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
-        <meta name="msapplication-TileColor" content="#da532c" />
-        <meta name="theme-color" content="#ffffff" />
       </Head>
       <body>
         <Main />
