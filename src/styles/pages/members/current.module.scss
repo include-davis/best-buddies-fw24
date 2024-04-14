@@ -36,7 +36,9 @@
 }
 
 .renewalBox {
-  align-self: center;
+  // align-self: center;
+  display: flex;
+  flex-direction: column;
   width: 100%;
   background-color: var(--color-white);
   border-radius: 15px;
@@ -44,6 +46,7 @@
 
   @include mixins.tablet {
     padding: 40px 22px;
+    align-items: center;
   }
 }
 
@@ -109,7 +112,9 @@
 
 .friendUpdatesBox,
 .latestNewsBox {
-  align-self: center;
+  // align-self: center;
+  display: flex;
+  flex-direction: column;
   width: 100%;
   @include mixins.tablet {
     justify-content: center;
