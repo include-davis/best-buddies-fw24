@@ -84,9 +84,10 @@ export default function NewMembers({ new_members_json }) {
           <h2 className={styles.joinTitle}>Who Can Join?</h2>
           <div className={styles.joinDesc}>
             <p className={"body-1"}>
-              Anyone can join Best Buddies, regardless of whether you have an
-              IDD or not. UC Davis students can sign up as a Peer Buddy (without
-              IDD), Buddy (with IDD), or Associate Member (unmatched).
+              Anyone of the age 18 or older can join Best Buddies, regardless of
+              whether you have an IDD or not. UC Davis students can sign up as a
+              Peer Buddy (without IDD), Buddy (with IDD), or Associate Member
+              (unmatched).
             </p>
             <p className={"body-1"}>
               Non-students with IDD that reside in the Greater Sacramento Area,
