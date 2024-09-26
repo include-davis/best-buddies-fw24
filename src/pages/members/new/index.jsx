@@ -84,10 +84,24 @@ export default function NewMembers({ new_members_json }) {
           <h2 className={styles.joinTitle}>Who Can Join?</h2>
           <div className={styles.joinDesc}>
             <p className={"body-1"}>
-              Anyone of the age 18 or older can join Best Buddies, regardless of
-              whether you have an IDD or not. UC Davis students can sign up as a
-              Peer Buddy (without IDD), Buddy (with IDD), or Associate Member
-              (unmatched).
+              In order to join our chapter, you must be age 18 or older AND be a
+              member of{" "}
+              <Link
+                style={{
+                  textDecoration: "none",
+                  color: "var(--color-purple)",
+                }}
+                href="https://team-davis.org/"
+                target="_blank"
+              >
+                Team Davis
+              </Link>{" "}
+              or a student at UC Davis. We cannot accept members who are
+              currently enrolled in high school or those who reside outside of
+              the Greater Sacramento Area. Students at UC Davis typically enroll
+              as Peer Buddies (matched members without IDD) or Associate Members
+              (non-matched members). Team Davis participants typically enroll as
+              Buddies (matched members with IDD) or Associate Members.
             </p>
             <p className={"body-1"}>
               Non-students with IDD that reside in the Greater Sacramento Area,
