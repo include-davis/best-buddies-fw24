@@ -107,6 +107,21 @@ export default function NewMembers({ new_members_json }) {
               Non-students with IDD that reside in the Greater Sacramento Area,
               are also eligible to join as Buddies, Associates or Members.
             </p>
+            <p className={"body-1"}>
+              If you are ineligible to join the UC Davis chapter, you can use
+              this tool to find other Best Buddies chapters:{" "}
+              <Link
+                style={{
+                  textDecoration: "none",
+                  color: "var(--color-purple)",
+                }}
+                href="https://www.bestbuddies.org/map-mashup/"
+                target="_blank"
+              >
+                https://www.bestbuddies.org/map-mashup
+              </Link>
+              .
+            </p>
           </div>
         </div>
       </div>
